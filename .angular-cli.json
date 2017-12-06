@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "material-angular-dashboard"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.app.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/nvd3/build/nv.d3.css",
+        "../node_modules/material-design-lite/src/material-design-lite.scss",
+        "../node_modules/getmdl-select/src/scss/getmdl-select.scss",
+        "theme/styles.scss"
+      ],
+      "scripts": [
+        "../node_modules/material-design-lite/material.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "defaults": {
+    "styleExt": "scss",
+    "component": {
+    }
+  }
+}

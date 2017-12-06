@@ -1,0 +1,30 @@
+.ui-icons {
+  .ui-icons-title {
+    font-size: 20px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-top: 24px;
+    letter-spacing: 0.2px;
+    a {
+      font-size: 20px;
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+  }
+  .itemcontainer {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    vertical-align: top;
+    .caption {
+      margin-top: 10px;
+    }
+  }
+  hr {
+    border-top: 1px solid gray;
+    margin: 0em -20px 1em;
+  }
+  .section-name {
+    margin: 25px 5px 30px;
+  }
+}

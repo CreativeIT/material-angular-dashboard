@@ -1,0 +1,125 @@
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.background-color--primary {
+  background-color: unquote("rgba(#{$color-primary}, 0.9)");
+}
+
+.background-color--secondary {
+  background-color: unquote("rgba(#{$color-secondary}, 0.9)");
+}
+
+.background-color--baby-blue {
+  background-color: unquote("rgba(#{$color-baby-blue}, 0.9)");
+}
+
+.background-color--cerulean {
+  background-color: unquote("rgba(#{$color-cerulean}, 0.9)");
+}
+
+.background-color--mint {
+  background-color: unquote("rgba(#{$color-mint}, 0.9)");
+}
+
+.text-color--primary {
+  color: unquote("rgba(#{$color-primary}, 0.8)") !important;
+}
+
+.text-color--secondary {
+  color: unquote("rgba(#{$color-secondary}, 0.8)") !important;
+}
+
+.text-color--baby-blue {
+  color: unquote("rgba(#{$color-baby-blue}, 0.8)") !important;
+}
+
+.text-color--cerulean {
+  color: unquote("rgba(#{$color-cerulean}, 0.8)") !important;
+}
+
+.text-color--mint {
+  color: unquote("rgba(#{$color-mint}, 0.8)") !important;
+}
+
+.text-color--gray {
+  color: unquote("rgb(#{$palette-grey-500})");
+}
+
+.text-color--white {
+  color: white !important;
+}
+
+.text-color--smooth-gray {
+  color: $color-smooth-gray !important;
+}
+
+.getmdl-select {
+  .mdl-icon-toggle__label {
+    color: white;
+  }
+
+  &.is-focused i.material-icons {
+    color: unquote("rgb(#{$color-primary})");
+  }
+
+  .mdl-menu__container {
+    margin-top: -45px !important;
+
+    .mdl-menu__outline {
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .mdl-menu .mdl-menu__item {
+    @include typo-employer-form-inputs();
+  }
+}
+
+.mdl-textfield {
+  input, textarea {
+    @include typo-employer-form-inputs();
+  }
+
+  &.is-focused {
+    &.getmdl-select {
+      input, textarea {
+        font-weight: 300;
+      }
+    }
+
+    input, textarea {
+      font-weight: 400;
+    }
+  }
+
+  &.is-disabled input {
+    border-bottom-width: 2px !important;
+  }
+  &:not(.is-focused), &:not(.mdl-textfield--floating-label) {
+    .mdl-textfield__label {
+      color: $color-smoke !important;
+    }
+  }
+  &:not(.is-focused):not(.is-dirty) {
+    .mdl-textfield__label {
+      font-size: 14px !important;
+    }
+  }
+}
+.mdl-grid:not(.ui-typography) .mdl-card:not(.robot):not(.todo) {
+  height: 100%;
+}
+h5{
+  &.mdl-card__title-text  {
+    font-size: 20px;
+  }
+}

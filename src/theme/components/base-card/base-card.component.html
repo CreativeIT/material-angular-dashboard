@@ -1,0 +1,11 @@
+<div class="mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title" [class.mdl-card--expand]="titleExpand">
+    <ng-content select="[card-title]"></ng-content>
+  </div>
+  <div class="mdl-card__supporting-text" [class.mdl-card--expand]="bodyExpand">
+    <ng-content select="[card-body]"></ng-content>
+  </div>
+  <div *ngIf="withActions" class="mdl-card__actions">
+    <ng-content select="[card-actions]"></ng-content>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+form {
+  &.form--basic {
+    .mdl-textfield__label {
+      font-size: 14px;
+    }
+  }
+}
+.profile-image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin-top: 5px;
+  &.profile-image--round {
+    border-radius: 50%;
+  }
+}

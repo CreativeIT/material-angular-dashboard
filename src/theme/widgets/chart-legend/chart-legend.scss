@@ -1,0 +1,15 @@
+.legend {
+  .legend__item {
+    @include typo-chart-legend;
+    margin: 8px 18px;
+    display: inline-block;
+    .legend__text {
+      margin-left: $legend-text-indent;
+    }
+    .legend__mark {
+      width: $legend-mark-size;
+      height: $legend-mark-size;
+      margin-top: 4px;
+    }
+  }
+}

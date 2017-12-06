@@ -1,0 +1,104 @@
+.mdl-checkbox__tick-outline {
+  -webkit-mask: url("/assets/images/tick-mask.svg");
+}
+
+.mdl-switch__label {
+  left: 0;
+  margin-left: 16px;
+}
+
+//CHECKBOXES
+.checkbox--colored-orange {
+  @include colored-checkbox($color-orange);
+}
+
+.checkbox--colored-light-blue {
+  @include colored-checkbox($color-light-blue);
+}
+
+.checkbox--colored-red {
+  @include colored-checkbox($color-red);
+}
+
+.checkbox--colored-teal {
+  @include colored-checkbox($color-teal);
+}
+
+.checkbox--colored-purple {
+  @include colored-checkbox($color-purple);
+}
+
+.checkbox--colored-green {
+  @include colored-checkbox($color-green);
+}
+
+//RADIO
+.radio--colored-orange {
+  @include colored-radio($color-orange);
+}
+
+.radio--colored-light-blue {
+  @include colored-radio($color-light-blue);
+}
+
+.radio--colored-red {
+  @include colored-radio($color-red);
+}
+
+.radio--colored-teal {
+  @include colored-radio($color-teal);
+}
+
+.radio--colored-purple {
+  @include colored-radio($color-purple);
+}
+
+.radio--colored-green {
+  @include colored-radio($color-green);
+}
+
+
+//SWITCHES
+.switch--colored-red {
+  @include colored-switch($color-red);
+}
+
+.switch--colored-orange {
+  @include colored-switch($color-orange);
+}
+
+.switch--colored-light-blue {
+  @include colored-switch($color-light-blue);
+}
+
+.switch--colored-teal {
+  @include colored-switch($color-teal);
+}
+
+.switch--colored-purple {
+  @include colored-switch($color-purple);
+}
+
+.switch--colored-green {
+  @include colored-switch($color-green);
+}
+
+//ICON TOOGLES
+.icon-toggle--colored-light-blue {
+  @include colored-icon-toggle($color-light-blue);
+}
+.icon-toggle--colored-teal {
+  @include colored-icon-toggle($color-teal);
+}
+.icon-toggle--colored-orange {
+  @include colored-icon-toggle($color-orange);
+}
+.icon-toggle--colored-purple {
+  @include colored-icon-toggle($color-purple);
+}
+.icon-toggle--colored-red {
+  @include colored-icon-toggle($color-red);
+}
+.icon-toggle--colored-green {
+  @include colored-icon-toggle($color-green);
+}

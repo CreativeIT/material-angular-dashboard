@@ -1,0 +1,80 @@
+$color-dark-gray: #333434;
+$color-gray: #4e4e4e;
+$color-table-border: #606060;
+$color-smooth-gray: #999999;
+$color-smoke: #666666;
+$color-red: #ff5252;
+$color-light-blue: #4285f4;
+$color-orange: #ffc107;
+$color-teal: #00bcd4;
+$color-purple: #7726d3;
+$color-green: #00d45a;
+
+
+.text-color--smoke {
+  color: $color-smoke;
+}
+
+.color--gray {
+  background-color: $color-gray !important;
+}
+
+.color--dark-gray {
+  background-color: $color-dark-gray;
+}
+
+.color--smooth-gray {
+  background-color: $color-smooth-gray !important;
+}
+
+.text-color--smooth-gray {
+  color: $color-smooth-gray !important;
+}
+
+.color--red {
+  background-color: $color-red !important;
+}
+
+.color-text--red {
+  color: $color-red !important;
+}
+
+.color--orange {
+  background-color: $color-orange !important;
+}
+
+.color-text--orange {
+  color: $color-orange !important;
+}
+
+.color--green {
+  background-color: $color-green !important;
+}
+
+.color-text--green {
+  color: $color-green !important;
+}
+
+.color--light-blue {
+  background-color: $color-light-blue !important;
+}
+
+.color-text--light-blue {
+  color: $color-light-blue !important;
+}
+
+.color--purple {
+  background-color: $color-purple !important;
+}
+
+.color-text--purple {
+  color: $color-purple !important;
+}
+
+.color--teal {
+  background-color: $color-teal !important;
+}
+
+.color-text--teal {
+  color: $color-teal !important;
+}

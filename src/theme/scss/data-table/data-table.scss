@@ -1,0 +1,49 @@
+.mdl-data-table {
+  @include typo-data-table;
+  background-color: $background-color;
+  color: $data-table-color;
+  border: none;
+  tr:last-child td {
+    border-bottom: none;
+  }
+  td, th {
+    &:first-of-type {
+      padding-left: 16px;
+    }
+    &:last-of-type {
+      padding-right: 16px;
+    }
+  }
+  tr:hover {
+    background-clip: padding-box;
+  }
+  &.bordered-table {
+    td, th {
+      border-right: 1px solid #606060;
+    }
+    tr :last-child {
+      border-right: none;
+    }
+  }
+  &.stripped-table {
+    td, th {
+      border: none;
+      border-right: 1px solid #676767;
+    }
+    tr :last-child {
+      border-right: none;
+    }
+    tr:hover {
+      background: $color-gray;
+    }
+    tbody tr:nth-child(odd){
+      background-color: #606060;
+    }
+  }
+
+  &.borderless-table {
+    td {
+      border: none;
+    }
+  }
+}

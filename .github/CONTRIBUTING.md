@@ -20,6 +20,8 @@
 
 * We use [Karma commit message convention](http://karma-runner.github.io/0.13/dev/git-commit-msg.html). Please follow it.
 
+* Use [Angular](https://angular.io/guide/styleguide), [TypeScript](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines) and [JavaScript](https://github.com/airbnb/javascript) style guides. You can check your code using `npm run lint` or `ng lint` or using standalone linters (for example, linter plugins for your editor).
+
 #### **Do you have questions about the source code?**
 
 * Ask any question about how to use Material Angular Dashboard in the [Issues](https://github.com/CreativeIT/material-angular-dashboard/issues).

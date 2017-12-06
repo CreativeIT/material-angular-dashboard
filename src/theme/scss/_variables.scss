@@ -1,0 +1,280 @@
+@import "~material-design-lite/src/color-definitions";
+/* ==========  IMAGES  ========== */
+$image_path: '../images';
+
+/* ==========  Color & Themes  ========== */
+$color-primary: 0, 188, 212;
+$color-secondary: 255, 82, 82;
+$color-baby-blue: 116, 199, 209;
+$color-cerulean: 80, 150, 215;
+$color-mint: 96, 196, 150;
+$color-white: 255, 255, 255;
+$color-black: 0, 0, 0;
+
+@import "./palette";
+
+$background-color: $color-gray;
+$background-color-header: $color-dark-gray;
+
+/* ==========  Typography  ========== */
+$text-color-primary: unquote("rgba(#{$color-white}, 0.87)") !default;
+
+/* ==========  Components  ========== */
+
+/* ==========  Standard Buttons  ========== */
+
+// Default button colors.
+$button-secondary-color: unquote("rgb(#{$color-white})");
+// Colored button colors.
+$button-primary-color-alt: unquote("rgb(#{$color-secondary})");
+// Ripple color for colored raised buttons.
+// Disabled button colors.
+$button-primary-color-disabled: #6b6b6b;
+//background-color:
+$button-secondary-color-disabled: unquote("rgba(#{$color-white}, 0.3)");
+//color:
+// FAB colors and sizes.
+$button-fab-color-alt: unquote("rgb(#{$color-secondary})");
+
+$button-fab-text-color-alt: #ffffff;
+$button-fab-hover-color-alt: #ff4c4c;
+$button-fab-active-color-alt: #f23d3d;
+// Icon button colors and sizes.
+
+/* ==========  Icon Toggles  ========== */
+
+/* ==========  Radio Buttons  ========== */
+
+/* ==========  Ripple effect  ========== */
+
+/* ==========  Layout  ========== */
+
+// Drawer
+$layout-drawer-width: 236px;
+$layout-drawer-bg-color: #202020;
+$layout-nav-color: #202020;
+$layout-drawer-navigation-link-active-background: unquote("rgba(#{$color-black}, 0.25)");
+$layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary})");
+$layout-nav-color: unquote("rgba(#{$color-black}, 0.25)");
+$layout-drawer-navigation-link-icon-color: unquote("rgba(#{$color-white}, 0.56)");
+$layout-drawer-header-color: unquote("rgb(#{$color-white})");
+$layout-drawer-header-bg-color: unquote("rgba(#{$color-black},0.85)");
+
+// Header
+$layout-header-text-color: unquote("rgb(#{$color-primary})");
+$layout-header-bg-color: $background-color-header;
+$layout-header-name-color: unquote("rgba(#{$color-white}, 0.5)");
+$layout-header-icon-hover-color: unquote("rgba(#{$color-black}, 0.3)");
+
+// Tabs
+
+/* ==========  Content Tabs  ========== */
+
+/* ==========  Checkboxes  ========== */
+$checkbox-off-color: unquote("rgb(#{$color-white})");
+$checkbox-color: unquote("rgb(#{$color-secondary})");
+
+/* ==========  Switches  ========== */
+
+/* ==========  Spinner  ========== */
+
+/* ==========  Text fields  ========== */
+$todo-input-text-label-color: unquote("rgba(#{$color-white}, 0.2)");
+
+$input-text-highlight-color: unquote("rgb(#{$color-primary})");
+$input-text-bottom-border-color: rgba(255, 255, 255, 0.2);
+$input-text-disabled-text-color: rgba(255, 255, 255, 0.6);
+
+//placeholder color
+$todo-input-text-highlight-color: unquote("rgba(#{$color-white}, 0.7)");
+
+//bottom line color
+
+/* ==========  Card  ========== */
+$card-background-color: $background-color;
+$card-text-color: unquote("rgba(#{$color-white}, 0.8)");
+$card-supporting-text-text-color: unquote("rgba(#{$color-white}, 0.8)");
+$card-subtitle-color: unquote("rgba(#{$color-white}, 0.5)");
+$card-border-color: unquote("rgba(#{$color-white},0.05)");
+
+$card-title-background-color: unquote("rgba(#{$color-black}, 0.3)");
+$card-actions-background-color: unquote("rgba(#{$color-white},0.05)");
+$card-text-color: unquote("rgba(#{$color-white}, 0.8)");
+$card-link-color: unquote("rgb(#{$color-primary})");
+$card-href-color: unquote("rgb(#{$color-primary})");
+
+$card-title-img-color: unquote("rgb(#{$color-white})");
+$card-deg-color: unquote("rgba(#{$color-white}, 0.9)");
+
+/* ==========  Sliders ========== */
+
+$range-bg-color: unquote("rgba(#{$color-white}, 0.45)");
+$range-color: unquote("rgb(#{$color-secondary})");
+
+/* ========== Progress ========== */
+$progress-main-color: unquote("rgb(#{$color-secondary})");
+$progress-secondary-color: unquote("rgba(#{$color-white}, 0.4)");
+
+/* ==========  List ========== */
+$list-main-text-text-color: unquote("rgb(#{$color-white})");
+$list-supporting-text-text-color: unquote("rgba(#{$color-white}, 0.54)");
+$list-icon-color: unquote("rgba(#{$color-white}, 0.8)");
+$list-icon-hover-color: unquote("rgb(#{$color-primary})");
+
+$list-border-color: unquote("rgba(#{$color-white},0.1)");
+$list-item-border: 1px solid $list-border-color;
+
+/* ==========  Item ========== */
+
+// Default Item Colors
+$default-item-focus-bg-color: unquote("rgba(#{$color-black}, 0.15)");
+$default-item-active-bg-color: unquote("rgba(#{$color-black}, 0.15)");
+$default-item-hover-bg-color: unquote("rgba(#{$color-black}, 0.2)");
+
+// Disabled Button Colors
+
+/* ==========  Dropdown menu ========== */
+$default-dropdown-bg-color: $background-color;
+
+$dropdown-menu-width: 310px;
+$dropdown-menu-header-font-color: unquote("rgba(#{$color-white}, 0.8)");
+$settings_dropdown_width: 135px;
+$account-dropdown-avatar-size: 48px;
+$messages-dropdown-label-text-color: unquote("rgba(#{$color-white}, 0.5)");
+
+/* ==========  Tooltips  ========== */
+$tooltip-background-color: #353535;
+
+/* ==========  Footer  ========== */
+
+/* TEXTFIELD */
+
+/* SWITCH */
+$switch-off-thumb-color: unquote("rgb(#{$palette-grey-500})");
+
+/* SPINNER */
+
+
+// Amount of circle the arc takes up.
+// Time it takes to expand and contract arc.
+// How much the start location of the arc should rotate each time.
+
+/* RADIO */
+$radio-off-color: unquote("rgba(#{$color-white}, 0.8)");
+$radio-color: unquote("rgba(#{$color-primary}, 0.8)");
+
+/* MENU */
+
+/* LIST */
+$list-border: 0;
+$list-bottom-padding: 16px;
+$list-avatar-text-left-distance: 64px;
+$list-icon-text-left-distance: 56px;
+$list-avatar-size: 32px;
+$list-two-line-height: 64px;
+
+/* LAYOUT */
+$layout-drawer-narrow: 236px;
+$layout-header-mobile-indent: 8px;
+$layout-header-desktop-indent: 20px;
+$layout-screen-size-threshold: 1440px;
+/* ICON */
+
+/* ICON TOGGLE */
+
+/* FOOTER */
+/*mega-footer*/
+/*mini-footer*/
+
+/* CHECKBOX */
+$checkbox-button-size: 18px;
+$checkbox-label-height: 24px;
+$checkbox-padding: 8px;
+
+/* CARD */
+/* Card dimensions */
+$card-height: auto;
+$card-width: auto;
+$card-title-font-size: 24px;
+$card-title-text-font-weight: 400;
+$card-vertical-padding: 20px;
+
+/* Cover image */
+
+/* BUTTON */
+$button-font-weigth: 400;
+
+/* ANIMATION */
+
+/* PROGRESS */
+
+/* BADGE */
+$badge-background: unquote("rgb(#{$color-primary})");
+$badge-color: unquote("rgb(#{$color-white})");
+
+/* SHADOWS */
+
+/* GRID */
+$grid-tablet-columns: 12;
+$grid-phone-columns: 4;
+
+$grid-desktop-gutter: 32px;
+$grid-desktop-margin: 16px;
+
+$grid-tablet-breakpoint: 1152px;
+$grid-desktop-breakpoint: 1920px;
+$phone-breakpoint: 800px;
+
+/* DATA TABLE */
+$data-table-font-size: 16px;
+$data-table-header-font-size: 13px;
+
+$data-table-color: unquote("rgb(#{$color-white})");
+$data-table-header-color: unquote("rgb(#{$color-white})");
+$data-table-divider-color: unquote("rgba(#{$color-white},0.05)");
+$data-table-hover-color: unquote("rgba(#{$color-black}, 0.2)");
+$data-table-selection-color: $background-color;
+
+$data-table-column-spacing: 16px;
+
+/* TOOLTIP */
+$tooltip-font-size: 12px;
+$table-tooltip-vertical-padding: 5px;
+$table-tooltip-horizontal-padding: 8px;
+
+//-------------------------------------------------------
+
+/* WIDGETS & COMPONENTS */
+
+/* Trending */
+$trending-arrow-size: 48px;
+$trending-arrow-up-color: unquote("rgb(#{$color-primary})");
+$trending-arrow-down-color: unquote("rgb(#{$color-secondary})");
+
+/* label */
+$label-height: 12px;
+$label-padding: 5px 8px 5px 8px;
+
+/* charts */
+$pie-chart-height: 228px;
+
+$line-chart-height: 280px;
+$line-chart-width: 100%;
+$line-chart-axis-label-color: unquote("rgba(#{$color-white},0.5)");
+$line-chart-guideline-color: unquote("rgba(#{$color-white},0.5)");
+$line-chart-guideline-width: 0.5px;
+
+$legend-mark-size: 8px;
+$legend-text-indent: $legend-mark-size + 16;
+
+/* employer form */
+$employer-form-width: 670px;
+$employer-form-color-brighter: rgba(255, 255, 255, 1);
+$employer-form-color-darker: rgba(255, 255, 255, 0.6);
+$employer-form-horizontal-padding: 15px;
+
+$weather-shadow-color: unquote("rgba(#{$color-black}, 0.4)");
+$weather-shadow-4px: 4px 4px 4px $weather-shadow-color;
+
+/* row */
+$row-col-padding: 30px;

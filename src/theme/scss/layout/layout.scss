@@ -1,0 +1,183 @@
+.mdl-layout {
+  background: $layout-drawer-bg-color;
+  overflow: hidden;
+}
+
+main {
+  background: url("/assets/images/Dark_background_1920x1080.png") center top no-repeat;
+  background-size: cover;
+}
+
+.mdl-layout__header {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.mdl-layout__drawer {
+  border: none;
+  header {
+    text-align: center;
+    text-transform: uppercase;
+    color: $layout-drawer-header-color;
+    height: $layout-header-desktop-row-height;
+    line-height: $layout-header-desktop-row-height;
+    background: $layout-drawer-header-bg-color;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+
+  & .mdl-navigation {
+    flex-grow: 1;
+    padding-top: 48px;
+    padding-bottom: 8px;
+    bottom: 0;
+    hr {
+      border-top: 1px solid unquote("rgba(#{$color-white}, 0.1)");
+      margin: 8px 0;
+    }
+    & .mdl-navigation__link {
+      @include typo-layout-navigation-link;
+      padding: 12px 0;
+      position: relative;
+      .material-icons {
+        margin: -3px 25px 0 23px;
+        color: $layout-drawer-navigation-link-icon-color;
+      }
+      &--current {
+        .material-icons {
+          color: $layout-drawer-navigation-link-active-color;
+        }
+        border-left: 2px solid $layout-drawer-navigation-link-active-color;
+      }
+
+      &:hover {
+        color: $layout-drawer-navigation-link-active-color;
+        .material-icons {
+          color: $layout-drawer-navigation-link-active-color;
+        }
+      }
+    }
+
+    .sub-navigation {
+      cursor: pointer;
+      & .mdl-navigation__link {
+        i:last-child {
+          margin: 0 16px 0 0;
+          transition: transform 0.3s;
+          float: right;
+        }
+      }
+      .mdl-navigation {
+        display: none;
+        padding: 5px 0;
+        & .mdl-navigation__link {
+          padding-left: 72px;
+          &--current {
+            border-left: none;
+          }
+        }
+      }
+
+      &--show {
+        .mdl-navigation {
+          display: block;
+        }
+        & .mdl-navigation__link {
+          i:last-child {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mdl-layout__header-row {
+  color: $dropdown-menu-header-font-color;
+  .avatar-dropdown {
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 0 20px;
+    line-height: $layout-header-desktop-row-height;
+
+    &:hover {
+      background: $layout-header-icon-hover-color;
+    }
+    & > img {
+      width: $layout-header-icon-size;
+      height: $layout-header-icon-size;
+    }
+    & > span {
+      color: $layout-header-name-color;
+      padding-right: 16px;
+    }
+  }
+  .mdl-textfield {
+    padding: 18px 0;
+  }
+  .mdl-button--icon {
+    &:hover {
+      background: $layout-header-icon-hover-color;
+    }
+  }
+  .material-icons.mdl-badge {
+    margin: 10px;
+    cursor: pointer;
+    overflow: visible;
+    text-align: center;
+    height: $button-fab-font-size;
+    width: $button-fab-font-size;
+    min-width: 0;
+    padding: 4px 4px;
+    &:hover {
+      background: $layout-header-icon-hover-color;
+    }
+    &.mdl-badge--overlap {
+      &:after {
+        top: -3px;
+        right: -8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $layout-screen-size-threshold) {
+  .mdl-layout--fixed-drawer {
+    main {
+      margin-right: 0;
+    }
+    & > .mdl-layout__content {
+      margin-left: 0;
+    }
+    & > .mdl-layout__drawer {
+      transform: translateX(-$layout-drawer-width - 10px);
+      &.is-visible {
+        transform: translateX(0) !important;
+      }
+    }
+    & > .mdl-layout__drawer {
+      header {
+        height: $layout-header-mobile-row-height;
+        line-height: $layout-header-mobile-row-height;
+      }
+    }
+  }
+  .mdl-layout__header-row {
+    .avatar-dropdown {
+      line-height: $layout-header-mobile-row-height;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-breakpoint - 1px) {
+  .mdl-grid > .mdl-grid .mdl-cell {
+    width: 100% !important;
+  }
+  .mdl-layout__header-row {
+    .message, .notification {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '~theme/helpers';
+
+.projects-table {
+  tbody {
+    td:nth-child(1) {
+      width: 1px;
+    }
+    td:nth-child(2) {
+      width: 300px;
+    }
+    td:nth-child(3) {
+      width: 240px;
+    }
+    td:nth-child(4) {
+      width: 300px;
+    }
+    td:nth-child(5) {
+      width: 200px;
+    }
+    td:nth-child(6) {
+      width: 300px;
+      .mdl-progress {
+        cursor: pointer;
+        min-width: 80px;
+        max-width: 200px;
+      }
+    }
+    .task-done {
+      padding-top: 6px !important;
+      padding-bottom: 0 !important;
+      color: $progress-main-color;
+      .material-icons {
+        cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: 848px) {
+    display: none;
+  }
+}

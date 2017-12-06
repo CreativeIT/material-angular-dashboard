@@ -1,0 +1,57 @@
+{
+  "name": "material-angular-dashboard",
+  "version": "0.0.0",
+  "description": "Free dashboard template with Material Design Lite and Angular",
+  "keywords": [
+    "dashboard",
+    "admin template",
+    "mdl",
+    "getmdl",
+    "Material Design",
+    "Material Design Lite",
+    "Dark",
+    "dark material design",
+    "angular",
+    "ng"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/router": "^5.0.0",
+    "core-js": "^2.4.1",
+    "d3": "^3.5.17",
+    "getmdl-select": "^1.1.0",
+    "material-design-lite": "^1.3.0",
+    "nvd3": "^1.8.6",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.5.5",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "@types/d3": "^3.5.40",
+    "@types/material-design-lite": "^1.1.15",
+    "@types/node": "~6.0.60",
+    "@types/nvd3": "^1.8.38",
+    "codelyzer": "^4.0.1",
+    "node-sass": "^4.7.2",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
+    "typescript": "~2.4.2"
+  }
+}

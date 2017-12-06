@@ -1,0 +1,49 @@
+.ui-colors {
+  h3 {
+    text-align: center;
+    opacity: 0.2;
+  }
+  .teal {
+    .mdl-card__supporting-text {
+      background: $color-teal;
+    }
+  }
+  .red {
+    .mdl-card__supporting-text {
+      background: $color-red;
+    }
+  }
+  .green {
+    .mdl-card__supporting-text {
+      background: $color-green;
+    }
+  }
+  .gray {
+    .mdl-card__supporting-text {
+      background: $color-gray;
+    }
+  }
+  .orange {
+    .mdl-card__supporting-text {
+      background: $color-orange;
+    }
+  }
+  .purple {
+    .mdl-card__supporting-text {
+      background: $color-purple;
+    }
+  }
+  .light-blue {
+    .mdl-card__supporting-text {
+      background: $color-light-blue;
+    }
+  }
+  .dark-gray {
+    .mdl-card__title {
+      background: $color-gray;
+    }
+    .mdl-card__supporting-text {
+      background: $color-dark-gray;
+    }
+  }
+}

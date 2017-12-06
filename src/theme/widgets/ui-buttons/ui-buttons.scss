@@ -1,0 +1,32 @@
+.ui-buttons {
+  h6 {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .mdl-button--icon .material-icons {
+    font-size: 20px;
+  }
+  .mdl-list__item {
+    padding: 8px 16px ;
+  }
+  .mdl-card__supporting-text {
+    display: flex;
+    justify-content: space-around;
+  }
+  .buttons-with-icons,
+  .buttons-social,
+  .buttons-basic,
+  .buttons-icons {
+    min-width: 350px;
+    .mdl-card {
+      height: 100%;
+    }
+    .mdl-button:not(.mdl-button--icon) {
+      padding: 0 8px;
+      min-width: 125px;
+    }
+    .mdl-list:nth-child(3) {
+      //clear: both;
+    }
+  }
+}
