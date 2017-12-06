@@ -17,9 +17,6 @@
       "tsconfig": "tsconfig.app.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/nvd3/build/nv.d3.css",
-        "../node_modules/material-design-lite/src/material-design-lite.scss",
-        "../node_modules/getmdl-select/src/scss/getmdl-select.scss",
         "theme/styles.scss"
       ],
       "scripts": [

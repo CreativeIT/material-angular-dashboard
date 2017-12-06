@@ -1,6 +1,7 @@
 @import "~material-design-lite/src/color-definitions";
 /* ==========  IMAGES  ========== */
-$image_path: '../images';
+$image_path: '/assets/images';
+$checkbox-image-path: $image_path;
 
 /* ==========  Color & Themes  ========== */
 $color-primary: 0, 188, 212;
