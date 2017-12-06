@@ -7,6 +7,7 @@ Material admin template is absolutely free for commercial usage theme, that uses
 > **Important**: We are still working on the project and there will be much more awesome, check out our [issues](https://github.com/CreativeIT/material-angular-dashboard/issues) to see what features are coming soon.
 
 # SETUP and USAGE
+
 The steps below will take you through cloning your own fork, installing dependencies and building:
 
 1. Fork and/or clone our repository. To use Git from command line, see the [Setting up Git](https://help.github.com/articles/set-up-git/) and [Fork a repo](https://help.github.com/articles/fork-a-repo/) articles.
@@ -56,8 +57,8 @@ Since the project uses [BEM](http://getbem.com) structure with sass, it can be c
 Google hasn't implemented select element yet ([see why here](http://37.media.tumblr.com/6a9fcffde2da977266b0ea99b15d5803/tumblr_n42cjjsriB1smcbm7o1_400.gif)), that is why the project depends on [getmdl-select plugin](https://github.com/CreativeIT/getmdl-select). Also project uses [d3](https://d3js.org/) and [nvd3](http://nvd3.org/) to build charts and chart components.
 
 # Hire us
-We are ready to bring value to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!
 
+We are ready to bring value to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!
 
 # Credits
 
