@@ -1,6 +1,6 @@
 <header>darkboard</header>
 <nav class="mdl-navigation">
-  <a class="mdl-navigation__link mdl-navigation__link--current" routerLink="/app/dashboard">
+  <a class="mdl-navigation__link mdl-navigation__link--current" routerLink="/app/dashboard" (click)="navigate()">
     <i class="material-icons" role="presentation">dashboard</i>
     Dashboard
   </a>
@@ -31,7 +31,7 @@
       </a>
     </div>
   </div>
-  <a class="mdl-navigation__link" routerLink="/app/forms">
+  <a class="mdl-navigation__link" routerLink="/app/forms" (click)="navigate()">
     <i class="material-icons" role="presentation">person</i>
     Account
   </a>

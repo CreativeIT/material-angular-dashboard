@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./base-sidebar.component.scss'],
   templateUrl: './base-sidebar.component.html'
 })
-export class BaseSidebarComponent {}
+export class BaseSidebarComponent {
+  private navigate() {
+    (document.querySelector('.mdl-layout') as any).MaterialLayout.toggleDrawer();
+  }
+}
