@@ -11,9 +11,10 @@ import { FormsComponent } from '../forms/forms.component';
       path: '',
       component: LayoutComponent,
       children: [
-        { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-        { path: 'dashboard', component: DashboardComponent },
-        { path: 'forms', component: FormsComponent },
+        { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+        { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
+        { path: 'forms', component: FormsComponent, pathMatch: 'full' },
+        { path: '**', redirectTo: '/pages/404' },
       ],
     },
   ])],

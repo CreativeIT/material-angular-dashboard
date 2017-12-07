@@ -11,8 +11,9 @@ import { LoginComponent } from '../login/login.component';
       path: '',
       component: PagesComponent,
       children: [
-        { path: '404', component: ErrorComponent },
-        { path: 'login', component: LoginComponent },
+        { path: '404', component: ErrorComponent, pathMatch: 'full' },
+        { path: 'login', component: LoginComponent, pathMatch: 'full' },
+        { path: '**', redirectTo: '404' },
       ],
     },
   ])],
