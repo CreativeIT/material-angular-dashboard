@@ -4,7 +4,6 @@
 @import '~material-design-lite/src/material-design-lite.scss';
 @import '~getmdl-select/src/scss/getmdl-select.scss';
 
-@import './scss/helper';
 @import './scss/layout/layout';
 @import './scss/card/card';
 @import './scss/chip/chip';
@@ -21,6 +20,7 @@
 @import './scss/list/list';
 @import './scss/form/form';
 @import './scss/scroll/scroll';
+@import './scss/helper';
 
 @import './widgets/link/link';
 @import './widgets/chart-legend/chart-legend';
