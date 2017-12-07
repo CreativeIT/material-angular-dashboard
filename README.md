@@ -1,6 +1,6 @@
-# Material Dashboard Lite
+# Material Angular Dashboard
 
-Welcome to first dark dashboard on the Material Design Lite and Angular!
+Welcome to first dark dashboard on Material Design Lite and Angular!
 
 Material admin template is absolutely free for commercial usage theme, that uses google's implementation of material design -- [Material Design Lite](http://www.getmdl.io) library.
 
@@ -13,7 +13,7 @@ The steps below will take you through cloning your own fork, installing dependen
 1. Fork and/or clone our repository. To use Git from command line, see the [Setting up Git](https://help.github.com/articles/set-up-git/) and [Fork a repo](https://help.github.com/articles/fork-a-repo/) articles.
 
 ```bash
-git clone https://github.com/CreativeIT/material-dashboard-lite.git
+git clone https://github.com/CreativeIT/material-angular-dashboard.git
 ```
 
 2. Open your copied repo folder in terminal and install necessary modules with command:
@@ -38,7 +38,9 @@ Run `yarn run build` or `ng build` to build the project. The build artifacts wil
 
 * [Material Design](http://www.google.com/design/spec/material-design/introduction.html) via [Material Design Lite](http://getmdl.io)
 
-* Typescript
+* TypeScript
+
+* Angular
 
 * Responsive dark material design. DARK, Carl!
 
