@@ -39,5 +39,6 @@
     "styleExt": "scss",
     "component": {
     }
-  }
+  },
+  "packageManager": "yarn"
 }
