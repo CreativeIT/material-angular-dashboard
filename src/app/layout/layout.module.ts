@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout.component';
 import { ThemeModule } from 'theme/theme.module';
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { FormsModule } from '../forms/forms.module';
+import { MapsModule } from '../maps/maps.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FormsModule } from '../forms/forms.module';
     LayoutRoutingModule,
     DashboardModule,
     FormsModule,
+    MapsModule,
   ],
   declarations: [
     LayoutComponent,
