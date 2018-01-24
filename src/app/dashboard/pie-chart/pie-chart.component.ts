@@ -93,7 +93,7 @@ export class PieChartComponent implements OnInit {
         .datum(data)
         .transition()
         .duration(1200)
-        .call(pieChart);
+        .call(pieChart as any);
 
       let h = 0;
       let i = 0;

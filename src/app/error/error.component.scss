@@ -1,11 +1,12 @@
-// FIXME: same styles for login and error components
-.login {
+@import '~theme/helpers';
+
+.not-found {
   .mdl-button {
     font-weight: 500;
   }
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 14px;
-  .mdl-card__login.mdl-card {
+  .mdl-card__not-found.mdl-card {
     width: 450px;
     min-height: 500px;
     margin: auto;
@@ -17,22 +18,6 @@
       .mdl-card__title-text {
         font-size: 17px;
         font-weight: bold;
-      }
-      .login-name {
-        font-size: 24px;
-        display: block;
-        padding: 0 0 8px 0;
-      }
-
-      .login-link {
-        padding: 12px 0;
-      }
-
-      .login-link, .login-link * {
-        display: inline-block;
-        font-size: 14px;
-        font-weight: inherit;
-        color: #dddddd;
       }
       .underlined {
         display: inline-block;

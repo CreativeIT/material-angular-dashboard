@@ -1,7 +1,9 @@
 @import '~theme/helpers';
 
 .todo {
-  height: auto !important;
+  base-card {
+    height: auto !important;
+  }
   .mdl-card__supporting-text {
     width: 100%;
     padding: 0;

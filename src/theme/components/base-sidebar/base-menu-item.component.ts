@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { HostClassBinding } from 'helpers';
 
 @Component({
   selector: 'base-menu-item',
@@ -29,52 +31,45 @@ export class BaseMenuItemComponent {
   styleUrls: ['./base-sidebar.component.scss'],
   template: `
     <a
-      *ngIf="link"
+      *ngIf="data.link"
       class="mdl-navigation__link"
-      [routerLink]="link"
+      [routerLink]="data.link"
       (click)="navigate()"
-      [class.mdl-navigation__link--current]="this.router.url === link">
-      <i *ngIf="icon" class="material-icons" role="presentation">{{icon}}</i>
-      {{name}}
+      [class.mdl-navigation__link--current]="router.url === data.link">
+      <i *ngIf="data.icon" class="material-icons" role="presentation">{{data.icon}}</i>
+      {{data.name}}
     </a>
     <a
-      *ngIf="href"
+      *ngIf="data.href"
       class="mdl-navigation__link"
-      [href]="href"
+      [href]="data.href"
       (click)="navigate()"
-      [class.mdl-navigation__link--current]="this.router.url === link">
-      <i *ngIf="icon" class="material-icons" role="presentation">{{icon}}</i>
-      {{name}}
+      [class.mdl-navigation__link--current]="router.url === data.link">
+      <i *ngIf="data.icon" class="material-icons" role="presentation">{{data.icon}}</i>
+      {{data.name}}
     </a>
   `,
 })
-export class BaseMenuLinkItemComponent extends BaseMenuItemComponent {
-  @Input() set data(value) {
-    Object.assign(this as any, value);
-  }
-}
+export class BaseMenuLinkItemComponent extends BaseMenuItemComponent { }
 
 @Component({
   selector: 'base-submenu-item',
   styleUrls: ['./base-sidebar.component.scss'],
   template: `
-    <div
-      *ngIf="children"
-      class="sub-navigation"
-      [class.sub-navigation--show]="shown"
-      (click)="shown= !shown">
-      <a class="mdl-navigation__link" [class.mdl-navigation__link--current]="shown">
-        <i *ngIf="icon" class="material-icons">{{icon}}</i>{{name}}<i class="material-icons">keyboard_arrow_down</i>
-      </a>
-      <div class="mdl-navigation">
-        <base-menu-item *ngFor="let child of children" [data]="child"></base-menu-item>
-      </div>
+    <a class="mdl-navigation__link" [class.mdl-navigation__link--current]="shown">
+      <i *ngIf="data.icon" class="material-icons">{{data.icon}}</i>{{data.name}}<i class="material-icons">keyboard_arrow_down</i>
+    </a>
+    <div class="mdl-navigation">
+      <base-menu-item *ngFor="let child of data.children" [data]="child"></base-menu-item>
     </div>
   `,
 })
+@HostClassBinding(function() {
+  return this.shown ? 'sub-navigation sub-navigation--show' : 'sub-navigation';
+})
 export class BaseSubmenuItemComponent extends BaseMenuItemComponent {
-  @Input() set data(value) {
-    Object.assign(this as any, value);
+  @HostListener('click') onClick() {
+    this.shown = !this.shown;
   }
 
   shown = false;

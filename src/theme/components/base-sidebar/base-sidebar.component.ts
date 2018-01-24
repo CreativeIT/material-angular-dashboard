@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 
+import { HostClassBinding } from 'helpers';
+
 @Component({
   selector: 'base-sidebar',
   styleUrls: ['./base-sidebar.component.scss'],
   templateUrl: './base-sidebar.component.html'
 })
+@HostClassBinding('mdl-layout__drawer')
 export class BaseSidebarComponent {
   private menu = [
     { name: 'Dashboard', link: '/app/dashboard', icon: 'dashboard' },

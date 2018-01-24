@@ -4,6 +4,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { FormsComponent } from '../forms/forms.component';
+import { MapsComponent } from '../maps/maps.component';
 
 @NgModule({
   imports: [RouterModule.forChild([
@@ -14,6 +15,7 @@ import { FormsComponent } from '../forms/forms.component';
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
         { path: 'forms', component: FormsComponent, pathMatch: 'full' },
+        { path: 'maps', component: MapsComponent, pathMatch: 'full' },
         { path: '**', redirectTo: '/pages/404' },
       ],
     },

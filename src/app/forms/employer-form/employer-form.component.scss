@@ -1,10 +1,12 @@
 @import '~theme/helpers';
 
 .employer-form {
-  padding: 0;
-  width: $employer-form-width;
-  background-color: $background-color;
-  margin: 16px auto;
+  .mdl-card {
+    padding: 0;
+    width: $employer-form-width;
+    background-color: $background-color;
+    margin: 16px auto;
+  }
 
   .mdl-radio {
     width: 20%;

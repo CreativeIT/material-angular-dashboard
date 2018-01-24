@@ -6,4 +6,5 @@ import { UpgradeDomAfterViewInit } from 'helpers';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
 })
-export class DashboardComponent extends UpgradeDomAfterViewInit {}
+@UpgradeDomAfterViewInit
+export class DashboardComponent {}

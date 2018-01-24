@@ -115,7 +115,7 @@
     }
   }
 }
-.mdl-grid:not(.ui-typography) .mdl-card:not(.robot):not(.todo) {
+.mdl-grid:not(.ui-typography) :not(.robot):not(.todo) > .mdl-card {
   height: 100%;
 }
 h5{

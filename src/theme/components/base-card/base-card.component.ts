@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 
+import { HostClassBinding } from 'helpers';
+
 @Component({
   selector: 'base-card',
   styleUrls: ['./base-card.component.scss'],
   templateUrl: './base-card.component.html',
 })
+@HostClassBinding('mdl-card mdl-shadow--2dp')
 export class BaseCardComponent {
   public withActions = false;
   public titleExpand = false;

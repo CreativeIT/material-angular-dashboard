@@ -6,4 +6,5 @@ import { UpgradeDomAfterViewInit } from 'helpers';
   selector: 'app-forms',
   template: `<app-employer-form></app-employer-form>`,
 })
-export class FormsComponent extends UpgradeDomAfterViewInit {}
+@UpgradeDomAfterViewInit
+export class FormsComponent {}
