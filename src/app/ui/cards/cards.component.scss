@@ -1,3 +1,5 @@
+@import '~theme/helpers';
+
 .ui-cards {
   .mdl-card {
     height: 100%;
@@ -22,13 +24,13 @@
       }
     }
     &:nth-last-of-type(1) .mdl-card__title {
-      background-image: url("/assets/images/sao_paulo.jpg");
+      background-image: url("#{$image-path}/sao_paulo.jpg");
     }
     &:nth-last-of-type(2) .mdl-card__title {
-      background-image: url("/assets/images/tokyo.jpg");
+      background-image: url("#{$image-path}/tokyo.jpg");
     }
     &:nth-last-of-type(3) .mdl-card__title {
-      background-image: url("/assets/images/istanbul.jpg");
+      background-image: url("#{$image-path}/istanbul.jpg");
     }
   }
   small {

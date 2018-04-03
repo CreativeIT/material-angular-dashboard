@@ -3,12 +3,12 @@ import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
 import { HostClassBinding } from 'helpers';
 
 @Component({
-  selector: 'base-card',
+  selector: 'base-card base-card-actions',
   styleUrls: ['./base-card.component.scss'],
   template: `<ng-content></ng-content>`,
 })
-@HostClassBinding('mdl-card mdl-shadow--2dp', true)
-export class BaseCardComponent {
+@HostClassBinding('mdl-card__actions', true)
+export class BaseCardActionsComponent {
   constructor(
     private viewContainerRef: ViewContainerRef,
   ) { }

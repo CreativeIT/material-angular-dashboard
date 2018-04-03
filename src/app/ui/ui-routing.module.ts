@@ -24,8 +24,8 @@ import { LayoutComponent } from 'app/layout/layout.component';
         { path: 'typography', component: TypographyComponent, pathMatch: 'full' },
         { path: 'tables', component: TablesComponent, pathMatch: 'full' },
       ],
-    }
+    },
   ])],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class UIRoutingModule { }

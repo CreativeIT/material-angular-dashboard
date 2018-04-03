@@ -2,12 +2,12 @@ import 'material-design-lite/material';
 
 import { AfterViewInit, HostBinding } from '@angular/core';
 
-export const HostClassBinding = (classList: string | DOMTokenList | (() => string | DOMTokenList), inherit = false) => Target => {
+export const HostClassBinding = (classList: string | DOMTokenList | (() => string | DOMTokenList), inherit = false) => (Target) => {
   Object.defineProperty(
     Target.prototype,
     'hostClassList',
     {
-      get: function () {
+      get () {
         return (
           (inherit ? this.viewContainerRef.element.nativeElement.className : '')
           + ' '
@@ -23,10 +23,12 @@ export const HostClassBinding = (classList: string | DOMTokenList | (() => strin
   HostBinding('class')(Target.prototype, 'hostClassList', Object.getOwnPropertyDescriptor(Target.prototype, 'hostClassList'));
 };
 
-export const UpgradeDomAfterViewInit = Target => {
+export const UpgradeDomAfterViewInit = (Target) => {
   const ngAfterViewInit = Target.prototype.ngAfterViewInit;
   Target.prototype.ngAfterViewInit = function () {
-    ngAfterViewInit && ngAfterViewInit.call(this)
+    if (ngAfterViewInit) {
+      ngAfterViewInit.call(this);
+    }
     componentHandler.upgradeDom();
-  }
+  };
 };

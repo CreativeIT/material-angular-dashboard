@@ -55,7 +55,7 @@
 }
 
 .text-color--white {
-  color: white !important;
+  color: $color-white !important;
 }
 
 .text-color--smooth-gray {
@@ -64,7 +64,7 @@
 
 .getmdl-select {
   .mdl-icon-toggle__label {
-    color: white;
+    color: $color-white;
   }
 
   &.is-focused i.material-icons {

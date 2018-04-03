@@ -16,40 +16,39 @@ export class PieChartComponent implements OnInit {
       'rgba(0, 188, 212, 1)',
       'rgba(116, 199, 209, 1)',
       'rgba(255, 82, 82, 1)',
-      'rgba(0, 0, 0, 0)'
+      'rgba(0, 0, 0, 0)',
     ];
 
     const data = [
       {
         key: 'Coding',
         y: 0,
-        end: 9
+        end: 9,
       },
       {
         key: 'Eating',
         y: 0,
-        end: 3
+        end: 3,
       },
       {
         key: 'Sleeping',
         y: 0,
-        end: 3
+        end: 3,
       },
       {
         key: 'Meditation',
         y: 0,
-        end: 3
+        end: 3,
       },
       {
         key: 'The fight against evil',
         y: 0,
-        end: 6
-      }
-      ,
+        end: 6,
+      },
       {
         key: 'Pending',
-        y: 23.9
-      }
+        y: 23.9,
+      },
     ];
 
     nv.addGraph(() => {
@@ -57,8 +56,8 @@ export class PieChartComponent implements OnInit {
       const outerRadius = 1.02;
 
       const pieChart = nv.models.pieChart()
-        .x((d) => d.key)
-        .y((d) => d.y)
+        .x(d => d.key)
+        .y(d => d.y)
         .showLabels(false)
         .donut(true)
         .growOnHover(true)
@@ -70,7 +69,7 @@ export class PieChartComponent implements OnInit {
             { inner: innerRadius, outer: outerRadius },
             { inner: innerRadius, outer: outerRadius },
             { inner: innerRadius, outer: outerRadius },
-            { inner: innerRadius, outer: outerRadius }
+            { inner: innerRadius, outer: outerRadius },
         ])
         .showLegend(false)
         .title('0 hours')
@@ -81,7 +80,7 @@ export class PieChartComponent implements OnInit {
         .headerEnabled(false)
         .contentGenerator((d) => {
           if (d === null) {
-              return '';
+            return '';
           }
           d3.selectAll('.nvtooltip').classed('mdl-tooltip', true);
           return `${d.data.y} hours`;
@@ -97,27 +96,31 @@ export class PieChartComponent implements OnInit {
 
       let h = 0;
       let i = 0;
-      const timer = setInterval((_data) => {
-        if (i < _data.length - 1) {
-          if (_data[i].y < _data[i].end) {
-            _data[i].y++;
-            _data[_data.length - 1].y--;
-            pieChart.title(`${h + 1} hours`);
-            h++;
+      const timer = setInterval(
+        (d) => {
+          if (i < d.length - 1) {
+            if (d[i].y < d[i].end) {
+              d[i].y += 1;
+              d[d.length - 1].y -= 1;
+              pieChart.title(`${h + 1} hours`);
+              h += 1;
+            } else {
+              i += 1;
+            }
           } else {
-            i++;
+            d.splice(d.length - 1, 1);
+            clearInterval(timer);
+            return;
           }
-        } else {
-          _data.splice(_data.length - 1, 1);
-          clearInterval(timer);
-          return;
-        }
-        if (container[0][0]) {
-          pieChart.update();
-        } else {
-          clearInterval(timer);
-        }
-      }, 70, data);
+          if (container[0][0]) {
+            pieChart.update();
+          } else {
+            clearInterval(timer);
+          }
+        },
+        70,
+        data,
+      );
 
       d3.select('.pie-chart__container .nv-pie .nv-pie')
         .append('image')
@@ -139,11 +142,11 @@ export class PieChartComponent implements OnInit {
 
       legend.append('div')
         .attr('class', 'legend__mark pull-left')
-        .style('background-color', (d) => color(d.key).toString());
+        .style('background-color', d => color(d.key).toString());
 
       legend.append('div')
         .attr('class', 'legend__text')
-        .text((d) => d.key);
+        .text(d => d.key);
 
       return pieChart;
     });

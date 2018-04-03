@@ -64,7 +64,7 @@
 
           .mdl-checkbox__tick-outline {
             background-color: unquote("rgb(#{$color-primary})");
-            background-image: url("/assets/images/tick_dark.svg?embed");
+            background-image: url("#{$image-path}/tick_dark.svg?embed");
           }
         }
       }

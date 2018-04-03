@@ -5,20 +5,20 @@
   class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp messages-dropdown"
   for="inbox">
   <li class="mdl-list__item">
-    You have {{messages.length}} new messages!
+    You have {{ messages.length }} new messages!
   </li>
   <li *ngFor="let item of messages" class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top">
     <span class="mdl-list__item-primary-content">
       <span class="mdl-list__item-avatar"
             ngClass="background-color--{{item.color}}">
-        <span class="text">{{item.icon}}</span>
+        <span class="text">{{ item.icon }}</span>
       </span>
-      <span>{{item.name}}</span>
+      <span>{{ item.name }}</span>
       <span
-        class="mdl-list__item-sub-title">{{item.type}}</span>
+        class="mdl-list__item-sub-title">{{ item.type }}</span>
     </span>
     <span class="mdl-list__item-secondary-content">
-      <span class="label label--transparent">{{item.time}}</span>
+      <span class="label label--transparent">{{ item.time }}</span>
     </span>
   </li>
   <li class="mdl-list__item list__item--border-top">

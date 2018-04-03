@@ -3,13 +3,9 @@ import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
 import { HostClassBinding } from 'helpers';
 
 @Component({
-  selector: 'base-card',
+  selector: 'base-card base-card-menu',
   styleUrls: ['./base-card.component.scss'],
   template: `<ng-content></ng-content>`,
 })
-@HostClassBinding('mdl-card mdl-shadow--2dp', true)
-export class BaseCardComponent {
-  constructor(
-    private viewContainerRef: ViewContainerRef,
-  ) { }
-}
+@HostClassBinding('mdl-card__menu')
+export class BaseCardMenuComponent { }

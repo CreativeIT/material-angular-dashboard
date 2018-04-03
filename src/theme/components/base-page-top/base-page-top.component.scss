@@ -21,7 +21,7 @@
         .mdl-list__item-avatar {
           height: $account-dropdown-avatar-size;
           width: $account-dropdown-avatar-size;
-          background: url("/assets/images/Icon.png");
+          background: url("#{$image-path}/Icon.png");
           background-size: cover;
         }
         .mdl-list__item-sub-title {

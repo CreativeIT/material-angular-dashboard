@@ -42,7 +42,7 @@
   .map__target-picture {
     height: 100%;
     transition: opacity 0.3s;
-    background: url("/assets/images/map_target_images_sprite.png") no-repeat top left;
+    background: url("#{$image-path}/map_target_images_sprite.png") no-repeat top left;
     background-size: cover;
   }
   .map__target-info, .map__target-picture {

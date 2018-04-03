@@ -51,7 +51,7 @@ export class TodoListComponent implements AfterViewInit {
   }
 
   public deleteItem(item): void {
-    this.items = this.items.filter((i) => i !== item);
+    this.items = this.items.filter(i => i !== item);
   }
 
   public createItem(): void {

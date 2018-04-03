@@ -9,36 +9,36 @@ export class BaseMsgMenuService {
         type: 'Birthday Party',
         time: 'just now',
         icon: 'A',
-        color: 'primary'
+        color: 'primary',
       },
       {
         name: 'Vladimir',
         type: 'Deployment',
         time: 'just now',
         icon: 'V',
-        color: 'primary'
+        color: 'primary',
       },
       {
         name: 'Mike',
         type: 'No theme',
         time: '5 min',
         icon: 'M',
-        color: 'baby-blue'
+        color: 'baby-blue',
       },
       {
         name: 'Darth',
         type: 'Suggestion',
         time: '23 hours',
         icon: 'D',
-        color: 'cerulean'
+        color: 'cerulean',
       },
       {
         name: 'Don McDuket',
         type: 'NEWS',
         time: '30 Nov',
         icon: 'D',
-        color: 'mint'
-      }
+        color: 'mint',
+      },
     ];
   }
 }

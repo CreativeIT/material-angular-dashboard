@@ -1,9 +1,3 @@
-//@mixin colored-badge ($color) {
-//  &[data-badge]:after {
-//    background-color: $color;
-//  }
-//}
-
 .badge--colored-green {
   @include colored-badge($color-green);
 }

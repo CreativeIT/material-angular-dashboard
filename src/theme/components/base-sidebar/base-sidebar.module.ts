@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { BaseSidebarComponent } from './base-sidebar.component';
-import { BaseMenuItemComponent, BaseMenuLinkItemComponent, BaseSubmenuItemComponent } from './base-menu-item.component';
+import { BaseMenuItemComponent } from './base-menu-item.component';
+import { BaseMenuLinkItemComponent } from './base-menu-link-item.component';
+import { BaseSubmenuItemComponent } from './base-submenu-item.component';
 
 @NgModule({
   imports: [
@@ -20,6 +22,6 @@ import { BaseMenuItemComponent, BaseMenuLinkItemComponent, BaseSubmenuItemCompon
   ],
   exports: [
     BaseSidebarComponent,
-  ]
+  ],
 })
 export class BaseSidebarModule { }

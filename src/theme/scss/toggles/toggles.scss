@@ -1,5 +1,5 @@
 .mdl-checkbox__tick-outline {
-  -webkit-mask: url("/assets/images/tick-mask.svg");
+  -webkit-mask: url("#{$image-path}/tick-mask.svg");
 }
 
 .mdl-switch__label {

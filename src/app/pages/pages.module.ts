@@ -17,6 +17,6 @@ import { ThemeModule } from 'theme/theme.module';
     PagesComponent,
     ErrorComponent,
     LoginComponent,
-  ]
+  ],
 })
 export class PagesModule { }

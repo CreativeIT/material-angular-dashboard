@@ -16,6 +16,6 @@ import { ThemeModule } from 'theme/theme.module';
   ],
   exports: [
     LayoutComponent,
-  ]
+  ],
 })
 export class LayoutModule { }

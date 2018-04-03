@@ -28,6 +28,6 @@ import { TablesComponent } from './tables/tables.component';
     IconsComponent,
     TypographyComponent,
     TablesComponent,
-  ]
+  ],
 })
 export class UIModule { }

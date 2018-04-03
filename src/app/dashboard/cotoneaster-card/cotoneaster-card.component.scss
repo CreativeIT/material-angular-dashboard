@@ -6,7 +6,7 @@
     padding-bottom: 26px;
   }
   .mdl-card__title {
-    background: url('/assets/images/cotoneaster.jpg') center center no-repeat;
+    background: url('#{$image-path}/cotoneaster.jpg') center center no-repeat;
     background-size: cover;
     .mdl-card__title-text {
       color: $card-title-img-color;

@@ -6,7 +6,7 @@
 
 @mixin typo-list($usePreferred: true) {
   @include typo-default($usePreferred);
-  color: white;
+  color: $color-white;
   letter-spacing: 0;
 }
 
@@ -38,7 +38,7 @@
   @include typo-preferred-font($usePreferred);
   font-size: 14px;
   font-weight: 100;
-  color: white;
+  color: $color-white;
 }
 
 @mixin typo-label($usePreferred: true) {
@@ -53,7 +53,7 @@
   span:first-of-type {
     font-size: 15px;
     font-weight: 500;
-    color: white;
+    color: $color-white;
   }
 
   span {
@@ -128,7 +128,7 @@
   h2:first-of-type {
     font-size: 24px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.8); //$employer-form-color-darker;//unquote("rgb(#{$color-primary})");
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.2em;
     margin-top: 0;
     margin-bottom: 0;
@@ -137,7 +137,7 @@
   .mdl-card__subtitle {
     font-size: 13px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.2); //$employer-form-color-darker;
+    color: rgba(255, 255, 255, 0.2);
     line-height: 1.2em;
   }
 }
@@ -161,7 +161,7 @@
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
-  color: white;
+  color: $color-white;
 }
 
 @mixin colored-button ($color) {

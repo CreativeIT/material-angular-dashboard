@@ -48,19 +48,22 @@ export class LineChartComponent implements OnInit {
             const INTERVAL_3 = 11.0;
 
             if (i < INTERVAL_1) {
-              this.values.push({x: i, y: (3.43 * i * i - 6.7 * i) / 14});
+              this.values.push({ x: i, y: (3.43 * i * i - 6.7 * i) / 14 });
             } else {
               if (i < INTERVAL_2) {
-                this.values.push({x: i, y: -(i - 7.1) * (i - 7.1) / 10.26 + 2.378});
+                this.values.push({ x: i, y: -(i - 7.1) * (i - 7.1) / 10.26 + 2.378 });
               } else {
                 if (i < INTERVAL_3) {
-                  this.values.push({x: i, y: -0.4 / (i - 4.3) + 2.53});
+                  this.values.push({ x: i, y: -0.4 / (i - 4.3) + 2.53 });
                 } else {
-                  this.values.push({x: i, y: ((i - 11.4) * (i - 11.4) * (i - 11.4)) / 13 + 2.476});
+                  this.values.push({
+                    x: i,
+                    y: ((i - 11.4) * (i - 11.4) * (i - 11.4)) / 13 + 2.476,
+                  });
                 }
               }
             }
-          }
+          },
         },
         {
           values: [],
@@ -74,15 +77,15 @@ export class LineChartComponent implements OnInit {
             const INTERVAL_2 = 8.2;
 
             if (i < INTERVAL_1) {
-              this.values.push({x: i, y: (3.255 * i * i - 9.6 * i) / 16});
+              this.values.push({ x: i, y: (3.255 * i * i - 9.6 * i) / 16 });
             } else {
               if (i < INTERVAL_2) {
-                this.values.push({x: i, y: (-1.055 * (i - 8.03) * (i - 8.03) + 27) / 15});
+                this.values.push({ x: i, y: (-1.055 * (i - 8.03) * (i - 8.03) + 27) / 15 });
               } else {
-                this.values.push({x: i, y: ((i - 9) * (i - 9) * (i - 9)) / 120 + 1.805});
+                this.values.push({ x: i, y: ((i - 9) * (i - 9) * (i - 9)) / 120 + 1.805 });
               }
             }
-          }
+          },
         },
         {
           values: [],
@@ -94,16 +97,16 @@ export class LineChartComponent implements OnInit {
             const INTERVAL_2 = 10.3;
 
             if (i < INTERVAL_1) {
-              this.values.push({x: i, y: (2.255 * i * i - 9.1 * i) / 13});
+              this.values.push({ x: i, y: (2.255 * i * i - 9.1 * i) / 13 });
             } else {
               if (i < INTERVAL_2) {
-                this.values.push({x: i, y: .82 * Math.sin((i - 4.5) / 2.1)});
+                this.values.push({ x: i, y: .82 * Math.sin((i - 4.5) / 2.1) });
               } else {
-                this.values.push({x: i, y: -(i - 13) * (i - 13) * (i - 13) / 64});
+                this.values.push({ x: i, y: -(i - 13) * (i - 13) * (i - 13) / 64 });
               }
             }
-          }
-        }
+          },
+        },
       ],
     };
 
@@ -121,18 +124,18 @@ export class LineChartComponent implements OnInit {
     }
   }
 
-  private _addSvgContainer() {
+  private addSvgContainer() {
     this.svg = this.container.append('div').append('svg');
   }
 
-  private _getSvgSizes() {
+  private getSvgSizes() {
     const svgWidth = getComputedStyle(this.svg[0][0]).width;
     const svgHeight = getComputedStyle(this.svg[0][0]).height;
     this.svgWidth = svgWidth.slice(0, svgWidth.length - 2);
     this.svgHeight = +svgHeight.slice(0, svgHeight.length - 2) - this.margin;
   }
 
-  private _addAxisLabels() {
+  private addAxisLabels() {
     this.container.selectAll('svg .y-axis-label').remove();
     this.container.select('svg')
       .append('text')
@@ -148,14 +151,11 @@ export class LineChartComponent implements OnInit {
       .text(this.options.xAxis || '');
   }
 
-  private _buildBackground() {
-    this._addSvgContainer();
-    this._getSvgSizes();
+  private buildBackground() {
+    this.addSvgContainer();
+    this.getSvgSizes();
 
-    const bars = [];
-    for (let i = 0; i < this.columns; i++) {
-      bars.push(this.svgHeight);
-    }
+    const bars = Array(this.columns).fill(this.svgHeight);
 
     this.barsLayout = this.svg.append('g')
       .attr('class', 'bars')
@@ -165,12 +165,12 @@ export class LineChartComponent implements OnInit {
       .enter()
       .append('rect');
 
-    this._addAxisLabels();
+    this.addAxisLabels();
 
-    this._setBackgroundSizes();
+    this.setBackgroundSizes();
   }
 
-  private _setBackgroundSizes() {
+  private setBackgroundSizes() {
     const availableBarWidth = (this.svgWidth - 2 * this.margin) / this.columns;
     const barWidth = availableBarWidth / 2;
     this.barsLayout
@@ -187,14 +187,14 @@ export class LineChartComponent implements OnInit {
   }
 
   private drawChart() {
-    this._buildBackground();
-    this._buildLegend();
-    this._buildNvGraph();
-    this._animateGraphs();
+    this.buildBackground();
+    this.buildLegend();
+    this.buildNvGraph();
+    this.animateGraphs();
   }
 
-  private _buildNvGraph() {
-    this._tuneNvGraph();
+  private buildNvGraph() {
+    this.tuneNvGraph();
 
     nv.addGraph(() => {
       this.svg.datum(this.data)
@@ -206,9 +206,9 @@ export class LineChartComponent implements OnInit {
     });
   }
 
-  private _tuneNvGraph() {
+  private tuneNvGraph() {
     this.lineChart = nv.models.lineChart()
-      .margin({top: this.margin, right: this.margin, bottom: 0, left: this.margin})
+      .margin({ top: this.margin, right: this.margin, bottom: 0, left: this.margin })
       .useInteractiveGuideline(true)
       .xDomain([0, this.options.maxX])
       .yDomain([-1.01, 3])
@@ -229,7 +229,7 @@ export class LineChartComponent implements OnInit {
       .ticks(10);
   }
 
-  private _buildLegend() {
+  private buildLegend() {
     const legend = this.container.append('div')
       .attr('class', 'legend')
       .selectAll('.legend__item')
@@ -240,37 +240,37 @@ export class LineChartComponent implements OnInit {
 
     legend.append('div')
       .attr('class', 'legend__mark pull-left')
-      .style('background-color', (d) => d.color);
+      .style('background-color', d => d.color);
 
     legend.append('div')
       .attr('class', 'legend__text')
-      .text((d) => d.key);
+      .text(d => d.key);
   }
 
   private resizeBackground() {
-    this._getSvgSizes();
-    this._setBackgroundSizes();
+    this.getSvgSizes();
+    this.setBackgroundSizes();
   }
 
-  private _animateGraphs() {
+  private animateGraphs() {
     let i = 0;
     this.timer = setInterval(() => {
-      this._calcAllGraphs(i);
-      this._drawNextStep(i);
+      this.calcAllGraphs(i);
+      this.drawNextStep(i);
       i += this.xStep;
-      this._checkEndOfAnimation(i);
-    }, Math.round(
-      this.options.animationTime / ((this.maxX / this.xStep) / this.options.xDrawStep)
+      this.checkEndOfAnimation(i);
+    },                       Math.round(
+      this.options.animationTime / ((this.maxX / this.xStep) / this.options.xDrawStep),
     ));
   }
 
-  private _drawNextStep(i) {
+  private drawNextStep(i) {
     if (i !== 0 && i % this.drawStep === 0 || i === this.options.maxX) {
       this.lineChart.update();
     }
   }
 
-  private _checkEndOfAnimation(i) {
+  private checkEndOfAnimation(i) {
     if (i >= this.options.maxX + 1) {
       this.lineChart.duration(this.durationResizeAnimation);
       this.data.forEach((item) => {
@@ -282,7 +282,7 @@ export class LineChartComponent implements OnInit {
     }
   }
 
-  private _calcAllGraphs(i) {
-    this.data.forEach((item) => item.graphFunction(i));
+  private calcAllGraphs(i) {
+    this.data.forEach(item => item.graphFunction(i));
   }
 }

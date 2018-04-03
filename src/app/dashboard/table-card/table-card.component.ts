@@ -22,64 +22,64 @@ export class TableCardComponent {
       responsible: [
         {
           color: 'mint',
-          name: 'Alex'
+          name: 'Alex',
         },
         {
           color: 'primary',
-          name: 'Dina'
+          name: 'Dina',
         },
         {
           color: 'cerulean',
-          name: 'Misha'
-        }
+          name: 'Misha',
+        },
       ],
       email: 'Luke@skywalker.com',
       deadline: 'Jun 15',
       progress: 44,
-      isSelected: false
+      isSelected: false,
     },
     {
       project: 'Big financial app',
       responsible: [
         {
           color: 'baby-blue',
-          name: 'Vlada'
-        }
+          name: 'Vlada',
+        },
       ],
       email: 'Boss@financial.com',
       deadline: 'Mar 1',
       progress: 14,
-      isSelected: true
+      isSelected: true,
     },
     {
       project: 'New Year office decoration',
       responsible: [
         {
           color: 'primary',
-          name: 'Dina'
+          name: 'Dina',
         },
         {
           color: 'baby-blue',
-          name: 'Vlada'
-        }
+          name: 'Vlada',
+        },
       ],
       email: 'info@creativeit.io',
       deadline: 'Dec 25',
       progress: 100,
-      isSelected: false
+      isSelected: false,
     },
     {
       project: 'Don\'t worry, be happy!!!',
       responsible: [
         {
           color: 'secondary',
-          name: 'Everybody'
-        }
+          name: 'Everybody',
+        },
       ],
       email: 'Contact@happyness.com',
       deadline: 'Yesterday',
       progress: 31,
-      isSelected: false
-    }
+      isSelected: false,
+    },
   ];
 }
