@@ -19,4 +19,4 @@ import { MapComponent } from './map/map.component';
   ],
   providers: [],
 })
-export class MapsModule {}
+export class MapsModule { }

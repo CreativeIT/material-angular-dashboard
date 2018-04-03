@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './robot-card.component.html',
 })
 @HostClassBinding('robot')
-export class RobotCardComponent {}
+export class RobotCardComponent { }

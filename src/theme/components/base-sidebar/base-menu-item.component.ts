@@ -20,7 +20,8 @@ export class BaseMenuItemComponent {
 
   private navigate() {
     const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;
-    if ((layout.drawer_.getAttribute('aria-hidden') !== 'true')) {
+    // FIXME: drawer is undefined
+    if (layout.drawer_ && layout.drawer_.getAttribute('aria-hidden') !== 'true') {
       layout.toggleDrawer();
     }
   }
@@ -64,7 +65,7 @@ export class BaseMenuLinkItemComponent extends BaseMenuItemComponent { }
     </div>
   `,
 })
-@HostClassBinding(function() {
+@HostClassBinding(function () {
   return this.shown ? 'sub-navigation sub-navigation--show' : 'sub-navigation';
 })
 export class BaseSubmenuItemComponent extends BaseMenuItemComponent {

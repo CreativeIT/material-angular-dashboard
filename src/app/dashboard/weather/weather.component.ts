@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './weather.component.html',
 })
 @HostClassBinding('weather')
-export class WeatherComponent {}
+export class WeatherComponent { }

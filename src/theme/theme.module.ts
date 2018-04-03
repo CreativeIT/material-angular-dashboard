@@ -4,19 +4,18 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { BaseSidebarModule } from './components/base-sidebar/base-sidebar.module';
+import { BaseCardModule } from './components/base-card/base-card.module';
 
 import {
   BasePageTopComponent,
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
-  BaseCardComponent,
 } from './components';
 
 const BASE_COMPONENTS = [
   BasePageTopComponent,
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
-  BaseCardComponent,
 ];
 
 const BASE_DIRECTIVES = [];
@@ -40,6 +39,7 @@ const BASE_PIPES = [];
     ...BASE_DIRECTIVES,
     ...BASE_COMPONENTS,
     BaseSidebarModule,
+    BaseCardModule,
   ],
 })
-export class ThemeModule {}
+export class ThemeModule { }

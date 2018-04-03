@@ -19,4 +19,4 @@ import { EmployerFormComponent } from './employer-form/employer-form.component';
   ],
   providers: [],
 })
-export class FormsModule {}
+export class FormsModule { }

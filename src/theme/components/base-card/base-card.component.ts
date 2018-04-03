@@ -1,27 +1,67 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
 
 import { HostClassBinding } from 'helpers';
 
 @Component({
   selector: 'base-card',
   styleUrls: ['./base-card.component.scss'],
-  templateUrl: './base-card.component.html',
+  template: `<ng-content></ng-content>`,
 })
-@HostClassBinding('mdl-card mdl-shadow--2dp')
+@HostClassBinding('mdl-card mdl-shadow--2dp', true)
 export class BaseCardComponent {
-  public withActions = false;
-  public titleExpand = false;
-  public bodyExpand = false;
+  constructor(
+    private viewContainerRef: ViewContainerRef,
+  ) { }
+}
 
-  @Input('with-actions') public set setWithActions(value) {
-    this.withActions = true;
-  }
+@Component({
+  selector: 'base-card base-card-title',
+  styleUrls: ['./base-card.component.scss'],
+  template: `<ng-content></ng-content>`,
+})
+@HostClassBinding(function () {
+  return `mdl-card__title ${this._expanded ? 'mdl-card--expand' : ''}`;
+})
+export class BaseCardTitleComponent {
+  private _expanded = false;
 
-  @Input('title-expand') public set setTitleExpand(value) {
-    this.titleExpand = true;
+  @Input() set expanded(value) {
+    if (value || value === '') this._expanded = true;
   }
+}
 
-  @Input('body-expand') public set setBodyExpand(value) {
-    this.bodyExpand = true;
+@Component({
+  selector: 'base-card base-card-menu',
+  styleUrls: ['./base-card.component.scss'],
+  template: `<ng-content></ng-content>`,
+})
+@HostClassBinding('mdl-card__menu')
+export class BaseCardMenuComponent { }
+
+@Component({
+  selector: 'base-card base-card-body',
+  styleUrls: ['./base-card.component.scss'],
+  template: `<ng-content></ng-content>`,
+})
+@HostClassBinding(function () {
+  return `mdl-card__supporting-text ${this._expanded ? 'mdl-card--expand' : ''}`;
+})
+export class BaseCardBodyComponent {
+  private _expanded = false;
+
+  @Input() set expanded(value) {
+    if (value || value === '') this._expanded = true;
   }
+}
+
+@Component({
+  selector: 'base-card base-card-actions',
+  styleUrls: ['./base-card.component.scss'],
+  template: `<ng-content></ng-content>`,
+})
+@HostClassBinding('mdl-card__actions', true)
+export class BaseCardActionsComponent {
+  constructor(
+    private viewContainerRef: ViewContainerRef,
+  ) { }
 }

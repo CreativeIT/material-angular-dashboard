@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './error.component.html',
 })
 @HostClassBinding('not-found')
-export class ErrorComponent {}
+export class ErrorComponent { }

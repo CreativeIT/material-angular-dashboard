@@ -34,4 +34,4 @@ import {
     PieChartComponent,
   ],
 })
-export class DashboardModule {}
+export class DashboardModule { }

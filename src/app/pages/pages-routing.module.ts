@@ -19,4 +19,4 @@ import { LoginComponent } from '../login/login.component';
   ])],
   exports: [RouterModule],
 })
-export class PagesRoutingModule {}
+export class PagesRoutingModule { }

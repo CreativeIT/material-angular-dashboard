@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './base-page-top.component.html'
 })
 @HostClassBinding('mdl-layout__header-row')
-export class BasePageTopComponent {}
+export class BasePageTopComponent { }

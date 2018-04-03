@@ -19,4 +19,4 @@ import { ThemeModule } from 'theme/theme.module';
     LoginComponent,
   ]
 })
-export class PagesModule {}
+export class PagesModule { }

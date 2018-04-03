@@ -22,4 +22,4 @@ import { BaseMenuItemComponent, BaseMenuLinkItemComponent, BaseSubmenuItemCompon
     BaseSidebarComponent,
   ]
 })
-export class BaseSidebarModule {}
+export class BaseSidebarModule { }

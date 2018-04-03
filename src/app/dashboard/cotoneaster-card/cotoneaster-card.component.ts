@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './cotoneaster-card.component.html',
 })
 @HostClassBinding('cotoneaster')
-export class CotoneasterCardComponent {}
+export class CotoneasterCardComponent { }

@@ -127,7 +127,7 @@
     "component-selector": [
       true,
       "element",
-      ["app", "base"],
+      ["app", "base", "ui"],
       "kebab-case"
     ],
     "no-output-on-prefix": true,

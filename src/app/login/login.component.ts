@@ -7,4 +7,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: './login.component.html',
 })
 @HostClassBinding('mdl-layout mdl-js-layout color--gray is-small-screen login')
-export class LoginComponent {}
+export class LoginComponent { }

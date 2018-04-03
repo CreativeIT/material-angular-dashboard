@@ -7,4 +7,4 @@ import { UpgradeDomAfterViewInit } from 'helpers';
   template: `<app-map></app-map>`,
 })
 @UpgradeDomAfterViewInit
-export class MapsComponent {}
+export class MapsComponent { }

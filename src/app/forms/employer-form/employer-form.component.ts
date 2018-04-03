@@ -8,4 +8,4 @@ import { HostClassBinding } from 'helpers';
   templateUrl: 'employer-form.component.html',
 })
 @HostClassBinding('employer-form')
-export class EmployerFormComponent {}
+export class EmployerFormComponent { }

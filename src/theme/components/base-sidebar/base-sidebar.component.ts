@@ -9,19 +9,21 @@ import { HostClassBinding } from 'helpers';
 })
 @HostClassBinding('mdl-layout__drawer')
 export class BaseSidebarComponent {
-  private menu = [
+  // TODO: move away from theme
+  menu = [
     { name: 'Dashboard', link: '/app/dashboard', icon: 'dashboard' },
     { name: 'UI', children: [
         ...(uis => uis.map(ui => ({
           name: ui[0].toUpperCase() + ui.slice(1),
-          link: `/app/${ui}`,
+          link: `/ui/${ui}`,
         })))([
           'buttons',
           'cards',
           'colors',
-          'components',
+          'forms',
           'icons',
           'typography',
+          'tables',
         ]),
       ], icon: 'view_comfy' },
     { name: 'Account', link: '/app/forms', icon: 'person' },
