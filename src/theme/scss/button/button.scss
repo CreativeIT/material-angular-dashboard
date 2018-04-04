@@ -84,7 +84,7 @@
         &,
         &:hover {
           background-color: #3b5998;
-          color: #fff;
+          color: unquote("rgb(#{$color-white})");
         }
       }
 
@@ -109,7 +109,7 @@
         &,
         &:hover {
           background-color: #00abf1;
-          color: #fff;
+          color: unquote("rgb(#{$color-white})");
         }
       }
 
@@ -134,7 +134,7 @@
         &,
         &:hover {
           background-color: #0083be;
-          color: #fff;
+          color: unquote("rgb(#{$color-white})");
         }
       }
 
@@ -159,7 +159,7 @@
         &,
         &:hover {
           background-color: #f26798;
-          color: #fff;
+          color: unquote("rgb(#{$color-white})");
         }
       }
 
@@ -184,7 +184,7 @@
         &,
         &:hover {
           background-color: #4176fb;
-          color: #fff;
+          color: unquote("rgb(#{$color-white})");
         }
       }
 

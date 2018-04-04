@@ -38,7 +38,7 @@ $button-secondary-color-disabled: unquote("rgba(#{$color-white}, 0.3)");
 // FAB colors and sizes.
 $button-fab-color-alt: unquote("rgb(#{$color-secondary})");
 
-$button-fab-text-color-alt: #fff;
+$button-fab-text-color-alt: unquote("rgb(#{$color-white})");
 $button-fab-hover-color-alt: #ff4c4c;
 $button-fab-active-color-alt: #f23d3d;
 // Icon button colors and sizes.

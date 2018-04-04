@@ -36,13 +36,13 @@
   .nvd3 {
     text {
       font: normal 12px Arial, sans-serif;
-      fill: #fff !important;
+      fill: unquote("rgb(#{$color-white})") !important;
     }
   }
 
   .chart1__container .nv-label {
     text {
-      fill: $color-white !important;
+      fill: unquote("rgb(#{$color-white})") !important;
     }
   }
 
@@ -60,13 +60,13 @@
 
     .nv-axis {
       text {
-        fill: #fff;
+        fill: unquote("rgb(#{$color-white})");
         opacity: 0.5 !important;
       }
 
       .domain,
       .nv-zeroLine {
-        stroke: #fff;
+        stroke: unquote("rgb(#{$color-white})");
         opacity: 0.5;
       }
 
@@ -91,7 +91,7 @@
 
       .nv-bar {
         text {
-          fill: #fff !important;
+          fill: unquote("rgb(#{$color-white})") !important;
           opacity: 0.9;
         }
       }

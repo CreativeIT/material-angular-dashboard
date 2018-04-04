@@ -24,7 +24,7 @@
       @include typo-weather-description;
 
       position: relative;
-      color: $color-white;
+      color: unquote("rgb(#{$color-white})");
 
       &::before {
         width: 35px;

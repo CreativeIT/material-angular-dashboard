@@ -8,7 +8,7 @@
 @mixin typo-list($usePreferred: true) {
   @include typo-default($usePreferred);
 
-  color: $color-white;
+  color: unquote("rgb(#{$color-white})");
   letter-spacing: 0;
 }
 
@@ -43,7 +43,7 @@
 
   font-size: 14px;
   font-weight: 100;
-  color: $color-white;
+  color: unquote("rgb(#{$color-white})");
 }
 
 @mixin typo-label($usePreferred: true) {
@@ -67,7 +67,7 @@
   span:first-of-type {
     font-size: 15px;
     font-weight: 500;
-    color: $color-white;
+    color: unquote("rgb(#{$color-white})");
   }
 }
 
@@ -181,7 +181,7 @@
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
-  color: $color-white;
+  color: unquote("rgb(#{$color-white})");
 }
 
 @mixin colored-button ($color) {
@@ -189,7 +189,7 @@
     &,
     &:hover {
       background-color: $color;
-      color: #fff;
+      color: unquote("rgb(#{$color-white})");
     }
   }
 

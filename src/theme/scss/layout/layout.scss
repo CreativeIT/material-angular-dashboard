@@ -28,7 +28,7 @@ main {
     letter-spacing: 1px;
   }
 
-  & .mdl-navigation {
+  .mdl-navigation {
     flex-grow: 1;
     padding-top: 48px;
     padding-bottom: 8px;
@@ -39,7 +39,7 @@ main {
       margin: 8px 0;
     }
 
-    & .mdl-navigation__link {
+    .mdl-navigation__link {
       @include typo-layout-navigation-link;
 
       padding: 12px 0;
@@ -70,7 +70,7 @@ main {
     .sub-navigation {
       cursor: pointer;
 
-      & .mdl-navigation__link {
+      .mdl-navigation__link {
         i:last-child {
           margin: 0 16px 0 0;
           transition: transform 0.3s;
@@ -83,7 +83,7 @@ main {
           display: block;
         }
 
-        & .mdl-navigation__link {
+        .mdl-navigation__link {
           i:last-child {
             transform: rotate(180deg);
           }
@@ -94,7 +94,7 @@ main {
         display: none;
         padding: 5px 0;
 
-        & .mdl-navigation__link {
+        .mdl-navigation__link {
           padding-left: 72px;
 
           &--current {
