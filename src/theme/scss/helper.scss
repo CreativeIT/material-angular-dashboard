@@ -85,41 +85,49 @@
 }
 
 .mdl-textfield {
-  input, textarea {
+  input,
+  textarea {
     @include typo-employer-form-inputs();
-  }
-
-  &.is-focused {
-    &.getmdl-select {
-      input, textarea {
-        font-weight: 300;
-      }
-    }
-
-    input, textarea {
-      font-weight: 400;
-    }
   }
 
   &.is-disabled input {
     border-bottom-width: 2px !important;
   }
-  &:not(.is-focused), &:not(.mdl-textfield--floating-label) {
+
+  &.is-focused {
+    input,
+    textarea {
+      font-weight: 400;
+    }
+
+    &.getmdl-select {
+      input,
+      textarea {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &:not(.is-focused),
+  &:not(.mdl-textfield--floating-label) {
     .mdl-textfield__label {
       color: $color-smoke !important;
     }
   }
+
   &:not(.is-focused):not(.is-dirty) {
     .mdl-textfield__label {
       font-size: 14px !important;
     }
   }
 }
+
 .mdl-grid:not(.ui-typography) :not(.robot):not(.todo) > .mdl-card {
   height: 100%;
 }
-h5{
-  &.mdl-card__title-text  {
+
+h5 {
+  &.mdl-card__title-text {
     font-size: 20px;
   }
 }

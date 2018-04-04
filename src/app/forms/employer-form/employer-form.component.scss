@@ -31,13 +31,16 @@
     padding-right: $employer-form-horizontal-padding;
     padding-bottom: 0;
     display: block;
+
     @include typo-employer-form-header();
   }
 
   button.mdl-button.mdl-button--colored {
     width: 68px;
     height: 32px;
+
     @include typo-employer-form-button();
+
     background-color: unquote("rgb(#{$color-primary})");
 
     &:disabled {
@@ -52,7 +55,6 @@
   }
 
   .form__action {
-
     .mdl-checkbox {
       .mdl-ripple {
         background: unquote("rgb(#{$color-primary})");

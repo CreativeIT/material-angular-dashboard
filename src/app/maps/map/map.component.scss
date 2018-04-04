@@ -3,28 +3,39 @@
 .map {
   min-height: 630px;
   position: relative;
+
   .map__window {
     background: $card-title-background-color;
+
     .gm-style {
-      & > div:nth-of-type(2), & > .gmnoprint:not(.gm-bundled-control), & > .gm-style-cc {
+      & > div:nth-of-type(2),
+      & > .gmnoprint:not(.gm-bundled-control),
+      & > .gm-style-cc {
         display: none;
       }
     }
   }
+
   .mdl-card__supporting-text {
     min-height: 185px;
   }
+
   h5 {
     margin-top: 0;
   }
+
   div > a {
     font-size: 14px;
   }
-  .map__target-location, .map__target-opening-hours {
+
+  .map__target-location,
+  .map__target-opening-hours {
     margin-bottom: 10px;
+
     & > * {
       vertical-align: middle;
     }
+
     .material-icons {
       color: unquote("rgb(#{$color-primary})");
       margin-top: -2px;
@@ -32,6 +43,7 @@
       font-size: 20px;
     }
   }
+
   .map__target-image {
     background: $card-title-background-color;
     border-radius: 50%;
@@ -39,15 +51,19 @@
     height: 170px;
     margin: 0 10px 5px 15px;
   }
+
   .map__target-picture {
     height: 100%;
     transition: opacity 0.3s;
     background: url("#{$image-path}/map_target_images_sprite.png") no-repeat top left;
     background-size: cover;
   }
-  .map__target-info, .map__target-picture {
+
+  .map__target-info,
+  .map__target-picture {
     opacity: 1;
     transition: opacity 0.2s;
+
     &--hide {
       opacity: 0;
     }

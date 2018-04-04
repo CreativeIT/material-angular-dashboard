@@ -1,4 +1,5 @@
 @import "~material-design-lite/src/color-definitions";
+
 /* ==========  IMAGES  ========== */
 $image-path: '/assets/images';
 $checkbox-image-path: $image-path;
@@ -37,7 +38,7 @@ $button-secondary-color-disabled: unquote("rgba(#{$color-white}, 0.3)");
 // FAB colors and sizes.
 $button-fab-color-alt: unquote("rgb(#{$color-secondary})");
 
-$button-fab-text-color-alt: #ffffff;
+$button-fab-text-color-alt: #fff;
 $button-fab-hover-color-alt: #ff4c4c;
 $button-fab-active-color-alt: #f23d3d;
 // Icon button colors and sizes.
@@ -155,7 +156,6 @@ $switch-off-thumb-color: unquote("rgb(#{$palette-grey-500})");
 
 /* SPINNER */
 
-
 // Amount of circle the arc takes up.
 // Time it takes to expand and contract arc.
 // How much the start location of the arc should rotate each time.
@@ -179,13 +179,16 @@ $layout-drawer-narrow: 236px;
 $layout-header-mobile-indent: 8px;
 $layout-header-desktop-indent: 20px;
 $layout-screen-size-threshold: 1440px;
+
 /* ICON */
 
 /* ICON TOGGLE */
 
 /* FOOTER */
-/*mega-footer*/
-/*mini-footer*/
+
+/* mega-footer */
+
+/* mini-footer */
 
 /* CHECKBOX */
 $checkbox-button-size: 18px;
@@ -193,6 +196,7 @@ $checkbox-label-height: 24px;
 $checkbox-padding: 8px;
 
 /* CARD */
+
 /* Card dimensions */
 $card-height: auto;
 $card-width: auto;

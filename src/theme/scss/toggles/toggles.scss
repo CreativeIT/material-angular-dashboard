@@ -57,7 +57,6 @@
   @include colored-radio($color-green);
 }
 
-
 //SWITCHES
 .switch--colored-red {
   @include colored-switch($color-red);
@@ -87,18 +86,23 @@
 .icon-toggle--colored-light-blue {
   @include colored-icon-toggle($color-light-blue);
 }
+
 .icon-toggle--colored-teal {
   @include colored-icon-toggle($color-teal);
 }
+
 .icon-toggle--colored-orange {
   @include colored-icon-toggle($color-orange);
 }
+
 .icon-toggle--colored-purple {
   @include colored-icon-toggle($color-purple);
 }
+
 .icon-toggle--colored-red {
   @include colored-icon-toggle($color-red);
 }
+
 .icon-toggle--colored-green {
   @include colored-icon-toggle($color-green);
 }

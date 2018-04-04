@@ -6,13 +6,15 @@
   .mdl-cell {
     margin: 0;
     padding-right: $row-col-padding;
-    &.mdl-textfield.is-focused .mdl-textfield__label:after {
+
+    &.mdl-textfield.is-focused .mdl-textfield__label::after {
       width: calc(100% - #{$row-col-padding});
     }
 
     &:last-of-type {
       padding-right: 0;
-      &.mdl-textfield.is-focused .mdl-textfield__label:after {
+
+      &.mdl-textfield.is-focused .mdl-textfield__label::after {
         width: 100%;
       }
     }
@@ -70,6 +72,7 @@
 .form__article {
   h3 {
     @include typo-employer-form-topic();
+
     margin-top: 4px;
     margin-bottom: 20px;
   }
@@ -83,10 +86,12 @@
 
   .mdl-checkbox {
     width: auto;
+
     .mdl-checkbox__label {
       @include typo-employer-form-inputs();
     }
   }
+
   .mdl-button {
     padding: 0;
   }

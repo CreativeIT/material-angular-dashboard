@@ -3,21 +3,26 @@
   .mdl-button {
     font-weight: 500;
   }
+
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 14px;
+
   .mdl-card__login.mdl-card {
     width: 450px;
     min-height: 500px;
     margin: auto;
+
     .mdl-card__supporting-text {
       min-height: inherit;
       width: 100%;
       padding: 32px 24px;
       box-sizing: border-box;
+
       .mdl-card__title-text {
         font-size: 17px;
         font-weight: bold;
       }
+
       .login-name {
         font-size: 24px;
         display: block;
@@ -28,21 +33,25 @@
         padding: 12px 0;
       }
 
-      .login-link, .login-link * {
+      .login-link,
+      .login-link * {
         display: inline-block;
         font-size: 14px;
         font-weight: inherit;
-        color: #dddddd;
+        color: #ddd;
       }
+
       .underlined {
         display: inline-block;
         border-bottom: 1px solid $color-light-blue;
       }
+
       .checkbox--inline {
         display: inline;
         padding-top: 4px;
         padding-left: 35px;
       }
+
       .submit-cell {
         display: flex;
       }

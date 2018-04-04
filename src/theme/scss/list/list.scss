@@ -1,8 +1,10 @@
 .mdl-list {
   margin: 0;
+
   .mdl-list__item {
     @include typo-list;
   }
+
   .list__item--border-top {
     background-clip: padding-box;
     border-top: $list-item-border;
@@ -16,6 +18,7 @@
 
   .mdl-list__item--two-line {
     height: auto;
+
     .mdl-list__item-primary-content {
       height: auto;
     }

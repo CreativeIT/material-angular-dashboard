@@ -19,9 +19,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "lint": "ng lint",
-    "lint:fix": "ng lint --fix"
+    "tlint": "ng lint",
+    "tlint:fix": "ng lint --fix",
+    "slint": "stylelint --syntax scss ./**/*.scss",
+    "slint:fix": "stylelint --syntax scss --fix ./**/*.scss",
+    "lint": "ng lint && stylelint --syntax scss ./**/*.scss"
   },
+  "pre-commit": "lint",
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -51,6 +55,11 @@
     "@types/nvd3": "^1.8.38",
     "codelyzer": "^4.0.1",
     "node-sass": "^4.7.2",
+    "pre-commit": "^1.2.2",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.0.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
     "tslint-angular": "^1.1.1",

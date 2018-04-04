@@ -6,43 +6,51 @@
   }
 }
 
-/*account-dropdown*/
+/* account-dropdown */
 .account-dropdown {
   .mdl-list__item {
     font-size: 14px;
+
     &:first-child {
       font-size: 16px;
       padding-top: $list-min-padding/2;
       padding-bottom: $list-min-padding/2;
       height: $account-dropdown-avatar-size + $list-min-padding;
+
       .mdl-list__item-primary-content {
         height: $account-dropdown-avatar-size;
         line-height: 28px;
+
         .mdl-list__item-avatar {
           height: $account-dropdown-avatar-size;
           width: $account-dropdown-avatar-size;
           background: url("#{$image-path}/Icon.png");
           background-size: cover;
         }
+
         .mdl-list__item-sub-title {
           font-weight: 300;
         }
       }
     }
+
     &:hover .mdl-list__item-icon {
       color: $list-icon-hover-color;
     }
   }
+
   .list__item--border-top {
     margin-top: 8px;
     padding-top: 8px;
   }
 }
 
-/*settings-dropdown*/
+/* settings-dropdown */
 .settings-dropdown {
   width: $settings_dropdown_width;
-  .mdl-menu__item, a {
+
+  .mdl-menu__item,
+  a {
     @include typo-dropdown-menu-li;
   }
 }
