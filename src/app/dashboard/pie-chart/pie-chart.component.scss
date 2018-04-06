@@ -34,7 +34,7 @@
 
 .chart1__container .nv-label {
   text {
-    fill: unquote("rgb(#{$color-white})") !important;
+    fill: $color-white !important;
   }
 }
 

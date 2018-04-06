@@ -1,3 +1,5 @@
+@import '~theme/helpers';
+
 .mdl-layout {
   background: $layout-drawer-bg-color;
   overflow: hidden;
@@ -35,7 +37,7 @@ main {
     bottom: 0;
 
     hr {
-      border-top: 1px solid unquote("rgba(#{$color-white}, 0.1)");
+      border-top: 1px solid rgba($color-white, 0.1);
       margin: 8px 0;
     }
 

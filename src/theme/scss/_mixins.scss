@@ -8,7 +8,7 @@
 @mixin typo-list($usePreferred: true) {
   @include typo-default($usePreferred);
 
-  color: unquote("rgb(#{$color-white})");
+  color: $color-white;
   letter-spacing: 0;
 }
 
@@ -43,7 +43,7 @@
 
   font-size: 14px;
   font-weight: 100;
-  color: unquote("rgb(#{$color-white})");
+  color: $color-white;
 }
 
 @mixin typo-label($usePreferred: true) {
@@ -67,7 +67,7 @@
   span:first-of-type {
     font-size: 15px;
     font-weight: 500;
-    color: unquote("rgb(#{$color-white})");
+    color: $color-white;
   }
 }
 
@@ -94,7 +94,7 @@
 @mixin typo-piechart-title($usePreferred: true) {
   @include typo-preferred-font($usePreferred);
 
-  fill: unquote("rgb(#{$color-white})");
+  fill: $color-white;
   font-weight: 300;
 }
 
@@ -103,7 +103,7 @@
 
   font-weight: 300;
   font-size: 16px;
-  color: unquote("rgb(#{$color-white})");
+  color: $color-white;
 }
 
 @mixin typo-linechart-axis-label($usePreferred: true) {
@@ -181,7 +181,7 @@
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
-  color: unquote("rgb(#{$color-white})");
+  color: $color-white;
 }
 
 @mixin colored-button ($color) {
@@ -189,7 +189,7 @@
     &,
     &:hover {
       background-color: $color;
-      color: unquote("rgb(#{$color-white})");
+      color: $color-white;
     }
   }
 

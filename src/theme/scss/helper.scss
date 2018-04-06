@@ -11,43 +11,43 @@
 }
 
 .background-color--primary {
-  background-color: unquote("rgba(#{$color-primary}, 0.9)");
+  background-color: rgba($color-primary, 0.9);
 }
 
 .background-color--secondary {
-  background-color: unquote("rgba(#{$color-secondary}, 0.9)");
+  background-color: rgba($color-secondary, 0.9);
 }
 
 .background-color--baby-blue {
-  background-color: unquote("rgba(#{$color-baby-blue}, 0.9)");
+  background-color: rgba($color-baby-blue, 0.9);
 }
 
 .background-color--cerulean {
-  background-color: unquote("rgba(#{$color-cerulean}, 0.9)");
+  background-color: rgba($color-cerulean, 0.9);
 }
 
 .background-color--mint {
-  background-color: unquote("rgba(#{$color-mint}, 0.9)");
+  background-color: rgba($color-mint, 0.9);
 }
 
 .text-color--primary {
-  color: unquote("rgba(#{$color-primary}, 0.8)") !important;
+  color: rgba($color-primary, 0.8) !important;
 }
 
 .text-color--secondary {
-  color: unquote("rgba(#{$color-secondary}, 0.8)") !important;
+  color: rgba($color-secondary, 0.8) !important;
 }
 
 .text-color--baby-blue {
-  color: unquote("rgba(#{$color-baby-blue}, 0.8)") !important;
+  color: rgba($color-baby-blue, 0.8) !important;
 }
 
 .text-color--cerulean {
-  color: unquote("rgba(#{$color-cerulean}, 0.8)") !important;
+  color: rgba($color-cerulean, 0.8) !important;
 }
 
 .text-color--mint {
-  color: unquote("rgba(#{$color-mint}, 0.8)") !important;
+  color: rgba($color-mint, 0.8) !important;
 }
 
 .text-color--gray {
@@ -55,7 +55,7 @@
 }
 
 .text-color--white {
-  color: unquote("rgb(#{$color-white})") !important;
+  color: $color-white !important;
 }
 
 .text-color--smooth-gray {
@@ -64,11 +64,11 @@
 
 .getmdl-select {
   .mdl-icon-toggle__label {
-    color: unquote("rgb(#{$color-white})");
+    color: $color-white;
   }
 
   &.is-focused i.material-icons {
-    color: unquote("rgb(#{$color-primary})");
+    color: $color-primary;
   }
 
   .mdl-menu__container {

@@ -5,40 +5,32 @@ $image-path: '/assets/images';
 $checkbox-image-path: $image-path;
 
 /* ==========  Color & Themes  ========== */
-$color-primary: 0, 188, 212;
-$color-secondary: 255, 82, 82;
-$color-baby-blue: 116, 199, 209;
-$color-cerulean: 80, 150, 215;
-$color-mint: 96, 196, 150;
-$color-white: 255, 255, 255;
-$color-black: 0, 0, 0;
-
 @import "./palette";
 
 $background-color: $color-gray;
 $background-color-header: $color-dark-gray;
 
 /* ==========  Typography  ========== */
-$text-color-primary: unquote("rgba(#{$color-white}, 0.87)") !default;
+$text-color-primary: rgba($color-white, 0.87) !default;
 
 /* ==========  Components  ========== */
 
 /* ==========  Standard Buttons  ========== */
 
 // Default button colors.
-$button-secondary-color: unquote("rgb(#{$color-white})");
+$button-secondary-color: $color-white;
 // Colored button colors.
-$button-primary-color-alt: unquote("rgb(#{$color-secondary})");
+$button-primary-color-alt: $color-secondary;
 // Ripple color for colored raised buttons.
 // Disabled button colors.
 $button-primary-color-disabled: #6b6b6b;
 //background-color:
-$button-secondary-color-disabled: unquote("rgba(#{$color-white}, 0.3)");
+$button-secondary-color-disabled: rgba($color-white, 0.3);
 //color:
 // FAB colors and sizes.
-$button-fab-color-alt: unquote("rgb(#{$color-secondary})");
+$button-fab-color-alt: $color-secondary;
 
-$button-fab-text-color-alt: unquote("rgb(#{$color-white})");
+$button-fab-text-color-alt: $color-white;
 $button-fab-hover-color-alt: #ff4c4c;
 $button-fab-active-color-alt: #f23d3d;
 // Icon button colors and sizes.
@@ -55,83 +47,83 @@ $button-fab-active-color-alt: #f23d3d;
 $layout-drawer-width: 236px;
 $layout-drawer-bg-color: #202020;
 $layout-nav-color: #202020;
-$layout-drawer-navigation-link-active-background: unquote("rgba(#{$color-black}, 0.25)");
-$layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary})");
-$layout-nav-color: unquote("rgba(#{$color-black}, 0.25)");
-$layout-drawer-navigation-link-icon-color: unquote("rgba(#{$color-white}, 0.56)");
-$layout-drawer-header-color: unquote("rgb(#{$color-white})");
-$layout-drawer-header-bg-color: unquote("rgba(#{$color-black},0.85)");
+$layout-drawer-navigation-link-active-background: rgba($color-black, 0.25);
+$layout-drawer-navigation-link-active-color: $color-primary;
+$layout-nav-color: rgba($color-black, 0.25);
+$layout-drawer-navigation-link-icon-color: rgba($color-white, 0.56);
+$layout-drawer-header-color: $color-white;
+$layout-drawer-header-bg-color: rgba($color-black, 0.85);
 
 // Header
-$layout-header-text-color: unquote("rgb(#{$color-primary})");
+$layout-header-text-color: $color-primary;
 $layout-header-bg-color: $background-color-header;
-$layout-header-name-color: unquote("rgba(#{$color-white}, 0.5)");
-$layout-header-icon-hover-color: unquote("rgba(#{$color-black}, 0.3)");
+$layout-header-name-color: rgba($color-white, 0.5);
+$layout-header-icon-hover-color: rgba($color-black, 0.3);
 
 // Tabs
 
 /* ==========  Content Tabs  ========== */
 
 /* ==========  Checkboxes  ========== */
-$checkbox-off-color: unquote("rgb(#{$color-white})");
-$checkbox-color: unquote("rgb(#{$color-secondary})");
+$checkbox-off-color: $color-white;
+$checkbox-color: $color-secondary;
 
 /* ==========  Switches  ========== */
 
 /* ==========  Spinner  ========== */
 
 /* ==========  Text fields  ========== */
-$todo-input-text-label-color: unquote("rgba(#{$color-white}, 0.2)");
+$todo-input-text-label-color: rgba($color-white, 0.2);
 
-$input-text-highlight-color: unquote("rgb(#{$color-primary})");
+$input-text-highlight-color: $color-primary;
 $input-text-bottom-border-color: rgba(255, 255, 255, 0.2);
 $input-text-disabled-text-color: rgba(255, 255, 255, 0.6);
 
 //placeholder color
-$todo-input-text-highlight-color: unquote("rgba(#{$color-white}, 0.7)");
+$todo-input-text-highlight-color: rgba($color-white, 0.7);
 
 //bottom line color
 
 /* ==========  Card  ========== */
 $card-background-color: $background-color;
-$card-text-color: unquote("rgba(#{$color-white}, 0.8)");
-$card-supporting-text-text-color: unquote("rgba(#{$color-white}, 0.8)");
-$card-subtitle-color: unquote("rgba(#{$color-white}, 0.5)");
-$card-border-color: unquote("rgba(#{$color-white},0.05)");
+$card-text-color: rgba($color-white, 0.8);
+$card-supporting-text-text-color: rgba($color-white, 0.8);
+$card-subtitle-color: rgba($color-white, 0.5);
+$card-border-color: rgba($color-white, 0.05);
 
-$card-title-background-color: unquote("rgba(#{$color-black}, 0.3)");
-$card-actions-background-color: unquote("rgba(#{$color-white},0.05)");
-$card-text-color: unquote("rgba(#{$color-white}, 0.8)");
-$card-link-color: unquote("rgb(#{$color-primary})");
-$card-href-color: unquote("rgb(#{$color-primary})");
+$card-title-background-color: rgba($color-black, 0.3);
+$card-actions-background-color: rgba($color-white, 0.05);
+$card-text-color: rgba($color-white, 0.8);
+$card-link-color: $color-primary;
+$card-href-color: $color-primary;
 
-$card-title-img-color: unquote("rgb(#{$color-white})");
-$card-deg-color: unquote("rgba(#{$color-white}, 0.9)");
+$card-title-img-color: $color-white;
+$card-deg-color: rgba($color-white, 0.9);
 
 /* ==========  Sliders ========== */
 
-$range-bg-color: unquote("rgba(#{$color-white}, 0.45)");
-$range-color: unquote("rgb(#{$color-secondary})");
+$range-bg-color: rgba($color-white, 0.45);
+$range-color: $color-secondary;
 
 /* ========== Progress ========== */
-$progress-main-color: unquote("rgb(#{$color-secondary})");
-$progress-secondary-color: unquote("rgba(#{$color-white}, 0.4)");
+$progress-main-color: $color-secondary;
+$progress-secondary-color: rgba($color-white, 0.4);
 
 /* ==========  List ========== */
-$list-main-text-text-color: unquote("rgb(#{$color-white})");
-$list-supporting-text-text-color: unquote("rgba(#{$color-white}, 0.54)");
-$list-icon-color: unquote("rgba(#{$color-white}, 0.8)");
-$list-icon-hover-color: unquote("rgb(#{$color-primary})");
+$list-main-text-text-color: $color-white;
+$list-supporting-text-text-color: rgba($color-white, 0.54);
+$list-icon-color: rgba($color-white, 0.8);
+$list-icon-hover-color: $color-primary;
 
-$list-border-color: unquote("rgba(#{$color-white},0.1)");
+$list-border-color: rgba($color-white, 0.1);
 $list-item-border: 1px solid $list-border-color;
 
 /* ==========  Item ========== */
 
 // Default Item Colors
-$default-item-focus-bg-color: unquote("rgba(#{$color-black}, 0.15)");
-$default-item-active-bg-color: unquote("rgba(#{$color-black}, 0.15)");
-$default-item-hover-bg-color: unquote("rgba(#{$color-black}, 0.2)");
+$default-item-focus-bg-color: rgba($color-black, 0.15);
+$default-item-active-bg-color: rgba($color-black, 0.15);
+$default-item-hover-bg-color: rgba($color-black, 0.2);
 
 // Disabled Button Colors
 
@@ -139,10 +131,10 @@ $default-item-hover-bg-color: unquote("rgba(#{$color-black}, 0.2)");
 $default-dropdown-bg-color: $background-color;
 
 $dropdown-menu-width: 310px;
-$dropdown-menu-header-font-color: unquote("rgba(#{$color-white}, 0.8)");
+$dropdown-menu-header-font-color: rgba($color-white, 0.8);
 $settings_dropdown_width: 135px;
 $account-dropdown-avatar-size: 48px;
-$messages-dropdown-label-text-color: unquote("rgba(#{$color-white}, 0.5)");
+$messages-dropdown-label-text-color: rgba($color-white, 0.5);
 
 /* ==========  Tooltips  ========== */
 $tooltip-background-color: #353535;
@@ -161,8 +153,8 @@ $switch-off-thumb-color: unquote("rgb(#{$palette-grey-500})");
 // How much the start location of the arc should rotate each time.
 
 /* RADIO */
-$radio-off-color: unquote("rgba(#{$color-white}, 0.8)");
-$radio-color: unquote("rgba(#{$color-primary}, 0.8)");
+$radio-off-color: rgba($color-white, 0.8);
+$radio-color: rgba($color-primary, 0.8);
 
 /* MENU */
 
@@ -214,8 +206,8 @@ $button-font-weigth: 400;
 /* PROGRESS */
 
 /* BADGE */
-$badge-background: unquote("rgb(#{$color-primary})");
-$badge-color: unquote("rgb(#{$color-white})");
+$badge-background: $color-primary;
+$badge-color: $color-white;
 
 /* SHADOWS */
 
@@ -234,10 +226,10 @@ $phone-breakpoint: 800px;
 $data-table-font-size: 16px;
 $data-table-header-font-size: 13px;
 
-$data-table-color: unquote("rgb(#{$color-white})");
-$data-table-header-color: unquote("rgb(#{$color-white})");
-$data-table-divider-color: unquote("rgba(#{$color-white},0.05)");
-$data-table-hover-color: unquote("rgba(#{$color-black}, 0.2)");
+$data-table-color: $color-white;
+$data-table-header-color: $color-white;
+$data-table-divider-color: rgba($color-white, 0.05);
+$data-table-hover-color: rgba($color-black, 0.2);
 $data-table-selection-color: $background-color;
 
 $data-table-column-spacing: 16px;
@@ -253,8 +245,8 @@ $table-tooltip-horizontal-padding: 8px;
 
 /* Trending */
 $trending-arrow-size: 48px;
-$trending-arrow-up-color: unquote("rgb(#{$color-primary})");
-$trending-arrow-down-color: unquote("rgb(#{$color-secondary})");
+$trending-arrow-up-color: $color-primary;
+$trending-arrow-down-color: $color-secondary;
 
 /* label */
 $label-height: 12px;
@@ -265,8 +257,8 @@ $pie-chart-height: 228px;
 
 $line-chart-height: 280px;
 $line-chart-width: 100%;
-$line-chart-axis-label-color: unquote("rgba(#{$color-white},0.5)");
-$line-chart-guideline-color: unquote("rgba(#{$color-white},0.5)");
+$line-chart-axis-label-color: rgba($color-white, 0.5);
+$line-chart-guideline-color: rgba($color-white, 0.5);
 $line-chart-guideline-width: 0.5px;
 
 $legend-mark-size: 8px;
@@ -278,7 +270,7 @@ $employer-form-color-brighter: rgba(255, 255, 255, 1);
 $employer-form-color-darker: rgba(255, 255, 255, 0.6);
 $employer-form-horizontal-padding: 15px;
 
-$weather-shadow-color: unquote("rgba(#{$color-black}, 0.4)");
+$weather-shadow-color: rgba($color-black, 0.4);
 $weather-shadow-4px: 4px 4px 4px $weather-shadow-color;
 
 /* row */

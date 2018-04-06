@@ -35,7 +35,7 @@
     }
 
     .material-icons {
-      color: unquote("rgb(#{$color-primary})");
+      color: $color-primary;
       margin-top: -2px;
       margin-right: 5px;
       font-size: 20px;

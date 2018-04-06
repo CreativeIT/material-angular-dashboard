@@ -41,7 +41,7 @@
 
     @include typo-employer-form-button();
 
-    background-color: unquote("rgb(#{$color-primary})");
+    background-color: $color-primary;
 
     &:disabled {
       background-color: gray;
@@ -57,15 +57,15 @@
   .form__action {
     .mdl-checkbox {
       .mdl-ripple {
-        background: unquote("rgb(#{$color-primary})");
+        background: $color-primary;
       }
 
       &.is-checked {
         .mdl-checkbox__box-outline {
-          border-color: unquote("rgb(#{$color-primary})");
+          border-color: $color-primary;
 
           .mdl-checkbox__tick-outline {
-            background-color: unquote("rgb(#{$color-primary})");
+            background-color: $color-primary;
             background-image: url("#{$image-path}/tick_dark.svg?embed");
           }
         }
@@ -86,7 +86,7 @@
   }
 
   .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: unquote("rgb(#{$color-primary})");
+    color: $color-primary;
   }
 
   textarea {

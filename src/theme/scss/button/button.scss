@@ -84,7 +84,7 @@
         &,
         &:hover {
           background-color: #3b5998;
-          color: unquote("rgb(#{$color-white})");
+          color: $color-white;
         }
       }
 
@@ -109,7 +109,7 @@
         &,
         &:hover {
           background-color: #00abf1;
-          color: unquote("rgb(#{$color-white})");
+          color: $color-white;
         }
       }
 
@@ -134,7 +134,7 @@
         &,
         &:hover {
           background-color: #0083be;
-          color: unquote("rgb(#{$color-white})");
+          color: $color-white;
         }
       }
 
@@ -159,7 +159,7 @@
         &,
         &:hover {
           background-color: #f26798;
-          color: unquote("rgb(#{$color-white})");
+          color: $color-white;
         }
       }
 
@@ -184,7 +184,7 @@
         &,
         &:hover {
           background-color: #4176fb;
-          color: unquote("rgb(#{$color-white})");
+          color: $color-white;
         }
       }
 
@@ -201,21 +201,21 @@
   &--secondary {
     &,
     &:hover {
-      background-color: unquote("rgb(#{$color-secondary})");
+      background-color: $color-secondary;
     }
   }
 
   &--mint {
     &,
     &:hover {
-      background-color: unquote("rgb(#{$color-mint})");
+      background-color: $color-mint;
     }
   }
 
   &--cerulean {
     &,
     &:hover {
-      background-color: unquote("rgb(#{$color-cerulean})");
+      background-color: $color-cerulean;
     }
   }
 }

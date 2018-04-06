@@ -14,7 +14,7 @@
     &:nth-last-of-type(2),
     &:nth-last-of-type(3) {
       .mdl-card__title {
-        color: unquote("rgb(#{$color-white})");
+        color: $color-white;
         height: 240px;
         background: transparent no-repeat center;
         background-size: cover;
@@ -45,12 +45,12 @@
   }
 
   b {
-    color: unquote("rgb(#{$color-white})");
+    color: $color-white;
     line-height: 1.4;
   }
 
   h3 {
-    color: unquote("rgb(#{$color-white})");
+    color: $color-white;
     margin-bottom: 0;
   }
 }
