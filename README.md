@@ -16,23 +16,23 @@ The steps below will take you through cloning your own fork, installing dependen
 git clone https://github.com/CreativeIT/material-dashboard-lite.git
 ```
 
-2. Open your copied repo folder in terminal and install [npm](https://www.npmjs.com/) components with command:
+2. Open your copied repo folder in terminal and install necessary modules with command:
 
 ```bash
-npm install
+yarn install
 ```
 
 3. _(optional)_ Install [angular-cli](https://cli.angular.io/) globally to use its commands in the terminal:
 
 ```bash
-npm install -g @angular/cli
+yarn global add @angular/cli
 ```
 
 4. Now you are able to run or build project:
 
-Run `npm start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `yarn run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 # FEATURES
 
