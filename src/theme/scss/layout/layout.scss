@@ -80,18 +80,6 @@ main {
         }
       }
 
-      &--show {
-        .mdl-navigation {
-          display: block;
-        }
-
-        .mdl-navigation__link {
-          i:last-child {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
       .mdl-navigation {
         display: none;
         padding: 5px 0;
@@ -101,6 +89,18 @@ main {
 
           &--current {
             border-left: none;
+          }
+        }
+      }
+
+      &--show {
+        .mdl-navigation {
+          display: block;
+
+          .mdl-navigation__link {
+            i:last-child {
+              transform: rotate(180deg);
+            }
           }
         }
       }

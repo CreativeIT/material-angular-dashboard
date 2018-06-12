@@ -3,8 +3,8 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { BaseSidebarModule } from './components/base-sidebar/base-sidebar.module';
-import { BaseCardModule } from './components/base-card/base-card.module';
+import { BaseSidebarModule } from './components/sidebar/sidebar.module';
+import { BaseCardModule } from './components/card/card.module';
 
 import {
   BasePageTopComponent,
