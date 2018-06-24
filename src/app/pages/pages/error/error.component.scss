@@ -1,5 +1,6 @@
-// FIXME: same styles for login and error components
-.login {
+@import '~theme/helpers';
+
+.not-found {
   .mdl-button {
     font-weight: 500;
   }
@@ -21,24 +22,6 @@
       .mdl-card__title-text {
         font-size: 17px;
         font-weight: bold;
-      }
-
-      .login-name {
-        font-size: 24px;
-        display: block;
-        padding: 0 0 8px 0;
-      }
-
-      .login-link {
-        padding: 12px 0;
-      }
-
-      .login-link,
-      .login-link * {
-        display: inline-block;
-        font-size: 14px;
-        font-weight: inherit;
-        color: #ddd;
       }
 
       .underlined {

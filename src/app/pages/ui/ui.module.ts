@@ -12,6 +12,7 @@ import { FormsComponent } from './forms/forms.component';
 import { IconsComponent } from './icons/icons.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TablesComponent } from './tables/tables.component';
+import { ComponentsComponent } from './components/components.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { TablesComponent } from './tables/tables.component';
     IconsComponent,
     TypographyComponent,
     TablesComponent,
+    ComponentsComponent,
   ],
 })
 export class UIModule { }

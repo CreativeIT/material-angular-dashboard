@@ -8,6 +8,7 @@ import { FormsComponent } from './forms/forms.component';
 import { IconsComponent } from './icons/icons.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TablesComponent } from './tables/tables.component';
+import { ComponentsComponent } from './components/components.component';
 import { CommonLayoutComponent } from 'app/layouts/common-layout/common-layout.component';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { CommonLayoutComponent } from 'app/layouts/common-layout/common-layout.c
         { path: 'icons', component: IconsComponent, pathMatch: 'full' },
         { path: 'typography', component: TypographyComponent, pathMatch: 'full' },
         { path: 'tables', component: TablesComponent, pathMatch: 'full' },
+        { path: 'components', component: ComponentsComponent, pathMatch: 'full' },
       ],
     },
   ])],

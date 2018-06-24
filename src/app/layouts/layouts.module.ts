@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { CommonLayoutComponent } from './common-layout/common-layout.component';
+import { ScreenLayoutComponent } from './screen-layout/screen-layout.component';
 import { ThemeModule } from 'theme/theme.module';
 import { SidebarComponent } from 'app/components/sidebar/sidebar.component';
 
@@ -14,10 +15,12 @@ import { SidebarComponent } from 'app/components/sidebar/sidebar.component';
   ],
   declarations: [
     CommonLayoutComponent,
+    ScreenLayoutComponent,
     SidebarComponent,
   ],
   exports: [
     CommonLayoutComponent,
+    ScreenLayoutComponent,
   ],
 })
 export class LayoutsModule { }

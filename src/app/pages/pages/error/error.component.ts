@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { HostClassBinding } from 'helpers';
 
 @Component({
-  selector: 'app-error',
+  selector: 'page-error',
   styleUrls: ['./error.component.scss'],
   templateUrl: './error.component.html',
 })

@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { HostClassBinding } from 'helpers';
 
 @Component({
-  selector: 'app-login',
+  selector: 'page-login',
+  styleUrls: ['./login.component.scss'],
   templateUrl: './login.component.html',
 })
-@HostClassBinding('mdl-layout mdl-js-layout color--gray is-small-screen login')
+@HostClassBinding('login')
 export class LoginComponent { }
