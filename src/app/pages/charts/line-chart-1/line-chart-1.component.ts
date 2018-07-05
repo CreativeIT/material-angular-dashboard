@@ -3,12 +3,25 @@ import * as nv from 'nvd3';
 
 import { Component, OnInit } from '@angular/core';
 
+// TODO: remove this
+const COLORS = {
+  red: '#f44336',
+  lightBlue: '#03a9f4',
+  orange: '#ffc107',
+  amber: '#ff9800',
+  teal: '#00bcd4',
+  purple: '#7726d3',
+  green: '#00d45a',
+  rowBgColor: '#4a4a4a',
+};
+
 @Component({
-  selector: 'app-line-chart',
-  styleUrls: ['./line-chart.component.scss'],
-  templateUrl: './line-chart.component.html',
+  selector: 'app-line-chart-1',
+  styleUrls: ['./line-chart-1.component.scss'],
+  templateUrl: './line-chart-1.component.html',
 })
-export class LineChartComponent implements OnInit {
+export class LineChart1Component implements OnInit {
+  private data;
   private container;
   private svg;
   private svgHeight;
@@ -16,83 +29,52 @@ export class LineChartComponent implements OnInit {
   private barsLayout;
   private lineChart;
   private timer;
-  private data;
-  private maxX = 14;
+  private maxX = 10;
   private xStep = 0.125;
-  private columns = this.maxX / 2;
-  private margin = 20;
   private xDrawStep = 4;
+  private rowBgColor = COLORS.rowBgColor;
+  private margin = 20;
+  private xAxis = 'X';
+  private yAxis = 'Y';
+  private animationTime = 400;
+  private columns = this.maxX / 2;
   private drawStep = this.xStep * this.xDrawStep;
   private durationResizeAnimation = 500;
-  private xAxis = 'TIME';
-  private yAxis = 'REVENUE';
 
   public ngOnInit() {
-    this.container = d3.select('.line-chart__container');
+    this.container = d3.select('.line-chart-1__container');
     this.data = [
       {
         values: [],
-        key: 'Awesome',
-        color: 'rgb(80, 150, 215)',
-        graphFunction(i) {
-          const INTERVAL_1 = 2.8;
-          const INTERVAL_2 = 7.1;
-          const INTERVAL_3 = 11.0;
-
-          if (i < INTERVAL_1) {
-            this.values.push({ x: i, y: (3.43 * i * i - 6.7 * i) / 14 });
-          } else if (i < INTERVAL_2) {
-            this.values.push({ x: i, y: -(i - 7.1) * (i - 7.1) / 10.26 + 2.378 });
-          } else if (i < INTERVAL_3) {
-            this.values.push({ x: i, y: -0.4 / (i - 4.3) + 2.53 });
-          } else {
-            this.values.push({
-              x: i,
-              y: ((i - 11.4) * (i - 11.4) * (i - 11.4)) / 13 + 2.476,
-            });
-          }
-        },
-      },
-      {
-        values: [],
-        key: 'Good',
-        color: 'rgb(0, 188, 212)',
+        key: 'Sin(x)',
+        color: COLORS.lightBlue,
         fillOpacity: 0.00001,
         area: true,
 
         graphFunction(i) {
-          const INTERVAL_1 = 3.0;
-          const INTERVAL_2 = 8.2;
-
-          if (i < INTERVAL_1) {
-            this.values.push({ x: i, y: (3.255 * i * i - 9.6 * i) / 16 });
-          } else {
-            if (i < INTERVAL_2) {
-              this.values.push({ x: i, y: (-1.055 * (i - 8.03) * (i - 8.03) + 27) / 15 });
-            } else {
-              this.values.push({ x: i, y: ((i - 9) * (i - 9) * (i - 9)) / 120 + 1.805 });
-            }
-          }
+          this.values.push({ x: i, y: Math.sin(i) });
         },
       },
       {
         values: [],
-        key: 'Fail',
-        color: 'rgb(255, 82, 82)',
+        key: 'Cos(x+10)+1/2',
+        color: COLORS.red,
+        fillOpacity: 0.00001,
+        area: true,
 
         graphFunction(i) {
-          const INTERVAL_1 = 3.1;
-          const INTERVAL_2 = 10.3;
+          this.values.push({ x: i, y: Math.cos(i + 10) + 0.5 });
+        },
+      },
+      {
+        values: [],
+        key: 'Cos(x)+1',
+        color: COLORS.purple,
+        fillOpacity: 0.00001,
+        area: true,
 
-          if (i < INTERVAL_1) {
-            this.values.push({ x: i, y: (2.255 * i * i - 9.1 * i) / 13 });
-          } else {
-            if (i < INTERVAL_2) {
-              this.values.push({ x: i, y: .82 * Math.sin((i - 4.5) / 2.1) });
-            } else {
-              this.values.push({ x: i, y: -(i - 13) * (i - 13) * (i - 13) / 64 });
-            }
-          }
+        graphFunction(i) {
+          this.values.push({ x: i, y: Math.cos(i) + 1 });
         },
       },
     ];
