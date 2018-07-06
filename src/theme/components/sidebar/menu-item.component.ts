@@ -15,7 +15,7 @@ export class BaseMenuItemComponent {
   @Input() data;
 
   constructor(
-    private router: Router,
+    protected router: Router,
   ) { }
 
   private navigate() {

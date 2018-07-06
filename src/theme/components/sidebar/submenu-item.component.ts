@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, AfterContentChecked } from '@angular/core';
 
 import { HostClassBinding } from 'helpers';
 
@@ -17,12 +17,21 @@ import { BaseMenuItemComponent } from './menu-item.component';
   `,
 })
 @HostClassBinding(function () {
-  return this.shown ? 'sub-navigation sub-navigation--show' : 'sub-navigation';
+  return this.shown || this.isHasCurrent ? 'sub-navigation sub-navigation--show' : 'sub-navigation';
 })
-export class BaseSubmenuItemComponent extends BaseMenuItemComponent {
+export class BaseSubmenuItemComponent extends BaseMenuItemComponent implements AfterContentChecked {
   shown = false;
+  isHasCurrent = false;
 
   @HostListener('click') onClick() {
     this.shown = !this.shown;
+  }
+
+  ngAfterContentChecked() {
+    this.isHasCurrent = this.hasCurrent(this.data.children);
+  }
+
+  private hasCurrent(list) {
+    return list.some(item => (item.link && item.link === this.router.url) || (item.children && this.hasCurrent(item.children)));
   }
 }

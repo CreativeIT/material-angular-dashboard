@@ -10,7 +10,7 @@
                  class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
                  [class.is-checked]="item.completed"
                  checkboxItem>
-            <input type="checkbox" class="mdl-checkbox__input" [id]="item.id" [(ngModel)]="item.completed"/>
+            <input type="checkbox" class="mdl-checkbox__input" [id]="item.id" [checked]="item.completed" (change)="item.completed = !item.completed"/>
             <span class="mdl-checkbox__label">{{ item.title }}</span>
           </label>
         </span>

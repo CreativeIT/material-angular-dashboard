@@ -65,7 +65,7 @@ export class BrowserStatisticsChartComponent implements OnInit {
           .donut(true)
           .growOnHover(true)
           .padAngle(.03)
-          .margin({ left: -10, right: -10, top: -10, bottom: -10 })
+          .margin({ left: 0, right: 0, top: 0, bottom: 0 })
           .color(colors)
           .arcsRadius([{ inner: innerRadius, outer: outerRadius },
             { inner: innerRadius, outer: outerRadius },
