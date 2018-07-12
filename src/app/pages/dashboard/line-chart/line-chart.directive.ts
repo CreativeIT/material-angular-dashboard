@@ -43,9 +43,11 @@ export class LineChartDirective extends BaseLineChartDirective {
       },
     ];
     this.rawData = [
-      [...lineChartService.getAwesomeGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChartService.getGoodGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChartService.getFailGraph(0, this.maxX + 1, this.xStep)],
-    ];
+      lineChartService.getAwesomeGraph,
+      lineChartService.getGoodGraph,
+      lineChartService.getFailGraph,
+    ]
+      .map(f => f.bind(lineChartService))
+      .map(f => [...f(0, this.maxX + 1, this.xStep)]);
   }
 }
