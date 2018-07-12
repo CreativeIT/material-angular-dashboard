@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.line-chart-1__container {
+.line-chart__container {
   min-height: $line-chart-height;
 
   svg {
@@ -35,7 +35,6 @@
       }
 
       .tick {
-        // setting?
         opacity: 0.1 !important;
 
         &.zero {

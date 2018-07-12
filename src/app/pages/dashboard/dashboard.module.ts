@@ -8,25 +8,25 @@ import {
   DashboardComponent,
   WeatherComponent,
   CotoneasterCardComponent,
-  LineChartComponent,
   TableCardComponent,
   RobotCardComponent,
   TodoListComponent,
   TrendingComponent,
   PieChartComponent,
-} from './index';
+  LineChartModule,
+} from '.';
 
 @NgModule({
   imports: [
     CommonModule,
     ThemeModule,
     FormsModule,
+    LineChartModule,
   ],
   declarations: [
     DashboardComponent,
     WeatherComponent,
     CotoneasterCardComponent,
-    LineChartComponent,
     TableCardComponent,
     RobotCardComponent,
     TodoListComponent,

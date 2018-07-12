@@ -17,6 +17,12 @@
       true,
       "check-format",
       "allow-pascal-case"
+    ],
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[A-Z]?[a-z][\\w\\d]+$"
+      }
     ]
   }
 }
