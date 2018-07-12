@@ -10,12 +10,14 @@ import {
   BasePageTopComponent,
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
+  BaseLineChartComponent,
 } from './components';
 
 const BASE_COMPONENTS = [
   BasePageTopComponent,
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
+  BaseLineChartComponent,
 ];
 
 const BASE_DIRECTIVES = [];
@@ -33,6 +35,7 @@ const BASE_PIPES = [];
     FormsModule,
     ReactiveFormsModule,
     BaseSidebarModule,
+    BaseCardModule,
   ],
   exports: [
     ...BASE_PIPES,

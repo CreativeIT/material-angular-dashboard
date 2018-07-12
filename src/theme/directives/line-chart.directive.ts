@@ -1,27 +1,17 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit } from '@angular/core';
+import { Directive, OnInit, ElementRef } from '@angular/core';
 
-// TODO: remove this
-const COLORS = {
-  red: '#f44336',
-  lightBlue: '#03a9f4',
-  orange: '#ffc107',
-  amber: '#ff9800',
-  teal: '#00bcd4',
-  purple: '#7726d3',
-  green: '#00d45a',
-  rowBgColor: '#4a4a4a',
-};
-
-@Component({
-  selector: 'app-line-chart-2',
-  styleUrls: ['./line-chart-2.component.scss'],
-  templateUrl: './line-chart-2.component.html',
+@Directive({
+  selector: '[baseLineChart]',
 })
-export class LineChart2Component implements OnInit {
-  private data;
+export class BaseLineChartDirective implements OnInit {
+  protected animatedData;
+  protected rawData;
+  protected xAxis;
+  protected yAxis;
+  protected maxX;
   private container;
   private svg;
   private svgHeight;
@@ -29,71 +19,25 @@ export class LineChart2Component implements OnInit {
   private barsLayout;
   private lineChart;
   private timer;
-  private maxX = 14;
-  private columns = this.maxX / 2;
-  private xStep = 0.125;
+  private columns;
+  protected xStep = 0.125;
   private xDrawStep = 4;
-  private rowBgColor = COLORS.rowBgColor;
   private margin = 20;
   private durationResizeAnimation = 500;
   private drawStep = this.xStep * this.xDrawStep;
   private animationTime = 400;
-  private xAxis = 'X';
-  private yAxis = 'Y';
+
+  constructor(private el: ElementRef) { }
 
   public ngOnInit() {
-    this.container = d3.select('.line-chart-2__container');
-    this.data = [
-      {
-        values: [],
-        key: 'Teal graph',
-        color: COLORS.teal,
-        fillOpacity: 0.00001,
-        area: true,
-
-        graphFunction(i) {
-          if (i < 7) {
-            this.values.push({ x: i, y: Math.random() * 0.2 * i });
-          } else {
-            this.values.push({ x: i, y: ((Math.random() * 0.1 + 0.2) * i - 1) });
-          }
-        },
-      },
-      {
-        values: [],
-        key: 'Orange graph',
-        color: COLORS.orange,
-        fillOpacity: 0.00001,
-        area: true,
-
-        graphFunction(i) {
-          if (i < 10) {
-            this.values.push({ x: i, y: -Math.random() * 1.5 + 2.5 });
-          } else {
-            this.values.push({ x: i, y: 1.5 });
-          }
-        },
-      },
-      {
-        values: [],
-        key: 'Green graph',
-        color: COLORS.green,
-        fillOpacity: 0.00001,
-
-        graphFunction(i) {
-          if ((i + 1) % 4 === 0) {
-            this.values.push({ x: i, y:  Math.random() * 1.5 + 0.6 });
-          }
-          if ((i + 1) % 2 > 0) {
-            this.values.push({ x: i, y: -Math.random() * 0.1 - 0.6 });
-          }
-        },
-      },
-    ];
-
+    this.container = d3.select(this.el.nativeElement);
     if (this.container[0][0]) {
       this.drawChart();
     }
+  }
+
+  protected afterConfigure() {
+    this.columns = this.maxX / 2;
   }
 
   private addSvgContainer() {
@@ -103,8 +47,8 @@ export class LineChart2Component implements OnInit {
   private getSvgSizes() {
     const svgWidth = getComputedStyle(this.svg[0][0]).width;
     const svgHeight = getComputedStyle(this.svg[0][0]).height;
-    this.svgWidth = svgWidth.slice(0, svgWidth.length - 2);
-    this.svgHeight = +svgHeight.slice(0, svgHeight.length - 2) - this.margin;
+    this.svgWidth = +svgWidth.slice(0, -2);
+    this.svgHeight = +svgHeight.slice(0, -2) - this.margin;
   }
 
   private addAxisLabels() {
@@ -169,7 +113,7 @@ export class LineChart2Component implements OnInit {
     this.tuneNvGraph();
 
     nv.addGraph(() => {
-      this.svg.datum(this.data)
+      this.svg.datum(this.animatedData)
         .transition().duration(0)
         .call(this.lineChart);
       nv.utils.windowResize(this.resizeBackground.bind(this));
@@ -205,7 +149,7 @@ export class LineChart2Component implements OnInit {
     const legend = this.container.append('div')
       .attr('class', 'legend')
       .selectAll('.legend__item')
-      .data(this.data)
+      .data(this.animatedData)
       .enter()
       .append('div')
       .attr('class', 'legend__item');
@@ -228,7 +172,7 @@ export class LineChart2Component implements OnInit {
     let i = 0;
     this.timer = setInterval(
       () => {
-        this.calcAllGraphs(i);
+        this.complementGraphs();
         this.drawNextStep(i);
         i += this.xStep;
         this.checkEndOfAnimation(i);
@@ -239,14 +183,17 @@ export class LineChart2Component implements OnInit {
 
   private drawNextStep(i) {
     if (i !== 0 && i % this.drawStep === 0 || i === this.maxX) {
-      this.lineChart.update();
+      // FIXME: error when chart out of sight
+      try {
+        this.lineChart.update();
+      } catch (e) { }
     }
   }
 
   private checkEndOfAnimation(i) {
     if (i >= this.maxX + 1) {
       this.lineChart.duration(this.durationResizeAnimation);
-      this.data.forEach((item) => {
+      this.animatedData.forEach((item) => {
         item.fillOpacity = 0.11;
       });
 
@@ -255,7 +202,7 @@ export class LineChart2Component implements OnInit {
     }
   }
 
-  private calcAllGraphs(i) {
-    this.data.forEach(item => item.graphFunction(i));
+  private complementGraphs() {
+    this.rawData.forEach((graph, i) => this.animatedData[i].values.push(graph.shift()));
   }
 }
