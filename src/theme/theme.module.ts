@@ -11,6 +11,7 @@ import {
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
   BaseLineChartComponent,
+  BasePieChartComponent,
 } from './components';
 
 const BASE_COMPONENTS = [
@@ -18,6 +19,7 @@ const BASE_COMPONENTS = [
   BaseMsgMenuComponent,
   BaseNotificationMenuComponent,
   BaseLineChartComponent,
+  BasePieChartComponent,
 ];
 
 const BASE_DIRECTIVES = [];

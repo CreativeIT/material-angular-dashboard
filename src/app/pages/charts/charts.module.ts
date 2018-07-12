@@ -6,8 +6,8 @@ import { ThemeModule } from 'theme/theme.module';
 
 import {
   ChartsComponent,
-  BrowserStatisticsChartComponent,
-  CountryStatisticsChartComponent,
+  BrowserStatisticsChartModule,
+  CountryStatisticsChartModule,
   DiscreteBarChartComponent,
   LineChart1Module,
   LineChart2Module,
@@ -22,11 +22,11 @@ import {
     FormsModule,
     LineChart1Module,
     LineChart2Module,
+    BrowserStatisticsChartModule,
+    CountryStatisticsChartModule,
   ],
   declarations: [
     ChartsComponent,
-    BrowserStatisticsChartComponent,
-    CountryStatisticsChartComponent,
     DiscreteBarChartComponent,
     LinePlusBarChartComponent,
     StackedBarChartComponent,

@@ -1,14 +1,19 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit } from '@angular/core';
+import { Directive, OnInit, ElementRef } from '@angular/core';
 
-@Component({
-  selector: 'app-browser-statistics-chart',
-  styleUrls: ['./browser-statistics-chart.component.scss'],
-  templateUrl: './browser-statistics-chart.component.html',
+import { BrowserStatisticsChartService } from './browser-statistics-chart.service';
+
+@Directive({
+  selector: '[appBrowserStatisticsChart]',
 })
-export class BrowserStatisticsChartComponent implements OnInit {
+export class BrowserStatisticsChartDirective implements OnInit {
+  constructor(
+    private el: ElementRef,
+    private browserStatisticsChartService: BrowserStatisticsChartService,
+  ) { }
+
   public ngOnInit() {
     const COLORS = {
       red: '#f44336',
@@ -21,7 +26,7 @@ export class BrowserStatisticsChartComponent implements OnInit {
       rowBgColor: '#4a4a4a',
     };
 
-    const container1 = d3.select('.chart1__container');
+    const container1 = d3.select(this.el.nativeElement);
     if (container1[0][0]) {
       const colors = [
         COLORS.purple,
@@ -31,28 +36,7 @@ export class BrowserStatisticsChartComponent implements OnInit {
         COLORS.lightBlue,
       ];
 
-      const data = [
-        {
-          key: 'Chrome',
-          y: 42,
-        },
-        {
-          key: 'Opera',
-          y: 13,
-        },
-        {
-          key: 'Safari',
-          y: 14,
-        },
-        {
-          key: 'Firefox',
-          y: 17,
-        },
-        {
-          key: 'IE & Edge',
-          y: 16,
-        },
-      ];
+      const data = this.browserStatisticsChartService.getBrowserStatistics();
 
       nv.addGraph(() => {
         const innerRadius = 0.03;
