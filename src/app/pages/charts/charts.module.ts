@@ -8,11 +8,11 @@ import {
   ChartsComponent,
   BrowserStatisticsChartModule,
   CountryStatisticsChartModule,
-  DiscreteBarChartComponent,
+  DiscreteBarChartModule,
   LineChart1Module,
   LineChart2Module,
-  LinePlusBarChartComponent,
-  StackedBarChartComponent,
+  LinePlusBarChartModule,
+  StackedBarChartModule,
 } from '.';
 
 @NgModule({
@@ -24,12 +24,12 @@ import {
     LineChart2Module,
     BrowserStatisticsChartModule,
     CountryStatisticsChartModule,
+    DiscreteBarChartModule,
+    StackedBarChartModule,
+    LinePlusBarChartModule,
   ],
   declarations: [
     ChartsComponent,
-    DiscreteBarChartComponent,
-    LinePlusBarChartComponent,
-    StackedBarChartComponent,
   ],
 })
 export class ChartsModule { }

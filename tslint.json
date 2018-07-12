@@ -23,6 +23,7 @@
       {
         "function-regex": "^[A-Z]?[a-z][\\w\\d]+$"
       }
-    ]
+    ],
+    "ter-computed-property-spacing": [false]
   }
 }

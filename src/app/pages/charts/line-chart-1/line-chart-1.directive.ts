@@ -47,9 +47,11 @@ export class LineChart1Directive extends BaseLineChartDirective {
       },
     ];
     this.rawData = [
-      [...lineChart1Service.getSinGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChart1Service.getFirstComplexGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChart1Service.getSecondComplexGraph(0, this.maxX + 1, this.xStep)],
-    ];
+      lineChart1Service.getSinGraph,
+      lineChart1Service.getFirstComplexGraph,
+      lineChart1Service.getSecondComplexGraph,
+    ]
+      .map(f => f.bind(lineChart1Service))
+      .map(f => [...f(0, this.maxX + 1, this.xStep)]);
   }
 }

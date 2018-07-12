@@ -46,9 +46,11 @@ export class LineChart2Directive extends BaseLineChartDirective {
       },
     ];
     this.rawData = [
-      [...lineChart2Service.getTealGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChart2Service.getOrangeGraph(0, this.maxX + 1, this.xStep)],
-      [...lineChart2Service.getGreenGraph(0, this.maxX + 1, this.xStep)],
-    ];
+      lineChart2Service.getTealGraph,
+      lineChart2Service.getOrangeGraph,
+      lineChart2Service.getGreenGraph,
+    ]
+      .map(f => f.bind(lineChart2Service))
+      .map(f => [...f(0, this.maxX + 1, this.xStep)]);
   }
 }
