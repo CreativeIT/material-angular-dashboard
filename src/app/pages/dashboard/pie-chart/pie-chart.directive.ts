@@ -1,14 +1,19 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit } from '@angular/core';
+import { Directive, OnInit, ElementRef } from '@angular/core';
 
-@Component({
-  selector: 'app-pie-chart',
-  styleUrls: ['./pie-chart.component.scss'],
-  templateUrl: './pie-chart.component.html',
+import { PieChartService } from './pie-chart.service';
+
+@Directive({
+  selector: '[appPieChart]',
 })
-export class PieChartComponent implements OnInit {
+export class PieChartDirective implements OnInit {
+  constructor(
+    private el: ElementRef,
+    private pieChartService: PieChartService,
+  ) { }
+
   public ngOnInit() {
     const colors = [
       'rgba(96, 196, 150, 1)',
@@ -19,32 +24,10 @@ export class PieChartComponent implements OnInit {
       'rgba(0, 0, 0, 0)',
     ];
 
-    const data = [
-      {
-        key: 'Coding',
-        y: 0,
-        end: 9,
-      },
-      {
-        key: 'Eating',
-        y: 0,
-        end: 3,
-      },
-      {
-        key: 'Sleeping',
-        y: 0,
-        end: 3,
-      },
-      {
-        key: 'Meditation',
-        y: 0,
-        end: 3,
-      },
-      {
-        key: 'The fight against evil',
-        y: 0,
-        end: 6,
-      },
+    const rawData = this.pieChartService.getDaySchedule();
+
+    const animatedData = [
+      ...rawData.map(job => ({ key: job.key, end: job.hours, y: 0 })),
       {
         key: 'Pending',
         y: 23.9,
@@ -83,13 +66,13 @@ export class PieChartComponent implements OnInit {
             return '';
           }
           d3.selectAll('.nvtooltip').classed('mdl-tooltip', true);
-          return `${d.data.y} hours`;
+          return `${d.animatedData.y} hours`;
         });
 
-      const container = d3.select('.pie-chart__container')
+      const container = d3.select(this.el.nativeElement)
         .append('div')
         .append('svg')
-        .datum(data)
+        .datum(animatedData)
         .transition()
         .duration(1200)
         .call(pieChart as any);
@@ -119,10 +102,10 @@ export class PieChartComponent implements OnInit {
           }
         },
         70,
-        data,
+        animatedData,
       );
 
-      d3.select('.pie-chart__container .nv-pie .nv-pie')
+      d3.select(this.el.nativeElement.querySelector('.nv-pie .nv-pie'))
         .append('image')
         .attr('width', '30')
         .attr('height', '30')
@@ -131,11 +114,11 @@ export class PieChartComponent implements OnInit {
 
       const color = d3.scale.ordinal().range(colors);
 
-      const legend = d3.select('.pie-chart__container')
+      const legend = d3.select(this.el.nativeElement)
         .append('div')
         .attr('class', 'legend')
         .selectAll('.legend__item')
-        .data(data.slice(0, data.length - 1))
+        .data(animatedData.slice(0, animatedData.length - 1))
         .enter()
         .append('div')
         .attr('class', 'legend__item');

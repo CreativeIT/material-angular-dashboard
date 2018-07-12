@@ -9,7 +9,6 @@ import { LineChart1Service } from './line-chart-1.service';
 
 @Directive({
   selector: '[appLineChart1]',
-  providers: [LineChart1Service],
 })
 export class LineChart1Directive extends BaseLineChartDirective {
   constructor(

@@ -1,14 +1,19 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit } from '@angular/core';
+import { Directive, OnInit, ElementRef } from '@angular/core';
 
-@Component({
-  selector: 'app-country-statistics-chart',
-  styleUrls: ['./country-statistics-chart.component.scss'],
-  templateUrl: './country-statistics-chart.component.html',
+import { CountryStatisticsChartService } from './country-statistics-chart.service';
+
+@Directive({
+  selector: '[appCountryStatisticsChart]',
 })
-export class CountryStatisticsChartComponent implements OnInit {
+export class CountryStatisticsChartDirective implements OnInit {
+  constructor(
+    private el: ElementRef,
+    private countryStatisticsChartService: CountryStatisticsChartService,
+  ) { }
+
   public ngOnInit() {
     const COLORS = {
       red: '#f44336',
@@ -21,7 +26,7 @@ export class CountryStatisticsChartComponent implements OnInit {
       rowBgColor: '#4a4a4a',
     };
 
-    const container2 = d3.select('.chart2__container');
+    const container2 = d3.select(this.el.nativeElement);
     if (container2[0][0]) {
       const colors = [
         COLORS.purple,
@@ -31,28 +36,7 @@ export class CountryStatisticsChartComponent implements OnInit {
         COLORS.lightBlue,
       ];
 
-      const data = [
-        {
-          key: 'United States',
-          y: 31,
-        },
-        {
-          key: 'Belarus',
-          y: 26,
-        },
-        {
-          key: 'Italy',
-          y: 18,
-        },
-        {
-          key: 'France',
-          y: 15,
-        },
-        {
-          key: 'Other',
-          y: 10,
-        },
-      ];
+      const data = this.countryStatisticsChartService.getCountryStatistics();
 
       nv.addGraph(() => {
         let innerRadius = 0.06;

@@ -12,7 +12,7 @@ import {
   RobotCardComponent,
   TodoListComponent,
   TrendingComponent,
-  PieChartComponent,
+  PieChartModule,
   LineChartModule,
 } from '.';
 
@@ -22,6 +22,7 @@ import {
     ThemeModule,
     FormsModule,
     LineChartModule,
+    PieChartModule,
   ],
   declarations: [
     DashboardComponent,
@@ -31,7 +32,6 @@ import {
     RobotCardComponent,
     TodoListComponent,
     TrendingComponent,
-    PieChartComponent,
   ],
 })
 export class DashboardModule { }
