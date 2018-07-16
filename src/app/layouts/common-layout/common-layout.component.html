@@ -1,5 +1,11 @@
-<base-page-top class="mdl-layout__header"></base-page-top>
-<app-sidebar class="mdl-layout__drawer"></app-sidebar>
-<main class="mdl-layout__content">
-  <router-outlet></router-outlet>
-</main>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header has-drawer">
+  <div class="mdl-layout__header">
+    <base-page-top></base-page-top>
+  </div>
+  <div class="mdl-layout__drawer">
+    <app-sidebar></app-sidebar>
+  </div>
+  <main class="mdl-layout__content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

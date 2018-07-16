@@ -5,13 +5,13 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { ScreenLayoutComponent } from 'app/layouts/screen-layout/screen-layout.component';
+import { BlankLayoutComponent } from 'app/layouts/blank-layout/blank-layout.component';
 
 @NgModule({
   imports: [RouterModule.forChild([
     {
       path: '',
-      component: ScreenLayoutComponent,
+      component: BlankLayoutComponent,
       children: [
         { path: '404', component: ErrorComponent, pathMatch: 'full' },
         { path: 'login', component: LoginComponent, pathMatch: 'full' },

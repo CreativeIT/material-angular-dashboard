@@ -1,12 +1,12 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Directive, OnInit, ElementRef } from '@angular/core';
+import { Directive, AfterViewInit, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[baseLineChart]',
 })
-export class BaseLineChartDirective implements OnInit {
+export class BaseLineChartDirective implements AfterViewInit {
   protected animatedData;
   protected rawData;
   protected xAxis;
@@ -29,7 +29,7 @@ export class BaseLineChartDirective implements OnInit {
 
   constructor(private el: ElementRef) { }
 
-  public ngOnInit() {
+  public ngAfterViewInit() {
     this.container = d3.select(this.el.nativeElement);
     if (this.container[0][0]) {
       this.drawChart();

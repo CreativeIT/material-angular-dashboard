@@ -1,6 +1,4 @@
-import { Component, HostListener, Input, AfterContentChecked } from '@angular/core';
-
-import { HostClassBinding } from 'helpers';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 import { BaseMenuItemComponent } from './menu-item.component';
 
@@ -8,27 +6,25 @@ import { BaseMenuItemComponent } from './menu-item.component';
   selector: 'base-submenu-item',
   styleUrls: ['./sidebar.component.scss'],
   template: `
-    <a class="mdl-navigation__link" [class.mdl-navigation__link--current]="shown">
+    <div class="sub-navigation" [class.sub-navigation--show]="shown">
+      <a class="mdl-navigation__link" [class.mdl-navigation__link--current]="shown" (click)="onClick()">
       <i *ngIf="data.icon" class="material-icons">{{ data.icon }}</i>{{ data.name }}<i class="material-icons">keyboard_arrow_down</i>
-    </a>
-    <div class="mdl-navigation">
+      </a>
+      <div class="mdl-navigation">
       <base-menu-item *ngFor="let child of data.children" [data]="child"></base-menu-item>
+      </div>
     </div>
   `,
 })
-@HostClassBinding(function () {
-  return this.shown || this.isHasCurrent ? 'sub-navigation sub-navigation--show' : 'sub-navigation';
-})
-export class BaseSubmenuItemComponent extends BaseMenuItemComponent implements AfterContentChecked {
+export class BaseSubmenuItemComponent extends BaseMenuItemComponent implements OnInit {
   shown = false;
-  isHasCurrent = false;
 
-  @HostListener('click') onClick() {
+  onClick() {
     this.shown = !this.shown;
   }
 
-  ngAfterContentChecked() {
-    this.isHasCurrent = this.hasCurrent(this.data.children);
+  ngOnInit() {
+    this.shown = this.hasCurrent(this.data.children);
   }
 
   private hasCurrent(list) {

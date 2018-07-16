@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { BaseNotificationMenuService } from './notification-menu.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { BaseNotificationMenuService } from './notification-menu.service';
   providers: [BaseNotificationMenuService],
 })
 export class BaseNotificationMenuComponent {
+  @HostBinding('style.position') private position = 'relative';
+
   public notifications: Object[];
 
   constructor(baseNotificationMenuService: BaseNotificationMenuService) {

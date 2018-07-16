@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { HostClassBinding, UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradeDomAfterViewInit } from 'helpers';
 
 @Component({
   selector: 'page-forgot-password',
   styleUrls: ['./forgot-password.component.scss'],
   templateUrl: './forgot-password.component.html',
 })
-@HostClassBinding('login')
 @UpgradeDomAfterViewInit
-export class ForgotPasswordComponent { }
+export class ForgotPasswordComponent {
+  @HostBinding('style.margin') private margin = 'auto';
+}
