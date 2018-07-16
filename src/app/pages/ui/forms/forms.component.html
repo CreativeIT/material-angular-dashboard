@@ -1,93 +1,95 @@
-<div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
-  <base-card>
-    <base-card-title>
-      <h5 class="mdl-card__title-text text-color--white">Text fields</h5>
-    </base-card-title>
-    <base-card-body>
-      <form class="form form--basic">
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
-            <h3 class="text-color--smooth-gray">BASIC INPUT</h3>
-            <div class="mdl-textfield mdl-js-textfield full-size">
-              <input class="mdl-textfield__input" type="text" id="first-name">
-              <label class="mdl-textfield__label" for="first-name">First Name</label>
+<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+  <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h5 class="mdl-card__title-text text-color--white">Text fields</h5>
+      </base-card-title>
+      <base-card-body>
+        <form class="form form--basic">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+              <h3 class="text-color--smooth-gray">BASIC INPUT</h3>
+              <div class="mdl-textfield mdl-js-textfield full-size">
+                <input class="mdl-textfield__input" type="text" id="first-name">
+                <label class="mdl-textfield__label" for="first-name">First Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield full-size">
+                <input class="mdl-textfield__input" type="text" id="last-name">
+                <label class="mdl-textfield__label" for="last-name">Last Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield full-size">
+                <input class="mdl-textfield__input" type="text" id="e-mail">
+                <label class="mdl-textfield__label" for="e-mail">Email</label>
+              </div>
             </div>
-            <div class="mdl-textfield mdl-js-textfield full-size">
-              <input class="mdl-textfield__input" type="text" id="last-name">
-              <label class="mdl-textfield__label" for="last-name">Last Name</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield full-size">
-              <input class="mdl-textfield__input" type="text" id="e-mail">
-              <label class="mdl-textfield__label" for="e-mail">Email</label>
+            <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+              <h3 class="text-color--smooth-gray">INPUT WITH FLOATING LABEL</h3>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                <input class="mdl-textfield__input" type="text" id="floating-first-name">
+                <label class="mdl-textfield__label" for="floating-first-name">First Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                <input class="mdl-textfield__input" type="text" id="floating-last-name">
+                <label class="mdl-textfield__label" for="floating-last-name">Last Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                <input class="mdl-textfield__input" type="text" id="floating-e-mail">
+                <label class="mdl-textfield__label" for="floating-e-mail">Email</label>
+              </div>
             </div>
           </div>
-          <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
-            <h3 class="text-color--smooth-gray">INPUT WITH FLOATING LABEL</h3>
+        </form>
+      </base-card-body>
+    </base-card>
+  </div>
+
+  <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h5 class="mdl-card__title-text text-color--white">PROFILE INFO</h5>
+      </base-card-title>
+      <base-card-body>
+      <form class="form form--basic">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">
+            <div class="profile-image color--smooth-gray profile-image--round">
+              <!-- TODO: superfluous dependency -->
+              <img src="/assets/images/Bobby.PNG">
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone form__article">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-              <input class="mdl-textfield__input" type="text" id="floating-first-name">
-              <label class="mdl-textfield__label" for="floating-first-name">First Name</label>
+              <input class="mdl-textfield__input" type="text" value="Bob" id="profile-floating-first-name">
+              <label class="mdl-textfield__label" for="profile-floating-first-name">First Name</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-              <input class="mdl-textfield__input" type="text" id="floating-last-name">
-              <label class="mdl-textfield__label" for="floating-last-name">Last Name</label>
+              <input class="mdl-textfield__input" type="text" value="Kelso" id="profile-floating-last-name">
+              <label class="mdl-textfield__label" for="profile-floating-last-name">Last Name</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-              <input class="mdl-textfield__input" type="text" id="floating-e-mail">
+              <input class="mdl-textfield__input" type="text" value="BobbyK@darkboard.io" id="profile-floating-e-mail">
               <label class="mdl-textfield__label" for="floating-e-mail">Email</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+              <input class="mdl-textfield__input" type="text" id="location" readonly tabIndex="-1"/>
+
+              <label class="mdl-textfield__label" for="location">Location</label>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="location">
+                <li class="mdl-menu__item">Minsk</li>
+                <li class="mdl-menu__item">Berlin</li>
+                <li class="mdl-menu__item">Moscow</li>
+                <li class="mdl-menu__item">NYC</li>
+              </ul>
+
+              <label for="location">
+                <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+              </label>
             </div>
           </div>
         </div>
       </form>
-    </base-card-body>
-  </base-card>
-</div>
-
-<div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--4-col-phone">
-  <base-card>
-    <base-card-title>
-      <h5 class="mdl-card__title-text text-color--white">PROFILE INFO</h5>
-    </base-card-title>
-    <base-card-body>
-    <form class="form form--basic">
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--1-col-phone">
-          <div class="profile-image color--smooth-gray profile-image--round">
-            <!-- TODO: superfluous dependency -->
-            <img src="/assets/images/Bobby.PNG">
-          </div>
-        </div>
-        <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone form__article">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-            <input class="mdl-textfield__input" type="text" value="Bob" id="profile-floating-first-name">
-            <label class="mdl-textfield__label" for="profile-floating-first-name">First Name</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-            <input class="mdl-textfield__input" type="text" value="Kelso" id="profile-floating-last-name">
-            <label class="mdl-textfield__label" for="profile-floating-last-name">Last Name</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-            <input class="mdl-textfield__input" type="text" value="BobbyK@darkboard.io" id="profile-floating-e-mail">
-            <label class="mdl-textfield__label" for="floating-e-mail">Email</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-            <input class="mdl-textfield__input" type="text" id="location" readonly tabIndex="-1"/>
-
-            <label class="mdl-textfield__label" for="location">Location</label>
-
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="location">
-              <li class="mdl-menu__item">Minsk</li>
-              <li class="mdl-menu__item">Berlin</li>
-              <li class="mdl-menu__item">Moscow</li>
-              <li class="mdl-menu__item">NYC</li>
-            </ul>
-
-            <label for="location">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
-          </div>
-        </div>
-      </div>
-    </form>
-    </base-card-body>
-  </base-card>
+      </base-card-body>
+    </base-card>
+  </div>
 </div>

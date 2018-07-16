@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { BaseMsgMenuService } from './msg-menu.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { BaseMsgMenuService } from './msg-menu.service';
   providers: [BaseMsgMenuService],
 })
 export class BaseMsgMenuComponent {
+  @HostBinding('style.position') private position = 'relative';
+
   public messages: Object[];
 
   constructor(baseMsgMenuService: BaseMsgMenuService) {

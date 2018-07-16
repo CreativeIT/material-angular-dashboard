@@ -1,8 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { HostClassBinding } from 'helpers';
-
 @Component({
   selector: 'base-menu-item',
   styleUrls: ['./sidebar.component.scss'],

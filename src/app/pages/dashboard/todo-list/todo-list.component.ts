@@ -12,8 +12,6 @@ import {
   OnDestroy,
 } from '@angular/core';
 
-import { HostClassBinding } from 'helpers';
-
 import { TodoListService } from './todo-list.service';
 
 @Component({
@@ -22,7 +20,6 @@ import { TodoListService } from './todo-list.service';
   templateUrl: './todo-list.component.html',
   providers: [TodoListService],
 })
-@HostClassBinding('todo')
 export class TodoListComponent implements AfterViewInit, OnDestroy {
   public items;
   public createdItem = null;

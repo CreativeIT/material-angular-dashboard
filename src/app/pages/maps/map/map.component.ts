@@ -1,7 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
 
-import { HostClassBinding } from 'helpers';
-
 declare const google: any;
 
 @Component({
@@ -9,7 +7,6 @@ declare const google: any;
   styleUrls: ['./map.component.scss'],
   templateUrl: 'map.component.html',
 })
-@HostClassBinding('mdl-cell mdl-cell--6-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone')
 export class MapComponent implements AfterViewInit {
   ngAfterViewInit() {
     const mapOptions = {

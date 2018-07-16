@@ -3,6 +3,11 @@
 .ui-cards {
   .mdl-card {
     height: 100%;
+
+    .mdl-card__actions {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
 
   .mdl-button--fab {
@@ -28,15 +33,21 @@
     }
 
     &:nth-last-of-type(1) .mdl-card__title {
-      background-image: url("#{$image-path}/sao_paulo.jpg");
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url("#{$image-path}/sao_paulo.jpg");
     }
 
     &:nth-last-of-type(2) .mdl-card__title {
-      background-image: url("#{$image-path}/tokyo.jpg");
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url("#{$image-path}/tokyo.jpg");
     }
 
     &:nth-last-of-type(3) .mdl-card__title {
-      background-image: url("#{$image-path}/istanbul.jpg");
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url("#{$image-path}/istanbul.jpg");
     }
   }
 

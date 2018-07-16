@@ -94,14 +94,12 @@ main {
       }
 
       &--show {
+        .mdl-navigation__link i:last-child {
+          transform: rotate(180deg);
+        }
+
         .mdl-navigation {
           display: block;
-
-          .mdl-navigation__link {
-            i:last-child {
-              transform: rotate(180deg);
-            }
-          }
         }
       }
     }

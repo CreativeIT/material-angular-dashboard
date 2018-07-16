@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { HostClassBinding } from 'helpers';
+import { UpgradeDomAfterViewInit } from 'helpers';
 
 @Component({
   selector: 'page-login',
   styleUrls: ['./login.component.scss'],
   templateUrl: './login.component.html',
 })
-@HostClassBinding('login')
-export class LoginComponent { }
+@UpgradeDomAfterViewInit
+export class LoginComponent {
+  @HostBinding('style.margin') private margin = 'auto';
+}

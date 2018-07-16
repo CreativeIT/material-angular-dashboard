@@ -9,7 +9,7 @@
     }
 
     .mdl-list__item-avatar {
-      padding: ($list-avatar-size - $list-icon-size)/2;
+      padding: ($list-avatar-size - $list-icon-size);
       text-align: center;
 
       .material-icons {

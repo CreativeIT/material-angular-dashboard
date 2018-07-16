@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 
-import { HostClassBinding } from 'helpers';
-
 @Component({
   selector: 'app-table-card',
   styleUrls: ['./table-card.component.scss'],
   templateUrl: './table-card.component.html',
 })
-@HostClassBinding('projects-table')
 export class TableCardComponent {
   public tableHeader: string[] = [
     'Project',

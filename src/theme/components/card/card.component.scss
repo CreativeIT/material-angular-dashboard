@@ -5,6 +5,7 @@
 }
 
 .mdl-card__supporting-text {
+  line-height: 22px;
   width: calc(100% - #{$card-horizontal-padding*2});
 }
 
