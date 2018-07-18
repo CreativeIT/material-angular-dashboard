@@ -24,7 +24,7 @@
     td,
     th {
       border: none;
-      border-right: 1px solid #676767;
+      border-right: 1px solid $color-dove-gray;
     }
 
     tr :last-child {
@@ -36,7 +36,7 @@
     }
 
     tbody tr:nth-child(odd) {
-      background-color: #606060;
+      background-color: $color-table-border;
     }
   }
 
@@ -49,7 +49,7 @@
   &.bordered-table {
     td,
     th {
-      border-right: 1px solid #606060;
+      border-right: 1px solid $color-table-border;
     }
 
     tr :last-child {

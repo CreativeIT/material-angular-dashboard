@@ -51,7 +51,7 @@
 }
 
 .text-color--gray {
-  color: unquote("rgb(#{$palette-grey-500})");
+  color: $palette-grey-500;
 }
 
 .text-color--white {
