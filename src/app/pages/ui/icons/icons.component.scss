@@ -1,3 +1,5 @@
+@import '~theme/helpers';
+
 .ui-icons {
   .ui-icons-title {
     font-size: 20px;
@@ -25,7 +27,7 @@
   }
 
   hr {
-    border-top: 1px solid gray;
+    border-top: 1px solid $color-gray;
     margin: 0 -20px 1em;
   }
 

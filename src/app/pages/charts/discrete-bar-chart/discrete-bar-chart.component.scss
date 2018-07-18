@@ -10,13 +10,13 @@
 
   .nv-axis {
     text {
-      fill: #fff;
+      fill: $color-white;
       opacity: 0.5 !important;
     }
 
     .domain,
     .nv-zeroLine {
-      stroke: #fff;
+      stroke: $color-white;
       opacity: 0.5;
     }
 
@@ -48,7 +48,7 @@
 
     .nv-bar {
       text {
-        fill: #fff !important;
+        fill: $color-white !important;
         opacity: 0.9;
       }
     }

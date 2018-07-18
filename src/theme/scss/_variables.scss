@@ -144,7 +144,7 @@ $tooltip-background-color: #353535;
 /* TEXTFIELD */
 
 /* SWITCH */
-$switch-off-thumb-color: unquote("rgb(#{$palette-grey-500})");
+$switch-off-thumb-color: $palette-grey-500;
 
 /* SPINNER */
 
