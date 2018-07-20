@@ -8,4 +8,22 @@ import { UpgradeDomAfterViewInit } from 'helpers';
   styleUrls: ['./components.component.scss'],
 })
 @UpgradeDomAfterViewInit
-export class ComponentsComponent { }
+export class ComponentsComponent {
+  data = [
+    {
+      name: 'Nathan Fillion',
+      description: 'Malcolm “Mal” Reynolds',
+      image: 'nathan-fillion.png',
+    },
+    {
+      name: 'Gina Torres',
+      description: 'Zoe Alleyne Washburne',
+      image: 'gina-torres.png',
+    },
+    {
+      name: 'Alan Tudyk',
+      description: 'Hoban “Wash” Washburne',
+      image: 'tudyk.png',
+    },
+  ];
+}

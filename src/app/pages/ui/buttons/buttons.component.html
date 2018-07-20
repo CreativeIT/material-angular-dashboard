@@ -1,6 +1,4 @@
 <div class="mdl-grid ui-buttons">
-  <!-- UI Buttons-->
-
   <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone buttons-basic">
     <base-card>
       <base-card-title>
@@ -11,33 +9,8 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-orange">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-green">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-purple">
+          <li *ngFor="let color of colors1" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-{{ color }}">
               Button
             </button>
           </li>
@@ -46,39 +19,8 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-light-blue"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-teal"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-orange"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-red"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-green"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-purple"
-                    disabled>
+          <li *ngFor="let color of colors1" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-{{ color }}" disabled>
               Button
             </button>
           </li>
@@ -97,40 +39,10 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue">
-              <i class="material-icons">assignment_returned</i>
-              Archive
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">
-              <i class="material-icons">create</i>
-              Create
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-orange">
-              <i class="material-icons">drafts</i>
-              Drafts
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red">
-              <i class="material-icons">forward</i>
-              Forward
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-green">
-              <i class="material-icons">attach_file</i>
-              Attach
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-purple">
-              <i class="material-icons">reply</i>
-              Reply
+          <li *ngFor="let item of buttonsWithIcons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-{{ item.color }}">
+              <i class="material-icons">{{ item.icon }}</i>
+              {{ item.action | titlecase }}
             </button>
           </li>
         </ul>
@@ -138,46 +50,10 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-light-blue"
-                    disabled>
-              <i class="material-icons">assignment_returned</i>
-              Archive
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-teal"
-                    disabled>
-              <i class="material-icons">create</i>
-              Create
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-orange"
-                    disabled>
-              <i class="material-icons">drafts</i>
-              Drafts
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-red"
-                    disabled>
-              <i class="material-icons">forward</i>
-              Forward
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-green"
-                    disabled>
-              <i class="material-icons">attach_file</i>
-              Attach
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--colored-purple"
-                    disabled>
-              <i class="material-icons">reply</i>
-              Reply
+          <li *ngFor="let item of buttonsWithIcons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-{{ item.color }}" disabled>
+              <i class="material-icons">{{ item.icon }}</i>
+              {{ item.action | titlecase }}
             </button>
           </li>
         </ul>
@@ -195,40 +71,10 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--facebook">
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--{{ name }}">
               <i class="material-icons"></i>
-              Facebook
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--twitter">
-              <i class="material-icons"></i>
-              Twitter
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--dribbble">
-              <i class="material-icons"></i>
-              Dribbble
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--behance">
-              <i class="material-icons"></i>
-              Behance
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--linkedin">
-              <i class="material-icons"></i>
-              Linkedin
-            </button>
-          </li>
-          <li class="mdl-list__item pull-left">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--github">
-              <i class="material-icons"></i>
-              Github
+              {{ name | titlecase }}
             </button>
           </li>
         </ul>
@@ -236,45 +82,10 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--facebook"
-                    disabled>
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--{{ name }}" disabled>
               <i class="material-icons"></i>
-              Facebook
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--twitter"
-                    disabled>
-              <i class="material-icons"></i>
-              Twitter
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--dribbble"
-                    disabled>
-              <i class="material-icons"></i>
-              Dribbble
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--behance"
-                    disabled>
-              <i class="material-icons"></i>
-              Behance
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--linkedin"
-                    disabled>
-              <i class="material-icons"></i>
-              Linkedin
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--raised button--github" disabled>
-              <i class="material-icons"></i>
-              Github
+              {{ name | titlecase }}
             </button>
           </li>
         </ul>
@@ -292,111 +103,29 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-light-blue">
-              <i class="material-icons">assignment_returned</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-teal">
-              <i class="material-icons">create</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-orange">
-              <i class="material-icons">drafts</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-red">
-              <i class="material-icons">forward</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-purple">
-              <i class="material-icons">reply</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons">send</i>
+          <li *ngFor="let item of iconButtons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-{{ item.color }}">
+              <i class="material-icons">{{ item.icon }}</i>
             </button>
           </li>
         </ul>
-
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Social</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--facebook">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--twitter">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--dribbble">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--behance">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--linkedin">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--github">
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--{{ name }}">
               <i class="material-icons"></i>
             </button>
           </li>
         </ul>
-        <!--icon disabled-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--colored-light-blue"
-                    disabled>
-              <i class="material-icons">assignment_returned</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--colored-teal"
-                    disabled>
-              <i class="material-icons">create</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--colored-orange"
-                    disabled>
-              <i class="material-icons">drafts</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--colored-red"
-                    disabled>
-              <i class="material-icons">forward</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--colored-purple"
-                    disabled>
-              <i class="material-icons">reply</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon" disabled>
-              <i class="material-icons">send</i>
+          <li *ngFor="let item of iconButtons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-{{ item.color }}" disabled>
+              <i class="material-icons">{{ item.icon }}</i>
             </button>
           </li>
         </ul>
@@ -404,39 +133,8 @@
           <li class="mdl-list__item">
             <span class="text-color--gray"></span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--facebook"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--twitter"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--dribbble"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--behance"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--linkedin"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon button--github"
-                    disabled>
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--{{ name }}" disabled>
               <i class="material-icons"></i>
             </button>
           </li>
@@ -455,111 +153,29 @@
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-light-blue">
-              <i class="material-icons">assignment_returned</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-teal">
-              <i class="material-icons">create</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-orange">
-              <i class="material-icons">drafts</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-red">
-              <i class="material-icons">forward</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-purple">
-              <i class="material-icons">reply</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect">
-              <i class="material-icons">send</i>
+          <li *ngFor="let item of iconButtons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-{{ item.color }}">
+              <i class="material-icons">{{ item.icon }}</i>
             </button>
           </li>
         </ul>
-
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Social</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--facebook">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--twitter">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--dribbble">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--behance">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--linkedin">
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--github">
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--{{ name }}">
               <i class="material-icons"></i>
             </button>
           </li>
         </ul>
-        <!--icon disabled-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised button--colored-light-blue"
-                    disabled>
-              <i class="material-icons">assignment_returned</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised button--colored-teal"
-                    disabled>
-              <i class="material-icons">create</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised button--colored-orange"
-                    disabled>
-              <i class="material-icons">drafts</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised button--colored-red"
-                    disabled>
-              <i class="material-icons">forward</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised button--colored-purple"
-                    disabled>
-              <i class="material-icons">reply</i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised" disabled>
-              <i class="material-icons">send</i>
+          <li *ngFor="let item of iconButtons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--colored-{{ item.color }}" disabled>
+              <i class="material-icons">{{ item.icon }}</i>
             </button>
           </li>
         </ul>
@@ -567,39 +183,8 @@
           <li class="mdl-list__item">
             <span class="text-color--gray"></span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--facebook"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--twitter"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--dribbble"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--behance"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--linkedin"
-                    disabled>
-              <i class="material-icons"></i>
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--github"
-                    disabled>
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised mdl-js-ripple-effect button--{{ name }}" disabled>
               <i class="material-icons"></i>
             </button>
           </li>
@@ -614,165 +199,45 @@
         <h2 class="mdl-card__title-text">Buttons without background</h2>
       </base-card-title>
       <base-card-body>
-        <!--BB-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Basic button</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--light-blue">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--teal">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--orange">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--red">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--green">
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-purple">
+          <li *ngFor="let color of colors1" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect color-text--{{ color }}">
               Button
             </button>
           </li>
         </ul>
-        <!--disabled-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Disabled</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored-light-blue"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored--teal"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored-orange"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored-red"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored-green"
-                    disabled>
-              Button
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button button--colored-purple"
-                    disabled>
+          <li *ngFor="let color of colors1" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button button--colored-{{ color }}" disabled>
               Button
             </button>
           </li>
         </ul>
-        <!--BWI-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Button with icon</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-light-blue">
-              <i class="material-icons">assignment_returned</i>
-              Archive
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-teal">
-              <i class="material-icons">create</i>
-              Create
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-orange">
-              <i class="material-icons">drafts</i>
-              Drafts
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-red">
-              <i class="material-icons">forward</i>
-              Forward
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-green">
-              <i class="material-icons">attach_file</i>
-              Attach
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-purple">
-              <i class="material-icons">reply</i>
-              Reply
+          <li *ngFor="let item of buttonsWithIcons" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--colored-{{ item.color }}">
+              <i class="material-icons">{{ item.icon }}</i>
+              {{ item.action | titlecase }}
             </button>
           </li>
         </ul>
-        <!--SB-->
         <ul class="mdl-list pull-left">
           <li class="mdl-list__item">
             <span class="text-color--gray">Normal</span>
           </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--facebook">
+          <li *ngFor="let name of socials" class="mdl-list__item">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--{{ name }}">
               <i class="material-icons"></i>
-              Facebook
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--twitter">
-              <i class="material-icons"></i>
-              Twitter
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--dribbble">
-              <i class="material-icons"></i>
-              Dribbble
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--behance">
-              <i class="material-icons"></i>
-              Behance
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--linkedin">
-              <i class="material-icons"></i>
-              Linkedin
-            </button>
-          </li>
-          <li class="mdl-list__item">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect button--github">
-              <i class="material-icons"></i>
-              Github
+              {{ name | titlecase }}
             </button>
           </li>
         </ul>
@@ -780,7 +245,6 @@
     </base-card>
   </div>
 
-  <!--FAB BUTTONS-->
   <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--5-col-tablet mdl-cell--4-col-phone buttons-fab">
     <base-card>
       <base-card-title>
@@ -820,7 +284,7 @@
       </base-card-body>
     </base-card>
   </div>
-  <!--HOW TO USE-->
+
   <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
     <base-card>
       <base-card-title>

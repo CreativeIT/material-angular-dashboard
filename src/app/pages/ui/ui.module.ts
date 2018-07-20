@@ -12,7 +12,7 @@ import { FormsComponent } from './forms/forms.component';
 import { IconsComponent } from './icons/icons.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TablesComponent } from './tables/tables.component';
-import { ComponentsComponent } from './components/components.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   imports: [
@@ -20,6 +20,7 @@ import { ComponentsComponent } from './components/components.component';
     UIRoutingModule,
     LayoutsModule,
     ThemeModule,
+    ComponentsModule,
   ],
   declarations: [
     ButtonsComponent,
@@ -29,7 +30,6 @@ import { ComponentsComponent } from './components/components.component';
     IconsComponent,
     TypographyComponent,
     TablesComponent,
-    ComponentsComponent,
   ],
 })
 export class UIModule { }
