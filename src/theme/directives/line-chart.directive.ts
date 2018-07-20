@@ -3,9 +3,7 @@ import * as nv from 'nvd3';
 
 import { Directive, AfterViewInit, ElementRef } from '@angular/core';
 
-@Directive({
-  selector: '[baseLineChart]',
-})
+@Directive({ })
 export class BaseLineChartDirective implements AfterViewInit {
   protected animatedData;
   protected rawData;
