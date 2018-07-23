@@ -1,0 +1,22 @@
+@import '~theme/helpers';
+
+.robot {
+  .mdl-card {
+    height: 450px;
+  }
+
+  .mdl-card__supporting-text {
+    @include typo-card-supporting-text;
+
+    padding-bottom: 26px;
+  }
+
+  .mdl-card__title {
+    background: url('#{$image-path}/robot.png') center center no-repeat;
+    background-size: cover;
+
+    .mdl-card__title-text {
+      color: $card-title-img-color;
+    }
+  }
+}

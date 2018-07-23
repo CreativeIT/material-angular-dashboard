@@ -1,0 +1,23 @@
+.badge--colored-green {
+  @include colored-badge($color-green);
+}
+
+.badge--colored-red {
+  @include colored-badge($color-red);
+}
+
+.badge--colored-teal {
+  @include colored-badge($color-teal);
+}
+
+.badge--colored-light-blue {
+  @include colored-badge($color-light-blue);
+}
+
+.badge--colored-purple {
+  @include colored-badge($color-purple);
+}
+
+.badge--colored-orange {
+  @include colored-badge($color-orange);
+}

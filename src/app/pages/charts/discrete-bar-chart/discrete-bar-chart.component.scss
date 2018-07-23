@@ -1,0 +1,89 @@
+@import '~theme/helpers';
+
+.discrete-bar-chart__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: $pie-chart-height;
+  height: 100%;
+
+  .nv-axis {
+    text {
+      fill: $color-white;
+      opacity: 0.5 !important;
+    }
+
+    .domain,
+    .nv-zeroLine {
+      stroke: $color-white;
+      opacity: 0.5;
+    }
+
+    .tick {
+      line {
+        opacity: 0.1 !important;
+      }
+    }
+  }
+
+  svg {
+    min-height: 200px;
+    max-width: calc(100% - 140px);
+
+    .nvd3.nv-pie {
+      path {
+        fill-opacity: 1;
+        stroke-width: 0;
+      }
+
+      .nv-pie-title {
+        @include typo-piechart-title;
+
+        font-size: 22px !important;
+      }
+    }
+
+    height: 240px;
+
+    .nv-bar {
+      text {
+        fill: $color-white !important;
+        opacity: 0.9;
+      }
+    }
+
+    .nv-axis {
+      &.nv-x {
+        text {
+          display: none;
+        }
+      }
+
+      &.nv-y {
+        .tick:nth-child(2n) {
+          text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .legend {
+    max-width: 140px;
+  }
+
+  .nv-controlsWrap .nv-legend-symbol {
+    fill: $color-teal !important;
+    stroke: $color-teal !important;
+  }
+
+  .nv-group {
+    fill-opacity: 0.9 !important;
+  }
+
+  .nv-legend-text {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,98 @@
+.form {
+  .mdl-grid {
+    padding: 0;
+  }
+
+  .mdl-cell {
+    margin: 0;
+    padding-right: $row-col-padding;
+
+    &.mdl-textfield.is-focused .mdl-textfield__label::after {
+      width: calc(100% - #{$row-col-padding});
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+
+      &.mdl-textfield.is-focused .mdl-textfield__label::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .mdl-cell--1-col {
+    width: calc(100% * 1 / 12);
+  }
+
+  .mdl-cell--2-col {
+    width: calc(100% * 2 / 12);
+  }
+
+  .mdl-cell--3-col {
+    width: calc(100% * 3 / 12);
+  }
+
+  .mdl-cell--4-col {
+    width: calc(100% * 4 / 12);
+  }
+
+  .mdl-cell--5-col {
+    width: calc(100% * 5 / 12);
+  }
+
+  .mdl-cell--6-col {
+    width: calc(100% * 6 / 12);
+  }
+
+  .mdl-cell--7-col {
+    width: calc(100% * 7 / 12);
+  }
+
+  .mdl-cell--8-col {
+    width: calc(100% * 8 / 12);
+  }
+
+  .mdl-cell--9-col {
+    width: calc(100% * 9 / 12);
+  }
+
+  .mdl-cell--10-col {
+    width: calc(100% * 10 / 12);
+  }
+
+  .mdl-cell--11-col {
+    width: calc(100% * 11 / 12);
+  }
+
+  .mdl-cell--12-col {
+    width: 100%;
+  }
+}
+
+.form__article {
+  h3 {
+    @include typo-employer-form-topic();
+
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+}
+
+.form__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  .mdl-checkbox {
+    width: auto;
+
+    .mdl-checkbox__label {
+      @include typo-employer-form-inputs();
+    }
+  }
+
+  .mdl-button {
+    padding: 0;
+  }
+}

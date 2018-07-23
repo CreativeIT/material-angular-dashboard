@@ -1,0 +1,63 @@
+<base-card>
+  <base-card-title>
+    <h2 class="mdl-card__title-text">Tooltips</h2>
+  </base-card-title>
+  <base-card-body>
+    <ul class="mdl-list pull-left">
+      <li class="mdl-list__item">
+        <span class="text-color--gray">SIMPLE</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Walk'" id="tt1" class="icon material-icons color-text--green">directions_run</div>
+      </li>
+      <li class="mdl-list__item">
+        <span class="text-color--gray">LEFT</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Left'; position: 'left'" id="tt5" class="icon material-icons">flight</div>
+      </li>
+    </ul>
+    <ul class="mdl-list pull-left">
+      <li class="mdl-list__item">
+        <span class="text-color--gray">LARGE</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Ride a bike'; large" id="tt2" class="icon material-icons color-text--orange">directions_bike</div>
+      </li>
+      <li class="mdl-list__item">
+        <span class="text-color--gray">TOP</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Top'; position: 'top'" id="tt6" class="icon material-icons">flight</div>
+      </li>
+    </ul>
+    <ul class="mdl-list pull-left">
+      <li class="mdl-list__item">
+        <span class="text-color--gray">RICH</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Travel by <b>BUS</b>'" id="tt3" class="icon material-icons color-text--red">directions_bus</div>
+      </li>
+      <li class="mdl-list__item">
+        <span class="text-color--gray">BOTTOM</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Bottom'; position: 'bottom'" id="tt7" class="icon material-icons">flight</div>
+      </li>
+    </ul>
+    <ul class="mdl-list pull-left">
+      <li class="mdl-list__item">
+        <span class="text-color--gray">MULTIPLY LINES</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Sail on<br>a boat'" id="tt4" class="icon material-icons color-text--teal">directions_boat</div>
+      </li>
+      <li class="mdl-list__item">
+        <span class="text-color--gray">RIGHT</span>
+      </li>
+      <li class="mdl-list__item">
+        <div *baseTooltip="'Right'; position: 'right'" id="tt8" class="icon material-icons">flight</div>
+      </li>
+    </ul>
+  </base-card-body>
+</base-card>

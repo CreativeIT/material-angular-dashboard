@@ -1,0 +1,35 @@
+.mdl-list {
+  margin: 0;
+
+  .mdl-list__item {
+    @include typo-list;
+  }
+
+  .list__item--border-top {
+    background-clip: padding-box;
+    border-top: $list-item-border;
+  }
+
+  .mdl-list__item-avatar {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+
+  .mdl-list__item--two-line {
+    height: auto;
+
+    .mdl-list__item-primary-content {
+      height: auto;
+    }
+  }
+}
+
+.list-title {
+  font-size: 20px;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+

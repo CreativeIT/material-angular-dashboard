@@ -1,0 +1,29 @@
+{
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ],
+  "extends": [
+    "tslint-angular",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "max-line-length": [
+      true,
+      {
+        "ignore-pattern": "(\"|'|`).*?\\1"
+      }
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-pascal-case"
+    ],
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[A-Z]?[a-z][\\w\\d]+$"
+      }
+    ],
+    "ter-computed-property-spacing": [false]
+  }
+}

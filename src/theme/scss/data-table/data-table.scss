@@ -1,0 +1,63 @@
+.mdl-data-table {
+  @include typo-data-table;
+
+  background-color: $background-color;
+  color: $data-table-color;
+  border: none;
+
+  td,
+  th {
+    &:first-of-type {
+      padding-left: 16px;
+    }
+
+    &:last-of-type {
+      padding-right: 16px;
+    }
+  }
+
+  tr:hover {
+    background-clip: padding-box;
+  }
+
+  &.stripped-table {
+    td,
+    th {
+      border: none;
+      border-right: 1px solid $color-dove-gray;
+    }
+
+    tr :last-child {
+      border-right: none;
+    }
+
+    tr:hover {
+      background: $color-gray;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: $color-table-border;
+    }
+  }
+
+  &.borderless-table {
+    td {
+      border: none;
+    }
+  }
+
+  &.bordered-table {
+    td,
+    th {
+      border-right: 1px solid $color-table-border;
+    }
+
+    tr :last-child {
+      border-right: none;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}

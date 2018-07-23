@@ -1,0 +1,49 @@
+@import '~theme/helpers';
+
+.weather {
+  .mdl-card__supporting-text {
+    color: $card-text-color;
+    background: url('#{$image-path}/weather_bck.png') center center no-repeat;
+    background-size: cover;
+    text-align: right;
+    padding-top: 38px;
+    text-shadow: $weather-shadow-4px;
+
+    .weather-temperature {
+      @include typo-weather-temperature;
+
+      color: $card-deg-color;
+
+      sup {
+        position: relative;
+        top: 13px;
+      }
+    }
+
+    .weather-description {
+      @include typo-weather-description;
+
+      position: relative;
+      color: $color-white;
+
+      &::before {
+        width: 35px;
+        position: absolute;
+        right: 150px;
+        content: url('#{$image-path}/cloudy_and_snow.svg');
+      }
+    }
+  }
+
+  .mdl-card__title {
+    .mdl-card__subtitle-text {
+      @include typo-card-subtitle-text;
+
+      .material-icons {
+        font-size: 16px;
+        top: 2px;
+        position: relative;
+      }
+    }
+  }
+}

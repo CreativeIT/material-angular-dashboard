@@ -1,0 +1,16 @@
+.mdl-card__title {
+  background-color: $card-title-background-color;
+}
+
+.mdl-card__supporting-text {
+  width: calc(100% - #{$card-horizontal-padding*2});
+}
+
+.mdl-card__actions {
+  padding: 8px 16px;
+}
+
+.mdl-card,
+.mdl-card__supporting-text {
+  overflow: inherit;
+}
