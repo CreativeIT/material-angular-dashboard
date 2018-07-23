@@ -1,0 +1,7 @@
+@import '~theme/helpers';
+
+@media screen and (max-width: $layout-screen-size-threshold) {
+  .mdl-layout__header {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,27 @@
+.mdl-slider__container {
+  margin: 0 -20px;
+}
+
+.slider--colored-green {
+  @include colored-slider($color-green);
+}
+
+.slider--colored-red {
+  @include colored-slider($color-red);
+}
+
+.slider--colored-purple {
+  @include colored-slider($color-purple);
+}
+
+.slider--colored-teal {
+  @include colored-slider($color-teal);
+}
+
+.slider--colored-light-blue {
+  @include colored-slider($color-light-blue);
+}
+
+.slider--colored-orange {
+  @include colored-slider($color-orange);
+}

@@ -1,0 +1,11 @@
+.mdl-textfield {
+  width: auto;
+
+  .mdl-textfield__input {
+    @include typo-textfield-input;
+  }
+
+  &.full-size {
+    width: 100%;
+  }
+}

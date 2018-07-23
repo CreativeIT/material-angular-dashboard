@@ -1,0 +1,25 @@
+.input-group {
+  & > i {
+    margin-right: 15px;
+    margin-top: 4px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  img {
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 16px;
+    height: 18px;
+    width: 18px;
+    float: left;
+  }
+
+  label {
+    margin-top: 4px;
+  }
+
+  .mdl-textfield {
+    width: calc(100% - 40.5px);
+  }
+}

@@ -1,0 +1,33 @@
+.scroller__bar {
+  opacity: 0.2;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 4px;
+  border-radius: 2px;
+  transition: 0.5s height, 0.3s opacity;
+  background: $color-gray;
+}
+
+.scroll__wrapper {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .scroller__bar {
+      opacity: 1;
+    }
+  }
+}
+
+.scroller {
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.scroll__container {
+  display: flex;
+  min-height: 100%;
+}

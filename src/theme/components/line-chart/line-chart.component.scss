@@ -1,0 +1,66 @@
+@import '~theme/helpers';
+
+.line-chart__container {
+  min-height: $line-chart-height;
+
+  svg {
+    height: $line-chart-height;
+    width: $line-chart-width;
+
+    .y-axis-label,
+    .x-axis-label {
+      @include typo-linechart-axis-label;
+
+      fill: $line-chart-axis-label-color;
+    }
+
+    .nv-axis {
+      &.nv-x {
+        text {
+          display: none;
+        }
+      }
+
+      &.nv-y {
+        text {
+          display: none;
+        }
+      }
+    }
+
+    .nv-lineChart {
+      .nv-guideline {
+        stroke: $line-chart-guideline-color;
+        stroke-width: $line-chart-guideline-width;
+      }
+
+      .tick {
+        opacity: 0.1 !important;
+
+        &.zero {
+          opacity: 0.5 !important;
+
+          line {
+            stroke-opacity: 1 !important;
+          }
+        }
+      }
+
+      .nv-y .domain {
+        stroke-opacity: 0 !important;
+      }
+
+      .nvd3.nv-scatter .nv-groups .nv-point.hover {
+        stroke-width: 5px;
+      }
+    }
+  }
+
+  .legend {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
