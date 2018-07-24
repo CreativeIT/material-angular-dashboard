@@ -7,7 +7,7 @@ import { Component, Input, ViewChild } from '@angular/core';
     <div #bar class="mdl-progress mdl-js-progress progress--colored-{{ color }}" (mdl-componentupgraded)="$event.target.MaterialProgress.setProgress(progressValue); $event.target.MaterialProgress.setBuffer(bufferValue)" [class.mdl-progress__indeterminate]="!isDeterminate"></div>
   `,
 })
-export class BaseProgressComponent {
+export class ProgressComponent {
   private progressValue = 0;
   private bufferValue = 100;
   private isDeterminate = true;

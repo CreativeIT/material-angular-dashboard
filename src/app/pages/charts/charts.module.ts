@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ThemeModule } from 'theme/theme.module';
+import { ThemeModule } from 'theme';
 
 import { ChartsComponent } from './charts.component';
-import { LineChart1Module } from './line-chart-1/line-chart-1.module';
-import { LineChart2Module } from './line-chart-2/line-chart-2.module';
-import { BrowserStatisticsChartModule } from './browser-statistics-chart/browser-statistics-chart.module';
-import { CountryStatisticsChartModule } from './country-statistics-chart/country-statistics-chart.module';
-import { DiscreteBarChartModule } from './discrete-bar-chart/discrete-bar-chart.module';
-import { StackedBarChartModule } from './stacked-bar-chart/stacked-bar-chart.module';
-import { LinePlusBarChartModule } from './line-plus-bar-chart/line-plus-bar-chart.module';
+import { LineChart1Module } from './line-chart-1';
+import { LineChart2Module } from './line-chart-2';
+import { BrowserStatisticsChartModule } from './browser-statistics-chart';
+import { CountryStatisticsChartModule } from './country-statistics-chart';
+import { DiscreteBarChartModule } from './discrete-bar-chart';
+import { StackedBarChartModule } from './stacked-bar-chart';
+import { LinePlusBarChartModule } from './line-plus-bar-chart';
 
 @NgModule({
   imports: [

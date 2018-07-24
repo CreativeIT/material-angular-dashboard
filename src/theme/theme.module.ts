@@ -3,32 +3,31 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { BaseSidebarModule } from './components/sidebar/sidebar.module';
-import { BaseCardModule } from './components/card/card.module';
-import { BaseTooltipModule } from './directives/tooltip/tooltip.module';
-import { BasePageTopComponent } from './components/page-top/page-top.component';
-import { BaseSidebarComponent } from './components/sidebar/sidebar.component';
-import { BaseMsgMenuComponent } from './components/msg-menu/msg-menu.component';
-import { BaseNotificationMenuComponent } from './components/notification-menu/notification-menu.component';
-import { BaseLineChartComponent } from './components/line-chart/line-chart.component';
-import { BasePieChartComponent } from './components/pie-chart/pie-chart.component';
-import { BaseRadioButtonComponent } from './components/radio-button/radio-button.component';
-import { BaseCheckboxComponent } from './components/checkbox/checkbox.component';
-import { BaseSwitchComponent } from './components/switch/switch.component';
-import { BaseIconToggleComponent } from './components/icon-toggle/icon-toggle.component';
-import { BaseProgressComponent } from './components/progress/progress.component';
+import { CardModule } from './components/card';
+import { TooltipModule } from './directives/tooltip';
+import { PageTopComponent } from './components/page-top';
+import { SidebarModule, SidebarComponent } from './components/sidebar';
+import { MessageMenuComponent } from './components/message-menu';
+import { NotificationMenuComponent } from './components/notification-menu';
+import { LineChartComponent } from './components/line-chart';
+import { PieChartComponent } from './components/pie-chart';
+import { RadioButtonComponent } from './components/radio-button';
+import { CheckboxComponent } from './components/checkbox';
+import { SwitchComponent } from './components/switch';
+import { IconToggleComponent } from './components/icon-toggle';
+import { ProgressComponent } from './components/progress';
 
 const BASE_COMPONENTS = [
-  BasePageTopComponent,
-  BaseMsgMenuComponent,
-  BaseNotificationMenuComponent,
-  BaseLineChartComponent,
-  BasePieChartComponent,
-  BaseRadioButtonComponent,
-  BaseCheckboxComponent,
-  BaseSwitchComponent,
-  BaseIconToggleComponent,
-  BaseProgressComponent,
+  PageTopComponent,
+  MessageMenuComponent,
+  NotificationMenuComponent,
+  LineChartComponent,
+  PieChartComponent,
+  RadioButtonComponent,
+  CheckboxComponent,
+  SwitchComponent,
+  IconToggleComponent,
+  ProgressComponent,
 ];
 
 const BASE_DIRECTIVES = [];
@@ -45,16 +44,16 @@ const BASE_PIPES = [];
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    BaseSidebarModule,
-    BaseCardModule,
+    SidebarModule,
+    CardModule,
   ],
   exports: [
     ...BASE_PIPES,
     ...BASE_DIRECTIVES,
     ...BASE_COMPONENTS,
-    BaseSidebarModule,
-    BaseCardModule,
-    BaseTooltipModule,
+    SidebarModule,
+    CardModule,
+    TooltipModule,
   ],
 })
 export class ThemeModule { }

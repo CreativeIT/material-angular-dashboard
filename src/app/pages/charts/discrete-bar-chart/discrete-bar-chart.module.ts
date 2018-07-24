@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ThemeModule } from 'theme/theme.module';
+import { ThemeModule } from 'theme';
 
 import { DiscreteBarChartDirective } from './discrete-bar-chart.directive';
 import { DiscreteBarChartComponent } from './discrete-bar-chart.component';

@@ -1,5 +1,3 @@
-// FIXME: loaded from service selected items are not visually selected
-
 import 'material-design-lite/material';
 
 import {

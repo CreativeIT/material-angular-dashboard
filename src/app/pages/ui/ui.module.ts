@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ThemeModule } from 'theme/theme.module';
-import { LayoutsModule } from 'app/layouts/layouts.module';
+import { ThemeModule } from 'theme';
 
 import { UIRoutingModule } from './ui-routing.module';
-import { ButtonsComponent } from './buttons/buttons.component';
-import { CardsComponent } from './cards/cards.component';
-import { ColorsComponent } from './colors/colors.component';
-import { FormsComponent } from './forms/forms.component';
-import { IconsComponent } from './icons/icons.component';
-import { TypographyComponent } from './typography/typography.component';
-import { TablesComponent } from './tables/tables.component';
-import { ComponentsModule } from './components/components.module';
+import { ButtonsComponent } from './buttons';
+import { CardsComponent } from './cards';
+import { ColorsComponent } from './colors';
+import { FormsComponent } from './forms';
+import { IconsComponent } from './icons';
+import { TypographyComponent } from './typography';
+import { TablesComponent } from './tables';
+import { ComponentsModule } from './components';
 
 @NgModule({
   imports: [
     CommonModule,
     UIRoutingModule,
-    LayoutsModule,
     ThemeModule,
     ComponentsModule,
   ],

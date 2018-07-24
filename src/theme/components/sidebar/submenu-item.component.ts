@@ -1,6 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-
-import { BaseMenuItemComponent } from './menu-item.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'base-submenu-item',
@@ -16,8 +15,14 @@ import { BaseMenuItemComponent } from './menu-item.component';
     </div>
   `,
 })
-export class BaseSubmenuItemComponent extends BaseMenuItemComponent implements OnInit {
+export class SubmenuItemComponent implements OnInit {
+  @Input() data;
+
   shown = false;
+
+  constructor(
+    protected router: Router,
+  ) { }
 
   onClick() {
     this.shown = !this.shown;

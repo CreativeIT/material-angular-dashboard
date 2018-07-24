@@ -4,7 +4,7 @@ import * as nv from 'nvd3';
 import { Directive, AfterViewInit, ElementRef } from '@angular/core';
 
 @Directive({ })
-export class BaseLineChartDirective implements AfterViewInit {
+export class LineChartDirective implements AfterViewInit {
   protected animatedData;
   protected rawData;
   protected xAxis;

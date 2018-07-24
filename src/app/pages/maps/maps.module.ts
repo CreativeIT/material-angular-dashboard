@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule as NgFormsModule } from '@angular/forms';
-import { ThemeModule } from 'theme/theme.module';
+import { FormsModule } from '@angular/forms';
+
+import { ThemeModule } from 'theme';
 
 import { MapsComponent } from './maps.component';
-
-import { MapComponent } from './map/map.component';
+import { MapComponent } from './map';
 
 @NgModule({
   imports: [
     CommonModule,
     ThemeModule,
-    NgFormsModule,
+    FormsModule,
   ],
   declarations: [
     MapsComponent,

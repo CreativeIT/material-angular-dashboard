@@ -5,7 +5,7 @@ import { Component, Input, ViewChild, HostBinding } from '@angular/core';
   styleUrls: ['./card.component.scss'],
   template: `<div class="mdl-card__supporting-text" [class.mdl-card--expand]="isExpanded"><ng-content></ng-content></div>`,
 })
-export class BaseCardBodyComponent {
+export class CardBodyComponent {
   private isExpanded = false;
 
   // FIXME: make NG components "through" for DOM-hierarchy instead of throwing properties manually

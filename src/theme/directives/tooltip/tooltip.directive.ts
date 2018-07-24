@@ -7,18 +7,18 @@ import {
   ComponentRef,
 } from '@angular/core';
 
-import { BaseTooltipComponent } from './tooltip.component';
+import { TooltipComponent } from './tooltip.component';
 
 @Directive({
   selector: '[baseTooltip]',
 })
-export class BaseTooltipDirective {
-  private tooltipRef: ComponentRef<BaseTooltipComponent>;
+export class TooltipDirective {
+  private tooltipRef: ComponentRef<TooltipComponent>;
 
   @Input() set baseTooltip(value) {
     const targetRef = this.vcr.createEmbeddedView(this.tr);
     this.tooltipRef = this.vcr.createComponent(
-      this.cfr.resolveComponentFactory(BaseTooltipComponent),
+      this.cfr.resolveComponentFactory(TooltipComponent),
     );
     this.tooltipRef.instance.targetId = targetRef.rootNodes[0].getAttribute('id');
     this.tooltipRef.instance.content = value;

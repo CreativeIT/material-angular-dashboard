@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-top.component.scss'],
   templateUrl: './page-top.component.html',
 })
-export class BasePageTopComponent { }
+export class PageTopComponent { }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BaseNotificationMenuService {
+export class NotificationMenuService {
   public getNotifications(): Object[] {
     return [
       {

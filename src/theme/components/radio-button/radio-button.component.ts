@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { BaseToggleComponent } from 'theme/components/toggle/toggle.component';
+import { ToggleComponent } from 'theme/components/toggle/toggle.component';
 
 @Component({
   selector: 'base-radio-button, base-toggle[type=radio]',
@@ -12,7 +12,7 @@ import { BaseToggleComponent } from 'theme/components/toggle/toggle.component';
     </label>
   `,
 })
-export class BaseRadioButtonComponent extends BaseToggleComponent {
+export class RadioButtonComponent extends ToggleComponent {
   @Input() name;
   @Input() value;
 }

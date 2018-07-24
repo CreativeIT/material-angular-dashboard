@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ThemeModule } from 'theme/theme.module';
+import { ThemeModule } from 'theme';
 
 import { LineChart2Directive } from './line-chart-2.directive';
 import { LineChart2Service } from './line-chart-2.service';

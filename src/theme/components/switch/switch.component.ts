@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { BaseToggleComponent } from 'theme/components/toggle/toggle.component';
+import { ToggleComponent } from 'theme/components/toggle/toggle.component';
 
 @Component({
   selector: 'base-switch, base-toggle[type=checkbox]',
@@ -12,4 +12,4 @@ import { BaseToggleComponent } from 'theme/components/toggle/toggle.component';
     </label>
   `,
 })
-export class BaseSwitchComponent extends BaseToggleComponent { }
+export class SwitchComponent extends ToggleComponent { }
