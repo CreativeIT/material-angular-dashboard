@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { BaseSidebarComponent } from './sidebar.component';
-import { BaseMenuItemComponent } from './menu-item.component';
-import { BaseMenuLinkItemComponent } from './menu-link-item.component';
-import { BaseSubmenuItemComponent } from './submenu-item.component';
+import { SidebarComponent } from './sidebar.component';
+import { MenuItemComponent } from './menu-item.component';
+import { MenuLinkItemComponent } from './menu-link-item.component';
+import { SubmenuItemComponent } from './submenu-item.component';
 
 @NgModule({
   imports: [
@@ -15,16 +15,16 @@ import { BaseSubmenuItemComponent } from './submenu-item.component';
     RouterModule,
   ],
   declarations: [
-    BaseSidebarComponent,
-    BaseMenuItemComponent,
-    BaseMenuLinkItemComponent,
-    BaseSubmenuItemComponent,
+    SidebarComponent,
+    MenuItemComponent,
+    MenuLinkItemComponent,
+    SubmenuItemComponent,
   ],
   exports: [
-    BaseSidebarComponent,
-    BaseMenuItemComponent,
-    BaseMenuLinkItemComponent,
-    BaseSubmenuItemComponent,
+    SidebarComponent,
+    MenuItemComponent,
+    MenuLinkItemComponent,
+    SubmenuItemComponent,
   ],
 })
-export class BaseSidebarModule { }
+export class SidebarModule { }

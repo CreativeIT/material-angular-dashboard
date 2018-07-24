@@ -3,7 +3,7 @@ import * as nv from 'nvd3';
 
 import { Directive, OnInit, ElementRef } from '@angular/core';
 
-import { BaseLineChartDirective } from 'theme/directives/line-chart.directive';
+import { LineChartDirective as BaseLineChartDirective } from 'theme/directives/line-chart.directive';
 
 import { LineChartService } from './line-chart.service';
 

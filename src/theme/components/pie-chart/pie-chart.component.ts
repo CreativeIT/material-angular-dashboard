@@ -8,4 +8,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./pie-chart.component.scss'],
   templateUrl: './pie-chart.component.html',
 })
-export class BasePieChartComponent { }
+export class PieChartComponent { }

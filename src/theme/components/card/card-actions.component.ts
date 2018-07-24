@@ -5,7 +5,7 @@ import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
   styleUrls: ['./card.component.scss'],
   template: `<div class="mdl-card__actions"><ng-content></ng-content></div>`,
 })
-export class BaseCardActionsComponent {
+export class CardActionsComponent {
   constructor(
     private viewContainerRef: ViewContainerRef,
   ) { }

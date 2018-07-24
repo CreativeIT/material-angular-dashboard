@@ -3,14 +3,14 @@ import * as nv from 'nvd3';
 
 import { Directive, OnInit, ElementRef } from '@angular/core';
 
-import { BaseLineChartDirective } from 'theme/directives/line-chart.directive';
+import { LineChartDirective } from 'theme/directives/line-chart.directive';
 
 import { LineChart2Service } from './line-chart-2.service';
 
 @Directive({
   selector: '[appLineChart2]',
 })
-export class LineChart2Directive extends BaseLineChartDirective {
+export class LineChart2Directive extends LineChartDirective {
   constructor(
     el: ElementRef,
     private lineChart2Service: LineChart2Service,

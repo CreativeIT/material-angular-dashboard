@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
   templateUrl: './sidebar.component.html',
 })
-export class BaseSidebarComponent {
+export class SidebarComponent {
   @Input() menu;
 }

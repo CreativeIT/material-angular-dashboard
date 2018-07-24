@@ -1,5 +1,4 @@
 import { Component, HostListener, Input } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'base-menu-item',
@@ -9,18 +8,6 @@ import { Router } from '@angular/router';
     <base-submenu-item *ngIf="data.children" [data]="data"></base-submenu-item>
   `,
 })
-export class BaseMenuItemComponent {
+export class MenuItemComponent {
   @Input() data;
-
-  constructor(
-    protected router: Router,
-  ) { }
-
-  private navigate() {
-    const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;
-    // FIXME: drawer is undefined
-    if (layout.drawer_ && layout.drawer_.getAttribute('aria-hidden') !== 'true') {
-      layout.toggleDrawer();
-    }
-  }
 }

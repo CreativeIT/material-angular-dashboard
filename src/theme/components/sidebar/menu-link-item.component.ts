@@ -1,6 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
-
-import { BaseMenuItemComponent } from './menu-item.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'base-menu-link-item',
@@ -26,4 +25,17 @@ import { BaseMenuItemComponent } from './menu-item.component';
     </a>
   `,
 })
-export class BaseMenuLinkItemComponent extends BaseMenuItemComponent { }
+export class MenuLinkItemComponent {
+  @Input() data;
+
+  constructor(
+    protected router: Router,
+  ) { }
+
+  private navigate() {
+    const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;
+    if (layout.drawer_.getAttribute('aria-hidden') !== 'true') {
+      layout.toggleDrawer();
+    }
+  }
+}

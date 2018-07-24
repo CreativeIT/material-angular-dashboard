@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { UpgradeDomAfterViewInit } from 'helpers';
 
 @Component({
-  selector: 'ui-icons',
+  selector: 'app-icons',
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss'],
 })

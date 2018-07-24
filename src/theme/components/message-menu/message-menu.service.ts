@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BaseMsgMenuService {
+export class MessageMenuService {
   public getMessages(): Object[] {
     return [
       {

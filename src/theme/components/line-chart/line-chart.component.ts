@@ -8,4 +8,4 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./line-chart.component.scss'],
   templateUrl: './line-chart.component.html',
 })
-export class BaseLineChartComponent { }
+export class LineChartComponent { }
