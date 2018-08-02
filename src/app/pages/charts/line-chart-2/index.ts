@@ -1,3 +1,2 @@
-export { LineChart2Directive } from './line-chart-2.directive';
-export { LineChart2Module } from './line-chart-2.module';
+export { LineChart2Component } from './line-chart-2.component';
 export { LineChart2Service } from './line-chart-2.service';

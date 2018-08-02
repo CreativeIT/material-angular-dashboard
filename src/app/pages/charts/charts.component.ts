@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-charts',
   styleUrls: ['./charts.component.scss'],
   templateUrl: './charts.component.html',
 })
-@UpgradeDomAfterViewInit
-export class ChartsComponent { }
+export class ChartsComponent extends UpgradableComponent {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.charts') private readonly charts = true;
+}

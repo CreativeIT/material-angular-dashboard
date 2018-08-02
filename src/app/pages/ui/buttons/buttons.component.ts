@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html',
   styleUrls: ['./buttons.component.scss'],
 })
-@UpgradeDomAfterViewInit
-export class ButtonsComponent {
+export class ButtonsComponent extends UpgradableComponent {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.ui-buttons') private readonly uiButtons = true;
+
   private colors1 = [
     'light-blue',
     'teal',

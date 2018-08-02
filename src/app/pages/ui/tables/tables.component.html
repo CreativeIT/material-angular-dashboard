@@ -1,132 +1,130 @@
-<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top ui-tables">
-  <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Simple table</h1>
-      </div>
-      <div class="mdl-card__supporting-text no-padding">
-        <table class="mdl-data-table mdl-js-data-table">
-          <thead>
-            <tr>
-              <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of simpleTable">
-              <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
-                <span *ngSwitchCase="'read'" class="label label--mini background-color--primary">Read</span>
-                <span *ngSwitchCase="'unread'" class="label label--mini background-color--secondary">Unread</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Simple table</h1>
+    </div>
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of simpleTable">
+            <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
+              <span *ngSwitchCase="'read'" class="label label--mini background-color--primary">Read</span>
+              <span *ngSwitchCase="'unread'" class="label label--mini background-color--secondary">Unread</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Bordered table</h1>
-      </div>
-      <div class="mdl-card__supporting-text no-padding">
-        <table class="mdl-data-table mdl-js-data-table bordered-table">
-          <thead>
-            <tr>
-              <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of borderedTable">
-              <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
-                <span *ngSwitchCase="'read'" class="label label--mini background-color--primary">Read</span>
-                <span *ngSwitchCase="'unread'" class="label label--mini background-color--secondary">Unread</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+</div>
+<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Bordered table</h1>
+    </div>
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table bordered-table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of borderedTable">
+            <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
+              <span *ngSwitchCase="'read'" class="label label--mini background-color--primary">Read</span>
+              <span *ngSwitchCase="'unread'" class="label label--mini background-color--secondary">Unread</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Stripped table</h1>
-      </div>
-      <div class="mdl-card__supporting-text no-padding">
-        <table class="mdl-data-table mdl-js-data-table stripped-table">
-          <thead>
-            <tr>
-              <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of strippedTable">
-              <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
-                <span *ngSwitchCase="'unavailable'" class="label label--mini color--orange">Unavailable</span>
-                <span *ngSwitchCase="'available'" class="label label--mini background-color--primary">Available</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+</div>
+<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Stripped table</h1>
+    </div>
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table stripped-table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of strippedTable">
+            <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
+              <span *ngSwitchCase="'unavailable'" class="label label--mini color--orange">Unavailable</span>
+              <span *ngSwitchCase="'available'" class="label label--mini background-color--primary">Available</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Borderless table</h1>
-      </div>
-      <div class="mdl-card__supporting-text no-padding">
-        <table class="mdl-data-table mdl-js-data-table borderless-table">
-          <thead>
-            <tr>
-              <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of borderlessTable">
-              <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
-                <span *ngSwitchCase="'unavailable'" class="label label--mini color--orange">Unavailable</span>
-                <span *ngSwitchCase="'available'" class="label label--mini background-color--primary">Available</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+</div>
+<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Borderless table</h1>
+    </div>
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table borderless-table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of borderlessTable">
+            <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
+              <span *ngSwitchCase="'unavailable'" class="label label--mini color--orange">Unavailable</span>
+              <span *ngSwitchCase="'available'" class="label label--mini background-color--primary">Available</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">Advanced table</h1>
-      </div>
-      <div class="mdl-card__supporting-text no-padding">
-        <table class="mdl-data-table mdl-js-data-table">
-          <thead>
-            <tr>
-              <th *ngFor="let header of advancedHeaders" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of advancedTable">
-              <td *ngFor="let cell of row.slice(0, 3)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric">
-                <span *ngFor="let genre of row[3]" class="label label--mini color--{{ genreColors[genre] }}">{{ genre }}</span>
-              </td>
-              <td *ngFor="let cell of row.slice(4, 8)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
-              <td class="mdl-data-table__cell--non-numeric">
-                <span *ngFor="let i of Array(row[8])" class="label label--mini label__availability" [class.background-color--primary]="row[8] === 4" [class.background-color--secondary]="row[8] === 1" [class.color--orange]="row[8] === 2"></span>
-                <span *ngFor="let i of Array(4 - row[8])" class="label label--mini label__availability"></span>
-              </td>
-              <td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">Add to cart</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+</div>
+<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">Advanced table</h1>
+    </div>
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table">
+        <thead>
+          <tr>
+            <th *ngFor="let header of advancedHeaders" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of advancedTable">
+            <td *ngFor="let cell of row.slice(0, 3)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric">
+              <span *ngFor="let genre of row[3]" class="label label--mini color--{{ genreColors[genre] }}">{{ genre }}</span>
+            </td>
+            <td *ngFor="let cell of row.slice(4, 8)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric">
+              <span *ngFor="let i of Array(row[8])" class="label label--mini label__availability" [class.background-color--primary]="row[8] === 4" [class.background-color--secondary]="row[8] === 1" [class.color--orange]="row[8] === 2"></span>
+              <span *ngFor="let i of Array(4 - row[8])" class="label label--mini label__availability"></span>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">Add to cart</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

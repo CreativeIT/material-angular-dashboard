@@ -1,13 +1,10 @@
 import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { BlankLayoutCardComponent } from 'app/components/blank-layout-card';
 
 @Component({
-  selector: 'page-login',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-login',
+  styleUrls: ['../../../components/blank-layout-card/blank-layout-card.component.scss'],
   templateUrl: './login.component.html',
 })
-@UpgradeDomAfterViewInit
-export class LoginComponent {
-  @HostBinding('style.margin') private margin = 'auto';
-}
+export class LoginComponent extends BlankLayoutCardComponent { }

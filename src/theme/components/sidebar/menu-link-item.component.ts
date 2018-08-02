@@ -26,10 +26,10 @@ import { Router } from '@angular/router';
   `,
 })
 export class MenuLinkItemComponent {
-  @Input() data;
+  @Input() private data;
 
   constructor(
-    protected router: Router,
+    private router: Router,
   ) { }
 
   private navigate() {

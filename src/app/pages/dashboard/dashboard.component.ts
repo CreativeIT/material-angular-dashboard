@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-dashboard',
+  styleUrls: ['../charts/charts.component.scss'],
   templateUrl: './dashboard.component.html',
 })
-@UpgradeDomAfterViewInit
-export class DashboardComponent { }
+export class DashboardComponent extends UpgradableComponent {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.mdl-grid--no-spacing') private readonly mdlGridNoSpacing = true;
+}

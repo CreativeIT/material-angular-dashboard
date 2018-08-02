@@ -6,6 +6,8 @@ import { CommonLayoutComponent } from './common-layout';
 import { BlankLayoutComponent } from './blank-layout';
 import { ThemeModule } from 'theme';
 import { SidebarComponent } from 'app/components/sidebar';
+import { MessageMenuComponent } from 'app/components/message-menu';
+import { NotificationMenuComponent } from 'app/components/notification-menu';
 
 @NgModule({
   imports: [
@@ -17,6 +19,8 @@ import { SidebarComponent } from 'app/components/sidebar';
     CommonLayoutComponent,
     BlankLayoutComponent,
     SidebarComponent,
+    MessageMenuComponent,
+    NotificationMenuComponent,
   ],
   exports: [
     CommonLayoutComponent,

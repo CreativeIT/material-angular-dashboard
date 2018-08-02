@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss'],
 })
-@UpgradeDomAfterViewInit
-export class IconsComponent {
+export class IconsComponent extends UpgradableComponent {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.ui-icons') private readonly uiIcons = true;
+
   private data = [
     {
       name: 'action',

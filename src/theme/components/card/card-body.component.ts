@@ -3,20 +3,12 @@ import { Component, Input, ViewChild, HostBinding } from '@angular/core';
 @Component({
   selector: 'base-card base-card-body',
   styleUrls: ['./card.component.scss'],
-  template: `<div class="mdl-card__supporting-text" [class.mdl-card--expand]="isExpanded"><ng-content></ng-content></div>`,
+  template: `<ng-content></ng-content>`,
 })
 export class CardBodyComponent {
-  private isExpanded = false;
+  @HostBinding('class.mdl-card__supporting-text') private readonly mdlCardSupportingText = true;
 
-  // FIXME: make NG components "through" for DOM-hierarchy instead of throwing properties manually
-
-  @HostBinding('style.display') private get display() {
-    return this.isExpanded ? 'flex' : undefined;
-  }
-
-  @HostBinding('style.flex-grow') private get flexGrow() {
-    return this.isExpanded ? 1 : undefined;
-  }
+  @HostBinding('class.mdl-card--expand') private isExpanded = false;
 
   @Input() set expanded(value) {
     if (value || value === '') {

@@ -1,3 +1,2 @@
-export { CountryStatisticsChartDirective } from './country-statistics-chart.directive';
-export { CountryStatisticsChartModule } from './country-statistics-chart.module';
+export { CountryStatisticsChartComponent } from './country-statistics-chart.component';
 export { CountryStatisticsChartService } from './country-statistics-chart.service';

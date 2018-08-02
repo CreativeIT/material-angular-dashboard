@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { ThemeModule } from 'theme';
 
 import { DashboardComponent } from './dashboard.component';
-import { LineChartModule } from './line-chart';
-import { PieChartModule } from './pie-chart';
+import { LineChartComponent } from './line-chart';
+import { PieChartComponent } from './pie-chart';
 import { WeatherComponent } from './weather';
 import { TrendingComponent } from './trending';
 import { RobotCardComponent } from './robot-card';
@@ -19,11 +19,11 @@ import { TableCardComponent } from './table-card';
     CommonModule,
     ThemeModule,
     FormsModule,
-    LineChartModule,
-    PieChartModule,
   ],
   declarations: [
     DashboardComponent,
+    LineChartComponent,
+    PieChartComponent,
     WeatherComponent,
     CotoneasterCardComponent,
     TableCardComponent,

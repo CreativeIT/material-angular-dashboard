@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  @Input() menu;
+  @Input() protected menu;
 }

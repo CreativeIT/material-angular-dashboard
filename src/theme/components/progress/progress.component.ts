@@ -1,19 +1,16 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, HostBinding, HostListener } from '@angular/core';
 
 @Component({
   selector: 'base-progress',
-  // styleUrls: ['../toggle/toggle.component.scss'],
-  template: `
-    <div #bar class="mdl-progress mdl-js-progress progress--colored-{{ color }}" (mdl-componentupgraded)="$event.target.MaterialProgress.setProgress(progressValue); $event.target.MaterialProgress.setBuffer(bufferValue)" [class.mdl-progress__indeterminate]="!isDeterminate"></div>
-  `,
+  styleUrls: ['./progress.component.scss'],
+  template: ``,
 })
 export class ProgressComponent {
   private progressValue = 0;
   private bufferValue = 100;
   private isDeterminate = true;
 
-  @ViewChild('bar') bar;
-  @Input() color;
+  @Input() private color;
 
   @Input() set indeterminate(value) {
     if (value || value === '') {
@@ -23,15 +20,31 @@ export class ProgressComponent {
 
   @Input() set progress(value) {
     this.progressValue = value;
-    if (this.bar.nativeElement.MaterialProgress) {
-      this.bar.nativeElement.MaterialProgress.setProgress(this.progressValue);
+    if (this.el.nativeElement.MaterialProgress) {
+      this.el.nativeElement.MaterialProgress.setProgress(this.progressValue);
     }
   }
 
   @Input() set buffer(value) {
     this.bufferValue = value;
-    if (this.bar.nativeElement.MaterialProgress) {
-      this.bar.nativeElement.MaterialProgress.setBuffer(this.bufferValue);
+    if (this.el.nativeElement.MaterialProgress) {
+      this.el.nativeElement.MaterialProgress.setBuffer(this.bufferValue);
     }
   }
+
+  @HostBinding('class') private get className() {
+    return `mdl-progress mdl-js-progress progress--colored-${this.color}`;
+  }
+
+  @HostBinding('class.mdl-progress__indeterminate') private get mdlProgressIndeterminate() {
+    return !this.isDeterminate;
+  }
+
+  @HostListener('mdl-componentupgraded') private mdlComponentUpgraded() {
+    this.el.nativeElement.MaterialProgress.setProgress(this.progressValue); this.el.nativeElement.MaterialProgress.setBuffer(this.bufferValue);
+  }
+
+  constructor(
+    private el: ElementRef,
+  ) { }
 }

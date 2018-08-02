@@ -1,11 +1,13 @@
-import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Input, ViewChild, ViewContainerRef, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'base-card base-card-actions',
   styleUrls: ['./card.component.scss'],
-  template: `<div class="mdl-card__actions"><ng-content></ng-content></div>`,
+  template: `<ng-content></ng-content>`,
 })
 export class CardActionsComponent {
+  @HostBinding('class.mdl-card__actions') private readonly mdlCardActions = true;
+
   constructor(
     private viewContainerRef: ViewContainerRef,
   ) { }
