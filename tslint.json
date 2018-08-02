@@ -3,8 +3,9 @@
     "node_modules/codelyzer"
   ],
   "extends": [
-    "tslint-angular",
-    "tslint-config-airbnb"
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-angular"
   ],
   "rules": {
     "max-line-length": [
@@ -13,17 +14,31 @@
         "ignore-pattern": "(\"|'|`).*?\\1"
       }
     ],
-    "variable-name": [
-      true,
-      "check-format",
-      "allow-pascal-case"
-    ],
     "function-name": [
       true,
       {
         "function-regex": "^[A-Z]?[a-z][\\w\\d]+$"
       }
     ],
-    "ter-computed-property-spacing": [false]
+    "ter-computed-property-spacing": false,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "object-literal-sort-keys": false,
+    "arrow-parens": false,
+    "ter-arrow-parens": [
+      true,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-conditional-assignment": false,
+    "object-literal-key-quotes": [
+      true,
+      "consistent-as-needed"
+    ]
   }
 }

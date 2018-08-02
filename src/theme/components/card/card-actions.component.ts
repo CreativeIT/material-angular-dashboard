@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ViewContainerRef, HostBinding } from '@angular/core';
+import { Component, HostBinding, Input, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'base-card base-card-actions',

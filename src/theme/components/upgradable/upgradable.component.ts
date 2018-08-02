@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({ })
 export abstract class UpgradableComponent implements AfterViewInit {

@@ -11,7 +11,7 @@ import { NotificationMenuService } from './notification-menu.service';
 export class NotificationMenuComponent {
   @HostBinding('class.notification-menu') private readonly notificationMenu = true;
 
-  private notifications: Object[];
+  private notifications: object[];
 
   constructor(notificationMenuService: NotificationMenuService) {
     this.notifications = notificationMenuService.getNotifications();

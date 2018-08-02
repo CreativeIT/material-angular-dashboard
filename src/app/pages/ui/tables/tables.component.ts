@@ -222,6 +222,6 @@ export class TablesComponent extends UpgradableComponent {
     'Childeren\'s literature': 'orange',
     'Gothic fiction': 'purple',
     'Horror fiction': 'dark-gray',
-    Fiction: 'green',
+    'Fiction': 'green',
   };
 }

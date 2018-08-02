@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, AfterViewInit, ElementRef, HostBinding } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostBinding } from '@angular/core';
 
 @Component({ })
 export abstract class LineChartComponent implements AfterViewInit {
@@ -183,11 +183,10 @@ export abstract class LineChartComponent implements AfterViewInit {
 
   private drawNextStep(i) {
     if (i !== 0 && i % this.drawStep === 0 || i === this.maxX) {
-      // FIXME: error when chart out of sight
       try {
         this.lineChart.update();
       } catch (e) {
-        console.warn(e);
+        // FIXME: error when chart out of sight
       }
     }
   }

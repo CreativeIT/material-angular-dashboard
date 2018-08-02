@@ -1,12 +1,12 @@
-import { Routes, RouterModule } from '@angular/router';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
+import { LayoutsModule } from 'app/layouts';
+import { BlankLayoutComponent } from 'app/layouts/blank-layout';
 import { ErrorComponent } from './error';
+import { ForgotPasswordComponent } from './forgot-password';
 import { LoginComponent } from './login';
 import { SignUpComponent } from './sign-up';
-import { ForgotPasswordComponent } from './forgot-password';
-import { BlankLayoutComponent } from 'app/layouts/blank-layout';
-import { LayoutsModule } from 'app/layouts';
 
 @NgModule({
   imports: [

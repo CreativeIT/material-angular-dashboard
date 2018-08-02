@@ -1,10 +1,10 @@
 import {
-  Directive,
-  Input,
-  ViewContainerRef,
-  TemplateRef,
   ComponentFactoryResolver,
   ComponentRef,
+  Directive,
+  Input,
+  TemplateRef,
+  ViewContainerRef,
 } from '@angular/core';
 
 import { TooltipComponent } from './tooltip.component';

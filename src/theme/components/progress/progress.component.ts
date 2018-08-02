@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, HostBinding, HostListener } from '@angular/core';
+import { Component, ElementRef, HostBinding, HostListener, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'base-progress',
