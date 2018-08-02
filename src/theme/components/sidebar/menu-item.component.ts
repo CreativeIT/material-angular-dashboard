@@ -9,5 +9,5 @@ import { Component, HostListener, Input } from '@angular/core';
   `,
 })
 export class MenuItemComponent {
-  @Input() data;
+  @Input() private data;
 }

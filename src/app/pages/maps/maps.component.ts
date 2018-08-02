@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-maps',
-  template: `<app-map></app-map>`,
+  template: `<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone"><app-map></app-map></div>`,
 })
-@UpgradeDomAfterViewInit
-export class MapsComponent { }
+export class MapsComponent extends UpgradableComponent { }

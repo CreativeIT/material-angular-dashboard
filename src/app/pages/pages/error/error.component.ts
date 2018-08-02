@@ -1,13 +1,10 @@
 import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { BlankLayoutCardComponent } from 'app/components/blank-layout-card';
 
 @Component({
-  selector: 'page-error',
-  styleUrls: ['./error.component.scss'],
+  selector: 'app-error',
+  styleUrls: ['../../../components/blank-layout-card/blank-layout-card.component.scss'],
   templateUrl: './error.component.html',
 })
-@UpgradeDomAfterViewInit
-export class ErrorComponent {
-  @HostBinding('style.margin') private margin = 'auto';
-}
+export class ErrorComponent extends BlankLayoutCardComponent { }

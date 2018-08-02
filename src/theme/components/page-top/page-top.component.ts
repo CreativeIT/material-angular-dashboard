@@ -1,9 +1,10 @@
-
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'base-page-top',
   styleUrls: ['./page-top.component.scss'],
-  templateUrl: './page-top.component.html',
+  template: `<ng-content></ng-content>`,
 })
-export class PageTopComponent { }
+export class PageTopComponent {
+  @HostBinding('class.mdl-layout__header-row') protected readonly mdlLayoutHeaderRow = true;
+}

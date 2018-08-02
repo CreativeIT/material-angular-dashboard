@@ -16,6 +16,7 @@ export class TooltipDirective {
   private tooltipRef: ComponentRef<TooltipComponent>;
 
   @Input() set baseTooltip(value) {
+    // NOTE: questionably
     const targetRef = this.vcr.createEmbeddedView(this.tr);
     this.tooltipRef = this.vcr.createComponent(
       this.cfr.resolveComponentFactory(TooltipComponent),

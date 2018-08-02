@@ -1,0 +1,41 @@
+@import '~theme/helpers';
+
+.mdl-progress {
+  min-width: 100px;
+  width: auto;
+
+  & > .bufferbar {
+    background-image: none;
+    background-color: $progress-secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.progress--colored {
+  &-red {
+    @include colored-progress($color-red);
+  }
+
+  &-light-blue {
+    @include colored-progress($color-light-blue);
+  }
+
+  &-orange {
+    @include colored-progress($color-orange);
+  }
+
+  &-light-teal {
+    @include colored-progress($color-teal);
+  }
+
+  &-purple {
+    @include colored-progress($color-purple);
+  }
+
+  &-green {
+    @include colored-progress($color-green);
+  }
+}

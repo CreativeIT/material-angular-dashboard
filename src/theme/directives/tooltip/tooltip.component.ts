@@ -1,12 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'base-tooltip',
-  template: `<div class="mdl-tooltip mdl-tooltip--{{ position }}" [class.mdl-tooltip--large]="large" [attr.for]="targetId" [innerHTML]="content"></div>`,
+  styleUrls: ['./tooltip.component.scss'],
+  template: ``,
 })
 export class TooltipComponent {
-  @Input() content;
-  @Input() targetId;
-  @Input() position = 'bottom';
-  @Input() large = false;
+  @HostBinding('innerHTML') @Input() public content;
+  @HostBinding('attr.for') @Input() public targetId;
+  @Input() public position = 'bottom';
+  @HostBinding('class.mdl-tooltip--large') @Input() public large = false;
+
+  @HostBinding('class') private get className() {
+    return `mdl-tooltip mdl-tooltip--${this.position}`;
+  }
 }

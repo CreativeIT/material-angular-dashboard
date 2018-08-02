@@ -8,6 +8,7 @@ import {
   ElementRef,
   AfterViewInit,
   OnDestroy,
+  HostBinding,
 } from '@angular/core';
 
 import { TodoListService } from './todo-list.service';
@@ -19,19 +20,18 @@ import { TodoListService } from './todo-list.service';
   providers: [TodoListService],
 })
 export class TodoListComponent implements AfterViewInit, OnDestroy {
-  public items;
-  public createdItem = null;
+  @HostBinding('class.todo') private readonly todo = true;
 
-  @ViewChild('todoInput')
-  set todoInput(element: ElementRef) {
+  private items;
+  private createdItem = null;
+  private todoItemsSubscription;
+
+  @ViewChild('todoInput') private set todoInput(element: ElementRef) {
     if (element) {
       element.nativeElement.focus();
     }
   }
-
-  @ViewChildren('listItem')
-  private todoItems: QueryList<ElementRef>;
-  private todoItemsSubscription;
+  @ViewChildren('listItem') private todoItems: QueryList<ElementRef>;
 
   constructor(todoListService: TodoListService) {
     this.items = todoListService.getItems();
@@ -51,11 +51,11 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
     this.todoItemsSubscription.unsubscribe();
   }
 
-  public deleteItem(item): void {
+  private deleteItem(item): void {
     this.items = this.items.filter(i => i !== item);
   }
 
-  public createItem(): void {
+  private createItem(): void {
     this.createdItem = {
       title: '',
       id: Date.now(),
@@ -63,14 +63,14 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
     };
   }
 
-  public addItem(): void {
+  private addItem(): void {
     if (this.createdItem.title) {
       this.items.push({ ...this.createdItem });
     }
     this.createdItem = null;
   }
 
-  public deleteCompletedItems(): void {
+  private deleteCompletedItems(): void {
     this.items = this.items.filter((item: any) => !item.completed);
   }
 }

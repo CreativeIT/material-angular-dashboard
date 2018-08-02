@@ -1,3 +1,2 @@
-export { BrowserStatisticsChartDirective } from './browser-statistics-chart.directive';
-export { BrowserStatisticsChartModule } from './browser-statistics-chart.module';
+export { BrowserStatisticsChartComponent } from './browser-statistics-chart.component';
 export { BrowserStatisticsChartService } from './browser-statistics-chart.service';

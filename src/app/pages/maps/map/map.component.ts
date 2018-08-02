@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostBinding } from '@angular/core';
 
 declare const google: any;
 
@@ -8,7 +8,11 @@ declare const google: any;
   templateUrl: 'map.component.html',
 })
 export class MapComponent implements AfterViewInit {
-  ngAfterViewInit() {
+  @HostBinding('class.map') private readonly map = true;
+  @HostBinding('class.mdl-card') private readonly mdlCard = true;
+  @HostBinding('class.mdl-shadow--2dp') private readonly mdlShadow2DP = true;
+
+  public ngAfterViewInit() {
     const mapOptions = {
       center: { lat: 53.905042, lng: 27.569053 },
       zoomControl: true,

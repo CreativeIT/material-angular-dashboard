@@ -1,13 +1,10 @@
 import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { BlankLayoutCardComponent } from 'app/components/blank-layout-card';
 
 @Component({
-  selector: 'page-forgot-password',
-  styleUrls: ['./forgot-password.component.scss'],
+  selector: 'app-forgot-password',
+  styleUrls: ['../../../components/blank-layout-card/blank-layout-card.component.scss'],
   templateUrl: './forgot-password.component.html',
 })
-@UpgradeDomAfterViewInit
-export class ForgotPasswordComponent {
-  @HostBinding('style.margin') private margin = 'auto';
-}
+export class ForgotPasswordComponent extends BlankLayoutCardComponent { }

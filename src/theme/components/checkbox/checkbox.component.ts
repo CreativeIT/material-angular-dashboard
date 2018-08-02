@@ -1,15 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 
 import { ToggleComponent } from 'theme/components/toggle/toggle.component';
 
 @Component({
-  selector: 'base-checkbox, base-toggle[type=checkbox]',
+  selector: 'label[baseCheckbox]',
   styleUrls: ['../toggle/toggle.component.scss'],
   template: `
-    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect checkbox--colored-{{ color }}" [for]="id">
-      <input type="checkbox" [id]="id" class="mdl-checkbox__input" [checked]="isChecked" (change)="isChecked = !isChecked">
-      <span class="mdl-checkbox__label"><ng-content></ng-content></span>
-    </label>
+    <input type="checkbox" [id]="innerID" class="mdl-checkbox__input" [checked]="isChecked" (change)="isChecked = !isChecked">
+    <span class="mdl-checkbox__label"><ng-content></ng-content></span>
   `,
 })
-export class CheckboxComponent extends ToggleComponent { }
+export class CheckboxComponent extends ToggleComponent {
+  @HostBinding('class') private get className() {
+    return `mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect checkbox--colored-${this.color}`;
+  }
+}

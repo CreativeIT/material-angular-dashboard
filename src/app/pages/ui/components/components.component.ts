@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
-import { UpgradeDomAfterViewInit } from 'helpers';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',
   styleUrls: ['./components.component.scss'],
 })
-@UpgradeDomAfterViewInit
-export class ComponentsComponent {
-  data = [
+export class ComponentsComponent extends UpgradableComponent {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.ui-components') private readonly uiComponents = true;
+
+  private data = [
     {
       name: 'Nathan Fillion',
       description: 'Malcolm “Mal” Reynolds',

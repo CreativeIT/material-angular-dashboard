@@ -1,8 +1,10 @@
-import { Component, Input, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Input, ViewChild, ViewContainerRef, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'base-card base-card-menu',
   styleUrls: ['./card.component.scss'],
-  template: `<div class="mdl-card__menu"><ng-content></ng-content></div>`,
+  template: `<ng-content></ng-content>`,
 })
-export class CardMenuComponent { }
+export class CardMenuComponent {
+  @HostBinding('class.mdl-card__menu') private readonly mdlCardMenu = true;
+}
