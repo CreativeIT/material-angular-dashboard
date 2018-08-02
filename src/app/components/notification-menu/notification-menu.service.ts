@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class NotificationMenuService {
-  public getNotifications(): Object[] {
+  public getNotifications(): object[] {
     return [
       {
         text: 'You have 3 new orders.',

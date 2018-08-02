@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TodoListService {
-  public getItems(): Object[] {
+  public getItems(): object[] {
     return [
       {
         title: 'Fix bugs',

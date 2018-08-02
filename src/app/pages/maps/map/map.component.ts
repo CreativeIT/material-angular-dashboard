@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, HostBinding } from '@angular/core';
+import { AfterViewInit, Component, HostBinding } from '@angular/core';
 
 declare const google: any;
 
@@ -166,7 +166,7 @@ export class MapComponent implements AfterViewInit {
           image: '-340px',
         }),
       },
-      _showInfo: (target) => {
+      showInfo(target) {
         document.querySelector('.map__target-picture').classList.toggle('map__target-picture--hide');
         document.querySelector('.map__target-info').classList.toggle('map__target-info--hide');
         setTimeout(
@@ -182,7 +182,7 @@ export class MapComponent implements AfterViewInit {
           200,
         );
       },
-      setActiveMarker () {
+      setActiveMarker() {
         for (const key in markers) {
           if (typeof(markers[key].marker) === 'object' && markers[key].marker != null) {
             markers[key].marker.setIcon(markerImage);
@@ -190,10 +190,10 @@ export class MapComponent implements AfterViewInit {
         }
         if (this === markers) {
           markers.theatre.marker.setIcon(activeMarkerImage);
-          markers._showInfo(markers.theatre.marker);
+          markers.showInfo(markers.theatre.marker);
         } else {
           this.setIcon(activeMarkerImage);
-          markers._showInfo(this);
+          markers.showInfo(this);
         }
       },
     };

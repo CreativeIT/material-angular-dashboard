@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ThemeModule } from 'theme';
 
-import { MapsComponent } from './maps.component';
 import { MapComponent } from './map';
+import { MapsComponent } from './maps.component';
 
 @NgModule({
   imports: [

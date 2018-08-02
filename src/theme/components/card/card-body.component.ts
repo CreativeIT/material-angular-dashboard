@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, HostBinding } from '@angular/core';
+import { Component, HostBinding, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'base-card base-card-body',

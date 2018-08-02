@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { LayoutsModule } from 'app/layouts';
+import { CommonLayoutComponent } from 'app/layouts/common-layout';
 import { ButtonsComponent } from './buttons';
 import { CardsComponent } from './cards';
 import { ColorsComponent } from './colors';
+import { ComponentsComponent } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
-import { TypographyComponent } from './typography';
 import { TablesComponent } from './tables';
-import { ComponentsComponent } from './components';
-import { CommonLayoutComponent } from 'app/layouts/common-layout';
-import { LayoutsModule } from 'app/layouts';
+import { TypographyComponent } from './typography';
 
 @NgModule({
   imports: [

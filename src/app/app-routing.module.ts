@@ -1,12 +1,12 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import { CommonLayoutComponent } from './layouts/common-layout';
-import { DashboardComponent } from './pages/dashboard';
-import { MapsComponent } from './pages/maps';
-import { ChartsComponent } from './pages/charts';
-import { FormsComponent } from './pages/forms';
 import { LayoutsModule } from './layouts';
+import { CommonLayoutComponent } from './layouts/common-layout';
+import { ChartsComponent } from './pages/charts';
+import { DashboardComponent } from './pages/dashboard';
+import { FormsComponent } from './pages/forms';
+import { MapsComponent } from './pages/maps';
 
 @NgModule({
   imports: [

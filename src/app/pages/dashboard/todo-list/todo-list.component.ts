@@ -1,14 +1,14 @@
 import 'material-design-lite/material';
 
 import {
+  AfterViewInit,
   Component,
+  ElementRef,
+  HostBinding,
+  OnDestroy,
+  QueryList,
   ViewChild,
   ViewChildren,
-  QueryList,
-  ElementRef,
-  AfterViewInit,
-  OnDestroy,
-  HostBinding,
 } from '@angular/core';
 
 import { TodoListService } from './todo-list.service';

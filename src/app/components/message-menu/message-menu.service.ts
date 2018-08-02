@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MessageMenuService {
-  public getMessages(): Object[] {
+  public getMessages(): object[] {
     return [
       {
         name: 'Alice',

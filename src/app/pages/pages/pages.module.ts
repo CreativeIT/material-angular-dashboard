@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { ThemeModule } from 'theme';
 
-import { PagesRoutingModule } from './pages-routing.module';
 import { ErrorComponent } from './error';
-import { LoginComponent } from './login';
-import { SignUpComponent } from './sign-up';
 import { ForgotPasswordComponent } from './forgot-password';
+import { LoginComponent } from './login';
+import { PagesRoutingModule } from './pages-routing.module';
+import { SignUpComponent } from './sign-up';
 
 @NgModule({
   imports: [

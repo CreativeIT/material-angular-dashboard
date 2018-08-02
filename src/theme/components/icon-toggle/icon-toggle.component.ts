@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 import { ToggleComponent } from 'theme/components/toggle/toggle.component';
 

@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ThemeModule } from 'theme';
 
-import { ComponentsComponent } from './components.component';
-import { TogglesComponent } from './toggles';
-import { ProgressBarsComponent } from './progress-bars';
-import { ChipsComponent } from './chips';
-import { SlidersComponent } from './sliders';
-import { TooltipsComponent } from './tooltips';
 import { BadgesComponent } from './badges';
+import { ChipsComponent } from './chips';
+import { ComponentsComponent } from './components.component';
+import { ProgressBarsComponent } from './progress-bars';
+import { SlidersComponent } from './sliders';
+import { TogglesComponent } from './toggles';
+import { TooltipsComponent } from './tooltips';
 
 @NgModule({
   imports: [

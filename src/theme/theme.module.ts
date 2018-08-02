@@ -1,17 +1,17 @@
-import { RouterModule } from '@angular/router';
-import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { CardModule } from './components/card';
-import { TooltipModule } from './directives/tooltip';
-import { PageTopComponent } from './components/page-top';
-import { SidebarModule } from './components/sidebar';
-import { RadioButtonComponent } from './components/radio-button';
 import { CheckboxComponent } from './components/checkbox';
-import { SwitchComponent } from './components/switch';
 import { IconToggleComponent } from './components/icon-toggle';
+import { PageTopComponent } from './components/page-top';
 import { ProgressComponent } from './components/progress';
+import { RadioButtonComponent } from './components/radio-button';
+import { SidebarModule } from './components/sidebar';
+import { SwitchComponent } from './components/switch';
+import { TooltipModule } from './directives/tooltip';
 
 const BASE_COMPONENTS = [
   PageTopComponent,

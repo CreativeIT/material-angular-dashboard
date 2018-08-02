@@ -15,7 +15,7 @@ export class TableCardComponent {
     'Deadline',
     'Progress',
   ];
-  private data: Object[] = [
+  private data: object[] = [
     {
       project: 'Darkboard',
       responsible: [

@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit, ElementRef, HostBinding } from '@angular/core';
+import { Component, ElementRef, HostBinding, OnInit } from '@angular/core';
 
 import { LinePlusBarChartService } from './line-plus-bar-chart.service';
 

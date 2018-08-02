@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { PieChartComponent as BasePieChartComponent } from 'theme/components/pie-chart';
 
