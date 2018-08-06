@@ -10,7 +10,7 @@
       <td class="mdl-data-table__cell--non-numeric">
         <span *ngFor="let resp of item.responsible"
         class="label label--mini"
-        ngClass="background-color--{{resp.color}}">{{ resp.name }}</span>
+        [ngClass]="resp.color">{{ resp.name }}</span>
       </td>
       <td class="mdl-data-table__cell--non-numeric">{{ item.email }}</td>
       <td class="mdl-data-table__cell--non-numeric">{{ item.deadline }}</td>
@@ -21,6 +21,7 @@
       <td class="mdl-data-table__cell--non-numeric task-done"
       *ngIf="item.progress >= 100">
         <i class="material-icons">done</i>
+        <span>Complete</span>
       </td>
     </tr>
   </tbody>

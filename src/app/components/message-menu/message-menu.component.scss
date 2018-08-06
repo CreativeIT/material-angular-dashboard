@@ -5,6 +5,10 @@
 }
 
 .messages-dropdown {
+  &.mdl-menu {
+    width: 310px;
+  }
+
   .label {
     color: $messages-dropdown-label-text-color;
   }

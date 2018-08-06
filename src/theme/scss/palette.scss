@@ -1,11 +1,12 @@
-$color-dark-gray: #333434;
-$color-gray: #4e4e4e;
+$color-dark-gray: #333;
+$color-gray: #444;
 $color-table-border: #606060;
 $color-smooth-gray: #999;
 $color-smoke: #666;
-$color-red: #ff5252;
-$color-light-blue: #4285f4;
+$color-red: #f44336;
+$color-light-blue: #03a9f4;
 $color-orange: #ffc107;
+$color-amber: #ff9800;
 $color-teal: #00bcd4;
 $color-purple: #7726d3;
 $color-green: #00d45a;
@@ -20,10 +21,11 @@ $color-froly: #f26798;
 $color-dodger-blue: #4176fb;
 $color-dove-gray: #676767;
 $color-primary: rgb(0, 188, 212);
-$color-secondary: rgb(255, 82, 82);
+$color-secondary: rgb(244, 67, 54);
 $color-baby-blue: rgb(116, 199, 209);
 $color-cerulean: rgb(80, 150, 215);
 $color-mint: rgb(96, 196, 150);
+$color-grey-500: unquote("rgb(#{$palette-grey-500})");
 
 .text-color--smoke {
   color: $color-smoke;
@@ -59,6 +61,14 @@ $color-mint: rgb(96, 196, 150);
 
 .color-text--orange {
   color: $color-orange !important;
+}
+
+.color--amber {
+  background-color: $color-amber !important;
+}
+
+.color-text--amber {
+  color: $color-amber !important;
 }
 
 .color--green {

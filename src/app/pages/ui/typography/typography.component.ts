@@ -10,4 +10,5 @@ import { UpgradableComponent } from 'theme/components/upgradable';
 export class TypographyComponent extends UpgradableComponent {
   @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
   @HostBinding('class.ui-typography') private readonly uiTypography = true;
+  @HostBinding('class.mdl-grid--no-spacing') private readonly mdlGridNoSpacing = true;
 }

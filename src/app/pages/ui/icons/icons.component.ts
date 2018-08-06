@@ -1132,8 +1132,8 @@ export class IconsComponent extends UpgradableComponent {
         'star',
         'star_border',
         'star_half',
-        'toggle_off',
-        'toggle_on',
+        // 'toggle_off',
+        // 'toggle_on',
       ],
     },
   ];

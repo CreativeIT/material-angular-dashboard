@@ -44,7 +44,8 @@
     background-color: $color-primary;
 
     &:disabled {
-      background-color: $color-gray;
+      // NOTE: $color-gray is different
+      background-color: gray;
       color: $employer-form-color-darker;
     }
   }

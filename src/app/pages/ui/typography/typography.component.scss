@@ -15,11 +15,14 @@
 
   ul,
   ol {
-    padding-left: 20px;
+    padding-left: 16px;
     margin: 0;
   }
 
   .mdl-card {
+    height: auto;
+    width: 100%;
+
     &:not(:last-child) {
       margin-bottom: $card-vertical-padding;
     }
@@ -59,7 +62,9 @@
         text-align: right;
       }
     }
+  }
 
+  .mdl-grid + .mdl-grid .mdl-cell {
     &:nth-child(3) {
       .mdl-card__supporting-text > ul {
         list-style: none;

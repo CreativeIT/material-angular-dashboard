@@ -6,8 +6,11 @@
   }
 }
 
-/* account-dropdown */
 .account-dropdown {
+  &.mdl-menu {
+    width: 310px;
+  }
+
   .mdl-list__item {
     font-size: 14px;
 
@@ -45,7 +48,6 @@
   }
 }
 
-/* settings-dropdown */
 .settings-dropdown {
   width: $settings_dropdown_width;
 
