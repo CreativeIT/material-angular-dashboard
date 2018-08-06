@@ -33,7 +33,7 @@
 @mixin typo-dropdown-menu-header($usePreferred: true) {
   @include typo-preferred-font($usePreferred);
 
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 100;
   color: $dropdown-menu-header-font-color;
 }
@@ -41,7 +41,7 @@
 @mixin typo-dropdown-menu-li($usePreferred: true) {
   @include typo-preferred-font($usePreferred);
 
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 100;
   color: $color-white;
 }
@@ -79,7 +79,7 @@
   span {
     color: rgba(255, 255, 255, 0.64);
     line-height: 1.3em;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 300;
   }
 

@@ -8,7 +8,7 @@
   }
 
   font-family: Roboto, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
 
   .mdl-card__blank-layout-card.mdl-card {
     max-width: 450px;
@@ -38,7 +38,7 @@
       .blank-layout-card-link,
       .blank-layout-card-link * {
         display: inline-block;
-        font-size: 14px;
+        font-size: 1rem;
         font-weight: inherit;
         color: $color-alto;
       }
