@@ -5,6 +5,8 @@
 }
 
 .notifications-dropdown.mdl-list {
+  width: 310px;
+
   .mdl-list__item {
     @include typo-dropdown-menu-li;
 

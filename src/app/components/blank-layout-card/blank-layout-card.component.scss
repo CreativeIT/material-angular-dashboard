@@ -11,8 +11,7 @@
   font-size: 14px;
 
   .mdl-card__blank-layout-card.mdl-card {
-    width: 450px;
-    min-height: 500px;
+    max-width: 450px;
     margin: auto;
 
     .mdl-card__supporting-text {

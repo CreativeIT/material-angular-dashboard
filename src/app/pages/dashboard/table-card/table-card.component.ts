@@ -20,15 +20,15 @@ export class TableCardComponent {
       project: 'Darkboard',
       responsible: [
         {
-          color: 'mint',
+          color: 'color--light-blue',
           name: 'Alex',
         },
         {
-          color: 'primary',
+          color: 'background-color--primary',
           name: 'Dina',
         },
         {
-          color: 'cerulean',
+          color: 'color--orange',
           name: 'Misha',
         },
       ],
@@ -41,7 +41,7 @@ export class TableCardComponent {
       project: 'Big financial app',
       responsible: [
         {
-          color: 'baby-blue',
+          color: 'color--orange',
           name: 'Vlada',
         },
       ],
@@ -54,11 +54,11 @@ export class TableCardComponent {
       project: 'New Year office decoration',
       responsible: [
         {
-          color: 'primary',
+          color: 'background-color--primary',
           name: 'Dina',
         },
         {
-          color: 'baby-blue',
+          color: 'color--orange',
           name: 'Vlada',
         },
       ],
@@ -71,7 +71,7 @@ export class TableCardComponent {
       project: 'Don\'t worry, be happy!!!',
       responsible: [
         {
-          color: 'secondary',
+          color: 'background-color--secondary',
           name: 'Everybody',
         },
       ],

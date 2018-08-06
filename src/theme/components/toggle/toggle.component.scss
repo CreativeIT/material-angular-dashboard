@@ -4,6 +4,16 @@
   -webkit-mask: url("#{$image-path}/tick-mask.svg");
 }
 
+.mdl-checkbox__box-outline {
+  border-color: rgba($color-white, 0.8);
+}
+
+.mdl-checkbox:hover:not(.is-checked) {
+  .mdl-checkbox__box-outline {
+    border-color: $color-white;
+  }
+}
+
 .mdl-switch__label {
   left: 0;
   margin-left: 16px;

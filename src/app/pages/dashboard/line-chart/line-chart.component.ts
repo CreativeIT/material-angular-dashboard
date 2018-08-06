@@ -30,19 +30,19 @@ export class LineChartComponent extends BaseLineChartComponent {
       {
         values: [],
         key: 'Awesome',
-        color: 'rgb(80, 150, 215)',
+        color: '#00bcd4',
       },
       {
         values: [],
         key: 'Good',
         fillOpacity: 0.00001,
         area: true,
-        color: 'rgb(0, 188, 212)',
+        color: '#ffc107',
       },
       {
         values: [],
         key: 'Fail',
-        color: 'rgb(255, 82, 82)',
+        color: '#f44336',
       },
     ];
     this.rawData = [

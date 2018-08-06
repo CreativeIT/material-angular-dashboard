@@ -8,10 +8,10 @@ $checkbox-image-path: $image-path;
 @import "./palette";
 
 $background-color: $color-gray;
-$background-color-header: $color-dark-gray;
+$background-color-header: #202020;
 
 /* ==========  Typography  ========== */
-$text-color-primary: rgba($color-white, 0.87) !default;
+$text-color-primary: rgba($color-white, 0.87);
 
 /* ==========  Components  ========== */
 
@@ -87,13 +87,13 @@ $todo-input-text-highlight-color: rgba($color-white, 0.7);
 /* ==========  Card  ========== */
 $card-background-color: $background-color;
 $card-text-color: rgba($color-white, 0.8);
-$card-supporting-text-text-color: rgba($color-white, 0.8);
+$card-supporting-text-text-color: $color-white;
 $card-subtitle-color: rgba($color-white, 0.5);
 $card-border-color: rgba($color-white, 0.05);
 
-$card-title-background-color: rgba($color-black, 0.3);
+$card-title-background-color: $color-dark-gray;
 $card-actions-background-color: rgba($color-white, 0.05);
-$card-text-color: rgba($color-white, 0.8);
+$card-text-color: $color-white;
 $card-link-color: $color-primary;
 $card-href-color: $color-primary;
 

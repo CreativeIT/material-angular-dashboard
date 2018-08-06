@@ -51,7 +51,7 @@
 }
 
 .text-color--gray {
-  color: $palette-grey-500;
+  color: $color-grey-500;
 }
 
 .text-color--white {
@@ -90,8 +90,16 @@
     @include typo-employer-form-inputs();
   }
 
-  &.is-disabled input {
-    border-bottom-width: 2px !important;
+  &.is-disabled {
+    input {
+      border-bottom-width: 2px !important;
+    }
+
+    .mdl-textfield__input {
+      background-color: transparent;
+      border-bottom: 1px dotted rgba($color-white, 0.2);
+      color: rgba($color-white, 0.6);
+    }
   }
 
   &.is-focused {
@@ -123,11 +131,15 @@
 }
 
 .mdl-grid:not(.ui-typography) :not(.robot):not(.todo) > .mdl-card {
-  height: 100%;
+  // height: 100%;
 }
 
 h5 {
   &.mdl-card__title-text {
     font-size: 20px;
   }
+}
+
+hr {
+  border-color: $list-border-color;
 }

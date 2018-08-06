@@ -219,6 +219,10 @@
     background-color: rgba($color, 0.8);
   }
 
+  .mdl-switch__thumb {
+    background-color: #9e9e9e;
+  }
+
   &.is-checked {
     .mdl-switch__track {
       background-color: rgba($color, 0.5);

@@ -23,12 +23,12 @@ export class PieChartComponent extends BasePieChartComponent implements OnInit {
 
   public ngOnInit() {
     const colors = [
-      'rgba(96, 196, 150, 1)',
-      'rgba(80, 150, 215, 1)',
-      'rgba(0, 188, 212, 1)',
-      'rgba(116, 199, 209, 1)',
-      'rgba(255, 82, 82, 1)',
-      'rgba(0, 0, 0, 0)',
+      '#03a9f4',
+      '#f44336',
+      '#ff9800',
+      '#ffc107',
+      '#00bcd4',
+      '',
     ];
 
     const rawData = this.pieChartService.getDaySchedule();
