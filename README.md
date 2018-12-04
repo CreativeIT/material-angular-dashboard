@@ -1,8 +1,12 @@
 # Material Angular Dashboard
 
-Welcome to first dark dashboard on Material Design Lite and Angular!
+Welcome to the first dark dashboard on Material Design Lite and Angular!
 
-Material admin template is absolutely free for commercial usage theme, that uses google's implementation of material design -- [Material Design Lite](http://www.getmdl.io) library.
+![dashboard-avatar](https://trello-attachments.s3.amazonaws.com/55f8466d8f95075bca20dd66/5bf421455ab0f05102cadac9/eee32e50e9fc278b715442a3fc6f65aa/Readme.png)
+
+Its much more fun with the [demo](http://creativeit.github.io/material-dashboard-lite/index.html).
+
+Material admin template is absolutely free for commercial usage theme, that uses google's implementation of material design — [Material Design Lite](http://www.getmdl.io) library.
 
 > **Important**: We are still working on the project and there will be much more awesome, check out our [issues](https://github.com/CreativeIT/material-angular-dashboard/issues) to see what features are coming soon.
 
@@ -10,7 +14,7 @@ Material admin template is absolutely free for commercial usage theme, that uses
 
 The steps below will take you through cloning your own fork, installing dependencies and building:
 
-1. Fork and/or clone our repository. To use Git from command line, see the [Setting up Git](https://help.github.com/articles/set-up-git/) and [Fork a repo](https://help.github.com/articles/fork-a-repo/) articles.
+1. Fork and/or clone our repository. To use Git from command line, see the [Setting up Git](https://help.github.com/articles/set-up-git/) and [Fork repo](https://help.github.com/articles/fork-a-repo/) articles.
 
 ```bash
 git clone https://github.com/CreativeIT/material-angular-dashboard.git
@@ -28,7 +32,7 @@ yarn install
 yarn global add @angular/cli
 ```
 
-4. Now you are able to run or build project:
+4. Now you are able to run or build the project:
 
 Run `yarn start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -54,7 +58,7 @@ Run `yarn run build` or `ng build` to build the project. The build artifacts wil
 
 # Additional
 
-Since the project uses [BEM](http://getbem.com) structure with sass, it can be customized in easy way by editing `src/theme/scss/_variables.scss` file.
+Since the project uses [BEM](http://getbem.com) structure with sass, it can be customized in an easy way by editing `src/theme/scss/_variables.scss` file.
 
 Google hasn't implemented select element yet ([see why here](http://37.media.tumblr.com/6a9fcffde2da977266b0ea99b15d5803/tumblr_n42cjjsriB1smcbm7o1_400.gif)), that is why the project depends on [getmdl-select plugin](https://github.com/CreativeIT/getmdl-select). Also project uses [d3](https://d3js.org/) and [nvd3](http://nvd3.org/) to build charts and chart components.
 
@@ -72,6 +76,6 @@ Designed with passion and coffee by CreativeIT.
 
 * Star the repo
 
-* Create issue report or feature request
+* Create an issue report or feature request
 
 * Follow us on [Twitter](https://twitter.com/intent/follow?screen_name=CreativeITeam)
