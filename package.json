@@ -1,17 +1,14 @@
 {
   "name": "material-angular-dashboard",
-  "version": "0.0.0",
-  "description": "Free dashboard template with Material Design Lite and Angular",
+  "version": "1.0.0",
+  "description": "Free material angular dashboard template with Google Material Design",
   "keywords": [
     "dashboard",
-    "admin template",
-    "mdl",
-    "getmdl",
-    "Material Design",
-    "Material Design Lite",
-    "Dark",
-    "dark material design",
     "angular",
+    "admin template",
+    "Material Design",    
+    "Dark",
+    "google material design",    
     "ng"
   ],
   "license": "MIT",
