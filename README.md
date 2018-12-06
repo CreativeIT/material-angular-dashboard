@@ -2,7 +2,7 @@
 
 Welcome to the first dark dashboard with Google Material Design and Angular!
 
-![dashboard-avatar](https://trello-attachments.s3.amazonaws.com/55f8466d8f95075bca20dd66/5bf421455ab0f05102cadac9/eee32e50e9fc278b715442a3fc6f65aa/Readme.png)
+<a target="_blank" href="http://material-angular-dashboard.creativeit.io/"><img src="https://trello-attachments.s3.amazonaws.com/55f8466d8f95075bca20dd66/5bf421455ab0f05102cadac9/eee32e50e9fc278b715442a3fc6f65aa/Readme.png"/></a>
 
 Its much more fun with the [demo](http://material-angular-dashboard.creativeit.io).
 
