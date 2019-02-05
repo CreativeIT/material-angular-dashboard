@@ -167,6 +167,21 @@ main {
   }
 }
 
+// custom scroll
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-track;
+}
+
 @media screen and (max-width: $layout-screen-size-threshold) {
   .mdl-layout--fixed-drawer {
     main {

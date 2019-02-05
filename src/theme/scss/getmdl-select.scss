@@ -1,0 +1,36 @@
+.getmdl-select {
+  width: 100%;
+
+  .mdl-textfield__input:focus {
+    outline: none;
+  }
+
+  .selected {
+    background-color: $default-dropdown-bg-color;
+  }
+
+  &.is-focused {
+    .mdl-icon-toggle__label {
+      color: $color-primary;
+    }
+  }
+
+  .mdl-menu__item {
+    color: $text-color-primary;
+  }
+
+  // custom scroll
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $scrollbar-track;
+  }
+}
