@@ -39,10 +39,12 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
 
   public ngAfterViewInit(): void {
     this.todoItemsSubscription = this.todoItems.changes.subscribe((todoItems) => {
-      componentHandler.upgradeElement(todoItems.last.nativeElement.querySelector('[checkboxitem]'));
-      const textField = todoItems.last.nativeElement.querySelector('.mdl-textfield');
-      if (textField) {
-        componentHandler.upgradeElement(textField);
+      if (todoItems.last) {
+        componentHandler.upgradeElement(todoItems.last.nativeElement.querySelector('[checkboxitem]'));
+        const textField = todoItems.last.nativeElement.querySelector('.mdl-textfield');
+        if (textField) {
+          componentHandler.upgradeElement(textField);
+        }
       }
     });
   }
