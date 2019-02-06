@@ -18,6 +18,9 @@
       "dom",
       "es2015.generator",
       "es2015.iterable"
-    ]
+    ],
+    "paths": {
+      "@components/*": ["app/components"]
+    }
   }
 }

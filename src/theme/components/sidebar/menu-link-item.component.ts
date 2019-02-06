@@ -26,7 +26,7 @@ import { Router } from '@angular/router';
   `,
 })
 export class MenuLinkItemComponent {
-  @Input() private data;
+  @Input() public data;
 
   constructor(
     private router: Router,

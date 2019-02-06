@@ -8,7 +8,7 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   styleUrls: ['./tables.component.scss'],
 })
 export class TablesComponent extends UpgradableComponent {
-  private readonly Array = Array;
+  public readonly Array = Array;
 
   @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
   @HostBinding('class.mdl-cell') private readonly mdlCell = true;
@@ -18,7 +18,7 @@ export class TablesComponent extends UpgradableComponent {
   @HostBinding('class.mdl-cell--top') private readonly mdlCellTop = true;
   @HostBinding('class.ui-tables') private readonly uiTables = true;
 
-  private headers = [
+  public headers = [
     '#',
     'Book title',
     'Author',
@@ -26,7 +26,7 @@ export class TablesComponent extends UpgradableComponent {
     'Status',
   ];
 
-  private simpleTable = [
+  public simpleTable = [
     [
       '1',
       'To Kill a Mockingbird',
@@ -57,7 +57,7 @@ export class TablesComponent extends UpgradableComponent {
     ],
   ];
 
-  private borderedTable = [
+  public borderedTable = [
     [
       '23',
       'Gone with the Wind',
@@ -88,7 +88,7 @@ export class TablesComponent extends UpgradableComponent {
     ],
   ];
 
-  private strippedTable = [
+  public strippedTable = [
     [
       '54',
       'The Hitchhiker\'s Guide to th...',
@@ -119,7 +119,7 @@ export class TablesComponent extends UpgradableComponent {
     ],
   ];
 
-  private borderlessTable = [
+  public borderlessTable = [
     [
       '31',
       'The Little Prince',
@@ -150,7 +150,7 @@ export class TablesComponent extends UpgradableComponent {
     ],
   ];
 
-  private advancedHeaders = [
+  public advancedHeaders = [
     '#',
     'Book title',
     'Author',
@@ -162,7 +162,7 @@ export class TablesComponent extends UpgradableComponent {
     'Availability',
   ];
 
-  private advancedTable = [
+  public advancedTableFullData = [
     [
       '5',
       'Life of Pi',
@@ -218,7 +218,7 @@ export class TablesComponent extends UpgradableComponent {
     ],
   ];
 
-  private genreColors = {
+  public genreColors = {
     'Childeren\'s literature': 'orange',
     'Gothic fiction': 'purple',
     'Horror fiction': 'dark-gray',

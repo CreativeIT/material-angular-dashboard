@@ -1,6 +1,8 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-@Component({ })
+@Component({
+  template: '',
+})
 export abstract class ToggleComponent {
   private static idCounter = 0;
 

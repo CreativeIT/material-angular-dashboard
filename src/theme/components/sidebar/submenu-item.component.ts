@@ -19,9 +19,9 @@ export class SubmenuItemComponent implements OnInit {
     return this.shown;
   }
 
-  @Input() private data;
+  @Input() public data;
 
-  private shown = false;
+  public shown = false;
 
   constructor(
     private router: Router,

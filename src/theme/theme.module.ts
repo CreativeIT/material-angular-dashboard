@@ -6,11 +6,15 @@ import { RouterModule } from '@angular/router';
 import { CardModule } from './components/card';
 import { CheckboxComponent } from './components/checkbox';
 import { IconToggleComponent } from './components/icon-toggle';
+import { LineChartComponent } from './components/line-chart';
 import { PageTopComponent } from './components/page-top';
+import { PieChartComponent } from './components/pie-chart';
 import { ProgressComponent } from './components/progress';
 import { RadioButtonComponent } from './components/radio-button';
 import { SidebarModule } from './components/sidebar';
 import { SwitchComponent } from './components/switch';
+import { ToggleComponent } from './components/toggle';
+import { UpgradableComponent } from './components/upgradable';
 import { TooltipModule } from './directives/tooltip';
 
 const BASE_COMPONENTS = [
@@ -20,6 +24,10 @@ const BASE_COMPONENTS = [
   SwitchComponent,
   IconToggleComponent,
   ProgressComponent,
+  ToggleComponent,
+  UpgradableComponent,
+  PieChartComponent,
+  LineChartComponent,
 ];
 
 const BASE_DIRECTIVES = [];
