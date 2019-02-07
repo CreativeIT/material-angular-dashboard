@@ -9,7 +9,7 @@ import { ColorsComponent } from './colors';
 import { ComponentsModule } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
-import { TablesComponent } from './tables';
+import { TablesComponent, TablesService } from './tables';
 import { TypographyComponent } from './typography';
 import { UIRoutingModule } from './ui-routing.module';
 
@@ -28,6 +28,9 @@ import { UIRoutingModule } from './ui-routing.module';
     IconsComponent,
     TypographyComponent,
     TablesComponent,
+  ],
+  providers: [
+    TablesService,
   ],
 })
 export class UIModule { }

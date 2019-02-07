@@ -1,0 +1,21 @@
+.mdl-data-table {
+  &.sorting-table {
+    .sorting {
+      position: relative;
+      font-size: 1.25rem;
+      top: 4px;
+      left: 0.5rem;
+      color: $color-dove-gray;
+      user-select: none;
+      cursor: pointer;
+
+      &.asc {
+        transform: rotate(180deg) scaleX(-1);
+      }
+
+      &.active {
+        color: $color-white;
+      }
+    }
+  }
+}

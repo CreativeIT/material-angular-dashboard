@@ -102,12 +102,22 @@
   <div class="mdl-card">
     <div class="mdl-card__title">
       <h1 class="mdl-card__title-text">Advanced table</h1>
+      <div class="mdl-layout-spacer"></div>
+      <base-pagination [numPage]="numPage"
+                       [currentPage]="currentPage"
+                       (changePage)="changePage($event)"></base-pagination>
     </div>
     <div class="mdl-card__supporting-text no-padding">
-      <table class="mdl-data-table mdl-js-data-table">
+      <table class="mdl-data-table mdl-js-data-table sorting-table">
         <thead>
           <tr>
-            <th *ngFor="let header of advancedHeaders" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+            <th *ngFor="let header of advancedHeaders; let i = index" class="mdl-data-table__cell--non-numeric"
+                (click)="changeSorting(header, i)">
+              <span>{{ header.name }}</span>
+              <i *ngIf="header.sort !== null " class="material-icons sorting"
+                 [class.asc]="header.sort === sortOrder.asc"
+                 [class.active]="header.sort === sortOrder.asc || header.sort === sortOrder.desc">sort</i>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -118,7 +128,11 @@
             </td>
             <td *ngFor="let cell of row.slice(4, 8)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
             <td class="mdl-data-table__cell--non-numeric">
-              <span *ngFor="let i of Array(row[8])" class="label label--mini label__availability" [class.background-color--primary]="row[8] === 4" [class.background-color--secondary]="row[8] === 1" [class.color--orange]="row[8] === 2"></span>
+              <span *ngFor="let i of Array(row[8])" class="label label--mini label__availability"
+                    [class.background-color--secondary]="row[8] === 1"
+                    [class.color--orange]="row[8] === 2"
+                    [class.background-color--primary]="row[8] === 4"
+                    [class.color--green]="row[8] === 3"></span>
               <span *ngFor="let i of Array(4 - row[8])" class="label label--mini label__availability"></span>
             </td>
             <td class="mdl-data-table__cell--non-numeric"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">Add to cart</button></td>

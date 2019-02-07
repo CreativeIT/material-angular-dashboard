@@ -8,6 +8,7 @@ import { CheckboxComponent } from './components/checkbox';
 import { IconToggleComponent } from './components/icon-toggle';
 import { LineChartComponent } from './components/line-chart';
 import { PageTopComponent } from './components/page-top';
+import { PaginationComponent } from './components/pagination';
 import { PieChartComponent } from './components/pie-chart';
 import { ProgressComponent } from './components/progress';
 import { RadioButtonComponent } from './components/radio-button';
@@ -24,6 +25,7 @@ const BASE_COMPONENTS = [
   SwitchComponent,
   IconToggleComponent,
   ProgressComponent,
+  PaginationComponent,
   ToggleComponent,
   UpgradableComponent,
   PieChartComponent,
