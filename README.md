@@ -62,6 +62,10 @@ Since the project uses [BEM](http://getbem.com) structure with sass, it can be c
 
 Project uses [d3](https://d3js.org/) and [nvd3](http://nvd3.org/) to build charts and chart components.
 
+# Quick start
+Do you want to start quickly and don't need all the pages and modules? You can checkout to empty 
+[starter-kit branch](https://github.com/CreativeIT/material-angular-dashboard/tree/starter-kit) and get to work!
+
 # Hire us
 
 We are ready to become a strong development partner and bring competitive advantage to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!

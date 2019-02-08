@@ -11,7 +11,8 @@
       true,
       {
         ignoreAtRules: [
-          'extend''at-root',
+          'extend',
+          'at-root',
           'debug',
           'warn',
           'error',
@@ -24,9 +25,19 @@
           'include',
           'content',
           'return',
-          'function'
+          'function',
+          "custom-elements"
         ]
       }
-    ]
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": [
+          "custom-elements"
+        ]
+      }
+    ],
+    "no-descending-specificity": null
   }
 }

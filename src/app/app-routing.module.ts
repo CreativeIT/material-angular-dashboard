@@ -3,24 +3,18 @@ import { RouterModule } from '@angular/router';
 
 import { LayoutsModule } from './layouts';
 import { CommonLayoutComponent } from './layouts/common-layout';
-import { ChartsComponent } from './pages/charts';
 import { DashboardComponent } from './pages/dashboard';
-import { FormsComponent } from './pages/forms';
-import { MapsComponent } from './pages/maps';
 
 @NgModule({
   imports: [
     RouterModule.forRoot(
       [
         { path: '', redirectTo: 'app/dashboard', pathMatch: 'full' },
-        { path: 'app', component: CommonLayoutComponent, children: [
-          { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
-          { path: 'forms', component: FormsComponent, pathMatch: 'full' },
-          { path: 'maps', component: MapsComponent, pathMatch: 'full' },
-          { path: 'charts', component: ChartsComponent, pathMatch: 'full' },
-          { path: '**', redirectTo: '/pages/404' },
-        ] },
-        { path: 'ui', loadChildren: './pages/ui/ui.module#UIModule' },
+        {
+          path: 'app', component: CommonLayoutComponent, children: [
+          { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' }],
+        },
+        { path: 'auth', loadChildren: './pages/auth/auth.module#AuthModule' },
         { path: 'pages', loadChildren: './pages/pages/pages.module#PagesModule' },
         { path: '**', redirectTo: '/pages/404' },
       ],
@@ -30,4 +24,4 @@ import { MapsComponent } from './pages/maps';
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

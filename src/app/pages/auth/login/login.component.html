@@ -1,0 +1,33 @@
+<div class="mdl-card mdl-card__blank-layout-card mdl-shadow--2dp">
+  <div class="mdl-card__supporting-text color--dark-gray">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+        <span class="mdl-card__title-text text-color--smooth-gray">DARKBOARD</span>
+      </div>
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+        <span class="blank-layout-card-name text-color--white">Sign in</span>
+        <span class="blank-layout-card-secondary-text text-color--smoke">Enter fields to sign in to DARKBOARD</span>
+      </div>
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+          <input class="mdl-textfield__input" type="text" id="e-mail">
+          <label class="mdl-textfield__label" for="e-mail">Email</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+          <input class="mdl-textfield__input" type="text" id="password">
+          <label class="mdl-textfield__label" for="password">Password</label>
+        </div>
+        <a routerLink="/auth/forgot-password" class="blank-layout-card-link">Forgot password?</a>
+      </div>
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
+        <a routerLink="/auth/sign-up" class="blank-layout-card-link">Don't have account?</a>
+        <div class="mdl-layout-spacer"></div>
+        <a routerLink="/app/dashboard">
+          <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue">
+            SIGN IN
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

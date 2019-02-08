@@ -4,10 +4,7 @@ import { NgModule } from '@angular/core';
 import { ThemeModule } from 'theme';
 
 import { ErrorComponent } from './error';
-import { ForgotPasswordComponent } from './forgot-password';
-import { LoginComponent } from './login';
 import { PagesRoutingModule } from './pages-routing.module';
-import { SignUpComponent } from './sign-up';
 
 @NgModule({
   imports: [
@@ -17,9 +14,6 @@ import { SignUpComponent } from './sign-up';
   ],
   declarations: [
     ErrorComponent,
-    LoginComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
   ],
 })
 export class PagesModule { }

@@ -1,7 +1,4 @@
-<header>darkboard</header>
+<header>{{ title }}</header>
 <nav class="mdl-navigation">
   <base-menu-item *ngFor="let item of menu" [data]="item"></base-menu-item>
-
-  <div class="mdl-layout-spacer"></div>
-  <base-menu-item [data]="{ name: 'GitHub', href: 'https://github.com/CreativeIT/material-angular-dashboard', icon: 'link' }"></base-menu-item>
 </nav>
