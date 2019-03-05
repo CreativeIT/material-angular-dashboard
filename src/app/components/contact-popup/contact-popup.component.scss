@@ -1,0 +1,125 @@
+@import '~theme/helpers';
+
+.contact-popup {
+  .popup {
+    max-width: 350px;
+    position: fixed;
+    right: 88px;
+    bottom: 30px;
+    z-index: 10;
+
+    .mdl-card__supporting-text {
+      @include typo-card-supporting-text;
+    }
+
+    .mdl-textfield:not(.is-focused):not(.is-dirty) .mdl-textfield__label {
+      font-size: 12px !important;
+    }
+
+    .form-button {
+      width: 100%;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .submitted {
+      border-bottom: 1px solid $input-text-bottom-border-color;
+    }
+
+    .footer {
+      margin-top: 1rem;
+
+      .mdl-grid {
+        flex-wrap: nowrap;
+        padding-bottom: 0;
+      }
+
+      .title {
+        margin-bottom: 0;
+      }
+
+      .socials {
+        i {
+          width: 35px;
+          height: 35px;
+        }
+
+        .mdl-button .material-icons {
+          margin: -5px;
+        }
+
+        .mdl-button--icon {
+          width: 42px;
+          height: 42px;
+        }
+
+        .mdl-cell {
+          &:first-child {
+            margin-left: -10px;
+          }
+
+          margin-left: 8px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .ng-invalid.mdl-textfield__input {
+      color: $color-red;
+      border-color: $color-red;
+    }
+  }
+
+  .chat-icon {
+    position: fixed;
+    right: 6px;
+    bottom: 50px;
+    cursor: pointer;
+    z-index: 10;
+
+    .mdl-button {
+      height: 55px;
+      width: 50px;
+    }
+
+    .material-icons {
+      font-size: 30px;
+      position: absolute;
+      width: 100%;
+      height: 55px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.16s linear, opacity 0.08s linear, -webkit-transform 0.16s linear;
+
+      &.open {
+        opacity: 1;
+        transform: rotate(0deg) scale(-1, 1);
+        margin-top: 2px;
+      }
+
+      &.close {
+        opacity: 0;
+        font-weight: 600;
+        transform: rotate(-30deg);
+      }
+    }
+
+    &.active {
+      .close {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+
+      .open {
+        opacity: 0;
+        transform: rotate(30deg) scale(0);
+      }
+    }
+  }
+}

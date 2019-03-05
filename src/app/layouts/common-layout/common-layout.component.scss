@@ -1,0 +1,17 @@
+@import '~theme/helpers';
+
+.contact {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-left: calc(#{$layout-drawer-width} - 40px);
+}
+
+.mdl-layout__header-row > * {
+  flex-shrink: 1;
+}
+
+.mdl-card.contact-mobile {
+  height: auto;
+  margin: 1.5rem;
+}

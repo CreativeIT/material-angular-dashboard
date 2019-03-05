@@ -1,0 +1,82 @@
+<div class="popup" *ngIf="isOpen">
+  <base-card class="mdl-shadow--8dp">
+    <base-card-title>
+      <h2 class="mdl-card__title-text">Contact Us</h2>
+    </base-card-title>
+    <base-card-body>
+      <div *ngIf="submitted; else form" class="submitted">
+        <ng-container *ngIf="!isError; else error">
+          <p>
+            Thank you for your message. We will answer you as soon as possible.
+          </p>
+          <p> Have a nice day!</p>
+        </ng-container>
+        <ng-template #error>
+          <p>
+            Ooops...
+            Something go wrong. Please, try again.
+            <br>
+            Thank you!
+          </p>
+        </ng-template>
+      </div>
+      <ng-template #form>
+        <div>
+          <p>If you need a custom solution or integration of our dashboard with your product contact with us here or
+            visit our <a href="http://creativeit.io/" target="_blank">CreativeIT website </a></p>
+          <p> We are open for a new projects!</p>
+        </div>
+
+        <form class="form form--basic gform" #formContact="ngForm" accept-charset='UTF-8'
+              (submit)="sendMessage($event)" novalidate>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+            <input [(ngModel)]="form.email" [value]="form.email" class="mdl-textfield__input" type="text" name="email"
+                   id="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+          <textarea [(ngModel)]="form.message" class="mdl-textfield__input" type="text" id="message" rows="3"
+                    name="message"></textarea>
+            <label class="mdl-textfield__label" for="message">Message</label>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <button class="mdl-button mdl-js-button mdl-button--raised form-button
+                     mdl-js-ripple-effect button--colored-teal"
+                      type="submit">
+                Send
+              </button>
+            </div>
+          </div>
+        </form>
+      </ng-template>
+
+      <div class="footer">
+        <p class="title"> Follow us:</p>
+        <div class="mdl-grid socials">
+          <div *ngFor="let item of socials" class="mdl-cell mdl-cell-2-col">
+            <button class="mdl-button mdl-js-button mdl-button--icon button--{{ item.name }} gray">
+              <a [href]="item.url" target="_blank"><i class="material-icons"></i></a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </base-card-body>
+  </base-card>
+</div>
+
+<div class="chat-icon" [class.active]="isOpen">
+  <button class="mdl-button mdl-js-button mdl-button--raised
+                     mdl-js-ripple-effect button--colored-teal"
+          (click)="toggleWindow()">
+    <i class="material-icons open">
+      chat_bubble
+    </i>
+    <i class="material-icons close">
+      close
+    </i>
+  </button>
+</div>
