@@ -114,16 +114,16 @@ export class ContactPopupComponent extends UpgradableComponent implements AfterV
           this.isError = (response.status !== 'success');
           if (response.status === 'success') {
             this.formContact.resetForm();
+            this.form = this.formContact.form.getRawValue();
           }
+          this.timeout = setTimeout(this.closeWindow.bind(this), 6000);
         },
         (error) => {
           this.submitted = true;
           this.isError = true;
+          this.timeout = setTimeout(this.closeWindow.bind(this), 6000);
         });
-
-    this.service.dataForm = this.formContact.form.getRawValue();
-    this.updateDom();
-    this.timeout = setTimeout(this.closeWindow.bind(this), 6000);
+    this.form = this.formContact.form.getRawValue();
     e.preventDefault();
   }
 
@@ -136,6 +136,7 @@ export class ContactPopupComponent extends UpgradableComponent implements AfterV
   }
 
   private closeWindow() {
+    this.service.dataForm = this.form;
     this.submitted = false;
     this.isError = false;
     this.service.setIsOpen(false);

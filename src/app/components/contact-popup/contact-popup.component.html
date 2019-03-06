@@ -36,8 +36,8 @@
           </div>
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-          <textarea [(ngModel)]="form.message" class="mdl-textfield__input" type="text" id="message" rows="3"
-                    name="message"></textarea>
+            <textarea [(ngModel)]="form.message" [value]="form.message" class="mdl-textfield__input" type="text" name="message"
+                      id="message" rows="3"></textarea>
             <label class="mdl-textfield__label" for="message">Message</label>
           </div>
 
