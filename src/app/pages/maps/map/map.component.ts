@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostBinding } from '@angular/core';
+import { UpgradableComponent } from 'theme/components/upgradable';
 
 declare const google: any;
 
@@ -7,10 +8,8 @@ declare const google: any;
   styleUrls: ['./map.component.scss'],
   templateUrl: 'map.component.html',
 })
-export class MapComponent implements AfterViewInit {
-  @HostBinding('class.map') private readonly map = true;
-  @HostBinding('class.mdl-card') private readonly mdlCard = true;
-  @HostBinding('class.mdl-shadow--2dp') private readonly mdlShadow2DP = true;
+export class MapComponent extends UpgradableComponent implements AfterViewInit {
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
 
   public ngAfterViewInit() {
     const mapOptions = {
@@ -203,5 +202,6 @@ export class MapComponent implements AfterViewInit {
         markers[key].marker.addListener('click', markers.setActiveMarker);
       }
     }
+    componentHandler.upgradeDom();
   }
 }

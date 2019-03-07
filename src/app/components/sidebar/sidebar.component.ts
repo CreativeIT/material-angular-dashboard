@@ -31,13 +31,21 @@ export class SidebarComponent extends BaseSidebarComponent {
     },
     { name: 'Components', link: '/ui/components', icon: 'developer_board' },
     { name: 'Account', link: '/app/forms', icon: 'person' },
-    { name: 'Maps', link: '/app/maps', icon: 'map' },
+    {
+      name: 'Maps', icon: 'map', children: [
+      { name: 'Simple map', link: '/maps/simple' },
+      { name: 'Advanced map', link: '/maps/advanced' },
+      ],
+    },
     { name: 'Charts', link: '/app/charts', icon: 'multiline_chart' },
-    { name: 'Pages', children: [
+    {
+      name: 'Pages', children: [
       { name: 'Sign in', link: '/pages/login' },
       { name: 'Sign up', link: '/pages/sign-up' },
       { name: 'Forgot password', link: '/pages/forgot-password' },
       { name: '404', link: '/pages/error' },
-    ], icon: 'pages' },
+      ],
+      icon: 'pages',
+    },
   ];
 }

@@ -1,0 +1,51 @@
+@import '~theme/helpers';
+
+.map-advanced {
+  min-height: 630px;
+  position: relative;
+  margin: 1rem;
+  display: block;
+
+  .map__window {
+    height: 630px;
+    background: $card-title-background-color;
+
+    .gm-style {
+      & > div:nth-of-type(2),
+      & > .gmnoprint:not(.gm-bundled-control),
+      & > .gm-style-cc {
+        display: none;
+      }
+    }
+  }
+}
+
+.window-info {
+  z-index: 1000;
+  position: absolute;
+  opacity: 1;
+  user-select: none;
+  width: 200px;
+
+  .mdl-card__title {
+    background-color: $card-title-background-color;
+    padding: 12px 16px;
+
+    .mdl-card__title-text {
+      font-size: 16px;
+    }
+  }
+
+  .mdl-card__supporting-text {
+    font-size: 14px;
+    padding: 12px 16px;
+    line-height: 30px;
+    width: auto;
+
+    & > div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+}
