@@ -273,6 +273,11 @@
   version "3.5.40"
   resolved "https://registry.yarnpkg.com/@types/d3/-/d3-3.5.40.tgz#277b575d79445a6dccc017d9bea71b72344c6e5f"
 
+"@types/googlemaps@^3.30.18":
+  version "3.30.18"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.30.18.tgz#c7076c68bff44e99c09b99926568a6a3fb15be44"
+  integrity sha512-rXYs277SHf7ceAR7RSoGh/fkYvy2eBl5mvmMlUEcPMMkwCP9XkFdwrtDZ4OGeEawOfnwauu/yoi0eTpfGp4MPg==
+
 "@types/material-design-lite@1.1.15":
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/@types/material-design-lite/-/material-design-lite-1.1.15.tgz#871f9d4f2529d4f221e10e19936e2f2dcbb8c2ac"

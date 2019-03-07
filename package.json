@@ -34,6 +34,7 @@
     "@angular/platform-browser": "7.2.1",
     "@angular/platform-browser-dynamic": "7.2.1",
     "@angular/router": "7.2.1",
+    "@types/googlemaps": "^3.30.18",
     "classlist.js": "1.1.20150312",
     "core-js": "2.5.6",
     "d3": "3.5.17",

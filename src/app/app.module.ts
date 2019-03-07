@@ -7,7 +7,6 @@ import { ContactPopupService } from './components/contact-popup/contact-popup.se
 import { ChartsModule } from './pages/charts';
 import { DashboardModule } from './pages/dashboard';
 import { FormsModule } from './pages/forms';
-import { MapsModule } from './pages/maps';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +15,6 @@ import { MapsModule } from './pages/maps';
     AppRoutingModule,
     DashboardModule,
     FormsModule,
-    MapsModule,
     ChartsModule,
   ],
   providers: [ContactPopupService],

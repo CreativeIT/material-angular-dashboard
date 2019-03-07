@@ -1,22 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { ThemeModule } from 'theme';
 
 import { MapComponent } from './map';
-import { MapsComponent } from './maps.component';
+import { MapAdvancedComponent } from './map-advanced';
+import { MapsRoutingModule } from './maps-routing.module';
+import { MapsService } from './maps.service';
 
 @NgModule({
   imports: [
     CommonModule,
     ThemeModule,
-    FormsModule,
+    MapsRoutingModule,
   ],
   declarations: [
-    MapsComponent,
     MapComponent,
+    MapAdvancedComponent,
   ],
-  providers: [],
+  providers: [MapsService],
 })
 export class MapsModule { }
