@@ -22,7 +22,7 @@ export class TablesService {
       'The secret Garden',
       'Frances Hodgson Burnett',
       [
-        'Childeren\'s literature',
+        'Children\'s book',
       ],
       '2017',
       '1911',
@@ -89,7 +89,7 @@ export class TablesService {
       'Alice in Wonderland',
       'Lewis Carroll',
       [
-        'Childeren\'s literature',
+        'Children\'s book',
         'Fantasy',
       ],
       '2018',

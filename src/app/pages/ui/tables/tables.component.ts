@@ -35,7 +35,7 @@ export class TablesComponent extends UpgradableComponent {
   public borderlessTable = this.tablesService.getBorderlessTable();
   public advancedHeaders = this.tablesService.getAdvancedHeaders();
   public genreColors = {
-    'Childeren\'s literature': 'orange',
+    'Children\'s book': 'orange',
     'Gothic fiction': 'purple',
     'Horror fiction': 'dark-gray',
     'Fiction': 'green',
