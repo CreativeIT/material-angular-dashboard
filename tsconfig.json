@@ -20,7 +20,15 @@
       "es2015.iterable"
     ],
     "paths": {
-      "@components/*": ["app/components"]
+      "@components/*": [
+        "app/components"
+      ],
+      "ng-getmdl-select": [
+        "../dist/ng-getmdl-select"
+      ],
+      "ng-getmdl-select/*": [
+        "../dist/ng-getmdl-select/*"
+      ]
     }
   }
 }

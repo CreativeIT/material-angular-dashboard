@@ -17,14 +17,13 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets",
+              "src/assets"
             ],
             "styles": [
               "src/theme/styles.scss"
             ],
             "scripts": [
-              "node_modules/material-design-lite/material.js",
-              "node_modules/getmdl-select/getmdl-select.min.js"
+              "node_modules/material-design-lite/material.js"
             ]
           },
           "configurations": {
@@ -81,6 +80,40 @@
       "root": "",
       "sourceRoot": "",
       "projectType": "application"
+    },
+    "ng-getmdl-select": {
+      "root": "projects/ng-getmdl-select",
+      "sourceRoot": "projects/ng-getmdl-select/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-getmdl-select/tsconfig.lib.json",
+            "project": "projects/ng-getmdl-select/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-getmdl-select/src/test.ts",
+            "tsConfig": "projects/ng-getmdl-select/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-getmdl-select/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-getmdl-select/tsconfig.lib.json",
+              "projects/ng-getmdl-select/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "material-angular-dashboard",

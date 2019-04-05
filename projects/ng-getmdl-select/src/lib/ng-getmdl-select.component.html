@@ -1,0 +1,20 @@
+<div #dropdown class="mdl-textfield mdl-js-textfield ng-getmdl-select"
+     [class.is-focused]="isFocused"
+     [class.mdl-textfield--floating-label]="isFloatingLabel"
+     [class.ng-getmdl-select__fix-height]="fixHeight">
+  <input (click)="onInputClick($event)" #input class="mdl-textfield__input" type="text"
+         [id]="id" tabIndex="-1" readonly [value]="(disabled)? '' : currentValue[keys.title]" [disabled]="disabled"/>
+  <input #hiddenInput type="hidden" [name]="name" [value]="(disabled) ? '': currentValue[keys.value]"/>
+  <label class="mdl-textfield__label" [for]="id">{{ label }}</label>
+  <ul #menu class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+    <li #li *ngFor="let item of dataArray" [attr.data-val]="item[keys.value]" class="mdl-menu__item"
+        [class.selected]="item[keys.value] === currentValue"
+        (click)="setSelectedItem(item)"
+        (focus)="onFocus(item)">
+      {{ item[keys.title] }}
+    </li>
+  </ul>
+  <label [for]="id" (click)="onInputClick($event)" *ngIf="arrow">
+    <i #arrow class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+  </label>
+</div>
