@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { NgGetmdlSelectModule } from 'ng-getmdl-select';
 
 import { ThemeModule } from 'theme';
 
@@ -19,6 +20,7 @@ import { UIRoutingModule } from './ui-routing.module';
     UIRoutingModule,
     ThemeModule,
     ComponentsModule,
+    NgGetmdlSelectModule,
   ],
   declarations: [
     ButtonsComponent,

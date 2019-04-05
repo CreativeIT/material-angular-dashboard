@@ -7,4 +7,5 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class EmployerFormComponent {
   @HostBinding('class.employer-form') private readonly employerForm = true;
+  public qualifications = ['Young Padawan', 'Junior', 'Middle', 'Senior'];
 }
