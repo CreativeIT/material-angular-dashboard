@@ -1,101 +1,100 @@
-$bg-color: #333;
-$text-color: #fff;
-$focused-color: #00bcd4;
+@import '~material-design-lite/src/variables';
+
+$getmdl-select-bg-color: $default-item-hover-bg-color !default;
+$getmdl-select-text-color: $text-color-primary !default;
+$getmdl-select-label-color: $input-text-highlight-color !default;
+$getmdl-select-height: 288px !default;
 
 /* scroll */
-$scrollbar-thumb: #999;
-$scrollbar-track: #666;
+$getmdl-select-scrollbar-thumb: #666 !default;
+$getmdl-select-scrollbar-track: #999 !default;
 
 ng-getmdl-select {
   display: block;
+  outline: none;
+  width: 100%;
 
-  .ng-getmdl-select {
-    outline: none;
-    width: 100%;
+  .mdl-textfield__input {
+    cursor: pointer;
 
-    .mdl-textfield__input {
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    .mdl-textfield__label::after {
-      bottom: 22px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0;
-    }
-
-    .selected {
-      background-color: $bg-color;
-    }
-
-    .mdl-icon-toggle__label {
-      float: right;
-      margin-top: -30px;
-      color: $text-color;
-      transform: rotate(0);
-      transition: transform 0.3s;
-    }
-
-    &.is-focused {
-      .mdl-icon-toggle__label {
-        color: $focused-color;
-        transform: rotate(180deg);
-      }
-    }
-
-    .mdl-menu__container {
-      width: 100% !important;
-      margin-top: 2px;
-
-      .mdl-menu {
-        width: 100%;
-
-        .mdl-menu__item {
-          font-size: 16px;
-          color: $text-color;
-        }
-      }
-    }
-
-    &.is-focused,
-    &.is-dirty,
-    &.has-placeholder {
-      .mdl-textfield__label {
-        color: $focused-color;
-      }
-    }
-
-    // custom scroll
-    ::-webkit-scrollbar {
-      width: 0.5rem;
-      height: 0.5rem;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: $scrollbar-thumb;
-      cursor: pointer;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: $scrollbar-track;
+    &:focus {
+      outline: none;
     }
   }
 
-  .ng-getmdl-select__fix-height {
-    .mdl-menu__container .mdl-menu {
-      overflow-y: auto;
-      max-height: 288px !important;
-    }
+  .mdl-textfield__label::after {
+    bottom: 22px;
+  }
 
-    .mdl-menu.mdl-menu--top-left {
-      bottom: auto;
-      top: 0;
+  label {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .mdl-icon-toggle__label {
+    float: right;
+    margin-top: -30px;
+    color: $getmdl-select-text-color;
+    transform: rotate(0);
+    transition: transform 0.3s;
+  }
+
+  &.is-focused {
+    .mdl-icon-toggle__label {
+      color: $getmdl-select-label-color;
+      transform: rotate(180deg);
     }
+  }
+
+  .is-item-hover {
+    background-color: $getmdl-select-bg-color;
+  }
+
+  .mdl-menu__container {
+    width: 100% !important;
+    margin-top: 2px;
+
+    .mdl-menu {
+      width: 100%;
+
+      .mdl-menu__item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.is-focused,
+  &.is-dirty,
+  &.has-placeholder {
+    .mdl-textfield__label {
+      color: $getmdl-select-label-color;
+    }
+  }
+
+  // custom scroll
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $getmdl-select-scrollbar-thumb;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $getmdl-select-scrollbar-track;
+  }
+}
+
+.ng-getmdl-select__fix-height {
+  .mdl-menu__container .mdl-menu {
+    overflow-y: auto;
+    max-height: $getmdl-select-height !important;
+  }
+
+  .mdl-menu.mdl-menu--top-left {
+    bottom: auto;
+    top: 0;
   }
 }

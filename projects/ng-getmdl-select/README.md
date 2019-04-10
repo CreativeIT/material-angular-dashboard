@@ -3,7 +3,7 @@ Angular select for [material-design-lite](https://github.com/google/material-des
 
 ## Live example
 
-![Live example](https://raw.githubusercontent.com/CreativeIT/material-angular-dashboard/ng-select/projects/ng-getmdl-select/src/assets/live_example.gif)
+![Live example](https://raw.githubusercontent.com/CreativeIT/ng-getmdl-select/master/src/assets/live_example.gif)
 
 ## Getting started
 ### Step 1: Install `ng-getmdl-select`:

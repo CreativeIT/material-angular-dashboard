@@ -1,4 +1,5 @@
 import 'material-design-lite/material';
+
 declare var componentHandler: any;
 
 import {
@@ -58,6 +59,8 @@ export class NgGetmdlSelectComponent implements OnInit, OnChanges, AfterViewInit
   public dataArray = [];
   private isViewInit = false;
   private todoAfterInit = [];
+  public arrowkeyLocation = 0;
+  public isKeyNavigation = false;
 
   public constructor(private changeDetector: ChangeDetectorRef) {
 
@@ -139,8 +142,43 @@ export class NgGetmdlSelectComponent implements OnInit, OnChanges, AfterViewInit
     this.changeDetector.reattach();
   }
 
-  public onFocus(value: string) { // todo: add button event
-    // console.log('onFocus', value);
+  public menuKeyDown(event: KeyboardEvent) {
+    event.stopImmediatePropagation();
+    event.stopPropagation();
+    event.preventDefault();
+
+    this.isKeyNavigation = true;
+    const isVisible = this.menu.nativeElement.parentElement.classList.contains('is-visible');
+    switch (event.keyCode) {
+      case 38: // arrow up
+        this.arrowkeyLocation = this.arrowkeyLocation > 0 ? this.arrowkeyLocation - 1 : this.dataArray.length - 1;
+        break;
+      case 40: // arrow down
+        this.arrowkeyLocation = this.arrowkeyLocation >= (this.dataArray.length - 1) ? 0 : this.arrowkeyLocation + 1;
+        break;
+      case 13: // enter
+        if (isVisible) {
+          this.setCurrentValue(this.data[this.arrowkeyLocation]);
+          this.closeMenu();
+        } else {
+          this.openMenu();
+        }
+        break;
+      case 27: // esc
+        this.closeMenu();
+        break;
+    }
+  }
+
+  public keyDownTab(event) {
+    const isVisible = this.menu.nativeElement.parentElement.classList.contains('is-visible');
+    switch (event.keyCode) {
+      case 9: // tab
+        if (isVisible) {
+          this.closeMenu();
+        }
+        break;
+    }
   }
 
   public onInputClick(e) {
@@ -152,13 +190,24 @@ export class NgGetmdlSelectComponent implements OnInit, OnChanges, AfterViewInit
     const isVisible = this.menu.nativeElement.parentElement.classList.contains('is-visible');
     this.hideAllMenu();
     if (!isVisible) {
-      this.menu.nativeElement['MaterialMenu'].show();
-      this.isFocused = true;
-      this.opened = true;
+      this.openMenu();
     } else {
       this.isFocused = false;
       this.opened = false;
     }
+  }
+
+  private openMenu() {
+    this.arrowkeyLocation = this.dataArray.findIndex(item => item[this.keys.value] === this.currentValue[this.keys.value]);
+    this.menu.nativeElement['MaterialMenu'].show();
+    this.isFocused = true;
+    this.opened = true;
+  }
+
+  private closeMenu() {
+    this.hideAllMenu();
+    this.isFocused = false;
+    this.opened = false;
   }
 
   private hideAllMenu() {

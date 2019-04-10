@@ -6,8 +6,8 @@ ng-getmdl-select {
       outline: none;
     }
 
-    .selected {
-      background-color: $default-dropdown-bg-color;
+    .is-item-hover {
+      background-color: $default-item-hover-bg-color;
     }
 
     &.is-focused {
@@ -33,6 +33,10 @@ ng-getmdl-select {
 
     ::-webkit-scrollbar-track {
       background: $scrollbar-track;
+    }
+
+    .mdl-icon-toggle__label {
+      color: $text-color-primary;
     }
   }
 }
