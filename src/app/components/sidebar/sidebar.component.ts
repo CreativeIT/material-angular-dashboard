@@ -10,7 +10,8 @@ import { SidebarComponent as BaseSidebarComponent } from 'theme/components/sideb
 export class SidebarComponent extends BaseSidebarComponent {
   public title = 'darkboard';
   public menu = [
-    { name: 'Dashboard', link: '/app/dashboard', icon: 'dashboard' },
+    { name: 'Classic Dashboard', link: '/app/dashboard', icon: 'dashboard' },
+    { name: 'Custom Dashboard', link: '/app/dashboard-custom', icon: 'dashboard' },
     {
       name: 'UI',
       children: [

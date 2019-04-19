@@ -18,6 +18,9 @@ import { MapsService } from './maps.service';
     MapComponent,
     MapAdvancedComponent,
   ],
+  exports: [
+    MapAdvancedComponent,
+  ],
   providers: [MapsService],
 })
 export class MapsModule { }

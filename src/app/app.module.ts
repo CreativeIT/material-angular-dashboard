@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChartsModule } from './pages/charts';
 import { DashboardModule } from './pages/dashboard';
+import { Dashboard2Module } from './pages/dashboard2';
 import { FormsModule } from './pages/forms';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormsModule } from './pages/forms';
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
+    Dashboard2Module,
     FormsModule,
     ChartsModule,
   ],

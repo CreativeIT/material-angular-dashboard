@@ -29,5 +29,8 @@ import { StackedBarChartComponent } from './stacked-bar-chart';
     StackedBarChartComponent,
     LinePlusBarChartComponent,
   ],
+  exports: [
+    CountryStatisticsChartComponent,
+  ],
 })
 export class ChartsModule { }

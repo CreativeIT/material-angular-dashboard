@@ -1,0 +1,30 @@
+<base-right-sidebar-layout>
+  <base-right-sidebar-content>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12">
+        <app-map-advanced></app-map-advanced>
+      </div>
+
+      <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--5-col-tablet mdl-cell--12-col-phone">
+        <base-card>
+          <base-card-title>
+            <h2 class="mdl-card__title-text">Country Statistics</h2>
+          </base-card-title>
+          <base-card-body>
+            <app-country-statistics-chart></app-country-statistics-chart>
+          </base-card-body>
+        </base-card>
+      </div>
+
+      <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--5-col-tablet mdl-cell--12-col-phone">
+        <app-weather></app-weather>
+      </div>
+    </div>
+  </base-right-sidebar-content>
+
+  <base-right-sidebar [title]="'Filters'">
+    <app-filters></app-filters>
+  </base-right-sidebar>
+
+</base-right-sidebar-layout>
+

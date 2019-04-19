@@ -1,0 +1,21 @@
+app-dashboard-2 {
+  app-map-advanced {
+    margin: -0.5rem !important;
+
+    &.map-advanced {
+      min-height: 500px;
+
+      .map__window {
+        height: 500px;
+      }
+    }
+  }
+
+  base-right-sidebar {
+    .mdl-card__title-text {
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

@@ -31,5 +31,8 @@ import { WeatherComponent } from './weather';
     TodoListComponent,
     TrendingComponent,
   ],
+  exports: [
+    WeatherComponent,
+  ],
 })
 export class DashboardModule { }
