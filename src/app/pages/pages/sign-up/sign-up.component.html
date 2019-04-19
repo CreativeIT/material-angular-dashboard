@@ -7,31 +7,67 @@
       <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
         <span class="blank-layout-card-name text-color--white">Sign up</span>
       </div>
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-          <input class="mdl-textfield__input" type="text" id="name">
-          <label class="mdl-textfield__label" for="name">Name</label>
+      <form class="login-form" [formGroup]="signupForm" (submit)="login()" novalidate autocomplete="off">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size"
+               [class.is-invalid]="username.invalid && (username.dirty || username.touched)"
+               [class.is-valid]="username.valid && (username.dirty || username.touched)">
+            <input formControlName="username"
+                   (change)="onInputChange($event)"
+                   class="mdl-textfield__input" type="text" id="username">
+            <label class="mdl-textfield__label" for="username">Name</label>
+
+            <div *ngIf="username.invalid && (username.dirty || username.touched)">
+              <span *ngIf="username.errors.required" class="mdl-textfield__error">
+                Name is required. <span class="color-text--orange"> Please, write any name.</span>
+              </span>
+            </div>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size"
+               [class.is-invalid]="password.invalid && (password.dirty || password.touched)"
+               [class.is-valid]="password.valid && (password.dirty || password.touched)" id="forRass">
+            <input formControlName="password"
+                   (change)="onInputChange($event)"
+                   class="mdl-textfield__input" type="password" id="password">
+            <label class="mdl-textfield__label" for="password">Password</label>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+              <span *ngIf="password.errors.required" class="mdl-textfield__error">
+                Password is required. <span class="color-text--orange"> Please, write any password.</span>
+              </span>
+            </div>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size"
+               [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+               [class.is-valid]="email.valid && (email.dirty || email.touched)">
+            <input formControlName="email"
+                   pattern="{{emailPattern}}"
+                   (change)="onInputChange($event)"
+                   class="mdl-textfield__input" type="text" id="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
+
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+              <span *ngIf="email.errors.required" class="mdl-textfield__error">
+                Email is required. <span class="color-text--orange"> Please, write any valid email.</span>
+              </span>
+              <span *ngIf="email.errors.pattern" class="mdl-textfield__error">
+                Email is invalid.
+              </span>
+            </div>
+          </div>
+
+          <label baseCheckbox color="light-blue" class="checkbox--inline" inline></label>
+          <span class="blank-layout-card-link">I agree all statements in <a href="#"
+                                                                            class="underlined">terms of service</a></span>
         </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-          <input class="mdl-textfield__input" type="text" id="password">
-          <label class="mdl-textfield__label" for="password">Password</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-          <input class="mdl-textfield__input" type="text" id="e-mail">
-          <label class="mdl-textfield__label" for="e-mail">Email</label>
-        </div>
-        <label baseCheckbox color="light-blue" class="checkbox--inline" inline></label>
-        <span class="blank-layout-card-link">I agree all statements in <a href="#" class="underlined">terms of service</a></span>
-      </div>
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
-        <a routerLink="/pages/login" class="blank-layout-card-link">I have already signed up</a>
-        <div class="mdl-layout-spacer"></div>
-        <a routerLink="/app/dashboard">
-          <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
+          <a routerLink="/pages/login" class="blank-layout-card-link">I have already signed up</a>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue"
+                  type="submit" [disabled]="signupForm.invalid">
             SIGN UP
           </button>
-        </a>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

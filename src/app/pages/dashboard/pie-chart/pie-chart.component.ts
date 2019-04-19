@@ -69,8 +69,8 @@ export class PieChartComponent extends BasePieChartComponent implements OnInit {
         .hideDelay(0)
         .headerEnabled(false)
         .contentGenerator((d) => {
-          if (d === null) {
-            return '';
+          if (d === null || !d.animatedData) {
+            return null;
           }
           d3.selectAll('.nvtooltip').classed('mdl-tooltip', true);
           return `${d.animatedData.y} hours`;

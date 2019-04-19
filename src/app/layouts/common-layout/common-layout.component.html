@@ -19,7 +19,7 @@
       <app-message-menu></app-message-menu>
 
       <div class="avatar-dropdown" id="icon">
-        <span>Luke</span>
+        <span>{{ user.username }}</span>
         <img src="assets/images/Icon_header.png">
       </div>
       <ul
@@ -28,8 +28,8 @@
         <li class="mdl-list__item mdl-list__item--two-line">
             <span class="mdl-list__item-primary-content">
               <span class="material-icons mdl-list__item-avatar"></span>
-              <span>Luke</span>
-              <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+              <span>{{ user.username }}</span>
+              <span class="mdl-list__item-sub-title">{{ user.email }}</span>
           </span>
         </li>
         <li class="list__item--border-top"></li>
@@ -62,7 +62,7 @@
             </span>
         </li>
         <li class="mdl-menu__item mdl-list__item">
-            <span class="mdl-list__item-primary-content">
+            <span class="mdl-list__item-primary-content" (click)="logout()">
               <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
               Log out
             </span>
