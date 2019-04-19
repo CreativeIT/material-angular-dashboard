@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MaterialAngularSelectModule } from 'material-angular-select';
 
 import { ThemeModule } from 'theme';
 
@@ -19,6 +20,7 @@ import { UIRoutingModule } from './ui-routing.module';
     UIRoutingModule,
     ThemeModule,
     ComponentsModule,
+    MaterialAngularSelectModule,
   ],
   declarations: [
     ButtonsComponent,

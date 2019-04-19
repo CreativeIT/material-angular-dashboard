@@ -17,14 +17,13 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets",
+              "src/assets"
             ],
             "styles": [
               "src/theme/styles.scss"
             ],
             "scripts": [
-              "node_modules/material-design-lite/material.js",
-              "node_modules/getmdl-select/getmdl-select.min.js"
+              "node_modules/material-design-lite/material.js"
             ]
           },
           "configurations": {

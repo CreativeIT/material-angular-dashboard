@@ -26,19 +26,12 @@
             <label class="mdl-textfield__label" for="birthday">Birthday</label>
           </div>
 
-          <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-            <input class="mdl-textfield__input" value="Male" type="text" id="gender" readonly tabIndex="-1"/>
-
-            <label class="mdl-textfield__label" for="gender">Gender</label>
-
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender">
-              <li class="mdl-menu__item">Male</li>
-              <li class="mdl-menu__item">Female</li>
-            </ul>
-
-            <label for="gender">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--6-col">
+            <material-angular-select [data]="['Male', 'Female']"
+                                  [label]="'Gender'"
+                                  [name]="'gender'"
+                                  [currentValue]="'Male'"
+                                  [fixHeight]="true"></material-angular-select>
           </div>
         </div>
       </div>
@@ -62,19 +55,12 @@
             <input class="mdl-textfield__input" type="text" value="Lead developer" id="position"/>
             <label class="mdl-textfield__label" for="position">Position</label>
           </div>
-          <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-            <input class="mdl-textfield__input" value="Senior" type="text" id="qualification" readonly tabIndex="-1"/>
-            <label class="mdl-textfield__label" for="qualification">Qualification</label>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown"
-                for="qualification">
-              <li class="mdl-menu__item">Young Padawan</li>
-              <li class="mdl-menu__item">Junior</li>
-              <li class="mdl-menu__item">Middle</li>
-              <li class="mdl-menu__item">Senior</li>
-            </ul>
-            <label for="qualification">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--6-col">
+            <material-angular-select [data]="qualifications"
+                                  [label]="'Qualification'"
+                                  [name]="'qualification'"
+                                  [currentValue]="'Junior'"
+                                  [fixHeight]="true"></material-angular-select>
           </div>
         </div>
 
@@ -107,16 +93,10 @@
             </div>
           </div>
 
-          <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield getmdl-select">
-            <input class="mdl-textfield__input" value="Mobile" type="text" id="phone_type" readonly tabIndex="-1"/>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="phone_type">
-              <li class="mdl-menu__item">Mobile</li>
-              <li class="mdl-menu__item">Home</li>
-              <li class="mdl-menu__item">Work</li>
-            </ul>
-            <label for="phone_type">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--3-col">
+            <material-angular-select [data]="['Mobile', 'Home', 'Work']"
+                                  [name]="'phone_type'"
+                                  [currentValue]="'Mobile'"></material-angular-select>
           </div>
         </div>
 
@@ -130,15 +110,10 @@
             </div>
           </div>
 
-          <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield getmdl-select">
-            <input class="mdl-textfield__input" value="Personal" type="text" id="skype_type" readonly tabIndex="-1"/>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="skype_type">
-              <li class="mdl-menu__item">Personal</li>
-              <li class="mdl-menu__item">Work</li>
-            </ul>
-            <label for="skype_type">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--3-col">
+            <material-angular-select [data]="['Personal', 'Work']"
+                                  [name]="'skype_type'"
+                                  [currentValue]="'Personal'"></material-angular-select>
           </div>
         </div>
 
@@ -152,15 +127,10 @@
             </div>
           </div>
 
-          <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield getmdl-select">
-            <input class="mdl-textfield__input" value="Work" type="text" id="email_type" readonly tabIndex="-1"/>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="email_type">
-              <li class="mdl-menu__item">Personal</li>
-              <li class="mdl-menu__item">Work</li>
-            </ul>
-            <label for="email_type">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--3-col">
+            <material-angular-select [data]="['Personal', 'Work']"
+                                  [name]="'email_type'"
+                                  [currentValue]="'Work'"></material-angular-select>
           </div>
         </div>
 
@@ -174,16 +144,10 @@
             </div>
           </div>
 
-          <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield getmdl-select">
-            <input class="mdl-textfield__input" value="Home" type="text" id="address_type" readonly
-                   tabIndex="-1"/>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="address_type">
-              <li class="mdl-menu__item">Home</li>
-              <li class="mdl-menu__item">Work</li>
-            </ul>
-            <label for="address_type">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
+          <div class="mdl-cell mdl-cell--3-col">
+            <material-angular-select [data]="['Home', 'Work']"
+                                  [name]="'address_type'"
+                                  [currentValue]="'Home'"></material-angular-select>
           </div>
         </div>
       </div>
@@ -202,7 +166,8 @@
           <input #isInfoReliable type="checkbox" id="isInfoReliable" class="mdl-checkbox__input" required/>
           <span class="mdl-checkbox__label">Entered information is reliable</span>
         </label>
-        <button [disabled]="!isInfoReliable.checked" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        <button [disabled]="!isInfoReliable.checked" id="submit_button"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
           Submit
         </button>
       </div>

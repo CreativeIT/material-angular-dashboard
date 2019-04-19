@@ -68,22 +68,10 @@
             <input class="mdl-textfield__input" type="text" value="BobbyK@darkboard.io" id="profile-floating-e-mail">
             <label class="mdl-textfield__label" for="floating-e-mail">Email</label>
           </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select full-size">
-            <input class="mdl-textfield__input" type="text" id="location" readonly tabIndex="-1"/>
-            <input type="hidden" value="" name="location">
-            <label class="mdl-textfield__label" for="location">Location</label>
-
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="location">
-              <li class="mdl-menu__item">Minsk</li>
-              <li class="mdl-menu__item">Berlin</li>
-              <li class="mdl-menu__item">Moscow</li>
-              <li class="mdl-menu__item">NYC</li>
-            </ul>
-
-            <label for="location">
-              <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-            </label>
-          </div>
+          <material-angular-select [data]="countries"
+                            [name]="'location'"
+                            [label]="'Location'"
+                            [currentValue]="locationValue"></material-angular-select>
         </div>
       </div>
     </form>
