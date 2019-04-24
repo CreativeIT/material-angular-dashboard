@@ -39,6 +39,7 @@
     "object-literal-key-quotes": [
       true,
       "consistent-as-needed"
-    ]
+    ],
+    "no-parameter-reassignment": false
   }
 }
