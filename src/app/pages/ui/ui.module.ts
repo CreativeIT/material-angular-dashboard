@@ -10,6 +10,7 @@ import { ColorsComponent } from './colors';
 import { ComponentsModule } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
+import { RightSidebarModule } from './right-sidebar';
 import { TablesComponent, TablesService } from './tables';
 import { TypographyComponent } from './typography';
 import { UIRoutingModule } from './ui-routing.module';
@@ -21,6 +22,7 @@ import { UIRoutingModule } from './ui-routing.module';
     ThemeModule,
     ComponentsModule,
     MaterialAngularSelectModule,
+    RightSidebarModule,
   ],
   declarations: [
     ButtonsComponent,

@@ -1,0 +1,22 @@
+app-filters {
+  material-angular-select {
+    .mdl-menu__container .mdl-menu .mdl-menu__item,
+    .mdl-textfield__input {
+      font-size: 13px;
+    }
+
+    &.mdl-textfield {
+      width: 100%;
+      max-width: 240px;
+    }
+
+    .mdl-textfield__input {
+      line-height: 20px;
+      text-transform: capitalize;
+    }
+
+    .mdl-menu__item {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -4,14 +4,14 @@ import { SidebarComponent as BaseSidebarComponent } from 'theme/components/sideb
 
 @Component({
   selector: 'app-sidebar',
-  styleUrls: ['../../../theme/components/sidebar/sidebar.component.scss'],
+  styleUrls: ['../../../theme/components/sidebar/sidebar.component.scss', './sidebar.component.scss'],
   templateUrl: '../../../theme/components/sidebar/sidebar.component.html',
 })
 export class SidebarComponent extends BaseSidebarComponent {
   public title = 'darkboard';
   public menu = [
     { name: 'Classic Dashboard', link: '/app/dashboard', icon: 'dashboard' },
-    { name: 'Custom Dashboard', link: '/app/dashboard-custom', icon: 'dashboard' },
+    { name: 'Custom Dashboard', link: '/app/dashboard-custom', icon: 'view_quilt' },
     {
       name: 'UI',
       children: [
@@ -27,6 +27,10 @@ export class SidebarComponent extends BaseSidebarComponent {
           name: ui[0].toUpperCase() + ui.slice(1),
           link: `/ui/${ui}`,
         })),
+        {
+          name: 'Right sidebar',
+          link: '/ui/right-sidebar',
+        },
       ],
       icon: 'view_comfy',
     },

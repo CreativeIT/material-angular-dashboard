@@ -33,6 +33,7 @@ import { WeatherComponent } from './weather';
   ],
   exports: [
     WeatherComponent,
+    TrendingComponent,
   ],
 })
 export class DashboardModule { }

@@ -9,6 +9,7 @@ import { ColorsComponent } from './colors';
 import { ComponentsComponent } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
+import { RightSidebarComponent } from './right-sidebar';
 import { TablesComponent } from './tables';
 import { TypographyComponent } from './typography';
 
@@ -27,6 +28,7 @@ import { TypographyComponent } from './typography';
           { path: 'typography', component: TypographyComponent, pathMatch: 'full' },
           { path: 'tables', component: TablesComponent, pathMatch: 'full' },
           { path: 'components', component: ComponentsComponent, pathMatch: 'full' },
+          { path: 'right-sidebar', component: RightSidebarComponent, pathMatch: 'full' },
         ],
       },
     ]),
