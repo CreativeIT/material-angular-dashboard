@@ -6,7 +6,6 @@ import { CommonLayoutComponent } from 'app/layouts/common-layout';
 import { ButtonsComponent } from './buttons';
 import { CardsComponent } from './cards';
 import { ColorsComponent } from './colors';
-import { ComponentsComponent } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
 import { RightSidebarComponent } from './right-sidebar';
@@ -27,7 +26,6 @@ import { TypographyComponent } from './typography';
           { path: 'icons', component: IconsComponent, pathMatch: 'full' },
           { path: 'typography', component: TypographyComponent, pathMatch: 'full' },
           { path: 'tables', component: TablesComponent, pathMatch: 'full' },
-          { path: 'components', component: ComponentsComponent, pathMatch: 'full' },
           { path: 'right-sidebar', component: RightSidebarComponent, pathMatch: 'full' },
         ],
       },

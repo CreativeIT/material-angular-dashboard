@@ -34,7 +34,7 @@ export class SidebarComponent extends BaseSidebarComponent {
       ],
       icon: 'view_comfy',
     },
-    { name: 'Components', link: '/ui/components', icon: 'developer_board' },
+    { name: 'Components', link: '/app/components', icon: 'developer_board' },
     { name: 'Account', link: '/app/forms', icon: 'person' },
     {
       name: 'Maps', icon: 'map', children: [
