@@ -29,6 +29,8 @@ passport.use(new LocalStrategy(
     passwordField: 'password',
   },
   (email, password, done) => {
+    // Here you can insert your own logic.
+    // See examples here: http://www.passportjs.org/docs/downloads/html/#configure
     if (email !== mockUser.email) {
       return done(null, false, { message: 'Incorrect email.' });
     }
@@ -45,6 +47,7 @@ passport.use(new JwtStrategy(
     secretOrKey: 'secret',
   },
   (payload, done) => {
+    // Here you can insert your own logic.
     if (payload.id !== mockUser.id) {
       return done(null, false, { message: 'Incorrect username.' });
     }

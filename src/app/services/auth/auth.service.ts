@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
-import { environment } from '../../../environments/environment';
 import { IUser } from '@models/*';
+import { environment } from '../../../environments/environment';
 
 const tokenName = 'token';
 

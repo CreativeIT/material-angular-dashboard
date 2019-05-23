@@ -48,4 +48,3 @@ export const periodTypes: string[] = [
   'month',
   'year',
 ];
-
