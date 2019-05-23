@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ThemeModule } from 'theme';
 
@@ -13,6 +14,8 @@ import { SignUpComponent } from './sign-up';
     CommonModule,
     ThemeModule,
     AuthRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     LoginComponent,

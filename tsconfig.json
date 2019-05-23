@@ -20,7 +20,9 @@
       "es2015.iterable"
     ],
     "paths": {
-      "@components/*": ["app/components"]
+      "@components/*": ["app/components"],
+      "@services/*": ["app/services"],
+      "@models/*": ["app/models"]
     }
   }
 }

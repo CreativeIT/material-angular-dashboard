@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "eslint-config-airbnb"
+  ],
+  "plugins": ["import"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off"
+  }
+}
