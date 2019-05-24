@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +16,7 @@ import { DashboardModule } from './pages/dashboard';
     AppRoutingModule,
     DashboardModule,
     HttpClientModule,
+    CommonModule,
   ],
   providers: [
     AuthService,

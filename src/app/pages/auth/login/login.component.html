@@ -46,10 +46,10 @@
 
           <div class="full-size color-text--red" *ngIf="error"> {{ error }}</div>
 
-          <a routerLink="/pages/forgot-password" class="blank-layout-card-link">Forgot password?</a>
+          <a routerLink="/auth/forgot-password" class="blank-layout-card-link">Forgot password?</a>
         </div>
         <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
-          <a routerLink="/pages/sign-up" class="blank-layout-card-link">Don't have account?</a>
+          <a routerLink="/auth/sign-up" class="blank-layout-card-link">Don't have account?</a>
           <div class="mdl-layout-spacer"></div>
           <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue"
                   type="submit" [disabled]="loginForm.invalid">
