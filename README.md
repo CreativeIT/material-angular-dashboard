@@ -66,6 +66,10 @@ Project uses [d3](https://d3js.org/) and [nvd3](http://nvd3.org/) to build chart
 Do you want to start quickly and don't need all the pages and modules? You can checkout to empty 
 [starter-kit branch](https://github.com/CreativeIT/material-angular-dashboard/tree/starter-kit) and get to work!
 
+If you need full-stack solution with authentication ability, checkout
+[feature/auth](https://github.com/CreativeIT/material-angular-dashboard/tree/feature/auth) branch with preconfigured Node.js backend.
+You can also try the [demo](http://dashboard-auth-demo.creativeit.io).
+
 # Hire us
 
 We are ready to become a strong development partner and bring competitive advantage to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!
