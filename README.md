@@ -20,23 +20,23 @@ The steps below will take you through cloning your own fork, installing dependen
 git clone https://github.com/CreativeIT/material-angular-dashboard.git
 ```
 
-2. Open your copied repo folder in terminal and install necessary modules with command, make sure that you have installed [yarn](https://yarnpkg.com/en/docs/install):
+2. Open your copied repo folder in terminal and install necessary modules with command, make sure that you have installed [npm](https://www.npmjs.com/get-npm):
 
 ```bash
-yarn install
+npm install
 ```
 
 3. Install [angular-cli](https://cli.angular.io/) globally to use its commands in the terminal:
 
 ```bash
-yarn global add @angular/cli
+npm install --global @angular/cli
 ```
 
 4. Now you are able to run or build the project:
 
-Run `yarn start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `yarn run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 # FEATURES
 
