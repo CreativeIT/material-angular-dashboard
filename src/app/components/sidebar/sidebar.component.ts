@@ -28,6 +28,10 @@ export class SidebarComponent extends BaseSidebarComponent {
           link: `/ui/${ui}`,
         })),
         {
+          name: 'ag-Grid tables',
+          link: '/ui/ag-grid',
+        },
+        {
           name: 'Right sidebar',
           link: '/ui/right-sidebar',
         },

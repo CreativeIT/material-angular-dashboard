@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 
 import { LayoutsModule } from 'app/layouts';
 import { CommonLayoutComponent } from 'app/layouts/common-layout';
+
+import { AgGridComponent } from './ag-grid';
 import { ButtonsComponent } from './buttons';
 import { CardsComponent } from './cards';
 import { ColorsComponent } from './colors';
@@ -19,6 +21,7 @@ import { TypographyComponent } from './typography';
         path: '',
         component: CommonLayoutComponent,
         children: [
+          { path: 'ag-grid', component: AgGridComponent, pathMatch: 'full' },
           { path: 'buttons', component: ButtonsComponent, pathMatch: 'full' },
           { path: 'cards', component: CardsComponent, pathMatch: 'full' },
           { path: 'colors', component: ColorsComponent, pathMatch: 'full' },

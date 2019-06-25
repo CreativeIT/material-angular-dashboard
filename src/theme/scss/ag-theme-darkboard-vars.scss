@@ -1,0 +1,67 @@
+@import "~ag-grid-community/src/styles/ag-theme-material/resources/material-legacy-var-names";
+@import './variables';
+
+// opacity values used for black values, taken from material spec
+$foreground-opacity: 0.87 !default;
+$secondary-foreground-color-opacity: 0.54 !default;
+$disabled-foreground-color-opacity: 0.38 !default;
+
+// Sizing
+$grid-size: 9px !default;
+$header-height: $grid-size * 5 !default;
+$row-height: $grid-size * 5 !default;
+$cell-horizontal-padding: calc(#{$grid-size} - 1px) !default;
+$cell-line-height: 48px !default;
+// Icons
+
+// Fonts
+$font-family: "Roboto", "Helvetica", "Arial", sans-serif !default; // legacy: font
+$font-size: 14px !default;
+$font-weight: 300 !default;
+
+$secondary-font-family: $font-family !default; //font-secondary
+$secondary-font-size: 13px !default; // font-secondary-size
+$secondary-font-weight: bold !default; // font-secondary-weight
+
+// Misc
+$card-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;
+$card-radius: 2px;
+
+// Colors
+$background-color: $background-color !default;
+$foreground-color: $data-table-color !default; // foreground
+$secondary-foreground-color: rgba($data-table-color, $secondary-foreground-color-opacity) !default; // foreground-secondary
+$disabled-foreground-color: rgba($data-table-color, $disabled-foreground-color-opacity) !default; // foreground-disabled
+$header-background-color: $background-color !default;
+$header-cell-hover-background-color: $background-color !default;
+$header-cell-moving-background-color: $header-cell-hover-background-color !default;
+$header-foreground-color: $data-table-header-color !default;
+
+$border-color: $data-table-hover-color !default;
+$primary-color: $color-primary !default;
+$accent-color: $color-secondary !default;
+$icon-color: $color-dove-gray !default;
+$alt-icon-color: transparent !default;
+
+$editor-background-color: $color-gray !default;
+$panel-background-color: $color-dove-gray !default;
+$tool-panel-background-color: $color-gray !default;
+$chip-background-color: $color-silver-chalice !default;
+
+$range-selection-background-color: transparentize(lighten($background-color, 30%), 0.9) !default;
+$range-selection-chart-category-background-color: rgba(0, 255, 132, 0.1) !default;
+$range-selection-chart-background-color: rgba(0, 88, 255, 0.1) !default;
+$range-selection-highlight-color: $color-gray !default;
+$ag-range-selected-color-1: opacify($range-selection-background-color, 0.1) !default;
+$ag-range-selected-color-2: opacify($range-selection-background-color, 0.2) !default;
+$ag-range-selected-color-3: opacify($range-selection-background-color, 0.3) !default;
+$ag-range-selected-color-4: opacify($range-selection-background-color, 0.4) !default;
+
+$hover-color: $data-table-hover-color !default;
+$selected-color: $color-dove-gray !default;
+$cell-data-changed-color: $color-alto !default;
+
+// delta changes
+$value-change-delta-up-color: $color-green !default;
+$value-change-delta-down-color: $color-red !default;
+$value-change-value-highlight-background-color: $color-light-blue !default;

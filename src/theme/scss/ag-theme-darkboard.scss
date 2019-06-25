@@ -1,0 +1,83 @@
+@import "ag-theme-darkboard-vars";
+
+.ag-theme-material {
+  .ag-cell,
+  .ag-header-cell {
+    &:first-child {
+      padding-left: $grid-size * 2;
+    }
+
+    &:last-child {
+      padding-right: $grid-size * 2;
+    }
+  }
+
+  .ag-cell {
+    line-height: $cell-line-height;
+  }
+
+  .ag-row.ag-row-last {
+    border-bottom: none;
+  }
+
+  .stripped-rows {
+    border: none;
+    border-right: 1px solid $color-dove-gray;
+
+    & :last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: $color-gray;
+    }
+
+    &:nth-child(odd) {
+      background-color: $color-table-border;
+    }
+  }
+
+  .bordered-table-row {
+    .ag-cell,
+    .ag-header-cell {
+      border-right: 1px solid $data-table-divider-color;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &:last-child,
+    &:first-child {
+      border-bottom: none;
+    }
+  }
+
+  .border-cell-header {
+    border-right: 1px solid $data-table-divider-color;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .ag-paging-panel {
+    padding: 0 $grid-size * 2;
+  }
+}
+
+.ag-filter {
+  select.ag-filter-select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $input-text-bottom-border-color;
+    height: 24px;
+    font-family: $font-family;
+    font-weight: 300;
+    color: $todo-input-text-highlight-color;
+
+    option {
+      background: $background-color;
+    }
+  }
+}

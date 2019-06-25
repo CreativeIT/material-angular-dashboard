@@ -4,6 +4,7 @@ import { MaterialAngularSelectModule } from 'material-angular-select';
 
 import { ThemeModule } from 'theme';
 
+import { AgGridComponentModule } from './ag-grid/ag-grid.module';
 import { ButtonsComponent } from './buttons';
 import { CardsComponent } from './cards';
 import { ColorsComponent } from './colors';
@@ -21,6 +22,7 @@ import { UIRoutingModule } from './ui-routing.module';
     ThemeModule,
     MaterialAngularSelectModule,
     RightSidebarModule,
+    AgGridComponentModule,
   ],
   declarations: [
     ButtonsComponent,
