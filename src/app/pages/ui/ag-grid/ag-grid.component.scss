@@ -1,0 +1,49 @@
+@import '~theme/helpers';
+
+app-ag-grid {
+  .no-padding {
+    padding: 0;
+    width: 100%;
+  }
+
+  .grouped-table {
+    .ag-header {
+      border-bottom: 2px solid $input-text-bottom-border-color;
+    }
+  }
+
+  .medals-group {
+    text-align: center;
+
+    &:hover {
+      background-color: $color-table-border;
+      cursor: pointer;
+    }
+
+    &.closed {
+      color: $color-smooth-gray;
+    }
+  }
+
+  .ag-header-cell-resize {
+    border-right: 1px solid $input-text-bottom-border-color;
+    right: 0 !important;
+  }
+
+  .mdl-button--small {
+    line-height: 30px;
+    height: 30px;
+  }
+
+  .ag-grid-title {
+    font-size: 20px;
+    margin-top: 24px;
+    letter-spacing: 0.2px;
+
+    a {
+      font-size: 20px;
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+    <div class="ag-grid-title">
+      <span class="text-color--gray">This is an implantation of <a href="https://www.ag-grid.com/" target="_blank">ag-Grid</a> with Material Angular Dashboard.</span>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h1 class="mdl-card__title-text">Simple ag-Grid table</h1>
+      </base-card-title>
+      <base-card-body class="no-padding">
+        <ag-grid-angular
+          style="width: 100%; min-height: 270px;"
+          class="ag-theme-material"
+          [gridOptions]="gridOptions">
+        </ag-grid-angular>
+      </base-card-body>
+    </base-card>
+  </div>
+
+  <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h1 class="mdl-card__title-text">Grouped data ag-Grid table</h1>
+        <div class="mdl-layout-spacer"></div>
+        <button (click)="onDownload()"
+                class="mdl-button mdl-js-button mdl-button--raised
+                mdl-js-ripple-effect button--colored-teal mdl-button--small">
+          Export
+        </button>
+      </base-card-title>
+      <base-card-body class="no-padding">
+        <ag-grid-angular
+          style="width: 100%; height: 445px;"
+          class="ag-theme-material grouped-table"
+          [columnDefs]="columnGroupedDefs"
+          [suppressDragLeaveHidesColumns]="true"
+          [suppressMakeColumnVisibleAfterUnGroup]="true"
+          [rowData]="rowDataGrouped"
+          [suppressHorizontalScroll]="false"
+          [enableSorting]="true"
+          [pagination]="true"
+          [paginationAutoPageSize]="true"
+          [rowClass]="'stripped-rows'"
+          [animateRows]="true"
+          [icons]="groupedIcons"
+          (gridReady)="onGridGroupedReady($event)"
+          (columnGroupOpened)="onColumnGroupOpened($event)"
+        ></ag-grid-angular>
+      </base-card-body>
+    </base-card>
+  </div>
+
+  <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h1 class="mdl-card__title-text">Advanced ag-Grid table</h1>
+        <div class="mdl-layout-spacer"></div>
+        <ag-pagination [paginationProxy]="paginationAdvanced"></ag-pagination>
+      </base-card-title>
+      <base-card-body class="no-padding">
+        <ag-grid-angular
+          style="width: 100%; min-height: 290px;"
+          class="ag-theme-material"
+          [gridOptions]="gridOptionsAdvanced"
+        ></ag-grid-angular>
+      </base-card-body>
+    </base-card>
+  </div>
+</div>
