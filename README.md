@@ -20,23 +20,34 @@ The steps below will take you through cloning your own fork, installing dependen
 git clone https://github.com/CreativeIT/material-angular-dashboard.git
 ```
 
-2. Open your copied repo folder in terminal and install necessary modules with command, make sure that you have installed [npm](https://www.npmjs.com/get-npm):
+2. Open your copied repo folder in terminal and checkout `feature/backend` branch to use bundle with backend.
+
+```bash
+git checkout feature/backend
+```
+
+3. Install necessary modules, make sure that you have installed [npm](https://www.npmjs.com/get-npm):
 
 ```bash
 npm install
+# then for backend
+cd backend
+npm install
 ```
 
-3. Install [angular-cli](https://cli.angular.io/) globally to use its commands in the terminal:
+4. Install [angular-cli](https://cli.angular.io/) globally to use its commands in the terminal:
 
 ```bash
 npm install --global @angular/cli
 ```
 
-4. Now you are able to run or build the project:
+5. Now you are able to run or build the project:
 
-Run `npm start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` or `ng serve` for a dev server. The app will automatically reload if you change any of the source files. Or run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Go to `backend` directory and run `npm start` to start node.js backend.
+
+Navigate to `http://localhost:4200/`. Use the following credentials to sign in the Dashboard: user: _admin@admin.admin_ , password: _admin_
 
 # FEATURES
 
@@ -45,6 +56,10 @@ Run `npm run build` or `ng build` to build the project. The build artifacts will
 * [Material Design](http://www.google.com/design/spec/material-design/introduction.html)
 
 * TypeScript
+
+* [Passport.js](http://www.passportjs.org/)
+
+* [Express](https://expressjs.com/)
 
 * Responsive dark material design. DARK, Carl!
 
