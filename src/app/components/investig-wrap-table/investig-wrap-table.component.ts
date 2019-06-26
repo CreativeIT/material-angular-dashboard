@@ -124,4 +124,8 @@ export class InvestigWrapTableComponent extends UpgradableComponent implements O
       this.loadData(this.filterValues, page);
     }
   }
+
+  public onClick() {
+    setTimeout(() => componentHandler.upgradeDom(), 200);
+  }
 }

@@ -52,7 +52,7 @@
           </td>
           <td class="mdl-data-table__cell--non-numeric">{{ row.originSource }}</td>
           <td>
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-dove-gray" [routerLink]="['/app/investigation', row.id]">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-dove-gray" (click)="onClick()" [routerLink]="['/app/investigation', row.id]">
               <i class="material-icons">remove_red_eye</i>
             </button>
           </td>
