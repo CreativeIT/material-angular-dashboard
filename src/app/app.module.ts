@@ -8,6 +8,8 @@ import { AuthInterceptor, AuthService } from '@services/*';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './pages/dashboard';
+import { InvestigationsModule } from './pages/investigations';
+import { InvestigationsService } from './services/investigations.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +19,10 @@ import { DashboardModule } from './pages/dashboard';
     DashboardModule,
     HttpClientModule,
     CommonModule,
+    InvestigationsModule,
   ],
   providers: [
+    InvestigationsService,
     AuthService,
     {
       provide: HTTP_INTERCEPTORS,

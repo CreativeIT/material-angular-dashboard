@@ -1,0 +1,22 @@
+@import '~theme/helpers';
+
+app-investigations {
+  width: 100%;
+  display: block;
+
+  .mdl-grid {
+    position: relative;
+  }
+
+  .main-content {
+    width: 100%;
+    padding-right: 230px;
+  }
+
+  .filter {
+    position: absolute;
+    right: 0;
+    width: 230px;
+    height: 100%;
+  }
+}

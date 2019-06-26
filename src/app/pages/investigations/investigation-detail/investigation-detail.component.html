@@ -1,0 +1,60 @@
+<ng-container *ngIf="investigation">
+  <p class="breadcrumbs">
+    <a [routerLink]="['/investigations']">Investigations</a> &gt; <a [routerLink]="['/admin/investigation', investigation.id]">Investigation {{ investigation.caseNumber }}</a>
+  </p>
+  <base-card>
+    <base-card-title>
+      <h2>{{ investigation.id }}</h2>
+    </base-card-title>
+    <base-card-body>
+      <form #form class="form">
+        <div class="form__article">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="openDateTime" name="openDateTime" [value]="investigation.openDateTime" readonly/>
+              <label class="mdl-textfield__label" for="openDateTime">Open Date/Time</label>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="status" name="status" [value]="investigation.status" readonly/>
+              <label class="mdl-textfield__label" for="status">Status</label>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="author" name="author" [value]="investigation.author" readonly/>
+              <label class="mdl-textfield__label" for="author">Who created</label>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="reportSource" name="reportSource" [value]="investigation.reportSource" readonly/>
+              <label class="mdl-textfield__label" for="reportSource">Report Source</label>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="originSource" name="originSource" [value]="investigation.originSource" readonly/>
+              <label class="mdl-textfield__label" for="originSource">Origin</label>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="locationCountry" name="locationCountry" [value]="investigation.locationCountry" readonly/>
+              <label class="mdl-textfield__label" for="locationCountry">Location Country</label>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input class="mdl-textfield__input" type="text" id="locationCity" name="locationCity" [value]="investigation.locationCity" readonly/>
+              <label class="mdl-textfield__label" for="locationCity">Location City</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__action">
+          <div >
+            <button id="cancel_button" [routerLink]="['/app/investigations']" class="mdl-button mdl-js-button">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </base-card-body>
+  </base-card>
+</ng-container>

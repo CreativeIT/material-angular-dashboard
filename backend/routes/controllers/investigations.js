@@ -63,7 +63,7 @@ export const get = (req, res) => {
 };
 
 export const getSingle = (req, res) => {
-  const investigation = investigations.find((investigation) => investigation.id === req.params.id);
+  const investigation = investigations.find((investigation) => investigation.id === +req.params.id);
   return res.json(investigation);
 };
 

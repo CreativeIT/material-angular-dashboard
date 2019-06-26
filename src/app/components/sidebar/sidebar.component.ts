@@ -11,6 +11,7 @@ export class SidebarComponent extends BaseSidebarComponent {
   public title = 'darkboard';
   public menu = [
     { name: 'Dashboard', link: '/app/dashboard', icon: 'dashboard' },
+    { name: 'Investigations', link: '/app/investigations', icon: 'grid_on' },
     {
       name: 'Auth', children: [
       { name: 'Sign in', link: '/auth/login' },

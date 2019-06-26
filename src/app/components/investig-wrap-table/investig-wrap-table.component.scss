@@ -1,0 +1,112 @@
+@import '~theme/helpers';
+
+.investigations-table-component {
+  width: 100%;
+
+  .mdl-card {
+    overflow-x: auto;
+  }
+
+  .investigation-table {
+    width: 100%;
+
+    td {
+      font-size: 0.95rem;
+      text-transform: capitalize;
+      padding: 5px 8px;
+    }
+
+    th {
+      cursor: pointer;
+    }
+
+    td:last-of-type,
+    th:last-of-type {
+      width: 16px;
+    }
+
+    td:first-of-type,
+    th:first-of-type {
+      padding-left: 16px;
+    }
+  }
+
+  .no-padding {
+    padding: 0;
+    width: 100%;
+  }
+
+  .label__availability {
+    margin-right: 2px;
+  }
+
+  .mdl-card__title {
+    background-color: $color-dark-gray;
+  }
+
+  .mdl-navigation__link {
+    padding: 0 0.5rem;
+    color: $color-dove-gray;
+    cursor: pointer;
+    font-size: 12px;
+
+    &.active {
+      color: white;
+    }
+  }
+
+  .status .label {
+    font-weight: bold;
+  }
+
+  .sorting {
+    position: relative;
+    font-size: 1.25rem;
+    top: 4px;
+    left: 0.5rem;
+    color: $color-dove-gray;
+
+    &.asc {
+      transform: rotate(180deg) scaleX(-1);
+    }
+
+    &.active {
+      color: $color-white;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .prediction {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $color-green;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .reexamine {
+    margin-left: 20px;
+  }
+
+  .benchmarked {
+    margin-left: 25px;
+  }
+
+  .likelihood {
+    margin-left: 40px;
+  }
+
+  .empty-data {
+    padding: 12px;
+    border-top: $data-table-dividers;
+    text-align: center;
+    color: $color-smooth-gray;
+  }
+}
