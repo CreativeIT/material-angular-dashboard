@@ -11,9 +11,10 @@ export class SidebarComponent extends BaseSidebarComponent {
   public title = 'darkboard';
   public menu = [
     { name: 'Classic Dashboard', link: '/app/dashboard', icon: 'dashboard' },
-    { name: 'Custom Dashboard', link: '/app/dashboard-custom', icon: 'view_quilt' },
+    { name: 'Custom Dashboard', link: '/app/dashboard-custom', icon: 'view_quilt', label: { text: 'new', color: 'teal' } },
     {
       name: 'UI',
+      label: { text: 'new', color: 'teal' },
       children: [
         ...[
           'buttons',
@@ -30,10 +31,12 @@ export class SidebarComponent extends BaseSidebarComponent {
         {
           name: 'ag-Grid tables',
           link: '/ui/ag-grid',
+          label: { text: 'new', color: 'teal' },
         },
         {
           name: 'Right sidebar',
           link: '/ui/right-sidebar',
+          label: { text: 'new', color: 'teal' },
         },
       ],
       icon: 'view_comfy',
@@ -43,8 +46,9 @@ export class SidebarComponent extends BaseSidebarComponent {
     {
       name: 'Maps', icon: 'map', children: [
       { name: 'Simple map', link: '/maps/simple' },
-      { name: 'Advanced map', link: '/maps/advanced' },
+      { name: 'Advanced map', link: '/maps/advanced', label: { text: 'new', color: 'teal' } },
       ],
+      label: { text: 'new', color: 'teal' },
     },
     { name: 'Charts', link: '/app/charts', icon: 'multiline_chart' },
     {

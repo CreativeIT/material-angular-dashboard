@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
       [routerLink]="data.link"
       (click)="navigate()"
       [class.mdl-navigation__link--current]="router.url === data.link"><i *ngIf="data.icon" class="material-icons" role="presentation">{{ data.icon }}</i>{{ data.name }}
+      <span *ngIf="data.label" class="label menu-link label--mini color--{{ data.label.color }}">{{ data.label.text }}</span>
     </a>
     <a
       *ngIf="data.href"

@@ -6,7 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss'],
   template: `
     <a class="mdl-navigation__link" [class.mdl-navigation__link--current]="shown" (click)="shown = !shown">
-    <i *ngIf="data.icon" class="material-icons">{{ data.icon }}</i>{{ data.name }}<i class="material-icons">keyboard_arrow_down</i>
+    <i *ngIf="data.icon" class="material-icons">{{ data.icon }}</i>{{ data.name }}
+      <span *ngIf="data.label" class="label menu-link label--mini color--{{ data.label.color }}">{{ data.label.text }}</span>
+      <i class="material-icons">keyboard_arrow_down</i>
     </a>
     <div class="mdl-navigation">
     <base-menu-item *ngFor="let child of data.children" [data]="child"></base-menu-item>
