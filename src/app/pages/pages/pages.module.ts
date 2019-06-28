@@ -4,10 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ThemeModule } from 'theme';
 
-import { TooltipModule } from '../../../theme/directives/tooltip/tooltip.module';
+import { TooltipModule } from '../../../theme/directives/tooltip';
 import { ErrorComponent } from './error';
 import { ForgotPasswordComponent } from './forgot-password';
-import { LoginComponent } from './login';
+import { GoogleLoginComponent, LoginComponent } from './login';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SignUpComponent } from './sign-up';
 
@@ -25,6 +25,7 @@ import { SignUpComponent } from './sign-up';
     LoginComponent,
     SignUpComponent,
     ForgotPasswordComponent,
+    GoogleLoginComponent,
   ],
 })
 export class PagesModule { }

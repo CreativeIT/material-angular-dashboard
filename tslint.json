@@ -40,6 +40,8 @@
       true,
       "consistent-as-needed"
     ],
-    "no-parameter-reassignment": false
+    "no-parameter-reassignment": false,
+    "ter-indent": false,
+    "align": [true, "parameters", "statements"]
   }
 }

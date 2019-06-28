@@ -71,6 +71,13 @@ export class AuthService {
     return this.loadUser();
   }
 
+  public loginGoogleSuccess(user: { token: string, username: string, email: string }) {
+    this.user = user;
+    localStorage.setItem(tokenName, user.token);
+    localStorage.setItem('username', user.username);
+    localStorage.setItem('email', user.email);
+  }
+
   private loadUser(): Observable<any> {
     // use request to load user data with token
     // it's fake and useing only for example

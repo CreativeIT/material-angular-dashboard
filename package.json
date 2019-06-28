@@ -41,6 +41,8 @@
     "@angular/platform-browser": "8.0.0",
     "@angular/platform-browser-dynamic": "8.0.0",
     "@angular/router": "8.0.0",
+    "@types/gapi": "0.0.36",
+    "@types/gapi.auth2": "0.0.50",
     "@types/googlemaps": "3.36.2",
     "ag-grid-angular": "21.0.1",
     "ag-grid-community": "21.0.1",

@@ -53,4 +53,9 @@ export class LoginComponent extends BlankLayoutCardComponent implements OnInit {
   public onInputChange(event) {
     event.target.required = true;
   }
+
+  googleLogin(user) {
+    this.authService.loginGoogleSuccess(user);
+    this.router.navigate(['/app/dashboard']);
+  }
 }

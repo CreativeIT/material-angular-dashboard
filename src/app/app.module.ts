@@ -2,7 +2,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AuthInterceptor, AuthService, FakeBackendInterceptor } from '@services/*';
+import { AuthInterceptor, AuthService, FakeBackendInterceptor, GoogleAuthService } from '@services/*';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { FormsModule } from './pages/forms';
   ],
   providers: [
     AuthService,
+    GoogleAuthService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
