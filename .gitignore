@@ -40,3 +40,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Serverless
+
+admin.env
+.env
+_meta
+.serverless
