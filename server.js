@@ -8,12 +8,15 @@ import * as compression from 'compression';
 
 import {join} from 'path';
 
+import { app as backend } from './backend/server';
+
 export const app = express();
 
 app.use(compression());
 app.use(cors());
+app.use('/backend', backend);
 
-const DIST_FOLDER = join(process.cwd(), 'dist/material-angular-dashboard');
+const DIST_FOLDER = join(process.cwd(), 'dist');
 
 app.get('*.*', express.static(join(DIST_FOLDER), {
     maxAge: '1y'

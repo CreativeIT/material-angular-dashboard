@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    server: './server.ts',
+    server: './server.js',
   },
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },

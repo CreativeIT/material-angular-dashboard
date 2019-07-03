@@ -32,10 +32,6 @@ custom:
       - '*/*'
 
 functions:
-#  backend:
-#    handler: backend.lambda.universal
-#    events:
-#      - http: ANY /backend
   api:
     handler: lambda.universal
     events:
