@@ -1,10 +1,17 @@
-# Material Angular Dashboard
 
-Welcome to the first dark dashboard with Google Material Design and Angular!
+# Material Angular Dashboard + AWS Lambda
+
+Welcome to the first dark dashboard with Google Material Design and Angular powered with [AWS Lambda](https://aws.amazon.com/lambda/) deployment facility!
 
 <a target="_blank" href="http://material-angular-dashboard.creativeit.io/"><img src="https://trello-attachments.s3.amazonaws.com/55f8466d8f95075bca20dd66/5bf421455ab0f05102cadac9/eee32e50e9fc278b715442a3fc6f65aa/Readme.png"/></a>
 
-Its much more fun with the [demo](http://material-angular-dashboard.creativeit.io).
+# Overview
+
+This bundle contains the [`feature/backend`](https://github.com/CreativeIT/material-angular-dashboard/tree/feature/backend) bundle code and configuration for deployment on AWS Lambda.
+
+AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
+
+Its much more fun with the [demo](https://g5ope910kg.execute-api.eu-central-1.amazonaws.com/production/).
 
 Material admin template is absolutely free for commercial usage theme, based on Google Material Design guidelines.
 
@@ -20,34 +27,43 @@ The steps below will take you through cloning your own fork, installing dependen
 git clone https://github.com/CreativeIT/material-angular-dashboard.git
 ```
 
-2. Open your copied repo folder in terminal and checkout `feature/backend` branch to use bundle with backend.
+2. Open your copied repo folder in terminal and checkout `feature/serverless` branch to use bundle with serverless deployment configuration.
 
 ```bash
-git checkout feature/backend
+git checkout feature/serverless
 ```
 
 3. Install necessary modules, make sure that you have installed [npm](https://www.npmjs.com/get-npm):
 
 ```bash
 npm install
-# then for backend
-cd backend
-npm install
 ```
 
-4. Install [angular-cli](https://cli.angular.io/) globally to use its commands in the terminal:
+4. Install [serverless](https://serverless.com/) globally to use its commands in the terminal:
 
 ```bash
-npm install --global @angular/cli
+npm install --global serverless
 ```
 
-5. Now you are able to run or build the project:
+5. Install [awscli](https://aws.amazon.com/cli/) to manage AWS services (AWS Lambda in our case), make sure that you have installed [pip](https://pip.pypa.io/en/stable/installing/):
 
-Run `npm start` or `ng serve` for a dev server. The app will automatically reload if you change any of the source files. Or run `npm run build` or `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+pip install awscli
+```
 
-Go to `backend` directory and run `npm start` to start node.js backend.
+6. [Create IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) for automatic project deployment, make sure that you have [AWS account]([https://aws.amazon.com/console/](https://aws.amazon.com/console/)). Grant it AdministratorAccess policy. Remember its access key pair.
 
-Navigate to `http://localhost:4200/`. Use the following credentials to sign in the Dashboard: user: _admin@admin.admin_ , password: _admin_
+7. [Configure awscli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) with key pair given above:
+
+```bash
+aws configure
+```
+
+8. Now you are able to deploy the project:
+
+Run `npm run build:serverless:deploy` to build and deploy the project to AWS Lambda. You will get the URL for your project.
+
+Navigate to the given URL. Use the following credentials to sign in the Dashboard: user: _admin@admin.admin_ , password: _admin_
 
 # FEATURES
 
@@ -60,6 +76,10 @@ Navigate to `http://localhost:4200/`. Use the following credentials to sign in t
 * [Passport.js](http://www.passportjs.org/)
 
 * [Express](https://expressjs.com/)
+
+* [AWS Lambda](https://aws.amazon.com/lambda/)
+
+* [Serverless](https://serverless.com/)
 
 * Responsive dark material design. DARK, Carl!
 
