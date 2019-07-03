@@ -20,7 +20,16 @@
     "tlint:fix": "ng lint --fix",
     "slint": "stylelint --syntax scss ./**/*.scss",
     "slint:fix": "stylelint --syntax scss --fix ./**/*.scss",
-    "lint": "ng lint && stylelint --syntax scss ./**/*.scss"
+    "lint": "ng lint && stylelint --syntax scss ./**/*.scss",
+    "build:browser:prod": "ng build --prod",
+    "build:browser:serverless": "ng build --base-href /production/",
+    "build:serverless": "npm run build:browser:serverless && npm run build:server:serverless",
+    "build:prod": "npm run build:browser:prod && npm run build:server:prod",
+    "build:prod:deploy": "npm run build:prod && npm run deploy",
+    "build:serverless:deploy": "npm run build:serverless && npm run deploy",
+    "deploy": "serverless deploy",
+    "build:server:prod": "webpack-cli --config webpack.server.config.js --progress --colors",
+    "build:server:serverless": "webpack-cli --config webpack.server.config.js --progress --colors"
   },
   "pre-commit": "lint",
   "private": true,
@@ -44,12 +53,24 @@
     "@types/googlemaps": "3.36.2",
     "classlist.js": "1.1.20150312",
     "core-js": "2.6.9",
+    "cors": "~2.8.4",
+    "cp-cli": "^1.1.0",
     "d3": "3.5.17",
     "material-angular-select": "1.0.0",
     "material-design-lite": "1.3.0",
     "nvd3": "1.8.6",
     "rxjs": "6.5.2",
-    "zone.js": "0.9.1"
+    "aws-serverless-express": "^3.2.0",
+    "zone.js": "0.9.1",
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.4",
+    "express": "4.17.1",
+    "express-session": "1.16.1",
+    "jsonwebtoken": "8.5.1",
+    "moment": "2.24.0",
+    "passport": "0.4.0",
+    "passport-jwt": "4.0.0",
+    "passport-local": "1.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.800.1",
@@ -62,7 +83,10 @@
     "@types/nvd3": "1.8.39",
     "codelyzer": "5.1.0",
     "node-sass": "4.12.0",
+    "opencollective": "^1.0.3",
     "pre-commit": "1.2.2",
+    "serverless": "1.40.0",
+    "serverless-apigw-binary": "^0.4.4",
     "stylelint": "10.0.1",
     "stylelint-config-recommended-scss": "3.3.0",
     "stylelint-config-standard": "18.3.0",
@@ -71,6 +95,7 @@
     "tslint": "5.17.0",
     "tslint-angular": "3.0.2",
     "tslint-config-airbnb": "5.11.1",
-    "typescript": "3.4.5"
+    "typescript": "3.4.5",
+    "webpack-cli": "3.3.5"
   }
 }

@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:3000',
+  apiBaseUrl: 'https://g5ope910kg.execute-api.eu-central-1.amazonaws.com/production/backend',
 };

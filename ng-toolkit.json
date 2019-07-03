@@ -1,0 +1,13 @@
+{
+  "serverless": {
+    "provider": "aws",
+    "project": "material-angular-dashboard",
+    "skipInstall": false,
+    "directory": ".",
+    "clientProject": "material-angular-dashboard",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}
