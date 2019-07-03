@@ -1,10 +1,20 @@
-# Material Angular Dashboard
+# Material Angular Dashboard + Node.js
 
-Welcome to the first dark dashboard with Google Material Design and Angular!
+Welcome to the first dark dashboard with Google Material Design and Angular powered with [Node.js](https://nodejs.org/) backend and [Passport.js](http://www.passportjs.org/) authentication facility!
 
 <a target="_blank" href="http://material-angular-dashboard.creativeit.io/"><img src="https://trello-attachments.s3.amazonaws.com/55f8466d8f95075bca20dd66/5bf421455ab0f05102cadac9/eee32e50e9fc278b715442a3fc6f65aa/Readme.png"/></a>
 
-Its much more fun with the [demo](http://material-angular-dashboard.creativeit.io).
+## Overview
+
+This bundle contains Node.js backend with authentication, simple REST API and server side pagination.
+
+With authentication feature you can control data access in your users network.
+
+With REST API you can fully separate business logic from the client to use multiple different clients with single backend.
+
+Server side pagination feature can save traffic due to the fact that the extra data is not loaded.
+
+Its much more fun with the [demo](http://dashboard-auth-demo.creativeit.io).
 
 Material admin template is absolutely free for commercial usage theme, based on Google Material Design guidelines.
 
