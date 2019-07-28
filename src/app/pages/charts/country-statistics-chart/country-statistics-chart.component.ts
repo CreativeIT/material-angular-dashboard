@@ -76,14 +76,14 @@ export class CountryStatisticsChartComponent extends BasePieChartComponent imple
               return '';
             }
             d3.selectAll('.nvtooltip').classed('mdl-tooltip', true);
-            return d.data.y + '%';
+            return `${d.data.y}%`;
           });
 
         container2.append('div')
           .append('svg')
           .datum(data)
           .transition().duration(1200)
-          .call(pieChart);
+          .call(pieChart as any);
 
         let h = 0;
         const i = 0.08;
@@ -102,7 +102,7 @@ export class CountryStatisticsChartComponent extends BasePieChartComponent imple
               { inner: innerRadius, outer: outerRadius },
               { inner: innerRadius, outer: outerRadius },
             ])
-              .title(h + '%')
+              .title(`${h}%`)
               .update();
             innerRadius += i;
             h += 10;

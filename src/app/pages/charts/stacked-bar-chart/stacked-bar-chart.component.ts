@@ -74,10 +74,12 @@ export class StackedBarChartComponent implements OnInit {
               return '';
             }
             d3.selectAll('.nvtooltip').classed('mdl-tooltip', true);
+            const formatTime = d3.time.format('%x');
+            const formatedDate = formatTime(new Date(d.value));
             if (d.hasOwnProperty('point')) {
-              return d3.time.format('%x')(new Date(d.value)) + '<br>Price: $' + d.series[0].value;
+              return `${formatedDate}<br>Price: $${d.series[0].value}`;
             }
-            return d.series[0].key + '<br>' + d.value + '<br>' + d.series[0].value;
+            return `${formatedDate}<br>Quantity: $${d.series[0].value}`;
           });
 
         container.append('svg')
