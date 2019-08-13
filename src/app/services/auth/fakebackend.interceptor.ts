@@ -24,7 +24,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       // signup
       if (request.url.endsWith('/api/auth/signup') && request.method === 'POST') {
         const body = {
-          token: 'token_' + this.makeID(),
+          token: `token_${this.makeID()}`,
           user: {
             username: request.body['username'],
             email: request.body['email'],
@@ -37,7 +37,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       // login
       if (request.url.endsWith('/api/auth/login') && request.method === 'POST') {
         const body = {
-          token: 'token_' + this.makeID(),
+          token: `token_${this.makeID()}`,
           user: {
             username: this.username,
             email: request.body['email'],

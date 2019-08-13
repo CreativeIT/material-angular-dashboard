@@ -34,6 +34,7 @@ export class BrowserStatisticsChartComponent extends BasePieChartComponent imple
     };
 
     const container1 = d3.select(this.el.nativeElement);
+
     if (container1[0][0]) {
       const colors = [
         COLORS.purple,
@@ -72,8 +73,9 @@ export class BrowserStatisticsChartComponent extends BasePieChartComponent imple
         container1.append('div')
           .append('svg')
           .datum(data)
-          .transition().duration(1200)
-          .call(pieChart);
+          .transition()
+          .duration(1200)
+          .call(pieChart as any);
 
         const h = 0;
         let i = 0.35;
