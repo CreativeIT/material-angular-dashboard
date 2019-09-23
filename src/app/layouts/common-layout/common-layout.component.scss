@@ -2,7 +2,7 @@
 
 .contact {
   display: flex;
-  width: 100%;
+  flex-grow: 1;
   justify-content: center;
   margin-left: calc(#{$layout-drawer-width} - 40px);
 }
