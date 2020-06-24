@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js --silent
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
 
 PATH: 
   C:\Users\insal\CommercialProjects\material-angular-dashboard\node_modules\.bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Users\insal\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\insal\AppData\Local\Programs\Python\Python38-32\;C:\Users\insal\AppData\Local\Microsoft\WindowsApps;C:\Users\insal\AppData\Local\GitHubDesktop\bin;C:\Users\insal\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\PyCharm 2019.2.4\bin;;C:\Users\insal\AppData\Local\Yarn\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\insal\CommercialProjects\material-angular-dashboard\node_modules\style-loader\lib\addStyles.js'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\insal\CommercialProjects\material-angular-dashboard\node_modules\node-sass\vendor\win32-x64-72\binding.node'
 
 npm manifest: 
   {
