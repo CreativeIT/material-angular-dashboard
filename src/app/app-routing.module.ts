@@ -9,6 +9,9 @@ import { DashboardComponent } from './pages/dashboard';
 import { Dashboard2Component } from './pages/dashboard2';
 import { FormsComponent } from './pages/forms';
 
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   imports: [
     RouterModule.forRoot(
@@ -20,11 +23,11 @@ import { FormsComponent } from './pages/forms';
           { path: 'forms', component: FormsComponent, pathMatch: 'full' },
           { path: 'charts', component: ChartsComponent, pathMatch: 'full' },
           { path: 'components', component: ComponentsComponent, pathMatch: 'full' },
-          { path: '**', redirectTo: '/pages/404' },
+          { path: '**', redirectTo: '/ypages/404' },
         ] }, // add 'canActivate: AuthGuard' for catching unauth users
-        { path: 'ui', loadChildren: './pages/ui/ui.module#UIModule' },
-        { path: 'maps', loadChildren: './pages/maps/maps.module#MapsModule' },
-        { path: 'pages', loadChildren: './pages/pages/pages.module#PagesModule' },
+        { path: 'ui', loadChildren: () => import('./pages/ui/ui.module').then(m => m.UIModule) },
+        { path: 'maps', loadChildren: () => import('./pages/maps/maps.module').then(m => m.MapsModule) },
+        { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesModule) },
         { path: '**', redirectTo: '/pages/404' },
       ],
       { useHash: true },
