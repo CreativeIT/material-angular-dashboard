@@ -6,16 +6,16 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './table-card.component.html',
 })
 export class TableCardComponent {
-  @HostBinding('class.projects-table') private readonly projectsTable = true;
+  @HostBinding('class.projects-table') public readonly projectsTable = true;
 
-  private tableHeader: string[] = [
+  public tableHeader: string[] = [
     'Project',
     'Responsible',
     'Client contact',
     'Deadline',
     'Progress',
   ];
-  private data: object[] = [
+  public data: object[] = [
     {
       project: 'Darkboard',
       responsible: [

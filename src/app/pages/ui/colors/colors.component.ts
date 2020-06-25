@@ -8,6 +8,6 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   styleUrls: ['./colors.component.scss'],
 })
 export class ColorsComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.ui-colors') private readonly uiColors = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.ui-colors') public readonly uiColors = true;
 }

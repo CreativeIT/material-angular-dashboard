@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LineChartService {
-  private awesomeFunction(x) {
+  public awesomeFunction(x) {
     const INTERVAL_1 = 2.8;
     const INTERVAL_2 = 7.1;
     const INTERVAL_3 = 11.0;
@@ -19,7 +19,7 @@ export class LineChartService {
     return ((x - 11.4) * (x - 11.4) * (x - 11.4)) / 13 + 2.476;
   }
 
-  private goodFunction(x) {
+  public goodFunction(x) {
     const INTERVAL_1 = 3.0;
     const INTERVAL_2 = 8.2;
 
@@ -32,7 +32,7 @@ export class LineChartService {
     return ((x - 9) * (x - 9) * (x - 9)) / 120 + 1.805;
   }
 
-  private failFunction(x) {
+  public failFunction(x) {
     const INTERVAL_1 = 3.1;
     const INTERVAL_2 = 10.3;
 

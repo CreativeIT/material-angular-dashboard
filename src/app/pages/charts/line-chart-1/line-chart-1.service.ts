@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LineChart1Service {
-  private firstComplexFunction(x) {
+  public firstComplexFunction(x) {
     return Math.cos(x + 10) + 0.5;
   }
 
-  private secondComplexFunction(x) {
+  public secondComplexFunction(x) {
     return Math.cos(x) + 1;
   }
 

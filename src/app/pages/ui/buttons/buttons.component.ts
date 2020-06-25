@@ -8,10 +8,10 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   styleUrls: ['./buttons.component.scss'],
 })
 export class ButtonsComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.ui-buttons') private readonly uiButtons = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.ui-buttons') public readonly uiButtons = true;
 
-  private colors1 = [
+  public colors1 = [
     'light-blue',
     'teal',
     'orange',
@@ -19,7 +19,7 @@ export class ButtonsComponent extends UpgradableComponent {
     'green',
     'purple',
   ];
-  private colors2 = [
+  public colors2 = [
     'light-blue',
     'teal',
     'orange',
@@ -27,7 +27,7 @@ export class ButtonsComponent extends UpgradableComponent {
     'purple',
     'white',
   ];
-  private actions = [
+  public actions = [
     'archive',
     'create',
     'drafts',
@@ -35,7 +35,7 @@ export class ButtonsComponent extends UpgradableComponent {
     'attach',
     'reply',
   ];
-  private icons1 = [
+  public icons1 = [
     'assignment_returned',
     'create',
     'drafts',
@@ -43,7 +43,7 @@ export class ButtonsComponent extends UpgradableComponent {
     'attach_file',
     'reply',
   ];
-  private icons2 = [
+  public icons2 = [
     'assignment_returned',
     'create',
     'drafts',
@@ -51,7 +51,7 @@ export class ButtonsComponent extends UpgradableComponent {
     'reply',
     'send',
   ];
-  private socials = [
+  public socials = [
     'facebook',
     'twitter',
     'dribbble',
@@ -60,6 +60,6 @@ export class ButtonsComponent extends UpgradableComponent {
     'github',
   ];
 
-  private buttonsWithIcons = this.colors1.map((color, i) => ({ color, action: this.actions[i], icon: this.icons1[i] }));
-  private iconButtons = this.colors2.map((color, i) => ({ color, icon: this.icons2[i] }));
+  public buttonsWithIcons = this.colors1.map((color, i) => ({ color, action: this.actions[i], icon: this.icons1[i] }));
+  public iconButtons = this.colors2.map((color, i) => ({ color, icon: this.icons2[i] }));
 }

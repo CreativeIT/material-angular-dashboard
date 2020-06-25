@@ -13,7 +13,7 @@ import { LineChart2Service } from './line-chart-2.service';
 export class LineChart2Component extends LineChartComponent {
   constructor(
     el: ElementRef,
-    private lineChart2Service: LineChart2Service,
+    public lineChart2Service: LineChart2Service,
   ) {
     super(el);
 

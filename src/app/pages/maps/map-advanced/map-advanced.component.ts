@@ -26,17 +26,17 @@ const iconSize = 20;
   templateUrl: './map-advanced.component.html',
 })
 export class MapAdvancedComponent extends UpgradableComponent implements AfterViewInit, OnDestroy {
-  @HostBinding('class.map-advanced') private map = true;
+  @HostBinding('class.map-advanced') public map = true;
 
   @ViewChild('gmap',  { static: false }) gmapElement: any;
   public gMap: any;
   public data = [];
-  private prevZoom = 2;
-  private markers: any[] = [];
-  private alive = true;
-  private isWorldLevel = true;
+  public prevZoom = 2;
+  public markers: any[] = [];
+  public alive = true;
+  public isWorldLevel = true;
 
-  public constructor(private mapService: MapsService) {
+  public constructor(public mapService: MapsService) {
     super();
   }
 
@@ -69,14 +69,14 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
 
   }
 
-  private loadData(data): void {
+  public loadData(data): void {
     this.clearMarkers();
     this.data = data;
     this.createMarkersArray(data);
     componentHandler.upgradeDom();
   }
 
-  private clearMarkers() {
+  public clearMarkers() {
     if (this.markers) {
       this.markers.forEach((marker) => {
         marker.setMap(null);
@@ -85,7 +85,7 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
     }
   }
 
-  private createMarkersArray(data) {
+  public createMarkersArray(data) {
     const markers = [];
     data.map((item) => {
       const icon = {
@@ -111,7 +111,7 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
     this.markers = markers;
   }
 
-  private drawInfoWindow(item, event, marker): void {
+  public drawInfoWindow(item, event, marker): void {
     /* check if previous window-info is shown and remove it */
     const oldWindowsInfo = document.getElementsByClassName('window-info');
     if (oldWindowsInfo.length > 0) {
@@ -146,7 +146,7 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
     parent.appendChild(infowindow);
   }
 
-  private removeInfoWindow(item, event): void {
+  public removeInfoWindow(item, event): void {
     const parent = item.infowindow.parentElement;
     parent.style.opacity = '0';
     parent.style.overflow = 'hidden';
@@ -157,7 +157,7 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
     item.infowindow.remove();
   }
 
-  private calculateInfoPosition(marker): { top: boolean, left: boolean } {
+  public calculateInfoPosition(marker): { top: boolean, left: boolean } {
     /* calculated where displayed infowindow relative to corners */
     const scale = Math.pow(2, this.gMap.getZoom());
     const nw = new google.maps.LatLng(
@@ -182,12 +182,12 @@ export class MapAdvancedComponent extends UpgradableComponent implements AfterVi
     return position;
   }
 
-  private zoomingToPoint(item, event): void {
+  public zoomingToPoint(item, event): void {
     this.gMap.setZoom(switchZoomValue + 1);
     this.gMap.setCenter(item.position);
   }
 
-  private onZoomChanged(): void {
+  public onZoomChanged(): void {
     // reload data on zoom changed event
     const currentZoom = this.gMap.getZoom();
     if (currentZoom > switchZoomValue && this.prevZoom <= switchZoomValue) {

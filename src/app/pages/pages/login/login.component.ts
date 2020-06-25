@@ -12,14 +12,14 @@ import { AuthService } from '../../../services/auth';
 })
 export class LoginComponent extends BlankLayoutCardComponent implements OnInit {
   public loginForm: FormGroup;
-  private email;
-  private password;
+  public email;
+  public password;
   public emailPattern = '^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$';
   public error: string;
 
-  constructor(private authService: AuthService,
-              private fb: FormBuilder,
-              private router: Router) {
+  constructor(public authService: AuthService,
+              public fb: FormBuilder,
+              public router: Router) {
     super();
 
     this.loginForm = this.fb.group({

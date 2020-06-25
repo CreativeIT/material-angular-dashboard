@@ -15,8 +15,8 @@ import { PieChartService } from './pie-chart.service';
 })
 export class PieChartComponent extends BasePieChartComponent implements OnInit {
   constructor(
-    private el: ElementRef,
-    private pieChartService: PieChartService,
+    public el: ElementRef,
+    public pieChartService: PieChartService,
   ) {
     super();
   }

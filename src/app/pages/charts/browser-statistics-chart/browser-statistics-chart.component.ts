@@ -15,8 +15,8 @@ import { BrowserStatisticsChartService } from './browser-statistics-chart.servic
 })
 export class BrowserStatisticsChartComponent extends BasePieChartComponent implements OnInit {
   constructor(
-    private el: ElementRef,
-    private browserStatisticsChartService: BrowserStatisticsChartService,
+    public el: ElementRef,
+    public browserStatisticsChartService: BrowserStatisticsChartService,
   ) {
     super();
   }

@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './cotoneaster-card.component.html',
 })
 export class CotoneasterCardComponent {
-  @HostBinding('class.cotoneaster') private readonly cotoneaster = true;
+  @HostBinding('class.cotoneaster') public readonly cotoneaster = true;
 }

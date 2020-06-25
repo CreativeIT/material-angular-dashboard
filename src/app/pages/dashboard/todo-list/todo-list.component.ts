@@ -20,18 +20,18 @@ import { TodoListService } from './todo-list.service';
   providers: [TodoListService],
 })
 export class TodoListComponent implements AfterViewInit, OnDestroy {
-  @HostBinding('class.todo') private readonly todo = true;
+  @HostBinding('class.todo') public readonly todo = true;
 
-  private items;
-  private createdItem = null;
-  private todoItemsSubscription;
+  public items;
+  public createdItem = null;
+  public todoItemsSubscription;
 
-  @ViewChild('todoInput',  { static: false }) private set todoInput(element: ElementRef) {
+  @ViewChild('todoInput',  { static: false }) public set todoInput(element: ElementRef) {
     if (element) {
       element.nativeElement.focus();
     }
   }
-  @ViewChildren('listItem') private todoItems: QueryList<ElementRef>;
+  @ViewChildren('listItem') public todoItems: QueryList<ElementRef>;
 
   constructor(todoListService: TodoListService) {
     this.items = todoListService.getItems();
@@ -53,11 +53,11 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
     this.todoItemsSubscription.unsubscribe();
   }
 
-  private deleteItem(item): void {
+  public deleteItem(item): void {
     this.items = this.items.filter(i => i !== item);
   }
 
-  private createItem(): void {
+  public createItem(): void {
     this.createdItem = {
       title: '',
       id: Date.now(),
@@ -65,14 +65,14 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
     };
   }
 
-  private addItem(): void {
+  public addItem(): void {
     if (this.createdItem.title) {
       this.items.push({ ...this.createdItem });
     }
     this.createdItem = null;
   }
 
-  private deleteCompletedItems(): void {
+  public deleteCompletedItems(): void {
     this.items = this.items.filter((item: any) => !item.completed);
   }
 }
