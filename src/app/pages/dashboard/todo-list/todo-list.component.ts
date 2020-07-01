@@ -26,7 +26,7 @@ export class TodoListComponent implements AfterViewInit, OnDestroy {
   private createdItem = null;
   private todoItemsSubscription;
 
-  @ViewChild('todoInput') private set todoInput(element: ElementRef) {
+  @ViewChild('todoInput', { static: true }) private set todoInput(element: ElementRef) {
     if (element) {
       element.nativeElement.focus();
     }

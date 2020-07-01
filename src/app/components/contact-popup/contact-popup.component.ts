@@ -51,7 +51,7 @@ export class ContactPopupComponent extends UpgradableComponent implements AfterV
   private timeout;
   public isError = false;
   private subscription: Subscription;
-  @ViewChild('formContact') formContact: NgForm;
+  @ViewChild('formContact', { static: true }) formContact: NgForm;
 
   constructor(private service: ContactPopupService,
               private ref: ChangeDetectorRef) {
