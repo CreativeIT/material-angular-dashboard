@@ -16,7 +16,7 @@ export class FormsComponent extends UpgradableComponent implements AfterViewInit
   @HostBinding('class.mdl-cell--top') private readonly mdlCellTop = true;
 
   public ngAfterViewInit() {
-    getmdlSelect.init('.getmdl-select');
+    // getmdlSelect.init('.getmdl-select');
     componentHandler.upgradeDom();
   }
 }
