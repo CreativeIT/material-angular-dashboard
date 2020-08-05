@@ -7,29 +7,29 @@ import { AfterViewInit, Component, ElementRef, HostBinding } from '@angular/core
   template: '',
 })
 export abstract class LineChartComponent implements AfterViewInit {
-  protected animatedData;
-  protected rawData;
-  protected xAxis;
-  protected yAxis;
-  protected maxX;
-  private container;
-  private svg;
-  private svgHeight;
-  private svgWidth;
-  private barsLayout;
-  private lineChart;
-  private timer;
-  private columns;
-  protected xStep = 0.125;
-  private xDrawStep = 4;
-  private margin = 20;
-  private durationResizeAnimation = 500;
-  private drawStep = this.xStep * this.xDrawStep;
-  private animationTime = 400;
+  public animatedData;
+  public rawData;
+  public xAxis;
+  public yAxis;
+  public maxX;
+  public container;
+  public svg;
+  public svgHeight;
+  public svgWidth;
+  public barsLayout;
+  public lineChart;
+  public timer;
+  public columns;
+  public xStep = 0.125;
+  public xDrawStep = 4;
+  public margin = 20;
+  public durationResizeAnimation = 500;
+  public drawStep = this.xStep * this.xDrawStep;
+  public animationTime = 400;
 
-  @HostBinding('class.line-chart__container') private readonly lineChartContainer = true;
+  @HostBinding('class.line-chart__container') public readonly lineChartContainer = true;
 
-  constructor(private el: ElementRef) { }
+  constructor(public el: ElementRef) { }
 
   public ngAfterViewInit() {
     this.container = d3.select(this.el.nativeElement);
@@ -38,22 +38,22 @@ export abstract class LineChartComponent implements AfterViewInit {
     }
   }
 
-  protected afterConfigure() {
+  public afterConfigure() {
     this.columns = this.maxX / 2;
   }
 
-  private addSvgContainer() {
+  public addSvgContainer() {
     this.svg = this.container.append('div').append('svg');
   }
 
-  private getSvgSizes() {
+  public getSvgSizes() {
     const svgWidth = getComputedStyle(this.svg[0][0]).width;
     const svgHeight = getComputedStyle(this.svg[0][0]).height;
     this.svgWidth = +svgWidth.slice(0, -2);
     this.svgHeight = +svgHeight.slice(0, -2) - this.margin;
   }
 
-  private addAxisLabels() {
+  public addAxisLabels() {
     this.container.selectAll('svg .y-axis-label').remove();
     this.container.select('svg')
       .append('text')
@@ -69,7 +69,7 @@ export abstract class LineChartComponent implements AfterViewInit {
       .text(this.xAxis || '');
   }
 
-  private buildBackground() {
+  public buildBackground() {
     this.addSvgContainer();
     this.getSvgSizes();
 
@@ -88,7 +88,7 @@ export abstract class LineChartComponent implements AfterViewInit {
     this.setBackgroundSizes();
   }
 
-  private setBackgroundSizes() {
+  public setBackgroundSizes() {
     const availableBarWidth = (this.svgWidth - 2 * this.margin) / this.columns;
     const barWidth = availableBarWidth / 2;
     this.barsLayout
@@ -104,14 +104,14 @@ export abstract class LineChartComponent implements AfterViewInit {
       .attr('y', this.svgHeight - (this.svgHeight) / 4 + this.margin + this.maxX);
   }
 
-  private drawChart() {
+  public drawChart() {
     this.buildBackground();
     this.buildLegend();
     this.buildNvGraph();
     this.animateGraphs();
   }
 
-  private buildNvGraph() {
+  public buildNvGraph() {
     this.tuneNvGraph();
 
     nv.addGraph(() => {
@@ -124,7 +124,7 @@ export abstract class LineChartComponent implements AfterViewInit {
     });
   }
 
-  private tuneNvGraph() {
+  public tuneNvGraph() {
     this.lineChart = nv.models.lineChart()
       .margin({ top: this.margin, right: this.margin, bottom: 0, left: this.margin })
       .useInteractiveGuideline(true)
@@ -147,7 +147,7 @@ export abstract class LineChartComponent implements AfterViewInit {
       .ticks(10);
   }
 
-  private buildLegend() {
+  public buildLegend() {
     const legend = this.container.append('div')
       .attr('class', 'legend')
       .selectAll('.legend__item')
@@ -165,12 +165,12 @@ export abstract class LineChartComponent implements AfterViewInit {
       .text(d => d.key);
   }
 
-  private resizeBackground() {
+  public resizeBackground() {
     this.getSvgSizes();
     this.setBackgroundSizes();
   }
 
-  private animateGraphs() {
+  public animateGraphs() {
     let i = 0;
     this.timer = setInterval(
       () => {
@@ -183,7 +183,7 @@ export abstract class LineChartComponent implements AfterViewInit {
     );
   }
 
-  private drawNextStep(i) {
+  public drawNextStep(i) {
     if (i !== 0 && i % this.drawStep === 0 || i === this.maxX) {
       try {
         this.lineChart.update();
@@ -193,7 +193,7 @@ export abstract class LineChartComponent implements AfterViewInit {
     }
   }
 
-  private checkEndOfAnimation(i) {
+  public checkEndOfAnimation(i) {
     if (i >= this.maxX + 1) {
       this.lineChart.duration(this.durationResizeAnimation);
       this.animatedData.forEach((item) => {
@@ -205,7 +205,7 @@ export abstract class LineChartComponent implements AfterViewInit {
     }
   }
 
-  private complementGraphs() {
+  public complementGraphs() {
     this.rawData.forEach((graph, i) => this.animatedData[i].values.push(graph.shift()));
   }
 }

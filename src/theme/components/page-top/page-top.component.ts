@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
   template: `<ng-content></ng-content>`,
 })
 export class PageTopComponent {
-  @HostBinding('class.mdl-layout__header-row') protected readonly mdlLayoutHeaderRow = true;
+  @HostBinding('class.mdl-layout__header-row') public readonly mdlLayoutHeaderRow = true;
 }

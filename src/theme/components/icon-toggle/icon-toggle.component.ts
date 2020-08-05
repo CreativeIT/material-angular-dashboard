@@ -11,7 +11,7 @@ import { ToggleComponent } from 'theme/components/toggle/toggle.component';
   `,
 })
 export class IconToggleComponent extends ToggleComponent {
-  @HostBinding('class') private get className() {
+  @HostBinding('class') public get className() {
     return `mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect icon-toggle--colored-${this.color}`;
   }
 }

@@ -7,5 +7,5 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
 }

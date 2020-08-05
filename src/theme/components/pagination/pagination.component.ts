@@ -6,7 +6,7 @@ import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/co
   templateUrl: './pagination.component.html',
 })
 export class PaginationComponent {
-  @HostBinding('class.pagination') private readonly pagination = true;
+  @HostBinding('class.pagination') public readonly pagination = true;
 
   @Input() public numPage = 1;
   @Input() public currentPage = 1;
