@@ -2,7 +2,7 @@ import {
   AfterViewInit, ChangeDetectorRef, Component, HostBinding, OnDestroy, ViewChild,
 } from '@angular/core';
 import { NgForm, Validators } from '@angular/forms';
-import { Subscription } from 'rxjs/index';
+import { Subscription } from 'rxjs';
 
 import { UpgradableComponent } from 'theme/components/upgradable/upgradable.component';
 import { ContactPopupService } from './contact-popup.service';
@@ -75,7 +75,6 @@ export class ContactPopupComponent extends UpgradableComponent implements AfterV
         },         0);
       }
     });
-
   }
 
   private setValidation() {
@@ -130,7 +129,12 @@ export class ContactPopupComponent extends UpgradableComponent implements AfterV
   public toggleWindow() {
     clearTimeout(this.timeout);
     if (this.isOpen) {
-      this.form = this.formContact.form.getRawValue();
+      if (this.formContact !== undefined) {
+        this.form = this.formContact.form.getRawValue();
+        this.timeout = setTimeout(this.closeWindow.bind(this), 100);
+      } else {
+        this.timeout = setTimeout(this.closeWindow.bind(this), 100);
+      }
     }
     this.service.setIsOpen(!this.isOpen);
   }
