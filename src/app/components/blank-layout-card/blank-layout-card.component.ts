@@ -6,5 +6,5 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   template: '',
 })
 export class BlankLayoutCardComponent extends UpgradableComponent {
-  @HostBinding('class.blank-layout-card') protected readonly blankLayoutCard = true;
+  @HostBinding('class.blank-layout-card') public readonly blankLayoutCard = true;
 }

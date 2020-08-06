@@ -29,10 +29,10 @@ export class MenuLinkItemComponent {
   @Input() public data;
 
   constructor(
-    private router: Router,
+    public router: Router,
   ) { }
 
-  private navigate() {
+  public navigate() {
     const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;
     if (layout.drawer_.getAttribute('aria-hidden') !== 'true') {
       layout.toggleDrawer();

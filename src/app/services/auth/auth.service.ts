@@ -13,11 +13,11 @@ const tokenName = 'token';
 })
 export class AuthService {
 
-  private isLogged$ = new BehaviorSubject(false);
-  private url = `${environment.apiBaseUrl}`;
-  private user;
+  public isLogged$ = new BehaviorSubject(false);
+  public url = `${environment.apiBaseUrl}`;
+  public user;
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
 
   }
 
@@ -53,7 +53,7 @@ export class AuthService {
     return this.loadUser();
   }
 
-  private loadUser(): Observable<any> {
+  public loadUser(): Observable<any> {
     // use request to load user data with token
     if (this.isAuthenticated()) {
       return this.http.get(`${this.url}/api/users/current`)
