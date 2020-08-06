@@ -11,10 +11,10 @@ import { ToggleComponent } from 'theme/components/toggle/toggle.component';
   `,
 })
 export class RadioButtonComponent extends ToggleComponent {
-  @Input() private name;
-  @Input() private value;
+  @Input() public name;
+  @Input() public value;
 
-  @HostBinding('class') private get className() {
+  @HostBinding('class') public get className() {
     return `mdl-radio mdl-js-radio mdl-js-ripple-effect radio--colored-${this.color}`;
   }
 }

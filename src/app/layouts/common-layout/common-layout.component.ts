@@ -11,8 +11,8 @@ export class CommonLayoutComponent implements OnInit {
 
   public user;
 
-  constructor(private authService: AuthService,
-              private router: Router) {}
+  constructor(public authService: AuthService,
+              public router: Router) {}
 
   public ngOnInit() {
     this.authService.userData.subscribe(user => this.user = user ? user : {

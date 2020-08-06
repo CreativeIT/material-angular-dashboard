@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './weather.component.html',
 })
 export class WeatherComponent {
-  @HostBinding('class.weather') private readonly weather = true;
+  @HostBinding('class.weather') public readonly weather = true;
 }

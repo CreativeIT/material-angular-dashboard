@@ -125,7 +125,7 @@ export class AgGridComponent {
 
   }
 
-  constructor(private dataService: AgGridService) {
+  constructor(public dataService: AgGridService) {
     this.gridOptions = {
       rowData: [],
       columnDefs: this.columnElementsDef,
@@ -191,11 +191,11 @@ export class AgGridComponent {
     this.gridApiGrouped.exportDataAsCsv();
   }
 
-  private labelComparatorByColor(a: { text: string, color: string }, b: { text: string, color: string }) {
+  public labelComparatorByColor(a: { text: string, color: string }, b: { text: string, color: string }) {
     return a.color.localeCompare(b.color);
   }
 
-  private numberToColor(val) {
+  public numberToColor(val) {
     switch (val) {
       case 0:
         return '#f44336';
@@ -206,7 +206,7 @@ export class AgGridComponent {
     }
   }
 
-  private numberParser(params) {
+  public numberParser(params) {
     const newValue = params.newValue;
     let valueAsNumber;
     if (newValue === null || newValue === undefined || newValue === '') {
@@ -217,7 +217,7 @@ export class AgGridComponent {
     return valueAsNumber;
   }
 
-  private onColumnGroupOpened(event) {
+  public onColumnGroupOpened(event) {
     this.gridApiGrouped.sizeColumnsToFit();
   }
 }

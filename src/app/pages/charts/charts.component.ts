@@ -8,6 +8,6 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   templateUrl: './charts.component.html',
 })
 export class ChartsComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.charts') private readonly charts = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.charts') public readonly charts = true;
 }

@@ -12,11 +12,11 @@ import { LinePlusBarChartService } from './line-plus-bar-chart.service';
   providers: [LinePlusBarChartService],
 })
 export class LinePlusBarChartComponent implements OnInit {
-  @HostBinding('class.line-plus-bar-chart__container') private readonly linePlusBarChartContainer = true;
+  @HostBinding('class.line-plus-bar-chart__container') public readonly linePlusBarChartContainer = true;
 
   constructor(
-    private linePlusBarBarChartService: LinePlusBarChartService,
-    private el: ElementRef,
+    public linePlusBarBarChartService: LinePlusBarChartService,
+    public el: ElementRef,
   ) { }
 
   public ngOnInit() {

@@ -12,8 +12,8 @@ import { delay, dematerialize, materialize, mergeMap } from 'rxjs/operators';
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
 
-  private username = 'Luke';
-  private email = 'Luke@skywalker.com';
+  public username = 'Luke';
+  public email = 'Luke@skywalker.com';
 
   constructor() { }
 
@@ -61,7 +61,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
   }
 
   // generate random token
-  private makeID(): string {
+  public makeID(): string {
     let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     for (let i = 0; i < 25; i = i + 1) {

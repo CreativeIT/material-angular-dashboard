@@ -14,15 +14,15 @@ import { BlankLayoutCardComponent } from 'app/components/blank-layout-card';
 export class SignUpComponent extends BlankLayoutCardComponent implements OnInit {
 
   public signupForm: FormGroup;
-  private email;
-  private password;
-  private username;
+  public email;
+  public password;
+  public username;
   public emailPattern = '^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$';
   public error: string;
 
-  constructor(private authService: AuthService,
-              private fb: FormBuilder,
-              private router: Router) {
+  constructor(public authService: AuthService,
+              public fb: FormBuilder,
+              public router: Router) {
     super();
 
     this.signupForm = this.fb.group({

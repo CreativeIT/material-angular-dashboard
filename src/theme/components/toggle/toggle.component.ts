@@ -4,13 +4,13 @@ import { Component, HostBinding, Input } from '@angular/core';
   template: '',
 })
 export abstract class ToggleComponent {
-  private static idCounter = 0;
+  public static idCounter = 0;
 
-  private isChecked = false;
+  public isChecked = false;
 
-  @HostBinding('for') @Input() protected innerID = `base-toggle-${ToggleComponent.idCounter += 1}`;
+  @HostBinding('for') @Input() public innerID = `base-toggle-${ToggleComponent.idCounter += 1}`;
 
-  @Input() protected color;
+  @Input() public color;
 
   @Input() set checked(value) {
     if (value || value === '') {

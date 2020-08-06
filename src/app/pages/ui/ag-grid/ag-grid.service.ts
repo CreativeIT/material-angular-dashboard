@@ -5,7 +5,7 @@ import { delay, switchMap } from 'rxjs/operators';
 
 @Injectable()
 export class AgGridService {
-  private elementsData = [
+  public elementsData = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', type: 'non metal' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', type: 'noble gas' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', type: 'alkali metal' },
@@ -28,7 +28,7 @@ export class AgGridService {
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca', type: 'alkaline earth metal' },
   ];
 
-  private advanceTableData = [
+  public advanceTableData = [
     {
       id: '5',
       title: 'Life of Pi',
@@ -156,7 +156,7 @@ export class AgGridService {
     },
   ];
 
-  private genreColors = {
+  public genreColors = {
     'Children\'s book': 'orange',
     'Gothic fiction': 'purple',
     'Horror fiction': 'dark-gray',
@@ -166,7 +166,7 @@ export class AgGridService {
     'Adventure': 'light-blue',
   };
 
-  private elementTypeColors = {
+  public elementTypeColors = {
     'non metal': 'smooth-gray',
     'noble gas': 'cerulean',
     'alkali metal': 'amber',
@@ -176,7 +176,7 @@ export class AgGridService {
     'metal': 'green',
   };
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
   }
 
   getGropedData(): Observable<any[]> {
@@ -220,7 +220,7 @@ export class AgGridService {
       );
   }
 
-  private getRandomItem(items: any[]) {
+  public getRandomItem(items: any[]) {
     return items[Math.floor(Math.random() * items.length)];
   }
 }

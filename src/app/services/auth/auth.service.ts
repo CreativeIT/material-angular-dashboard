@@ -12,11 +12,11 @@ const tokenName = 'token';
 })
 export class AuthService {
 
-  private isLogged$ = new BehaviorSubject(false);
-  private url = `${environment.apiBaseUrl}/api/auth`;
-  private user = { username: 'Luke', email: 'Luke@skywalker.com' }; // some data about user
+  public isLogged$ = new BehaviorSubject(false);
+  public url = `${environment.apiBaseUrl}/api/auth`;
+  public user = { username: 'Luke', email: 'Luke@skywalker.com' }; // some data about user
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
 
   }
 
@@ -71,7 +71,7 @@ export class AuthService {
     return this.loadUser();
   }
 
-  private loadUser(): Observable<any> {
+  public loadUser(): Observable<any> {
     // use request to load user data with token
     // it's fake and useing only for example
     if (localStorage.getItem('username') && localStorage.getItem('email')) {

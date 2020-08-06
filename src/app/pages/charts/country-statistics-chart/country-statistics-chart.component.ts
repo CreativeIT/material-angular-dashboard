@@ -15,8 +15,8 @@ import { CountryStatisticsChartService } from './country-statistics-chart.servic
 })
 export class CountryStatisticsChartComponent extends BasePieChartComponent implements OnInit {
   constructor(
-    private el: ElementRef,
-    private countryStatisticsChartService: CountryStatisticsChartService,
+    public el: ElementRef,
+    public countryStatisticsChartService: CountryStatisticsChartService,
   ) {
     super();
   }

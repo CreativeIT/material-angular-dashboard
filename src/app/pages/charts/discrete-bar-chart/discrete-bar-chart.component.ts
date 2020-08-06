@@ -12,11 +12,11 @@ import { DiscreteBarChartService } from './discrete-bar-chart.service';
   providers: [DiscreteBarChartService],
 })
 export class DiscreteBarChartComponent implements OnInit {
-  @HostBinding('class.discrete-bar-chart__container') private readonly discreteBarChartContainer = true;
+  @HostBinding('class.discrete-bar-chart__container') public readonly discreteBarChartContainer = true;
 
   constructor(
-    private discreteBarChartService: DiscreteBarChartService,
-    private el: ElementRef,
+    public discreteBarChartService: DiscreteBarChartService,
+    public el: ElementRef,
   ) { }
 
   public ngOnInit() {

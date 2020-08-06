@@ -11,15 +11,15 @@ import { TablesService } from './tables.service';
 export class TablesComponent extends UpgradableComponent {
   public readonly Array = Array;
 
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.mdl-cell') private readonly mdlCell = true;
-  @HostBinding('class.mdl-cell--12-col-desktop') private readonly mdlCell12ColDesktop = true;
-  @HostBinding('class.mdl-cell--12-col-tablet') private readonly mdlCell12ColTablet = true;
-  @HostBinding('class.mdl-cell--4-col-phone') private readonly mdlCell4ColPhone = true;
-  @HostBinding('class.mdl-cell--top') private readonly mdlCellTop = true;
-  @HostBinding('class.ui-tables') private readonly uiTables = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.mdl-cell') public readonly mdlCell = true;
+  @HostBinding('class.mdl-cell--12-col-desktop') public readonly mdlCell12ColDesktop = true;
+  @HostBinding('class.mdl-cell--12-col-tablet') public readonly mdlCell12ColTablet = true;
+  @HostBinding('class.mdl-cell--4-col-phone') public readonly mdlCell4ColPhone = true;
+  @HostBinding('class.mdl-cell--top') public readonly mdlCellTop = true;
+  @HostBinding('class.ui-tables') public readonly uiTables = true;
 
-  public constructor(private tablesService: TablesService) {
+  public constructor(public tablesService: TablesService) {
     super();
   }
 
@@ -45,7 +45,7 @@ export class TablesComponent extends UpgradableComponent {
   };
 
   public currentPage = 1;
-  private countPerPage = 4;
+  public countPerPage = 4;
   public numPage = this.tablesService.getAdvancedTableNumOfPage(this.countPerPage);
 
   public advancedTable = this.tablesService.getAdvancedTablePage(1, this.countPerPage);

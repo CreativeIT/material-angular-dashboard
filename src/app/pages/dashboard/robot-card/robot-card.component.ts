@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './robot-card.component.html',
 })
 export class RobotCardComponent {
-  @HostBinding('class.robot') private readonly robot = true;
+  @HostBinding('class.robot') public readonly robot = true;
 }

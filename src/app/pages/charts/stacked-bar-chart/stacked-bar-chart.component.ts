@@ -12,11 +12,11 @@ import { StackedBarChartService } from './stacked-bar-chart.service';
   providers: [StackedBarChartService],
 })
 export class StackedBarChartComponent implements OnInit {
-  @HostBinding('class.stacked-bar-chart__container') private readonly stackedBarChartContainer = true;
+  @HostBinding('class.stacked-bar-chart__container') public readonly stackedBarChartContainer = true;
 
   constructor(
-    private stackedBarChartService: StackedBarChartService,
-    private el: ElementRef,
+    public stackedBarChartService: StackedBarChartService,
+    public el: ElementRef,
   ) { }
 
   public ngOnInit() {

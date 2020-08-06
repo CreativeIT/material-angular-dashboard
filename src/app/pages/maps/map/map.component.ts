@@ -9,7 +9,7 @@ declare const google: any;
   templateUrl: 'map.component.html',
 })
 export class MapComponent extends UpgradableComponent implements AfterViewInit {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
 
   public ngAfterViewInit() {
     const mapOptions = {

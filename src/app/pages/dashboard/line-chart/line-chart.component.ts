@@ -16,7 +16,7 @@ import { LineChartService } from './line-chart.service';
 export class LineChartComponent extends BaseLineChartComponent {
   constructor(
     el: ElementRef,
-    private lineChartService: LineChartService,
+    public lineChartService: LineChartService,
   ) {
     super(el);
 

@@ -21,8 +21,8 @@ import { PaginationProxy } from 'ag-grid-community';
   `,
 })
 export class AgPaginationComponent implements OnChanges {
-  @HostBinding('class.pagination') private readonly pagination = true;
-  @Input() private paginationProxy: PaginationProxy;
+  @HostBinding('class.pagination') public readonly pagination = true;
+  @Input() public paginationProxy: PaginationProxy;
   public numPage = 1;
   public currentPage = 1;
   public inputNumPage: number;

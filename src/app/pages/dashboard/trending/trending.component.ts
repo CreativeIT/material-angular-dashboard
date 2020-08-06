@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
   templateUrl: './trending.component.html',
 })
 export class TrendingComponent {
-  @HostBinding('class.trending') private readonly trending = true;
+  @HostBinding('class.trending') public readonly trending = true;
 }

@@ -8,10 +8,10 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   styleUrls: ['./icons.component.scss'],
 })
 export class IconsComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.ui-icons') private readonly uiIcons = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.ui-icons') public readonly uiIcons = true;
 
-  private data = [
+  public data = [
     {
       name: 'action',
       icons: [
