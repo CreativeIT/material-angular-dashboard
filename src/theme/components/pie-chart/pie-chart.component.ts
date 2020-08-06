@@ -7,5 +7,5 @@ import { Component, HostBinding } from '@angular/core';
   template: '',
 })
 export abstract class PieChartComponent {
-  @HostBinding('class.pie-chart__container') private readonly pieChartContainer = true;
+  @HostBinding('class.pie-chart__container') public readonly pieChartContainer = true;
 }

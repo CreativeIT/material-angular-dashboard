@@ -8,11 +8,11 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent extends UpgradableComponent implements OnInit {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
 
   public user;
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
     super();
   }
 

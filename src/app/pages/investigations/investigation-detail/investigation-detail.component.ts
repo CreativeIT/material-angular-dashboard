@@ -8,16 +8,16 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   templateUrl: './investigation-detail.component.html',
 })
 export class InvestigationDetailComponent extends UpgradableComponent implements OnInit {
-  @HostBinding('class.employer-form') private readonly employerForm = true;
+  @HostBinding('class.employer-form') public readonly employerForm = true;
 
-  private investigation;
+  public investigation;
 
   @ViewChild('form') form;
 
   constructor(
-    private investigationsService: InvestigationsService,
-    private router: Router,
-    private route: ActivatedRoute,
+    public investigationsService: InvestigationsService,
+    public router: Router,
+    public route: ActivatedRoute,
   ) {
     super();
   }

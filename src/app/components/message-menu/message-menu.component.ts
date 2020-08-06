@@ -9,9 +9,9 @@ import { MessageMenuService } from './message-menu.service';
   providers: [MessageMenuService],
 })
 export class MessageMenuComponent {
-  @HostBinding('class.message-menu') private readonly messageMenu = true;
+  @HostBinding('class.message-menu') public readonly messageMenu = true;
 
-  private messages: object[];
+  public messages: object[];
 
   constructor(messageMenuService: MessageMenuService) {
     this.messages = messageMenuService.getMessages();

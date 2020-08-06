@@ -7,10 +7,10 @@ import { Observable, Subject } from 'rxjs';
 export class InvestigationsService {
   public filterValue$ = new Subject();
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
   }
 
-  private url = `${environment.apiBaseUrl}/api`;
+  public url = `${environment.apiBaseUrl}/api`;
 
   public getInvestigations(filters: object): Observable<{ investigations: any[], pages: number }> {
     const params = Object.keys(filters)

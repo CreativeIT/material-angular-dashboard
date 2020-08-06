@@ -44,13 +44,13 @@ const PERIOD_TYPES = {
   templateUrl: './investig-wrap-table.component.html',
 })
 export class InvestigWrapTableComponent extends UpgradableComponent implements OnInit, OnDestroy {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.mdl-cell') private readonly mdlCell = true;
-  @HostBinding('class.mdl-cell--12-col-desktop') private readonly mdlCell12ColDesktop = true;
-  @HostBinding('class.mdl-cell--12-col-tablet') private readonly mdlCell12ColTablet = true;
-  @HostBinding('class.mdl-cell--4-col-phone') private readonly mdlCell4ColPhone = true;
-  @HostBinding('class.mdl-cell--top') private readonly mdlCellTop = true;
-  @HostBinding('class.ui-tables') private readonly uiTables = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.mdl-cell') public readonly mdlCell = true;
+  @HostBinding('class.mdl-cell--12-col-desktop') public readonly mdlCell12ColDesktop = true;
+  @HostBinding('class.mdl-cell--12-col-tablet') public readonly mdlCell12ColTablet = true;
+  @HostBinding('class.mdl-cell--4-col-phone') public readonly mdlCell4ColPhone = true;
+  @HostBinding('class.mdl-cell--top') public readonly mdlCellTop = true;
+  @HostBinding('class.ui-tables') public readonly uiTables = true;
 
   @Input() public config: {
     type: 'investigation', // 'investigation' | 'prediction'
@@ -62,15 +62,15 @@ export class InvestigWrapTableComponent extends UpgradableComponent implements O
   @Input() public filterParams: any;
   public readonly periodTypes = PERIOD_TYPES;
 
-  private alive = true;
+  public alive = true;
   public data: any[];
   public period = PERIOD_TYPES.week;
   public numPage = 1;
-  private currentPage = 1;
+  public currentPage = 1;
   public headers = [];
-  private filterValues = {};
+  public filterValues = {};
 
-  constructor(private investService: InvestigationsService) {
+  constructor(public investService: InvestigationsService) {
     super();
   }
 
@@ -81,7 +81,7 @@ export class InvestigWrapTableComponent extends UpgradableComponent implements O
         .pipe(takeWhile(() => this.alive))
         .subscribe((filterValue) => {
           this.filterValues = filterValue;
-          this.loadData(filterValue);
+          this.loadData(this.filterValues);
         });
     }
     this.filterValues = { period: this.period };

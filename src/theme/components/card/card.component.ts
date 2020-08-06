@@ -6,10 +6,10 @@ import { Component, HostBinding, Input, ViewChild, ViewContainerRef } from '@ang
   template: `<ng-content></ng-content>`,
 })
 export class CardComponent {
-  @HostBinding('class.mdl-card') private readonly mdlCard = true;
-  @HostBinding('class.mdl-shadow--2dp') private readonly mdlShadow2DP = true;
+  @HostBinding('class.mdl-card') public readonly mdlCard = true;
+  @HostBinding('class.mdl-shadow--2dp') public readonly mdlShadow2DP = true;
 
   constructor(
-    private viewContainerRef: ViewContainerRef,
+    public viewContainerRef: ViewContainerRef,
   ) { }
 }
