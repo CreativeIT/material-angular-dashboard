@@ -8,6 +8,9 @@
     "tslint-angular"
   ],
   "rules": {
+    "deprecation": {
+      "severity": "warning"
+    },
     "max-line-length": [
       true,
       {
