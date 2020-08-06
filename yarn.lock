@@ -1515,7 +1515,7 @@ ag-grid-angular@21.0.1:
   resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-21.0.1.tgz#b45789a5ec38f1d3305e25663b44fd0624570285"
   integrity sha512-o0mhoPXbZDlxLAlwK+LPpBm5/RA6bYHqXV26yfJmx2wZ/khtT7VOiMbe9XAsGskMv+sxuR7G2FkxbxhluZzTnA==
 
-ag-grid-community@^23.2.1:
+ag-grid-community@23.2.1:
   version "23.2.1"
   resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-23.2.1.tgz#0cf2beb7ba2fcf66a4865e45faabdbea173d59b6"
   integrity sha512-WHfDV7mFsd6eQJ5yOu26nnpnW7Gd02zcp9LHHfKQky8lfgTEo382qcja7MibHzB2f5vOCBdQnOPsWrbBNKRzhQ==
