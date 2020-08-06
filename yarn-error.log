@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\insal\CommercialProjects\material-angular-dashboard-master\node_modules\@babel\runtime\helpers\esm'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\insal\CommercialProjects\material-angular-dashboard-master\node_modules\@angular\common\__ivy_ngcc__\fesm5'
 
 npm manifest: 
   {
@@ -52,14 +52,14 @@ npm manifest:
     },
     "homepage": "https://github.com/CreativeIT/material-angular-dashboard",
     "dependencies": {
-      "@angular/animations": "8.0.0",
-      "@angular/common": "8.0.0",
-      "@angular/compiler": "8.0.0",
-      "@angular/core": "8.0.0",
-      "@angular/forms": "8.0.0",
-      "@angular/platform-browser": "8.0.0",
-      "@angular/platform-browser-dynamic": "8.0.0",
-      "@angular/router": "8.0.0",
+      "@angular/animations": "10.0.8",
+      "@angular/common": "10.0.8",
+      "@angular/compiler": "10.0.8",
+      "@angular/core": "10.0.8",
+      "@angular/forms": "10.0.8",
+      "@angular/platform-browser": "10.0.8",
+      "@angular/platform-browser-dynamic": "10.0.8",
+      "@angular/router": "10.0.8",
       "@types/googlemaps": "3.36.2",
       "classlist.js": "1.1.20150312",
       "core-js": "2.6.9",
@@ -67,19 +67,20 @@ npm manifest:
       "material-angular-select": "1.0.0",
       "material-design-lite": "1.3.0",
       "nvd3": "1.8.6",
-      "rxjs": "6.5.2",
-      "zone.js": "0.9.1"
+      "rxjs": "6.6.2",
+      "tslib": "^1.10.0",
+      "zone.js": "~0.10.2"
     },
     "devDependencies": {
-      "@angular-devkit/build-angular": "0.800.1",
-      "@angular/cli": "8.0.1",
-      "@angular/compiler-cli": "8.0.0",
-      "@angular/language-service": "8.0.0",
+      "@angular-devkit/build-angular": "~0.1000.5",
+      "@angular/cli": "10.0.5",
+      "@angular/compiler-cli": "10.0.8",
+      "@angular/language-service": "10.0.8",
       "@types/d3": "3.5.41",
       "@types/material-design-lite": "1.1.15",
-      "@types/node": "12.0.4",
+      "@types/node": "^12.11.1",
       "@types/nvd3": "1.8.39",
-      "codelyzer": "5.1.0",
+      "codelyzer": "^5.1.2",
       "node-sass": "4.12.0",
       "pre-commit": "1.2.2",
       "stylelint": "10.0.1",
@@ -90,7 +91,7 @@ npm manifest:
       "tslint": "5.17.0",
       "tslint-angular": "3.0.2",
       "tslint-config-airbnb": "5.11.1",
-      "typescript": "3.4.5"
+      "typescript": "3.9.7"
     }
   }
 
@@ -1490,18 +1491,6 @@ Lockfile:
     version "6.4.1"
     resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
     integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
-  
-  ag-grid-angular@23.2.1:
-    version "23.2.1"
-    resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-23.2.1.tgz#332e46845a2b6171b8b4b0d53f16f53f11255a66"
-    integrity sha512-SxP7IeLkjlqmh9nDBGy2uYpnc09DkGjjUNxrUrvYogMDnITcx1cKkQry4ayH9eNhq6pvRNcmzNlXPWN8JoAu7Q==
-    dependencies:
-      tslib "^1.10.0"
-  
-  ag-grid-community@23.2.1:
-    version "23.2.1"
-    resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-23.2.1.tgz#0cf2beb7ba2fcf66a4865e45faabdbea173d59b6"
-    integrity sha512-WHfDV7mFsd6eQJ5yOu26nnpnW7Gd02zcp9LHHfKQky8lfgTEo382qcja7MibHzB2f5vOCBdQnOPsWrbBNKRzhQ==
   
   agent-base@4, agent-base@^4.3.0:
     version "4.3.0"
