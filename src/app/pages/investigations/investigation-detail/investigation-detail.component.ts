@@ -12,7 +12,7 @@ export class InvestigationDetailComponent extends UpgradableComponent implements
 
   private investigation;
 
-  @ViewChild('form', { static: false }) form;
+  @ViewChild('form') form;
 
   constructor(
     private investigationsService: InvestigationsService,
