@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InvestigationsService } from '@services/investigation.service';
 import { UpgradableComponent } from 'theme/components/upgradable';
+import { InvestigationsService } from '../../../services';
 
 @Component({
   selector: 'app-investigation-detail',

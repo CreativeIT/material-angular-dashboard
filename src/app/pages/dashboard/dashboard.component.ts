@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 
-import { AuthService } from '@services/*';
 import { UpgradableComponent } from 'theme/components/upgradable';
+import { AuthService } from '../../services/auth';
 
 @Component({
   selector: 'app-dashboard',

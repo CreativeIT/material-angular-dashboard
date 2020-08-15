@@ -1,7 +1,8 @@
 import { Component, EventEmitter, HostBinding, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { InvestigationsService } from '@services/*';
+
 import { takeWhile } from 'rxjs/internal/operators';
 import { UpgradableComponent } from '../../../theme/components/upgradable/upgradable.component';
+import { InvestigationsService } from '../../services';
 
 const HEADER_INVESTIGATION = [
   {
