@@ -17,8 +17,7 @@ export class AgGridComponent {
     { headerName: 'Symbol', field: 'symbolType', cellRendererFramework: AgLabelComponent, comparator: this.labelComparatorByColor },
   ];
 
-  // tslint:disable-next-line:prefer-array-literal
-  readonly columnGroupedDefs: Array<ColGroupDef | ColDef> = [
+  readonly columnGroupedDefs: (ColGroupDef | ColDef)[] = [
     {
       headerName: 'Athlete',
       field: 'athlete',

@@ -3,8 +3,16 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
-    "types": ["d3", "nvd3", "material-design-lite"]
-  },
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "types": ["d3", "nvd3", "material-design-lite"],
+    "target": "es5",
+    "downlevelIteration": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
   "files": [
     "main.ts",
     "polyfills.ts"
