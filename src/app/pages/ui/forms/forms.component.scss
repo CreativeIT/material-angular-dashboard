@@ -1,11 +1,12 @@
-.ui-form-components {
+:host {
   form {
     .mdl-cell {
       margin-left: 16px;
     }
+
+    .mdl-card__supporting-text {
+      padding-bottom: 70px;
+    }
   }
 
-  .mdl-card__supporting-text {
-    padding-bottom: 70px;
-  }
 }

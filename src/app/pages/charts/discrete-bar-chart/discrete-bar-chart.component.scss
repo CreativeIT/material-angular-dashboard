@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.discrete-bar-chart__container {
+:host {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
