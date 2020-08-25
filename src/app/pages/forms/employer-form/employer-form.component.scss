@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.employer-form {
+:host ::ng-deep {
   .mdl-card {
     padding: 0;
     width: $employer-form-width;

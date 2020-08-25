@@ -2,8 +2,7 @@
 
 // TODO: separate styles
 
-.charts,
-.dashboard {
+:host ::ng-deep {
   .chart1__container,
   .chart2__container,
   .pie-chart__container,
