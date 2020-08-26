@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.cotoneaster {
+:host {
   .mdl-card__supporting-text {
     @include typo-card-supporting-text;
 

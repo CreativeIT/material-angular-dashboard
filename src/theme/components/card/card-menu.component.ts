@@ -6,5 +6,5 @@ import { Component, HostBinding, Input, ViewChild, ViewContainerRef } from '@ang
   template: `<ng-content></ng-content>`,
 })
 export class CardMenuComponent {
-  @HostBinding('class.mdl-card__menu') public readonly mdlCardMenu = true;
+  @HostBinding('class.mdl-card__menu') private readonly mdlCardMenu = true;
 }

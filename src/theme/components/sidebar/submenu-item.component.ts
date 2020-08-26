@@ -14,8 +14,8 @@ import { Router } from '@angular/router';
   `,
 })
 export class SubmenuItemComponent implements OnInit {
-  @HostBinding('class.sub-navigation') public readonly subNavigation = true;
-  @HostBinding('class.sub-navigation--show') public get subNavigationShow() {
+  @HostBinding('class.sub-navigation') private readonly subNavigation = true;
+  @HostBinding('class.sub-navigation--show') private get subNavigationShow() {
     return this.shown;
   }
 
@@ -24,14 +24,14 @@ export class SubmenuItemComponent implements OnInit {
   public shown = false;
 
   constructor(
-    public router: Router,
+    private router: Router,
   ) { }
 
   public ngOnInit() {
     this.shown = this.hasCurrent(this.data.children);
   }
 
-  public hasCurrent(list) {
+  private hasCurrent(list) {
     return list.some(item => (item.link && item.link === this.router.url) || (item.children && this.hasCurrent(item.children)));
   }
 }

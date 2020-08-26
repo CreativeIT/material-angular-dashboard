@@ -6,12 +6,13 @@ import { AuthService } from '../../services/auth';
   selector: 'app-common-layout',
   templateUrl: './common-layout.component.html',
 })
+
 export class CommonLayoutComponent implements OnInit {
 
   public user;
 
-  constructor(public authService: AuthService,
-              public router: Router) {}
+  constructor(private authService: AuthService,
+              private router: Router) {}
 
   public ngOnInit() {
     this.authService.userData.subscribe(user => this.user = user ? user : {

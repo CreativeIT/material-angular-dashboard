@@ -1,3 +1,5 @@
+@import '~theme/helpers';
+
 .legend {
   .legend__item {
     @include typo-chart-legend;

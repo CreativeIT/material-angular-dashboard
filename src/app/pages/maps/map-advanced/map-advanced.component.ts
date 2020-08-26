@@ -28,7 +28,7 @@ const iconSize = 20;
 export class MapAdvancedComponent extends UpgradableComponent implements AfterViewInit, OnDestroy {
   @HostBinding('class.map-advanced') public map = true;
 
-  @ViewChild('gmap') gmapElement: any;
+  @ViewChild('gmap',  { static: false }) gmapElement: any;
   public gMap: any;
   public data = [];
   public prevZoom = 2;

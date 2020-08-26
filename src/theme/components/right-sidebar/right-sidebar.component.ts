@@ -11,6 +11,6 @@ import { UpgradableComponent } from 'theme/components/upgradable';
 export class RightSidebarLayoutComponent extends UpgradableComponent {
   @Input() public title;
 
-  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
-  @HostBinding('class.mdl-grid--no-spacing') public readonly mdlGridNoSpacing = true;
+  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
+  @HostBinding('class.mdl-grid--no-spacing') private readonly mdlGridNoSpacing = true;
 }

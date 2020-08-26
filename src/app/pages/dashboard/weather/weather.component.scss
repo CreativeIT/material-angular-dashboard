@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.weather {
+:host {
   .mdl-card__supporting-text {
     color: $card-text-color;
     background: url('#{$image-path}/weather_bck.png') center center no-repeat;

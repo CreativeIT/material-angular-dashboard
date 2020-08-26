@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.stacked-bar-chart__container {
+:host {
   svg,
   svg .nv-linePlusBar {
     height: 250px;

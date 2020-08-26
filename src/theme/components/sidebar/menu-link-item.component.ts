@@ -26,9 +26,9 @@ import { Router } from '@angular/router';
 export class MenuLinkItemComponent {
   @Input() public data;
 
-  constructor(public router: Router) { }
+  constructor(private router: Router) { }
 
-  public navigate() {
+  private navigate() {
     const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;
     if (layout.drawer_.getAttribute('aria-hidden') !== 'true') {
       layout.toggleDrawer();

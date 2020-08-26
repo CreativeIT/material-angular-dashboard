@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.projects-table {
+:host {
   thead th {
     color: rgba($color-white, 0.9);
   }

@@ -11,7 +11,7 @@ import { ToggleComponent } from 'theme/components/toggle/toggle.component';
   `,
 })
 export class SwitchComponent extends ToggleComponent {
-  @HostBinding('class') public get className() {
+  @HostBinding('class') private get className() {
     return `mdl-switch mdl-js-switch mdl-js-ripple-effect switch--colored-${this.color}`;
   }
 }
