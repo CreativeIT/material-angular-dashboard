@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 })
 export class BlankLayoutComponent {
   // FIXME: responsibility leak
-  @HostBinding('class.not-found') public get notFound() {
+  @HostBinding('class.not-found') private get notFound() {
     return this.router.url === '/pages/404';
   }
 
   constructor(
-    public router: Router,
+    private router: Router,
   ) { }
 }

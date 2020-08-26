@@ -1,0 +1,21 @@
+<div *ngIf="isClosed" class="open-icon">
+  <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--raised  button--colored-teal mdl-js-ripple-effect" (click)="openSidebar()">
+    <i class="material-icons">close</i>
+  </button>
+</div>
+
+<base-card *ngIf="!isClosed">
+  <div class="right-sidebar-wrap">
+    <base-card-title>
+      <h2 class="mdl-card__title-text">{{ title }}</h2>
+      <div class="close">
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" (click)="closeSidebar()">
+          <i class="material-icons">close</i>
+        </button>
+      </div>
+    </base-card-title>
+    <div class="right-sidebar-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</base-card>

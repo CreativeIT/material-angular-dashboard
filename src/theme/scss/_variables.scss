@@ -1,7 +1,7 @@
 @import "~material-design-lite/src/color-definitions";
 
 /* ==========  IMAGES  ========== */
-$image-path: '/production/assets/images';
+$image-path: '/assets/images';
 $checkbox-image-path: $image-path;
 
 /* ==========  Color & Themes  ========== */
@@ -53,6 +53,9 @@ $layout-nav-color: rgba($color-black, 0.25);
 $layout-drawer-navigation-link-icon-color: rgba($color-white, 0.56);
 $layout-drawer-header-color: $color-white;
 $layout-drawer-header-bg-color: rgba($color-black, 0.85);
+
+// Right Sidebar
+$right-sidebar-width: 230px;
 
 // Header
 $layout-header-text-color: $color-primary;

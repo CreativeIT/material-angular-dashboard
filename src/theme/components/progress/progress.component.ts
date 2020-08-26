@@ -6,11 +6,11 @@ import { Component, ElementRef, HostBinding, HostListener, Input, ViewChild } fr
   template: ``,
 })
 export class ProgressComponent {
-  public progressValue = 0;
-  public bufferValue = 100;
-  public isDeterminate = true;
+  private progressValue = 0;
+  private bufferValue = 100;
+  private isDeterminate = true;
 
-  @Input() public color;
+  @Input() private color;
 
   @Input() set indeterminate(value) {
     if (value || value === '') {
@@ -32,19 +32,19 @@ export class ProgressComponent {
     }
   }
 
-  @HostBinding('class') public get className() {
+  @HostBinding('class') private get className() {
     return `mdl-progress mdl-js-progress progress--colored-${this.color}`;
   }
 
-  @HostBinding('class.mdl-progress__indeterminate') public get mdlProgressIndeterminate() {
+  @HostBinding('class.mdl-progress__indeterminate') private get mdlProgressIndeterminate() {
     return !this.isDeterminate;
   }
 
-  @HostListener('mdl-componentupgraded') public mdlComponentUpgraded() {
+  @HostListener('mdl-componentupgraded') private mdlComponentUpgraded() {
     this.el.nativeElement.MaterialProgress.setProgress(this.progressValue); this.el.nativeElement.MaterialProgress.setBuffer(this.bufferValue);
   }
 
   constructor(
-    public el: ElementRef,
+    private el: ElementRef,
   ) { }
 }

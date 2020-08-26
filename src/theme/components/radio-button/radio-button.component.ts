@@ -14,7 +14,7 @@ export class RadioButtonComponent extends ToggleComponent {
   @Input() public name;
   @Input() public value;
 
-  @HostBinding('class') public get className() {
+  @HostBinding('class') private get className() {
     return `mdl-radio mdl-js-radio mdl-js-ripple-effect radio--colored-${this.color}`;
   }
 }

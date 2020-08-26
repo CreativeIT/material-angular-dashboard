@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-app-pagination {
+:host {
   font-family: Roboto, Helvetica, sans-serif;
   color: $color-smooth-gray;
   font-size: 14px;

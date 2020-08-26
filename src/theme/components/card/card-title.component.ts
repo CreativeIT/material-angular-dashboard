@@ -6,9 +6,9 @@ import { Component, HostBinding, Input, ViewChild } from '@angular/core';
   template: `<ng-content></ng-content>`,
 })
 export class CardTitleComponent {
-  @HostBinding('class.mdl-card__title') public readonly mdlCardTitle = true;
+  @HostBinding('class.mdl-card__title') private readonly mdlCardTitle = true;
 
-  @HostBinding('class.mdl-card--expand') public isExpanded = false;
+  @HostBinding('class.mdl-card--expand') private isExpanded = false;
 
   @Input() set expanded(value) {
     if (value || value === '') {

@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.employer-form {
+:host ::ng-deep {
   .breadcrumbs {
     margin: 16px;
 
