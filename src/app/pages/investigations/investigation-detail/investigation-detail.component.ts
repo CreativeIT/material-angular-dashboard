@@ -26,6 +26,7 @@ export class InvestigationDetailComponent extends UpgradableComponent implements
     this.investigationsService.getInvestigation(+this.route.snapshot.paramMap.get('id'))
       .subscribe((investigation) => {
         this.investigation = investigation;
+        console.log(JSON.stringify(this.investigation));
       });
   }
 }

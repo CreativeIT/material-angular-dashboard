@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-app-investigations {
+:host ::ng-deep {
   width: 100%;
   display: block;
 

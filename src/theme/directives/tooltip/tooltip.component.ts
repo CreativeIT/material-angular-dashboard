@@ -11,7 +11,7 @@ export class TooltipComponent {
   @Input() public position = 'bottom';
   @HostBinding('class.mdl-tooltip--large') @Input() public large = false;
 
-  @HostBinding('class') public get className() {
+  @HostBinding('class') private get className() {
     return `mdl-tooltip mdl-tooltip--${this.position}`;
   }
 }

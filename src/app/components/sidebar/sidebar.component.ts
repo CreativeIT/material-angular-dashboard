@@ -7,6 +7,7 @@ import { SidebarComponent as BaseSidebarComponent } from 'theme/components/sideb
   styleUrls: ['../../../theme/components/sidebar/sidebar.component.scss'],
   templateUrl: '../../../theme/components/sidebar/sidebar.component.html',
 })
+
 export class SidebarComponent extends BaseSidebarComponent {
   public title = 'darkboard';
   public menu = [
@@ -14,9 +15,9 @@ export class SidebarComponent extends BaseSidebarComponent {
     { name: 'Investigations', link: '/app/investigations', icon: 'grid_on' },
     {
       name: 'Auth', children: [
-      { name: 'Sign in', link: '/auth/login' },
-      { name: 'Sign up', link: '/auth/sign-up' },
-      { name: 'Forgot password', link: '/auth/forgot-password' }],
+        { name: 'Sign in', link: '/auth/login' },
+        { name: 'Sign up', link: '/auth/sign-up' },
+        { name: 'Forgot password', link: '/auth/forgot-password' }],
       icon: 'lock',
     },
     { name: '404', link: '/404', icon: 'build' },

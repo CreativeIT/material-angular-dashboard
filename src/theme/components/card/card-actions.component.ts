@@ -6,9 +6,9 @@ import { Component, HostBinding, Input, ViewChild, ViewContainerRef } from '@ang
   template: `<ng-content></ng-content>`,
 })
 export class CardActionsComponent {
-  @HostBinding('class.mdl-card__actions') public readonly mdlCardActions = true;
+  @HostBinding('class.mdl-card__actions') private readonly mdlCardActions = true;
 
   constructor(
-    public viewContainerRef: ViewContainerRef,
+    private viewContainerRef: ViewContainerRef,
   ) { }
 }

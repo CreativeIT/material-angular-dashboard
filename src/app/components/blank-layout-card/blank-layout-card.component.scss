@@ -1,7 +1,8 @@
 @import '~theme/helpers';
 
-.blank-layout-card {
+:host {
   margin: auto;
+  display: flex;
 
   .mdl-button {
     font-weight: 500;

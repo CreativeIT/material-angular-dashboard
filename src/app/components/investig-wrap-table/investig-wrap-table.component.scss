@@ -1,6 +1,7 @@
 @import '~theme/helpers';
 
-.investigations-table-component {
+:host {
+  .investigations-table-component {
   width: 100%;
 
   .mdl-card {
@@ -108,5 +109,6 @@
     border-top: $data-table-dividers;
     text-align: center;
     color: $color-smooth-gray;
+  }
   }
 }

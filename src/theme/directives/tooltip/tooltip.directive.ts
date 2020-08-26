@@ -13,7 +13,7 @@ import { TooltipComponent } from './tooltip.component';
   selector: '[baseTooltip]',
 })
 export class TooltipDirective {
-  public tooltipRef: ComponentRef<TooltipComponent>;
+  private tooltipRef: ComponentRef<TooltipComponent>;
 
   @Input() set baseTooltip(value) {
     // NOTE: questionably
@@ -34,8 +34,8 @@ export class TooltipDirective {
   }
 
   constructor(
-    public vcr: ViewContainerRef,
-    public tr: TemplateRef<any>,
-    public cfr: ComponentFactoryResolver,
+    private vcr: ViewContainerRef,
+    private tr: TemplateRef<any>,
+    private cfr: ComponentFactoryResolver,
   ) { }
 }
