@@ -5,6 +5,13 @@ app-blank-layout .mdl-layout .mdl-layout__content {
   display: flex;
 }
 
+.mdl-layout{
+  .mdl-layout__content {
+    display: flex;
+    padding: 16px;
+  }
+}
+
 // FIXME: responsibility leak
 .not-found .mdl-layout__content {
   background-image: url('#{$image-path}/404.svg');

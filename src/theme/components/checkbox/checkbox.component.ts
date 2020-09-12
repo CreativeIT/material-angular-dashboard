@@ -11,13 +11,13 @@ import { ToggleComponent } from 'theme/components/toggle/toggle.component';
   `,
 })
 export class CheckboxComponent extends ToggleComponent {
-  public isInline = false;
-  @Input() public set inline(value) {
+  private isInline = false;
+  @Input() private set inline(value) {
     if (value || value === '') {
       this.isInline = true;
     }
   }
-  @HostBinding('class') public get className() {
+  @HostBinding('class') private get className() {
     return `mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect checkbox--colored-${this.color} ${this.isInline && 'checkbox--inline'}`;
   }
 }
