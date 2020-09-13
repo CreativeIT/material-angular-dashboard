@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.map-advanced {
+:host ::ng-deep {
   min-height: 630px;
   position: relative;
   margin: 1rem;
@@ -18,34 +18,36 @@
       }
     }
   }
-}
 
-.window-info {
-  z-index: 1000;
-  position: absolute;
-  opacity: 1;
-  user-select: none;
-  width: 200px;
+  .window-info {
+    z-index: 1000;
+    position: absolute;
+    opacity: 1;
+    user-select: none;
+    width: 200px;
 
-  .mdl-card__title {
-    background-color: $card-title-background-color;
-    padding: 12px 16px;
+    .mdl-card__title {
+      background-color: $card-title-background-color;
+      padding: 12px 16px;
 
-    .mdl-card__title-text {
-      font-size: 16px;
+      .mdl-card__title-text {
+        font-size: 16px;
+      }
+    }
+
+    .mdl-card__supporting-text {
+      font-size: 14px;
+      padding: 12px 16px;
+      line-height: 30px;
+      width: auto;
+
+      & > div {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
     }
   }
 
-  .mdl-card__supporting-text {
-    font-size: 14px;
-    padding: 12px 16px;
-    line-height: 30px;
-    width: auto;
-
-    & > div {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-  }
 }
+

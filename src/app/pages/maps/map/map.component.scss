@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.map {
+:host ::ng-deep {
   min-height: 630px;
   position: relative;
 
