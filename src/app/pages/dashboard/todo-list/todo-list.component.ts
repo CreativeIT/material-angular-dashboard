@@ -13,6 +13,8 @@ import {
 
 import { TodoListService } from './todo-list.service';
 
+declare var componentHandler: any;
+
 @Component({
   selector: 'app-todo-list',
   styleUrls: ['./todo-list.component.scss'],

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, HostBinding, OnDestroy, ViewChild } from '@an
 import { takeWhile } from 'rxjs/internal/operators';
 
 declare const google: any;
+declare var componentHandler: any;
 
 import { UpgradableComponent } from 'theme/components/upgradable';
 import { MapsService } from '../maps.service';

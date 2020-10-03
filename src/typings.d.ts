@@ -4,7 +4,6 @@ declare var module: NodeModule;
 interface NodeModule {
   id: string;
 }
-declare var componentHandler: any;
 declare var getmdlSelect: {
   init: any;
 };

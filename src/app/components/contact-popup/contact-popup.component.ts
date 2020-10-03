@@ -7,6 +7,8 @@ import { Subscription } from 'rxjs';
 import { UpgradableComponent } from 'theme/components/upgradable/upgradable.component';
 import { ContactPopupService } from './contact-popup.service';
 
+declare var componentHandler: any;
+
 @Component({
   selector: 'app-contact-card',
   styleUrls: ['./contact-popup.component.scss'],
