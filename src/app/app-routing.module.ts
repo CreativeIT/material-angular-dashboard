@@ -17,7 +17,7 @@ import { FormsComponent } from './pages/forms';
             { path: 'forms', component: FormsComponent, pathMatch: 'full' },
             { path: 'charts', component: ChartsComponent, pathMatch: 'full' },
             { path: '**', redirectTo: '/pages/404' },
-          ] },
+        ] },
         { path: 'ui', loadChildren: () => import('./pages/ui/ui.module').then(m => m.UIModule) },
         { path: 'maps', loadChildren: () => import('./pages/maps/maps.module').then(m => m.MapsModule) },
         { path: 'pages', loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesModule) },
