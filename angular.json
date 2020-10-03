@@ -18,7 +18,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets"
+              "src/assets",
             ],
             "styles": [
               "src/theme/styles.scss"
@@ -92,8 +92,7 @@
   },
   "defaultProject": "material-angular-dashboard",
   "cli": {
-    "packageManager": "yarn",
-    "analytics": "a5e9d524-a910-45b0-a25d-822d37bc20ac"
+    "packageManager": "yarn"
   },
   "schematics": {
     "@schematics/angular:component": {
