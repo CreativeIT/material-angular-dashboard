@@ -12,7 +12,6 @@ import { PaginationComponent } from './components/pagination';
 import { PieChartComponent } from './components/pie-chart';
 import { ProgressComponent } from './components/progress';
 import { RadioButtonComponent } from './components/radio-button';
-import { RightSidebarModule } from './components/right-sidebar';
 import { SidebarModule } from './components/sidebar';
 import { SwitchComponent } from './components/switch';
 import { ToggleComponent } from './components/toggle';
@@ -48,7 +47,6 @@ const BASE_PIPES = [];
     FormsModule,
     ReactiveFormsModule,
     SidebarModule,
-    RightSidebarModule,
     CardModule,
   ],
   exports: [
@@ -58,7 +56,6 @@ const BASE_PIPES = [];
     SidebarModule,
     CardModule,
     TooltipModule,
-    RightSidebarModule,
   ],
 })
 export class ThemeModule { }
