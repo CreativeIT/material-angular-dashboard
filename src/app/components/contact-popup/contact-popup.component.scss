@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.contact-popup {
+:host ::ng-deep {
   .popup {
     max-width: 350px;
     position: fixed;

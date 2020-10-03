@@ -1,9 +1,7 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header has-drawer">
   <div class="mdl-layout__header">
     <base-page-top>
-      <div class="contact mdl-layout--large-screen-only">
-        If you need custom solution contact us &nbsp;<a href="mailto:hello@creativeit.io"> hello@creativeit.io</a>
-      </div>
+      <div class="mdl-layout-spacer"></div>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search">
         <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -21,7 +19,7 @@
       <app-message-menu></app-message-menu>
 
       <div class="avatar-dropdown" id="icon">
-        <span>Luke</span>
+        <span>{{ user.username }}</span>
         <img src="assets/images/Icon_header.png">
       </div>
       <ul
@@ -30,8 +28,8 @@
         <li class="mdl-list__item mdl-list__item--two-line">
             <span class="mdl-list__item-primary-content">
               <span class="material-icons mdl-list__item-avatar"></span>
-              <span>Luke</span>
-              <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+              <span>{{ user.username }}</span>
+              <span class="mdl-list__item-sub-title">{{ user.email }}</span>
           </span>
         </li>
         <li class="list__item--border-top"></li>
@@ -64,7 +62,7 @@
             </span>
         </li>
         <li class="mdl-menu__item mdl-list__item">
-            <span class="mdl-list__item-primary-content">
+            <span class="mdl-list__item-primary-content" (click)="logout()">
               <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
               Log out
             </span>
@@ -90,17 +88,8 @@
   </div>
   <div class="mdl-layout__drawer">
     <app-sidebar></app-sidebar>
-    <base-card class="mdl-shadow--8dp contact-mobile mdl-layout--small-screen-only">
-      <base-card-body>
-        Contact us if you need custom solution:
-        <br/>
-        <br/>
-        <a href="mailto:hello@creativeit.io"> hello@creativeit.io</a>
-      </base-card-body>
-    </base-card>
   </div>
   <main class="mdl-layout__content">
     <router-outlet></router-outlet>
-    <app-contact-card class="mdl-layout--large-screen-only"></app-contact-card>
   </main>
 </div>

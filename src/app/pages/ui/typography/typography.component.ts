@@ -8,7 +8,7 @@ import { UpgradableComponent } from 'theme/components/upgradable';
   styleUrls: ['./typography.component.scss'],
 })
 export class TypographyComponent extends UpgradableComponent {
-  @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
-  @HostBinding('class.ui-typography') private readonly uiTypography = true;
-  @HostBinding('class.mdl-grid--no-spacing') private readonly mdlGridNoSpacing = true;
+  @HostBinding('class.mdl-grid') public readonly mdlGrid = true;
+  @HostBinding('class.ui-typography') public readonly uiTypography = true;
+  @HostBinding('class.mdl-grid--no-spacing') public readonly mdlGridNoSpacing = true;
 }

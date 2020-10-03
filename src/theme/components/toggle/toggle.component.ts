@@ -6,9 +6,9 @@ import { Component, HostBinding, Input } from '@angular/core';
 export abstract class ToggleComponent {
   private static idCounter = 0;
 
-  private isChecked = false;
+  public isChecked = false;
 
-  @HostBinding('for') @Input() protected innerID = `base-toggle-${ToggleComponent.idCounter += 1}`;
+  @HostBinding('for') @Input() public innerID = `base-toggle-${ToggleComponent.idCounter += 1}`;
 
   @Input() protected color;
 

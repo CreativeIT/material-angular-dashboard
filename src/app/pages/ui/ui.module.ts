@@ -6,7 +6,6 @@ import { ThemeModule } from 'theme';
 import { ButtonsComponent } from './buttons';
 import { CardsComponent } from './cards';
 import { ColorsComponent } from './colors';
-import { ComponentsModule } from './components';
 import { FormsComponent } from './forms';
 import { IconsComponent } from './icons';
 import { TablesComponent, TablesService } from './tables';
@@ -18,7 +17,6 @@ import { UIRoutingModule } from './ui-routing.module';
     CommonModule,
     UIRoutingModule,
     ThemeModule,
-    ComponentsModule,
   ],
   declarations: [
     ButtonsComponent,

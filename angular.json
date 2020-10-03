@@ -11,21 +11,20 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": false,
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
-              "src/assets",
+              "src/assets"
             ],
             "styles": [
               "src/theme/styles.scss"
             ],
             "scripts": [
-              "node_modules/material-design-lite/material.js",
-              "node_modules/getmdl-select/getmdl-select.min.js"
+              "node_modules/material-design-lite/material.js"
             ]
           },
           "configurations": {
@@ -41,7 +40,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": false,
@@ -92,7 +91,8 @@
   },
   "defaultProject": "material-angular-dashboard",
   "cli": {
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "analytics": "da7d51b3-c32d-4dc2-9b7b-658bc6e0ff21"
   },
   "schematics": {
     "@schematics/angular:component": {

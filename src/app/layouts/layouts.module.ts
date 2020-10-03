@@ -6,8 +6,6 @@ import { BlankLayoutCardComponent } from 'app/components/blank-layout-card';
 import { MessageMenuComponent } from 'app/components/message-menu';
 import { NotificationMenuComponent } from 'app/components/notification-menu';
 import { SidebarComponent } from 'app/components/sidebar';
-import { ContactPopupModule } from '../components/contact-popup';
-
 import { ThemeModule } from 'theme';
 import { BlankLayoutComponent } from './blank-layout';
 import { CommonLayoutComponent } from './common-layout';
@@ -17,7 +15,6 @@ import { CommonLayoutComponent } from './common-layout';
     CommonModule,
     ThemeModule,
     RouterModule,
-    ContactPopupModule,
   ],
   declarations: [
     CommonLayoutComponent,

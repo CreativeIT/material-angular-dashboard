@@ -1,6 +1,6 @@
 @import '~theme/helpers';
 
-.trending {
+:host {
   .mdl-card__supporting-text {
     width: 100%;
     padding: 8px 0;
@@ -21,15 +21,15 @@
     font-size: $trending-arrow-size;
   }
 
-  &__arrow-up {
+  .trending__arrow-up {
     color: $trending-arrow-up-color;
   }
 
-  &__arrow-down {
+  .trending__arrow-down {
     color: $trending-arrow-down-color;
   }
 
-  &__percent {
+  .trending__percent {
     text-align: right;
     width: 40px;
   }

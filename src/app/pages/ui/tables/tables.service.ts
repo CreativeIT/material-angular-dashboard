@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TablesService {
 
-  private advanceTableData = [
+  public advanceTableData = [
     [
       '5',
       'Life of Pi',
@@ -22,7 +22,7 @@ export class TablesService {
       'The secret Garden',
       'Frances Hodgson Burnett',
       [
-        'Childeren\'s literature',
+        'Children\'s book',
       ],
       '2017',
       '1911',
@@ -89,7 +89,7 @@ export class TablesService {
       'Alice in Wonderland',
       'Lewis Carroll',
       [
-        'Childeren\'s literature',
+        'Children\'s book',
         'Fantasy',
       ],
       '2018',
@@ -414,7 +414,7 @@ export class TablesService {
     this.advanceTableData = this.sorting(this.advanceTableData, order, index);
   }
 
-  private sorting(array, order, value) {
+  public sorting(array, order, value) {
     const compareFunction = (a, b) => {
       if (a[value] > b[value]) {
         return 1 * order;

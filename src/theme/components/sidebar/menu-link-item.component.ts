@@ -10,9 +10,7 @@ import { Router } from '@angular/router';
       class="mdl-navigation__link"
       [routerLink]="data.link"
       (click)="navigate()"
-      [class.mdl-navigation__link--current]="router.url === data.link">
-      <i *ngIf="data.icon" class="material-icons" role="presentation">{{ data.icon }}</i>
-      {{ data.name }}
+      [class.mdl-navigation__link--current]="router.url === data.link"><i *ngIf="data.icon" class="material-icons" role="presentation">{{ data.icon }}</i>{{ data.name }}
     </a>
     <a
       *ngIf="data.href"
@@ -28,9 +26,7 @@ import { Router } from '@angular/router';
 export class MenuLinkItemComponent {
   @Input() public data;
 
-  constructor(
-    private router: Router,
-  ) { }
+  constructor(private router: Router) { }
 
   private navigate() {
     const layout = (document.querySelector('.mdl-layout') as any).MaterialLayout;

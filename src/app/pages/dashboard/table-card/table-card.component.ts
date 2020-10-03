@@ -8,14 +8,14 @@ import { Component, HostBinding } from '@angular/core';
 export class TableCardComponent {
   @HostBinding('class.projects-table') private readonly projectsTable = true;
 
-  private tableHeader: string[] = [
+  public tableHeader: string[] = [
     'Project',
     'Responsible',
     'Client contact',
     'Deadline',
     'Progress',
   ];
-  private data: object[] = [
+  public data: object[] = [
     {
       project: 'Darkboard',
       responsible: [

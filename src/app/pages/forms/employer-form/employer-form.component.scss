@@ -1,11 +1,12 @@
 @import '~theme/helpers';
 
-.employer-form {
+:host ::ng-deep {
   .mdl-card {
     padding: 0;
     width: $employer-form-width;
     background-color: $background-color;
     margin: 16px auto;
+    height: auto;
   }
 
   .mdl-radio {

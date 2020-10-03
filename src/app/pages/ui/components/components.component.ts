@@ -11,7 +11,7 @@ export class ComponentsComponent extends UpgradableComponent {
   @HostBinding('class.mdl-grid') private readonly mdlGrid = true;
   @HostBinding('class.ui-components') private readonly uiComponents = true;
 
-  private data = [
+  public data = [
     {
       name: 'Nathan Fillion',
       description: 'Malcolm “Mal” Reynolds',
