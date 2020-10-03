@@ -7,6 +7,7 @@ import { MessageMenuComponent } from 'app/components/message-menu';
 import { NotificationMenuComponent } from 'app/components/notification-menu';
 import { SidebarComponent } from 'app/components/sidebar';
 import { ThemeModule } from 'theme';
+import { ContactPopupModule } from '../components/contact-popup';
 import { BlankLayoutComponent } from './blank-layout';
 import { CommonLayoutComponent } from './common-layout';
 
@@ -15,6 +16,7 @@ import { CommonLayoutComponent } from './common-layout';
     CommonModule,
     ThemeModule,
     RouterModule,
+    ContactPopupModule,
   ],
   declarations: [
     CommonLayoutComponent,

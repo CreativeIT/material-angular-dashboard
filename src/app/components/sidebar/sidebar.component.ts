@@ -4,7 +4,7 @@ import { SidebarComponent as BaseSidebarComponent } from 'theme/components/sideb
 
 @Component({
   selector: 'app-sidebar',
-  styleUrls: ['../../../theme/components/sidebar/sidebar.component.scss'],
+  styleUrls: ['sidebar.component.scss'],
   templateUrl: '../../../theme/components/sidebar/sidebar.component.html',
 })
 export class SidebarComponent extends BaseSidebarComponent {
