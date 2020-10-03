@@ -202,6 +202,7 @@ export class MapComponent extends UpgradableComponent implements AfterViewInit {
         markers[key].marker.addListener('click', markers.setActiveMarker);
       }
     }
+    declare var componentHandler: any;
     componentHandler.upgradeDom();
   }
 }
