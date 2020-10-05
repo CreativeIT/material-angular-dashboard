@@ -1,0 +1,64 @@
+@import '~theme/helpers';
+
+base-right-sidebar {
+  display: block;
+  min-height: calc(100vh - #{$layout-desktop-header-height});
+  height: auto;
+
+  .mdl-card {
+    background: $card-title-background-color;
+    min-height: calc(100vh - #{$layout-desktop-header-height});
+    height: 100%;
+  }
+
+  @media screen and (max-width: $layout-screen-size-threshold) {
+    min-height: calc(100vh - #{$layout-mobile-header-height});
+
+    .mdl-card {
+      min-height: calc(100vh - #{$layout-mobile-header-height});
+    }
+  }
+
+  .right-sidebar-wrap {
+    position: fixed;
+    width: calc(#{$right-sidebar-width} - 30px);
+    right: 1rem;
+    margin: 0.5rem;
+  }
+
+  .mdl-card__title {
+    padding-left: 8px;
+  }
+
+  .mdl-card__supporting-text {
+    height: 100%;
+  }
+
+  .close {
+    float: right;
+    right: 0;
+    position: absolute;
+  }
+
+  &.is-closed {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .close,
+  .open-icon {
+    display: none;
+  }
+
+  @media screen and (max-width: $phone-breakpoint) {
+    .mdl-card {
+      overflow-y: auto;
+    }
+
+    .close,
+    .open-icon {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<span (click)="onChangePage(-1)"><i class="material-icons">chevron_left</i></span>
+<span> {{ currentPage }} of {{ numPage }} </span>
+<span (click)="onChangePage(1)"><i class="material-icons">chevron_right</i></span>
+<div class="goto">
+  <span> Go to </span>
+  <form (submit)="goToPage($event)">
+    <input [(ngModel)]="inputNumPage" name="inputPage"
+           class="mdl-textfield__input"
+           type="number"
+           min="1"
+           [max]="numPage">
+  </form>
+</div>

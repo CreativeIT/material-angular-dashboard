@@ -1,0 +1,67 @@
+<div
+  class="investigations-table-component">
+  <div class="mdl-card mdl-shadow--2dp">
+
+    <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">{{ config.title }}</h1>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-navigation" *ngIf="config.isPeriod">
+        <a class="mdl-navigation__link"
+           [class.active]="period == periodTypes.today"
+           (click)="changePeriod(periodTypes.today)">Today</a>
+        <a class="mdl-navigation__link"
+           [class.active]="period == periodTypes.yesterday"
+           (click)="changePeriod(periodTypes.yesterday)">Yesterday</a>
+        <a class="mdl-navigation__link"
+           [class.active]="period == periodTypes.week"
+           (click)="changePeriod(periodTypes.week)">Last week</a>
+        <a class="mdl-navigation__link"
+           [class.active]="period == periodTypes.month"
+           (click)="changePeriod(periodTypes.month)">Last month</a>
+        <a class="mdl-navigation__link"
+           [class.active]="period == periodTypes.year"
+           (click)="changePeriod(periodTypes.year)">Last year</a>
+      </div>
+
+      <app-pagination *ngIf="config.isPagination"
+                      [numPage]="numPage"
+                      (changePage)="changePage($event)"></app-pagination>
+    </div>
+
+    <!-- table -->
+    <div class="mdl-card__supporting-text no-padding">
+      <table class="mdl-data-table mdl-js-data-table investigation-table">
+        <thead>
+        <tr>
+          <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">
+            <span>{{ header.name }}</span>
+          </th>
+        </tr>
+        </thead>
+
+        <!-- investigation -->
+        <tbody *ngIf="config.type === 'investigation' && data?.length">
+        <tr *ngFor="let row of data">
+          <td class="mdl-data-table__cell--non-numeric">{{ row.openDateTime | date: 'yyyy-MM-dd' }}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{ row.locationCountry }}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{ row.reportSource }}</td>
+          <td class="mdl-data-table__cell--non-numeric status">
+            <span class="label label-mini"
+                  [class.background-color--primary]="row.status.toLowerCase() === 'closed'"
+                  [class.color--green]="row.status.toLowerCase() === 'open'">{{ row.status }}</span>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">{{ row.originSource }}</td>
+          <td>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect button--colored-dove-gray" (click)="onClick()" [routerLink]="['/app/investigation', row.id]">
+              <i class="material-icons">remove_red_eye</i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div *ngIf="!data?.length" class="empty-data">
+        There is no data
+      </div>
+    </div>
+  </div>
+</div>
