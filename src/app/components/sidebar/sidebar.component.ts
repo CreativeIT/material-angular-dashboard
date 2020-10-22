@@ -18,7 +18,6 @@ export class SidebarComponent extends BaseSidebarComponent {
           'buttons',
           'cards',
           'colors',
-          'components',
           'forms',
           'icons',
           'typography',
@@ -30,7 +29,7 @@ export class SidebarComponent extends BaseSidebarComponent {
       ],
       icon: 'view_comfy',
     },
-    // { name: 'Components', link: '/components', icon: 'developer_board' },
+    { name: 'Components', link: '/ui/components', icon: 'developer_board' },
     { name: 'Account', link: '/app/forms', icon: 'person' },
     {
       name: 'Maps', icon: 'map', children: [
